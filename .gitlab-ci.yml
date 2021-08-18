@@ -1,0 +1,32 @@
+image: node:16.6-alpine3.14
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  environment:
+    name: production
+  only:
+    - tags
+  script:
+    - mkdir public
+    - cp $INDEX public/index.html
+  artifacts:
+    name: $CI_JOB_NAME-ARTIFACTS
+    expire_in: 10 mins
+    paths:
+      - public
+
+pages:
+  stage: deploy
+  environment:
+    name: production
+  only:
+    - tags
+  script:
+    - echo "Deploying portfolio to Gitlab pages..."
+  artifacts:
+    paths:
+      - public
