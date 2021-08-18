@@ -1,0 +1,10 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "description": "Ian Buñag's portfolio",
+  "main": "index.js",
+  "repository": "git@gitlab.com:yvnbunag/portfolio.git",
+  "author": "Ian <jianbunag@gmail.com>",
+  "license": "MIT",
+  "packageManager": "yarn@3.0.1"
+}
