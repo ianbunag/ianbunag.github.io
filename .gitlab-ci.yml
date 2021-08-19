@@ -29,28 +29,26 @@ build:
   only:
     - tags
   before_script:
-    - apk add git
+    - yarn --prefer-offline
   script:
-    - npm version --no-git-tag-version $CI_COMMIT_TAG
-    - mkdir public
-    - cp $ENTRY_POINT public/index.html
+    - yarn generate
   artifacts:
     name: $CI_JOB_NAME-ARTIFACTS
     expire_in: 10 mins
     paths:
       - public
-      - package.json
 
 pages:
   stage: release
   environment:
     name: production
+    url: $CI_PAGES_URL
   only:
     - tags
   dependencies:
     - build
   script:
-    - echo "Releasing portfolio to Gitlab pages..."
+    - echo "Releasing portfolio to $CI_PAGES_URL"
   artifacts:
     paths:
       - public
@@ -61,8 +59,6 @@ release:
     name: production
   only:
     - tags
-  dependencies:
-    - build
   before_script:
     - apk add git
     - DEPLOYMENT_URL=$(sh ci/scripts/generate-deployment-url.sh $CI_REPOSITORY_URL $GITLAB_ACCESS_TOKEN)
@@ -70,6 +66,8 @@ release:
     - git config --global user.email "$CI_GIT_EMAIL"
     - git checkout -b ci-bump-version
   script:
+    - echo "Bumping package version to $CI_COMMIT_TAG"
+    - npm version --no-git-tag-version $CI_COMMIT_TAG
     - echo "Committing published version $CI_COMMIT_TAG to master"
     - git add package.json
     - git commit -m "Release $CI_COMMIT_TAG"
