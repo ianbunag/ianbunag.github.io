@@ -1,10 +1,49 @@
 {
   "name": "portfolio",
   "version": "0.0.3",
-  "description": "Ian Buñag's portfolio",
-  "main": "index.js",
+  "description": "Ian Buñag's personal portfolio",
   "repository": "git@gitlab.com:yvnbunag/portfolio.git",
   "author": "Ian <jianbunag@gmail.com>",
   "license": "MIT",
-  "packageManager": "yarn@3.0.1"
+  "scripts": {
+    "dev": "nuxt",
+    "clear": "rimraf .nuxt public",
+    "build": "yarn clear && nuxt build",
+    "generate": "yarn clear && nuxt generate",
+    "start": "nuxt start",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
+    "prepare": "husky install",
+    "lint": "yarn lint:js && yarn lint:style"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint",
+    "*.{css,vue}": "stylelint"
+  },
+  "dependencies": {
+    "@nuxtjs/composition-api": "^0.26.0",
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7",
+    "vuetify": "^2.5.5"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.14.7",
+    "@nuxt/types": "^2.15.7",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config-typescript": "^6.0.1",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/vuetify": "^1.12.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "eslint": "^7.29.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-vue": "^7.16.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "rimraf": "^3.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
+  }
 }
