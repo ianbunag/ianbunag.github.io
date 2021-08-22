@@ -1,11 +1,11 @@
 export const head = {
-  titleTemplate: (titleChunk) => {
-    // For some reason, titleTemplate cannot find reference to scoped variables
-    const title = 'Ian Buñag'
+  titleTemplate: (titleChunk: string) => {
+    // titleTemplate cannot reference variables within module scope (unknown)
+    const { name } = require('../src/config/profile.json')
 
-    if (!titleChunk || titleChunk === title) { return title }
+    if (!titleChunk || titleChunk === name) { return name }
 
-    return `${titleChunk} - ${title}`
+    return `${titleChunk} - ${name}`
   },
   htmlAttrs: { lang: 'en' },
   meta: [

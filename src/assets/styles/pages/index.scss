@@ -1,0 +1,56 @@
+.section {
+  position: relative;
+  min-height: 100vh;
+}
+
+@mixin section-background-color($color: #000) {
+  &.section {
+    background-color: $color;
+  }
+}
+
+.section-light-blue-green {
+  @include section-background-color($light-blue-green);
+}
+
+.section-blue-green {
+  @include section-background-color($blue-green);
+}
+
+.section-dark-blue-green {
+  @include section-background-color($dark-blue-green);
+}
+
+.section-dark-slate-gray {
+  @include section-background-color($dark-slate-gray);
+}
+
+.section-slate-gray {
+  @include section-background-color($slate-gray);
+}
+
+@mixin shape-fill($color: #000) {
+  ::v-deep .shape-fill {
+    fill: $color;
+  }
+}
+
+.shape-fill-light-blue-green {
+  @include shape-fill($light-blue-green);
+}
+
+.shape-fill-blue-green {
+  @include shape-fill($blue-green);
+}
+
+.shape-fill-dark-blue-green {
+  @include shape-fill($dark-blue-green);
+}
+
+.shape-fill-dark-slate-gray {
+  @include shape-fill($dark-slate-gray);
+}
+
+.shape-fill-slate-gray {
+  @include shape-fill($slate-gray);
+}
