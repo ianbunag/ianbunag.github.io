@@ -6,4 +6,5 @@ export const generate = {
    * See https://github.com/nuxt-community/composition-api/issues/44
    */
   interval: 2000,
+  fallback: '404.html',
 }

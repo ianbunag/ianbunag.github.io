@@ -2,7 +2,7 @@ import colors from 'vuetify/es5/util/colors'
 
 // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
 export const vuetify = {
-  customVariables: ['~/assets/variables.scss'],
+  customVariables: ['~/assets/styles/vuetify/variables.scss'],
   theme: {
     dark: true,
     themes: {
