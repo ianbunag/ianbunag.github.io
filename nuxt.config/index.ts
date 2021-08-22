@@ -1,8 +1,11 @@
 import { resolve } from 'path'
 
 import { head } from './head'
-import { buildModules } from './build-modules'
+import { plugins } from './plugins'
+import { modules } from './modules'
 import { vuetify } from './vuetify'
+import { styleResources } from './style-resources'
+import { buildModules } from './build-modules'
 import { generate } from './generate'
 
 export default {
@@ -11,7 +14,10 @@ export default {
   alias: { '~': resolve(__dirname, '../src') },
   router: { base: '/portfolio/' },
   head,
-  buildModules,
+  plugins,
+  modules,
   vuetify,
+  styleResources,
+  buildModules,
   generate,
 }

@@ -1,0 +1,15 @@
+@mixin layer($index) {
+  z-index: $index !important;
+}
+
+.layer-background {
+  @include layer(100);
+}
+
+.layer-content {
+  @include layer(1000);
+}
+
+.layer-navigation {
+  @include layer(10000);
+}

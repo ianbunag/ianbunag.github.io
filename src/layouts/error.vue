@@ -1,23 +1,8 @@
-<template>
-  <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
-  </v-app>
-</template>
-
 <script lang="ts">
 import {
   defineComponent,
   toRefs,
   ref,
-  useMeta,
 } from '@nuxtjs/composition-api'
 
 interface NuxtError extends Error {
@@ -34,25 +19,46 @@ export default defineComponent({
   },
   setup (props) {
     const { error } = toRefs(props)
-    const pageNotFound = ref('404 Not Found')
-    const otherError = ref('An error occurred')
-    const { title } = useMeta()
+    const message = ref(
+      error.value.statusCode === 404
+        ? 'The page you are looking for is not here.'
+        : 'Something went wrong.',
+    )
 
-    title.value = error.value.statusCode === 404
-      ? pageNotFound.value
-      : otherError.value
-
-    return {
-      pageNotFound,
-      otherError,
-    }
+    return { message }
   },
-  head: {},
 })
 </script>
+
+<template>
+  <v-app dark>
+    <v-container fluid>
+      <v-row
+        justify="center"
+        align="center"
+        class="text-center section"
+      >
+        <v-col cols="auto">
+          <v-icon x-large>
+            mdi-alert-octagon-outline
+          </v-icon>
+
+          <h1>{{ message }}</h1>
+          <NuxtLink to="/">
+            Let us head back home
+          </NuxtLink>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app>
+</template>
 
 <style scoped>
 h1 {
   font-size: 20px;
+}
+
+.section {
+  min-height: 100vh;
 }
 </style>
