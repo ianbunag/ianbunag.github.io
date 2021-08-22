@@ -1,7 +1,6 @@
 export const head = {
   titleTemplate: (titleChunk: string) => {
-    // titleTemplate cannot reference variables within module scope (unknown)
-    const { name } = require('../src/config/profile.json')
+    const name = 'John Ian Buñag'
 
     if (!titleChunk || titleChunk === name) { return name }
 
