@@ -2,7 +2,7 @@
 import { defineComponent, toRefs, reactive } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  name: 'DividerTiltLeft',
+  name: 'DividerTiltTopLeft',
   props: {
     height: {
       type: String,

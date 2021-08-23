@@ -44,9 +44,9 @@ export default defineComponent({
           </v-icon>
 
           <h1>{{ message }}</h1>
-          <NuxtLink to="/">
+          <a href="/">
             Let us head back home
-          </NuxtLink>
+          </a>
         </v-col>
       </v-row>
     </v-container>
