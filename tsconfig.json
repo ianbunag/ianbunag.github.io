@@ -16,17 +16,22 @@
     "resolveJsonModule": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
-    "paths": { "~/*": ["./src/*"] },
+    "paths": {
+      "~/*": ["./src/*"],
+      "@/*": ["./types/*"]
+    },
     "types": [
       "@nuxt/types",
+      "@nuxtjs/vuetify",
       "@types/node",
-      "vuetify",
       "types/**/*"
     ]
   },
   "exclude": [
     "node_modules",
+    ".husky",
+    "ci",
     ".nuxt",
-    "dist"
+    "public"
   ]
 }

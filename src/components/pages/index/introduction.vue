@@ -4,12 +4,9 @@ import {
   ref,
   reactive,
   computed,
-  toRef,
+  toRefs,
 } from '@nuxtjs/composition-api'
 import { write, presets } from 'glitched-writer'
-
-import { name, tag, titles } from '~/config/profile.json'
-import BrandingLogoWhite from '~/components/branding/logo/white.vue'
 
 enum NameState {
   TYPING_TAG,
@@ -27,26 +24,40 @@ const typerSettings = {
   eraseStyle: 'select-back',
   caretAnimation: 'smooth',
 }
-const glitchSettings: Parameters<typeof write>[2] = {
-  ...presets.neo,
-  glyphs: name,
-}
 
 export default defineComponent({
   name: 'Introduction',
-  components: { BrandingLogoWhite },
-  setup () {
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
+    tag: {
+      type: String,
+      required: true,
+    },
+    titles: {
+      type: Array as ()=> Array<string>,
+      required: true,
+    },
+  },
+  setup (props) {
+    const { name, tag, titles: rawTitles } = toRefs(props)
     const nameState = ref(NameState.TYPING_TAG)
-    const nameTyper = {
+    const nameTyper = reactive({
       tag,
       replaceTag,
-    }
-    const glitchedName = ref(null)
+    })
+    const glitchedName = ref()
     const roleTyper = reactive({
-      titles: titles.map(title => title.toUpperCase()),
+      titles: computed(() => rawTitles.value.map(title => title.toUpperCase())),
       hidden: computed(() => nameState.value === NameState.TYPING_TAG),
       preTypeDelay: ref((nameTyper.tag.length + 10) * 70),
     })
+    const glitchSettings: Parameters<typeof write>[2] = {
+      ...presets.neo,
+      glyphs: name.value,
+    }
 
     function replaceTag () {
       nameState.value = NameState.REPLACE_TAG
@@ -56,12 +67,12 @@ export default defineComponent({
     function replaceName () {
       nameState.value = NameState.REPLACING_NAME
 
-      write(name, glitchedName.value, glitchSettings, undefined, finish)
+      write(name.value, glitchedName.value, glitchSettings, undefined, finish)
     }
     function finish () {
       nameState.value = NameState.REPLACED_NAME
 
-      toRef(roleTyper, 'preTypeDelay').value = typerSettings.preTypeDelay
+      roleTyper.preTypeDelay = typerSettings.preTypeDelay
     }
 
     return {
@@ -84,7 +95,7 @@ export default defineComponent({
   >
     <v-col cols="12" class="layer-content">
       <v-responsive max-width="300px" class="center">
-        <branding-logo-white responsive />
+        <slot name="logo" />
       </v-responsive>
 
       <div class="introduction-name-container">
@@ -94,13 +105,13 @@ export default defineComponent({
             v-bind="typerSettings"
             :text="nameTyper.tag"
             :repeat="0"
-            class="introduction-name-typer break-line"
+            class="introduction-name-typer"
             @completed="nameTyper.replaceTag"
           />
           <span
             v-else
             ref="glitchedName"
-            class="introduction-name break-line"
+            class="introduction-name"
           >{{ nameTyper.tag }}</span>
         </client-only>
       </div>
@@ -126,17 +137,6 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-.center {
-  margin: auto;
-}
-
-.break-line {
-  &::after {
-    content: "\a";
-    white-space: pre;
-  }
-}
-
 .introduction-typer {
   &.vue-typer .custom.char {
     color: #fff;

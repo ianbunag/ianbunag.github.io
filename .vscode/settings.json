@@ -1,0 +1,22 @@
+{
+  "vetur.validation.script": true,
+  "vetur.validation.templateProps": true,
+  "vetur.experimental.templateInterpolationService": false,
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.rulers": [80]
+  },
+  "[typescript]": {
+      "editor.tabSize": 2,
+      "editor.rulers": [80]
+  },
+  "[css]": {
+    "editor.tabSize": 2,
+    "editor.rulers": [80]
+  },
+  "[markdown]": {
+    "editor.tabSize": 2,
+    "editor.rulers": [80],
+    "files.trimTrailingWhitespace": false
+  },
+}
