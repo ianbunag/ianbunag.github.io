@@ -11,13 +11,21 @@ import { generate } from './generate'
 export default {
   target: 'static',
   srcDir: 'src',
-  alias: { '~': resolve(__dirname, '../src') },
-  router: { base: '/portfolio/' },
+  alias: {
+    '~': resolve(__dirname, '../src'),
+    '@': resolve(__dirname, '../types'),
+  },
+  router: {
+    base: '/portfolio/',
+  },
   head,
   plugins,
   modules,
   vuetify,
   styleResources,
+  build: {
+    extractCSS: true,
+  },
   buildModules,
   generate,
 }

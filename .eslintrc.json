@@ -135,8 +135,11 @@
   "settings": {
     "import/resolver": {
       "alias": {
-        "map": [["~", "./src"]],
-        "extensions": [".vue", ".js", ".scss"]
+        "map": [
+          ["~", "./src"],
+          ["@", "./types"]
+        ],
+        "extensions": [".vue", ".ts", ".scss"]
       }
     }
   }
