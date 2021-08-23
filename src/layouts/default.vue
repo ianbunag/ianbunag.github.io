@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 
-import { name } from '~/config/profile.json'
+import { name } from '~/config/profile'
 
 export default defineComponent({
   setup () {
@@ -21,9 +21,10 @@ export default defineComponent({
       elevate-on-scroll
       inverted-scroll
       app
+      dense
       class="layer-navigation"
     >
-      <v-toolbar-title class="px-1">
+      <v-toolbar-title>
         {{ name }}
       </v-toolbar-title>
     </v-app-bar>
