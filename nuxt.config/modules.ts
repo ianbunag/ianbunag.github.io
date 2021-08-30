@@ -1,3 +1,1 @@
-export const modules = [
-  '@nuxtjs/style-resources',
-]
+export const modules = ['@nuxtjs/style-resources']

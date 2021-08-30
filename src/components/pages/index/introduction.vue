@@ -37,51 +37,60 @@ export default defineComponent({
       required: true,
     },
     titles: {
-      type: Array as ()=> Array<string>,
+      type: Array as Prop<Array<string>>,
       required: true,
     },
   },
   setup (props) {
     const { name, tag, titles: rawTitles } = toRefs(props)
     const nameState = ref(NameState.TYPING_TAG)
-    const nameTyper = reactive({
-      tag,
-      replaceTag,
-    })
     const glitchedName = ref()
-    const roleTyper = reactive({
-      titles: computed(() => rawTitles.value.map(title => title.toUpperCase())),
-      hidden: computed(() => nameState.value === NameState.TYPING_TAG),
-      preTypeDelay: ref((nameTyper.tag.length + 10) * 70),
-    })
     const glitchSettings: Parameters<typeof write>[2] = {
       ...presets.neo,
       glyphs: name.value,
     }
+    const roleTyper = reactive({
+      titles: computed(() => rawTitles.value.map(title => title.toUpperCase())),
+      hidden: computed(() => nameState.value === NameState.TYPING_TAG),
+      preTypeDelay: ref((tag.value.length + 10) * 70),
+    })
 
-    function replaceTag () {
+    function replaceTag (callback?: ()=> void) {
       nameState.value = NameState.REPLACE_TAG
 
-      setTimeout(replaceName, 2000)
+      if (callback) { callback() }
     }
-    function replaceName () {
+    function replaceName (callback?: ()=> void) {
       nameState.value = NameState.REPLACING_NAME
 
-      write(name.value, glitchedName.value, glitchSettings, undefined, finish)
+      write(name.value, glitchedName.value, glitchSettings, undefined, callback)
     }
-    function finish () {
+    function finishNameTransition () {
       nameState.value = NameState.REPLACED_NAME
 
       roleTyper.preTypeDelay = typerSettings.preTypeDelay
     }
+    function startNameTransition () {
+      const replaceNameCallback = () => setTimeout(
+        () => replaceName(finishNameTransition),
+        2000,
+      )
+
+      replaceTag(replaceNameCallback)
+    }
+
+    const nameTyper = reactive({
+      tag,
+      startNameTransition,
+    })
 
     return {
       NameState,
       nameState,
-      typerSettings,
-      nameTyper,
       glitchedName,
+      typerSettings,
       roleTyper,
+      nameTyper,
     }
   },
 })
@@ -106,7 +115,7 @@ export default defineComponent({
             :text="nameTyper.tag"
             :repeat="0"
             class="introduction-name-typer"
-            @completed="nameTyper.replaceTag"
+            @completed="nameTyper.startNameTransition"
           />
           <span
             v-else

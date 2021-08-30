@@ -1,0 +1,24 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.center {
+  margin: auto;
+}
+
+.margin-less {
+  margin: 0 !important;
+}
+
+.padding-less {
+  padding: 0 !important;
+}
+
+.bound-less {
+  @extend .margin-less;
+  @extend .padding-less;
+}

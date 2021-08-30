@@ -24,6 +24,7 @@
       "@nuxt/types",
       "@nuxtjs/vuetify",
       "@types/node",
+      "webpack-env",
       "types/**/*"
     ]
   },

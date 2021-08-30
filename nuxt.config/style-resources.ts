@@ -1,3 +1,3 @@
 export const styleResources = {
-  scss: ['./assets/styles/global/*.scss'],
+  scss: ['~/assets/styles/variables/*.scss'],
 }

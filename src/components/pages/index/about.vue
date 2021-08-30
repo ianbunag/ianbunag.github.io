@@ -1,27 +1,22 @@
 <script lang = "ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 
-import { technologies } from '~/config/technologies'
-import TechnologyList from '~/components/technology-list.vue'
+import { getIcon } from '~/config/icons'
+import TechnologyList from '~/components/technology/list.vue'
 
-import type { Skills } from '@/config/profile'
-import type { Technology } from '@/config/technologies'
+import type { ProfileSkills } from '~/config/profile/skills'
 
 export default defineComponent({
   name: 'About',
   components: { TechnologyList },
   props: {
     skills: {
-      type: Array as ()=> Skills<typeof technologies>,
+      type: Array as Prop<ProfileSkills>,
       required: true,
     },
   },
   setup () {
-    function getTechnology (key: keyof typeof technologies): Technology {
-      return technologies[key]
-    }
-
-    return { getTechnology }
+    return { getIcon }
   },
 })
 </script>
@@ -32,14 +27,18 @@ export default defineComponent({
     align="center"
     class="section"
   >
-    <v-col cols="12" class="layer-content mt-16 pt-8 pt-md-16">
-      <v-container fluid>
+    <v-col cols="12" class="layer-content bound-less mt-16 mb-8 pt-12 pt-md-16">
+      <v-container class="bound-less" fluid>
         <v-row justify="center" align="center">
           <v-col cols="12" md="10">
-            <slot name="title" />
+            <div class="text-h3 text-center">
+              <slot name="title" />
+            </div>
           </v-col>
           <v-col cols="12" md="10">
-            <slot name="about" />
+            <div class="text-h5 text-center">
+              <slot name="description" />
+            </div>
           </v-col>
         </v-row>
 
@@ -60,7 +59,7 @@ export default defineComponent({
                 >
                   <div class="mt-5 px-4">
                     <v-icon size="60px">
-                      {{ skill.icon }}
+                      {{ getIcon(skill.icon) }}
                     </v-icon>
                   </div>
                   <v-card-title>{{ skill.name }}</v-card-title>
@@ -68,7 +67,9 @@ export default defineComponent({
                   <v-spacer />
                   <v-card-actions>
                     <technology-list
-                      :technologies="skill.technologies.map(getTechnology)"
+                      :technologies="skill.technologies"
+                      justify="end"
+                      class="mb-1"
                     />
                   </v-card-actions>
                 </v-card>
