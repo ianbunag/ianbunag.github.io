@@ -9,8 +9,8 @@ export default { name: 'Experience' }
     class="text-center section"
   >
     <v-col cols="12" class="layer-content">
-      <!-- @TODO Career? -->
-      Experience
+      <!-- __Environments__ that sculpted me to what I am now -->
+      What I've been up to
     </v-col>
     <div class="layer-background">
       <slot name="background" />

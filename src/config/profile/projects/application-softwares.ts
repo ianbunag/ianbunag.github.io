@@ -1,0 +1,130 @@
+import {
+  requireProgressiveImage,
+  LinkName,
+} from '~/config/profile/projects/module'
+
+import type { ProfileProjects } from '~/config/profile/projects/module'
+
+export const applicationSoftwares: ProfileProjects = [
+  {
+    name: '@yvnbunag/dock',
+    period: 'July 2021',
+    tags: [
+      'CLI',
+      'BDD',
+      'TDD',
+      'TypeScript',
+      'docker',
+      'docker-compose',
+      'dock',
+      'npm',
+      'software',
+      'application',
+      'completion',
+    ],
+    description: 'CLI tool to help manage and consume development environments containerized with docker.',
+    images: [
+      './assets/images/projects/dock/root-help.png',
+      './assets/images/projects/dock/projects.png',
+      './assets/images/projects/dock/build.png',
+      './assets/images/projects/dock/root-command.png',
+      './assets/images/projects/dock/open.png',
+      './assets/images/projects/dock/run.png',
+      './assets/images/projects/dock/mode.png',
+    ].map(requireProgressiveImage),
+    technologies: [
+      'typescript',
+      'jest',
+      'webpack',
+      'node-js',
+      'docker',
+      'npm',
+      'gitlab',
+    ],
+    featured: true,
+    secondaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      icon: 'mdiGitlab',
+      link: process.env.DOCK_REPOSITORY,
+    },
+    primaryLink: {
+      text: LinkName.TRY_ME,
+      icon: 'mdiConsole',
+      link: process.env.DOCK_NPM_URL,
+    },
+  },
+  {
+    name: 'Simple Calculator',
+    period: 'October 2015',
+    tags: [
+      'software',
+      'application',
+      'university',
+      'programming',
+    ],
+    description: 'University project application to compute basic arithmetic operations. Includes type or click input, clear, value negation and system message.',
+    images: [
+      './assets/images/projects/simple-calculator/initial.png',
+      './assets/images/projects/simple-calculator/input.png',
+      './assets/images/projects/simple-calculator/solve.png',
+      './assets/images/projects/simple-calculator/delete.png',
+      './assets/images/projects/simple-calculator/clear.png',
+    ].map(requireProgressiveImage),
+    technologies: ['java'],
+    secondaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      icon: 'mdiGitlab',
+      link: process.env.SIMPLE_CALCULATOR_REPOSITORY,
+    },
+  },
+  {
+    name: 'Simple Circuit Calculator',
+    period: 'October 2015',
+    tags: [
+      'software',
+      'application',
+      'university',
+      'physics',
+    ],
+    description: 'University project application to compute for the total of a simple series or parallel circuit based on the Ohm’s Law Physics equation. Includes auto-fill for missing and constant variables.',
+    images: [
+      './assets/images/projects/simple-circuit-calculator/initial.png',
+      './assets/images/projects/simple-circuit-calculator/series-constant-auto-solve.png',
+      './assets/images/projects/simple-circuit-calculator/series-missing-variable-auto-solve.png',
+      './assets/images/projects/simple-circuit-calculator/series-remaining-variable-auto-solve.png',
+      './assets/images/projects/simple-circuit-calculator/series-total.png',
+      './assets/images/projects/simple-circuit-calculator/parallel-missing-variable-auto-solve.png',
+      './assets/images/projects/simple-circuit-calculator/parallel-remaining-variable-auto-solve.png',
+      './assets/images/projects/simple-circuit-calculator/parallel-total.png',
+    ].map(requireProgressiveImage),
+    technologies: ['java'],
+    secondaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      icon: 'mdiGitlab',
+      link: process.env.SIMPLE_CIRCUIT_CALCULATOR_REPOSITORY,
+    },
+  },
+  {
+    name: `Ohm's Law Calculator`,
+    period: 'October 2015',
+    tags: [
+      'software',
+      'application',
+      'university',
+      'physics',
+    ],
+    description: `University project application to compute for one of Voltage (V), Ampere (I) or Resistance (Ω) based on the Ohm’s Law Physics equation.`,
+    images: [
+      './assets/images/projects/ohms-law-calculator/initial.png',
+      './assets/images/projects/ohms-law-calculator/calculate-voltage.png',
+      './assets/images/projects/ohms-law-calculator/calculate-ampere.png',
+      './assets/images/projects/ohms-law-calculator/calculate-resistance.png',
+    ].map(requireProgressiveImage),
+    technologies: ['java'],
+    secondaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      icon: 'mdiGitlab',
+      link: process.env.OHMS_LAW_CALCULATOR_REPOSITORY,
+    },
+  },
+]

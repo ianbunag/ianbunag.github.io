@@ -1,6 +1,8 @@
 .section {
   position: relative;
   min-height: 100vh;
+  padding-left: 24px; // equivalent to Vuetify utility class pl-6
+  padding-right: 24px; // equivalent to Vuetify utility class pr-6
 }
 
 @mixin section-background-color($color: #000) {

@@ -64,6 +64,14 @@
       "error",
       { "allowAllPropertiesOnSameLine": true }
     ],
+    "array-element-newline": ["error", "consistent"],
+    "array-bracket-newline": [
+      "error",
+      {
+        "multiline": true,
+        "minItems": null
+      }
+    ],
     "comma-dangle": ["error", "always-multiline"],
     "vue/max-len": [
       "error", {
@@ -73,7 +81,8 @@
         "ignoreStrings": true,
         "ignoreTemplateLiterals": true,
         "ignoreHTMLAttributeValues": true,
-        "ignoreHTMLTextContents": true
+        "ignoreHTMLTextContents": true,
+        "ignoreUrls": true
       }
     ],
     "@typescript-eslint/type-annotation-spacing": [
@@ -102,7 +111,8 @@
       },
       {
         "selector": "variableLike",
-        "format": ["camelCase", "UPPER_CASE"]
+        "format": ["camelCase", "UPPER_CASE"],
+        "leadingUnderscore": "allow"
       },
       {
         "selector": "variable",
