@@ -4,7 +4,7 @@ export const head = {
 
     if (!titleChunk || titleChunk === name) { return name }
 
-    return `${titleChunk} - ${name}`
+    return `${titleChunk} | ${name}`
   },
   htmlAttrs: { lang: 'en' },
   meta: [
