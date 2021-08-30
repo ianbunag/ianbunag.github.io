@@ -3,13 +3,21 @@
 }
 
 .layer-background {
-  @include layer(100);
+  @include layer($layer-background);
 }
 
 .layer-content {
-  @include layer(1000);
+  @include layer($layer-content);
 }
 
 .layer-navigation {
-  @include layer(10000);
+  @include layer($layer-navigation);
+}
+
+.layer-navigation-1 {
+  @include layer($layer-navigation-1);
+}
+
+.layer-modal {
+  @include layer($layer-modal);
 }

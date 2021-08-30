@@ -1,14 +1,35 @@
 import colors from 'vuetify/es5/util/colors'
 
-import * as icons from '~/components/icons'
+import * as customIconComponents from '~/components/icons'
+import BrandingLogoIcon from '~/components/branding/logo/icon.vue'
 
-const iconsMap = Object.fromEntries(
-  Object.entries(icons).map(([name, component]) => [name, { component }]),
-)
+export const pluggedIcons = (() => {
+  type CustomIconComponents = typeof customIconComponents
+  type CustomIconKey = keyof CustomIconComponents
+  type CustomIcon = CustomIconComponents[CustomIconKey]
+  type CustomIcons = Record<CustomIconKey, CustomIcon>
 
-// @TODO theme
+  const entries =
+    Object.entries(customIconComponents) as Array<[CustomIconKey, CustomIcon]>
+  const customIcons: CustomIcons = entries.reduce(
+    (accumulated, [key, component]) => ({
+      ...accumulated,
+      [key]: { component },
+    }),
+    {} as CustomIcons,
+  )
+
+  return {
+    ...customIcons,
+    brandLogo: { component: BrandingLogoIcon },
+  }
+})()
+
 export default {
-  icons: { values: iconsMap },
+  icons: {
+    iconfont: 'mdiSvg',
+    values: pluggedIcons,
+  },
   theme: {
     dark: true,
     themes: {
