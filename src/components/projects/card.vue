@@ -4,7 +4,21 @@ import { defineComponent } from '@nuxtjs/composition-api'
 import Tags from '~/components/tags.vue'
 import ImagePreview from '~/components/image/preview.vue'
 
+import type { ThumbnailMaxHeight } from '~/components/image/preview.vue'
 import type { ProfileProject } from '~/config/profile/projects'
+
+export interface ThumbnailOptions {
+  maxHeight: ThumbnailMaxHeight,
+}
+
+export const thumbnailOptions = {
+  props: {
+    thumbnail: {
+      type: Object as Prop<ThumbnailOptions>,
+      default: () => ({}),
+    },
+  },
+}
 
 export default defineComponent({
   name: 'ProjectCard',
@@ -12,6 +26,7 @@ export default defineComponent({
     Tags,
     ImagePreview,
   },
+  mixins: [thumbnailOptions],
   props: {
     project: {
       type: Object as Prop<ProfileProject>,
@@ -30,7 +45,10 @@ export default defineComponent({
         ripple
         @click="(event) => $emit('click', event)"
       >
-        <image-preview :src="project.images[0] || ''" />
+        <image-preview
+          :src="project.images[0] || ''"
+          :max-height="thumbnail.maxHeight"
+        />
         <v-card-title>{{ project.name }}</v-card-title>
         <v-card-subtitle class="text-left pt-1">
           {{ project.period }}

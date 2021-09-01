@@ -56,6 +56,7 @@ function includesInsensitive (target: Array<string>) {
 }
 
 export default defineComponent({
+  name: 'PageProjects',
   components: { ProjectsShowcase },
   layout: 'independent',
   setup () {
@@ -83,12 +84,12 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="mt-2">
+  <div class="mt-3">
     <v-card>
       <v-card-title class="text-center justify-center">
-        <div class="font-weight-bold text-h3 text-md-h2">
+        <span class="font-weight-bold text-h3 text-md-h2">
           Projects
-        </div>
+        </span>
       </v-card-title>
 
       <v-tabs

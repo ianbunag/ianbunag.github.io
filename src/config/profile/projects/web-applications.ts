@@ -69,14 +69,14 @@ export const webApplications: ProfileProjects = [
       ],
       description: `University project turned proof-of-concept for ${dockLink}. Features resource borrowing, resource management and email notification.`,
       images: [
-        './assets/images/projects/library-system/printed-resources.png',
-        './assets/images/projects/library-system/login-page.png',
-        './assets/images/projects/library-system/home-page.png',
-        './assets/images/projects/library-system/borrow-queue.png',
-        './assets/images/projects/library-system/borrow-history.png',
-        './assets/images/projects/library-system/digital-items.png',
-        './assets/images/projects/library-system/resource-management.png',
-        './assets/images/projects/library-system/borrow-management.png',
+        './assets/images/projects/library-system/printed-resources.jpg',
+        './assets/images/projects/library-system/login-page.jpg',
+        './assets/images/projects/library-system/home-page.jpg',
+        './assets/images/projects/library-system/borrow-queue.jpg',
+        './assets/images/projects/library-system/borrow-history.jpg',
+        './assets/images/projects/library-system/digital-items.jpg',
+        './assets/images/projects/library-system/resource-management.jpg',
+        './assets/images/projects/library-system/borrow-management.jpg',
       ].map(requireProgressiveImage),
       technologies: [
         'nuxt',
@@ -142,8 +142,8 @@ export const webApplications: ProfileProjects = [
       ],
       description,
       images: [
-        './assets/images/projects/change-onesimo-foundation-inc/web-page.png',
-        './assets/images/projects/change-onesimo-foundation-inc/poster.png',
+        './assets/images/projects/change-onesimo-foundation-inc/web-page.jpg',
+        './assets/images/projects/change-onesimo-foundation-inc/poster.jpg',
       ].map(requireProgressiveImage),
       technologies: [
         'php',
@@ -255,7 +255,7 @@ export const webApplications: ProfileProjects = [
         'freelance',
       ],
       description: `Promotional website for ${casaBurgos}, featuring: ${features}`,
-      images: [requireProgressiveImage('./assets/images/projects/creative-events-by-casa-burgos/landing-section.png')],
+      images: [requireProgressiveImage('./assets/images/projects/creative-events-by-casa-burgos/landing-section.jpg')],
       technologies: [
         'php',
         'html',

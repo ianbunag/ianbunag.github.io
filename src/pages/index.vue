@@ -6,23 +6,28 @@ import { profile, icons, pages } from '~/config'
 import Introduction from '~/components/pages/index/introduction.vue'
 import About from '~/components/pages/index/about.vue'
 import Projects from '~/components/pages/index/projects.vue'
-import Skills from '~/components/pages/index/skills.vue'
 import Experience from '~/components/pages/index/experience.vue'
+import Contact from '~/components/pages/index/contact.vue'
 
 import BrandingLogoSolid from '~/components/branding/logo/solid.vue'
 import DividerTiltTopLeft from '~/components/dividers/tilt-top-left.vue'
 import DividerTiltTopRight from '~/components/dividers/tilt-top-right.vue'
+import DividerTriangleTopLeft from '~/components/dividers/triangle-top-right.vue'
+import DividerTriangleTopRight from '~/components/dividers/triangle-top-left.vue'
 
 export default defineComponent({
+  name: 'PageRoot',
   components: {
     Introduction,
     About,
     Projects,
-    Skills,
     Experience,
+    Contact,
     BrandingLogoSolid,
     DividerTiltTopLeft,
     DividerTiltTopRight,
+    DividerTriangleTopLeft,
+    DividerTriangleTopRight,
   },
   layout: 'single-page',
   setup () {
@@ -75,23 +80,20 @@ export default defineComponent({
       class="section-blue-green"
     >
       <template #title>
-        Awesome stuff
+        Some awesome stuff
       </template>
       <template #description>
         Projects that showcase my technical growth over the years.
       </template>
       <template #footer>
-        <div class="text-h5">
-          Got your attention?
-          <v-btn
-            class="secondary mt-0 ml-2"
-            :to="pages.PROJECTS.route"
-            large
-          >
-            See more projects
-            <v-icon>{{ icons.mdiArrowTopRight }}</v-icon>
-          </v-btn>
-        </div>
+        <v-btn
+          class="secondary mt-3"
+          :to="pages.PROJECTS.route"
+          large
+        >
+          See all projects
+          <v-icon>{{ icons.mdiArrowTopRight }}</v-icon>
+        </v-btn>
       </template>
       <template #background>
         <divider-tilt-top-right
@@ -101,21 +103,21 @@ export default defineComponent({
     </projects>
 
     <!-- @TODO remove style -->
-    <skills class="section-light-blue-green" style="color: black;">
+    <experience class="section-light-blue-green" style="color: black;">
       <template #background>
-        <divider-tilt-top-left
+        <divider-triangle-top-right
           class="shape-fill-blue-green elevate-shape-bottom"
         />
       </template>
-    </skills>
+    </experience>
 
-    <experience class="section-dark-slate-gray">
+    <contact>
       <template #background>
-        <divider-tilt-top-left
+        <divider-triangle-top-left
           class="shape-fill-light-blue-green elevate-shape-bottom"
         />
       </template>
-    </experience>
+    </contact>
   </v-container>
 </template>
 
@@ -125,7 +127,7 @@ export default defineComponent({
   .elevate-shape-bottom {
     filter: $shadow;
     -webkit-filter: $shadow;
-    clip-path: inset(-1px -25px -50px -25px);
+    // clip-path: inset(-1px -25px -50px -25px); @TODO evaluate
   }
 </style>
 

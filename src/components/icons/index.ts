@@ -17,6 +17,10 @@ import adobeIllustrator from '~/components/icons/adobe-illustrator.vue'
 import adobePremierPro from '~/components/icons/adobe-premier-pro.vue'
 import adobeAfterEffects from '~/components/icons/adobe-after-effects.vue'
 import adobeAudition from '~/components/icons/adobe-audition.vue'
+import lumen from '~/components/icons/lumen.vue'
+import swagger from '~/components/icons/swagger.vue'
+import pm2 from '~/components/icons/pm2.vue'
+import awsChalice from '~/components/icons/aws-chalice.vue'
 
 export {
   fastify,
@@ -38,4 +42,8 @@ export {
   adobePremierPro,
   adobeAfterEffects,
   adobeAudition,
+  lumen,
+  swagger,
+  pm2,
+  awsChalice,
 }
