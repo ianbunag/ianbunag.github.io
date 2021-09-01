@@ -1,5 +1,20 @@
 html {
   scroll-behavior: smooth;
+  background-color: $dark-slate-gray;
+}
+
+.main {
+  background-color: $dark-slate-gray;
+}
+
+.emphasized-title {
+  text-decoration: underline solid currentColor;
+  text-underline-offset: 2px;
+  border-bottom: 2px dashed currentColor;
+}
+
+.semi-transparent-bg {
+  background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
 .full-height {
@@ -21,4 +36,8 @@ html {
 .bound-less {
   @extend .margin-less;
   @extend .padding-less;
+}
+
+.absolute {
+  position: absolute;
 }

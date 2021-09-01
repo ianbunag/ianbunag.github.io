@@ -11,7 +11,7 @@ export default defineComponent({
 <template>
   <v-app dark>
     <app-bar />
-    <v-main>
+    <v-main class="main">
       <Nuxt />
     </v-main>
     <app-footer fixed />

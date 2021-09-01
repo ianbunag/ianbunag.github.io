@@ -21,7 +21,7 @@ export default defineComponent({
 
 <template>
   <v-footer
-    class="layer-navigation px-6"
+    class="layer-navigation semi-transparent-bg px-6"
     :absolute="!fixed"
     app
   >

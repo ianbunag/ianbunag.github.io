@@ -17,10 +17,10 @@ export const threeDimensionDesign: ProfileProjects = [
     ],
     description: '3D animation of a wine being poured into a wine glass.',
     images: [
-      './assets/images/projects/wine/wine-1.png',
-      './assets/images/projects/wine/wine-2.png',
-      './assets/images/projects/wine/wine-3.png',
-      './assets/images/projects/wine/wine-4.png',
+      './assets/images/projects/wine/wine-1.jpg',
+      './assets/images/projects/wine/wine-2.jpg',
+      './assets/images/projects/wine/wine-3.jpg',
+      './assets/images/projects/wine/wine-4.jpg',
     ].map(requireProgressiveImage),
     technologies: [
       'autodesk-maya',
@@ -43,10 +43,10 @@ export const threeDimensionDesign: ProfileProjects = [
     ],
     description: '3D animation of a plasma globe.',
     images: [
-      './assets/images/projects/plasma/plasma-1.png',
-      './assets/images/projects/plasma/plasma-2.png',
-      './assets/images/projects/plasma/plasma-3.png',
-      './assets/images/projects/plasma/plasma-4.png',
+      './assets/images/projects/plasma/plasma-1.jpg',
+      './assets/images/projects/plasma/plasma-2.jpg',
+      './assets/images/projects/plasma/plasma-3.jpg',
+      './assets/images/projects/plasma/plasma-4.jpg',
     ].map(requireProgressiveImage),
     technologies: [
       'autodesk-maya',
@@ -69,10 +69,10 @@ export const threeDimensionDesign: ProfileProjects = [
     ],
     description: '3D animation of a thunderstorm.',
     images: [
-      './assets/images/projects/rain/rain-1.png',
-      './assets/images/projects/rain/rain-2.png',
-      './assets/images/projects/rain/rain-3.png',
-      './assets/images/projects/rain/rain-4.png',
+      './assets/images/projects/rain/rain-1.jpg',
+      './assets/images/projects/rain/rain-2.jpg',
+      './assets/images/projects/rain/rain-3.jpg',
+      './assets/images/projects/rain/rain-4.jpg',
     ].map(requireProgressiveImage),
     technologies: [
       'autodesk-maya',
@@ -94,7 +94,7 @@ export const threeDimensionDesign: ProfileProjects = [
       'university',
     ],
     description: 'Semi-realistic 3D model of a tank in snowy terrain.',
-    images: [requireProgressiveImage('./assets/images/projects/snow-leopard/snow-leopard.png')],
+    images: [requireProgressiveImage('./assets/images/projects/snow-leopard/snow-leopard.jpg')],
     technologies: [
       'autodesk-maya',
       'adobe-photoshop',

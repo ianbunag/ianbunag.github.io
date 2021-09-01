@@ -1,5 +1,6 @@
 export const build = {
-  extractCSS: true,
+  extractCSS: { ignoreOrder: true },
+  postcss: { plugins: { cssnano: {} } },
   transpile: [
     /**
      * Transpile Vuetify components imported from source.

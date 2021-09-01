@@ -26,9 +26,9 @@ export const graphicsDesign: ProfileProjects = [
       ],
       description: `Banner Designs for ${keywestInternationaleSales}.`,
       images: [
-        './assets/images/projects/keywest-internationale/banners/perler-beads.png',
-        './assets/images/projects/keywest-internationale/banners/thinking-putty.png',
-        './assets/images/projects/keywest-internationale/banners/itty-bitty-boo.png',
+        './assets/images/projects/keywest-internationale/banners/perler-beads.jpg',
+        './assets/images/projects/keywest-internationale/banners/thinking-putty.jpg',
+        './assets/images/projects/keywest-internationale/banners/itty-bitty-boo.jpg',
       ].map(requireProgressiveImage),
       technologies: [
         'adobe-photoshop',
@@ -53,9 +53,9 @@ export const graphicsDesign: ProfileProjects = [
       ],
       description: `Banner Designs for ${cranePhilippines}.`,
       images: [
-        './assets/images/projects/crane-philippines/banners/humidifier-liquids.png',
-        './assets/images/projects/crane-philippines/banners/oscillating-tower-fan.png',
-        './assets/images/projects/crane-philippines/banners/travel-humidifier.png',
+        './assets/images/projects/crane-philippines/banners/humidifier-liquids.jpg',
+        './assets/images/projects/crane-philippines/banners/oscillating-tower-fan.jpg',
+        './assets/images/projects/crane-philippines/banners/travel-humidifier.jpg',
       ].map(requireProgressiveImage),
       technologies: [
         'adobe-photoshop',
@@ -106,7 +106,7 @@ export const graphicsDesign: ProfileProjects = [
         'internship',
       ],
       description: `Sticker design for the Mitsubishi L300 van of ${keywestInternationaleSales}.`,
-      images: [requireProgressiveImage('./assets/images/projects/keywest-internationale/stickers/mitsubishi-L300.png')],
+      images: [requireProgressiveImage('./assets/images/projects/keywest-internationale/stickers/mitsubishi-L300.jpg')],
       technologies: [
         'adobe-photoshop',
         'adobe-illustrator',
