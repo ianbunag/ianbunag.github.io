@@ -54,7 +54,11 @@ export default defineComponent({
         </v-row>
         <v-row justify="center" align="center">
           <v-col cols="12">
-            <projects-showcase :projects="featuredProjects" />
+            <projects-showcase
+              :projects="featuredProjects"
+              :thumbnail="{ maxHeight: { desktop: '200px' } }"
+              justify="center"
+            />
           </v-col>
         </v-row>
         <v-row justify="center" align="center">

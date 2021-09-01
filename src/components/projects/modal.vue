@@ -9,7 +9,7 @@ import {
 import { useBreakPoints } from '~/lib/hooks'
 import { getIcon } from '~/config/icons'
 import Tags from '~/components/tags.vue'
-import TechnologyList from '~/components/technology/list.vue'
+import TechnologyIconList from '~/components/technology/icon-list.vue'
 import ImageLoader from '~/components/image/loader.vue'
 import ResponsiveContainer from '~/components/wrappers/responsive-container.vue'
 
@@ -19,7 +19,7 @@ export default defineComponent({
   name: 'ProjectModal',
   components: {
     Tags,
-    TechnologyList,
+    TechnologyIconList,
     ImageLoader,
     ResponsiveContainer,
   },
@@ -70,6 +70,7 @@ export default defineComponent({
     v-model="active"
     :width="isMobile ? undefined : '70vw'"
     :content-class="contentClass"
+    class="projects-showcase-dialog-container"
   >
     <v-card>
       <v-btn
@@ -137,7 +138,7 @@ export default defineComponent({
         </div>
         <div class="mt-3">
           <span class="text-overline">Tech</span>
-          <technology-list
+          <technology-icon-list
             :technologies="project.technologies"
             class="pt-1"
           />
@@ -188,6 +189,10 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
+  .projects-showcase-dialog-container {
+    z-index: $layer-modal;
+  }
+
   .absolute {
     z-index: $layer-modal;
     position: absolute;

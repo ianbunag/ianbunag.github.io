@@ -49,9 +49,11 @@ build:
   dependencies:
     - prepare
   before_script:
+    - (cd /bin && mv gzip gzip-busybox.bak && apk add --update gzip)
     - yarn --prefer-offline
   script:
     - yarn generate
+    - gzip -k -9 -r public
   artifacts:
     name: $CI_JOB_NAME-ARTIFACTS
     expire_in: 10 mins

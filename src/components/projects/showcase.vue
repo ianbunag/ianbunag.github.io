@@ -8,7 +8,7 @@ import {
 } from '@nuxtjs/composition-api'
 
 import ProjectModal from '~/components/projects/modal.vue'
-import ProjectCard from '~/components/projects/card.vue'
+import ProjectCard, { thumbnailOptions } from '~/components/projects/card.vue'
 
 import type {
   ProfileProject,
@@ -51,6 +51,7 @@ export default defineComponent({
     ProjectModal,
     ProjectCard,
   },
+  mixins: [thumbnailOptions],
   props: {
     projects: {
       type: Array as Prop<ProfileProjects>,
@@ -67,6 +68,10 @@ export default defineComponent({
     ascending: {
       type: Boolean,
       default: false,
+    },
+    justify: {
+      type: String,
+      default: undefined,
     },
   },
   setup (props) {
@@ -102,18 +107,20 @@ export default defineComponent({
 
 <template>
   <v-container class="px-0" fluid>
-    <v-row>
+    <v-row :justify="justify">
       <v-fade-transition
         v-for="(project, index) in formattedProjects"
         :key="project.name"
       >
         <v-col
           cols="12"
+          sm="6"
           md="4"
           align-self="stretch"
         >
           <project-card
             :project="project"
+            :thumbnail="thumbnail"
             @click.stop="modal.open(index)"
           />
         </v-col>

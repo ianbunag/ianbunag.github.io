@@ -4,6 +4,11 @@ import { defineComponent, toRefs, computed } from '@nuxtjs/composition-api'
 import { useBreakPoints } from '~/lib/hooks'
 import ImageLoader from '~/components/image/loader.vue'
 
+export interface ThumbnailMaxHeight {
+  desktop: string,
+  mobile: string,
+}
+
 export default defineComponent({
   name: 'ImagePreview',
   components: { ImageLoader },
@@ -13,7 +18,7 @@ export default defineComponent({
       required: true,
     },
     maxHeight: {
-      type: Object as Prop<{ desktop: string, mobile: string }>,
+      type: Object as Prop<ThumbnailMaxHeight>,
       default: () => ({}),
     },
   },
