@@ -17,5 +17,9 @@ export const head = {
     },
     { name: 'format-detection', content: 'telephone=no' },
   ],
-  link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
+  link: [
+    { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
+    //  See https://web.dev/uses-rel-preconnect/?utm_source=lighthouse&utm_medium=devtools
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+  ],
 }

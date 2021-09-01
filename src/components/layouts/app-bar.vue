@@ -35,8 +35,7 @@ export default defineComponent({
   <div>
     <v-app-bar
       :inverted-scroll="invertedScroll"
-      class="layer-navigation px-2"
-      color="rgba(0, 0, 0, 0.3)"
+      class="layer-navigation semi-transparent-bg px-2"
       elevation="0"
       collapse
       dense

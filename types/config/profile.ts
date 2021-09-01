@@ -44,3 +44,14 @@ export type Projects<
   IconMap extends IconMapBase = IconMapBase,
   TechnologyMap extends TechnologyMapBase = TechnologyMapBase,
 > = Array<Project<IconMap, TechnologyMap>>
+
+export interface TechStack<
+  TechnologyMap extends TechnologyMapBase = TechnologyMapBase,
+> {
+  category: string,
+  technologies: Array<keyof TechnologyMap>,
+}
+
+export type TechStacks<
+  TechnologyMap extends TechnologyMapBase = TechnologyMapBase,
+> = Array<TechStack<TechnologyMap>>

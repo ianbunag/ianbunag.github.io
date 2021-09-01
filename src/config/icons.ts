@@ -32,6 +32,8 @@ import {
   mdiYoutube,
   mdiLanguageHtml5,
   mdiLanguageJavascript,
+  mdiFlashCircle,
+  mdiLanguageMarkdownOutline,
 } from '@mdi/js'
 
 import { pluggedIcons } from '~/plugins/vuetify'
@@ -88,6 +90,8 @@ export const mdi = defineIconMap({
   mdiYoutube,
   mdiLanguageHtml5,
   mdiLanguageJavascript,
+  mdiFlashCircle,
+  mdiLanguageMarkdownOutline,
 })
 
 export const custom: CustomIcons = (() => {

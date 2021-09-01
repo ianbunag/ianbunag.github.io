@@ -58,7 +58,7 @@ export default { name: 'BrandingLogoIcon' }
   </svg>
 </template>
 
-<style>
+<style scoped>
 .branding-logo-icon {
   fill: currentColor;
 }

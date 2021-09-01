@@ -2,13 +2,13 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 
 import { getIcon } from '~/config/icons'
-import TechnologyList from '~/components/technology/list.vue'
+import TechnologyIconList from '~/components/technology/icon-list.vue'
 
 import type { ProfileSkills } from '~/config/profile/skills'
 
 export default defineComponent({
   name: 'About',
-  components: { TechnologyList },
+  components: { TechnologyIconList },
   props: {
     skills: {
       type: Array as Prop<ProfileSkills>,
@@ -42,12 +42,13 @@ export default defineComponent({
           </v-col>
         </v-row>
 
-        <v-row>
+        <v-row justify="center">
           <v-col
             v-for="skill in skills"
             :key="skill.name"
             :order="skill.order"
             cols="12"
+            sm="6"
             md="4"
             align-self="stretch"
           >
@@ -66,7 +67,7 @@ export default defineComponent({
                   <v-card-text>{{ skill.description }}</v-card-text>
                   <v-spacer />
                   <v-card-actions>
-                    <technology-list
+                    <technology-icon-list
                       :technologies="skill.technologies"
                       justify="end"
                       class="mb-1"
