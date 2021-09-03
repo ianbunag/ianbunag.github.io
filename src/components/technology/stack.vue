@@ -40,8 +40,9 @@ export default defineComponent({
       <v-card
         :href="url || undefined"
         :target="url ? '_blank' : undefined"
-        :rel="url ? 'noreferrer nofollow' : undefined"
+        :rel="url ? 'noopener noreferrer' : undefined"
         :elevation="hover ? 8 : 4"
+        class="transition-swing"
       >
         <table>
           <tr>
@@ -59,9 +60,9 @@ export default defineComponent({
                   <v-row
                     align="center"
                     justify="center"
-                    class="full-height margin-less faded"
+                    class="g-full-height g-margin-less g-fade-35"
                   >
-                    <v-icon size="100%" class="absolute">
+                    <v-icon size="100%" class="g-absolute">
                       {{ icon || icons.mdiFlashCircle }}
                     </v-icon>
                   </v-row>
@@ -69,7 +70,7 @@ export default defineComponent({
               </v-img>
             </td>
             <td>
-              <v-card-title class="pt-0 px-0">
+              <v-card-title class="pt-0 px-0 g-text-pair ">
                 {{ display }}
               </v-card-title>
               <v-card-subtitle class="text-body-2 pb-0 px-0">
@@ -82,9 +83,3 @@ export default defineComponent({
     </template>
   </v-hover>
 </template>
-
-<style scoped>
-  .faded {
-    opacity: 0.35;
-  }
-</style>

@@ -35,7 +35,7 @@ export default defineComponent({
   <div>
     <v-app-bar
       :inverted-scroll="invertedScroll"
-      class="layer-navigation semi-transparent-bg px-2"
+      class="px-2 g-layer-navigation g-semi-transparent-bg"
       elevation="0"
       collapse
       dense
@@ -49,13 +49,13 @@ export default defineComponent({
 
     <v-navigation-drawer
       v-model="appBar.drawer"
-      class="layer-navigation-1"
+      class="g-layer-navigation-1"
       temporary
       app
     >
       <v-list nav dense>
         <v-btn
-          class="float-right layer-navigation"
+          class="float-right g-layer-navigation"
           aria-label="close-drawer"
           icon
           large
@@ -75,7 +75,7 @@ export default defineComponent({
             <v-list-item-title class="text-h6">
               {{ profile. name }}
             </v-list-item-title>
-            <v-list-item-subtitle>
+            <v-list-item-subtitle class="g-text-pair">
               {{ profile.title }}
             </v-list-item-subtitle>
           </v-list-item-content>

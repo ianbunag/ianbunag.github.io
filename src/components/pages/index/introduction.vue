@@ -26,7 +26,7 @@ const typerSettings = {
 }
 
 export default defineComponent({
-  name: 'Introduction',
+  name: 'PageRootIntroduction',
   props: {
     name: {
       type: String,
@@ -102,8 +102,8 @@ export default defineComponent({
     align="center"
     class="text-center section"
   >
-    <v-col cols="12" class="layer-content">
-      <v-responsive max-width="300px" class="center">
+    <v-col cols="12" class="g-layer-content">
+      <v-responsive max-width="300px" class="g-center">
         <slot name="logo" />
       </v-responsive>
 
@@ -125,7 +125,7 @@ export default defineComponent({
         </client-only>
       </div>
 
-      <div class="introduction-role-container">
+      <div class="introduction-role-container g-text-pair">
         <client-only>
           <vue-typer
             v-bind="typerSettings"
@@ -139,24 +139,26 @@ export default defineComponent({
         </client-only>
       </div>
     </v-col>
-    <div class="layer-background">
+    <div class="g-layer-background">
       <slot name="background" />
     </div>
   </v-row>
 </template>
 
 <style lang="scss" scoped>
+@import '~/assets/styles/vuetify/overrides.scss';
+
 .introduction-typer {
   &.vue-typer .custom.char {
-    color: #fff;
+    color: $dark-theme-color;
   }
 
   &.vue-typer .custom.char.selected {
-    background-color: $sub-secondary;
+    background-color: $selection-color;
   }
 
   &.vue-typer .custom.caret {
-    background-color: #fff;
+    background-color: $dark-theme-color;
   }
 }
 

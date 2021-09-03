@@ -19,7 +19,7 @@ export default defineComponent({
     <div
       v-for="tag of tags"
       :key="tag"
-      class="tag text-body-2 rounded elevation-8"
+      class="text-body-2 rounded elevation-8 tag"
     >
       <span class="px-2">{{ tag }}</span>
     </div>

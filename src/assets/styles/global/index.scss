@@ -1,43 +1,5 @@
-html {
-  scroll-behavior: smooth;
-  background-color: $dark-slate-gray;
-}
-
-.main {
-  background-color: $dark-slate-gray;
-}
-
-.emphasized-title {
-  text-decoration: underline solid currentColor;
-  text-underline-offset: 2px;
-  border-bottom: 2px dashed currentColor;
-}
-
-.semi-transparent-bg {
-  background-color: rgba(0, 0, 0, 0.4) !important;
-}
-
-.full-height {
-  height: 100%;
-}
-
-.center {
-  margin: auto;
-}
-
-.margin-less {
-  margin: 0 !important;
-}
-
-.padding-less {
-  padding: 0 !important;
-}
-
-.bound-less {
-  @extend .margin-less;
-  @extend .padding-less;
-}
-
-.absolute {
-  position: absolute;
-}
+@import '~/assets/styles/global/general.scss';
+@import '~/assets/styles/global/text.scss';
+@import '~/assets/styles/global/layers.scss';
+@import '~/assets/styles/global/boundaries.scss';
+@import '~/assets/styles/vuetify/overrides.scss';
