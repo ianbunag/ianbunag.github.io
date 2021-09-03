@@ -87,12 +87,13 @@ export default defineComponent({
   <div class="mt-3">
     <v-card>
       <v-card-title class="text-center justify-center">
-        <span class="font-weight-bold text-h3 text-md-h2">
+        <span class="text-h3 text-md-h2 g-text-pair">
           Projects
         </span>
       </v-card-title>
 
       <v-tabs
+        color="accent"
         icons-and-text
         center-active
         show-arrows

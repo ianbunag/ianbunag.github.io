@@ -1,14 +1,12 @@
-import {
-  requireProgressiveImage,
-  LinkName,
-} from '~/config/profile/projects/module'
+import { LinkName } from '~/config/profile/projects/module'
+import { requireProgressiveImage } from '~/config/module'
 
 import type { ProfileProjects } from '~/config/profile/projects/module'
 
 export const threeDimensionDesign: ProfileProjects = [
   {
     name: 'Wine',
-    period: 'February 2017',
+    period: '2017 February',
     tags: [
       '3D',
       'design',
@@ -34,7 +32,7 @@ export const threeDimensionDesign: ProfileProjects = [
   },
   {
     name: 'Plasma',
-    period: 'February 2017',
+    period: '2017 February',
     tags: [
       '3D',
       'design',
@@ -60,7 +58,7 @@ export const threeDimensionDesign: ProfileProjects = [
   },
   {
     name: 'Rain',
-    period: 'December 2016',
+    period: '2016 December',
     tags: [
       '3D',
       'design',
@@ -86,7 +84,7 @@ export const threeDimensionDesign: ProfileProjects = [
   },
   {
     name: 'Snow Leopard',
-    period: 'May 2016',
+    period: '2016 May',
     tags: [
       '3D',
       'design',
@@ -102,7 +100,7 @@ export const threeDimensionDesign: ProfileProjects = [
   },
   {
     name: `Corey's Bedroom`,
-    period: 'April 2016',
+    period: '2016 April',
     tags: [
       '3D',
       'design',

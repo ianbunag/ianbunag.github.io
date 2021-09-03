@@ -1,5 +1,5 @@
 <script lang = "ts">
-export default { name: 'Contact' }
+export default { name: 'PageRootContact' }
 </script>
 
 <template>
@@ -8,14 +8,14 @@ export default { name: 'Contact' }
     align="center"
     class="text-center section"
   >
-    <v-col cols="12" class="layer-content">
+    <v-col cols="12" class="g-layer-content">
       Let's grab some sushi 🍣 </br>
       I would be delighted to get in touch </br>
       <v-btn class="primary">
         Drop me an email
       </v-btn>
     </v-col>
-    <div class="layer-background">
+    <div class="g-layer-background">
       <slot name="background" />
     </div>
   </v-row>

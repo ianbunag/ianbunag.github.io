@@ -11,48 +11,66 @@
   }
 }
 
-.section-light-blue-green {
-  @include section-background-color($light-blue-green);
+.section-background-darker {
+  @include section-background-color($background-darker);
 }
 
-.section-blue-green {
-  @include section-background-color($blue-green);
+.section-background-dark {
+  @include section-background-color($background-dark);
 }
 
-.section-dark-blue-green {
-  @include section-background-color($dark-blue-green);
+.section-background-median {
+  @include section-background-color($background-median);
 }
 
-.section-dark-slate-gray {
-  @include section-background-color($dark-slate-gray);
+.section-background-light {
+  @include section-background-color($background-light);
 }
 
-.section-slate-gray {
-  @include section-background-color($slate-gray);
+.section-background-lighter {
+  @include section-background-color($background-lighter);
 }
 
-@mixin shape-fill($color: #000) {
-  ::v-deep .shape-fill {
-    fill: $color;
+.shape {
+  $shadow: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.65));
+
+  &.elevate-bottom {
+    filter: $shadow;
+    -webkit-filter: $shadow;
+    // clip-path: inset(-1px -25px -50px -25px); @TODO evaluate
   }
-}
 
-.shape-fill-light-blue-green {
-  @include shape-fill($light-blue-green);
-}
+  @mixin shape-fill($color: #000) {
+    ::v-deep .shape-fill {
+      fill: $color;
+    }
+  }
 
-.shape-fill-blue-green {
-  @include shape-fill($blue-green);
-}
+  &.fill-background-darker {
+    @include shape-fill($background-darker);
+  }
 
-.shape-fill-dark-blue-green {
-  @include shape-fill($dark-blue-green);
-}
+  &.fill-background-dark {
+    @include shape-fill($background-dark);
+  }
 
-.shape-fill-dark-slate-gray {
-  @include shape-fill($dark-slate-gray);
-}
+  &.fill-background-median {
+    @include shape-fill($background-median);
+  }
 
-.shape-fill-slate-gray {
-  @include shape-fill($slate-gray);
+  &.fill-background-light {
+    @include shape-fill($background-light);
+  }
+
+  &.fill-background-lighter {
+    @include shape-fill($background-lighter);
+  }
+
+  &.offset-top-10 {
+    top: -10px;
+  }
+
+  &.offset-top-15 {
+    top: -15px;
+  }
 }

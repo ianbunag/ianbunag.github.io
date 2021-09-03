@@ -1,5 +1,6 @@
 import type { IconMap as IconMapBase } from '@/config/icons'
 import type { TechnologyMap as TechnologyMapBase } from '@/config/technologies'
+import type { AssociationMap as AssociationMapBase } from '@/config/associations'
 
 export interface Skill<
   IconMap extends IconMapBase = IconMapBase,
@@ -55,3 +56,22 @@ export interface TechStack<
 export type TechStacks<
   TechnologyMap extends TechnologyMapBase = TechnologyMapBase,
 > = Array<TechStack<TechnologyMap>>
+
+export interface Experience<
+  Type = string,
+  AssociationMap extends AssociationMapBase = AssociationMapBase,
+> {
+  role: string,
+  type: Type,
+  association: keyof AssociationMap,
+  period: {
+    start: string,
+    end?: string,
+  },
+  description: string,
+}
+
+export type Experiences<
+  Type = string,
+  AssociationMap extends AssociationMapBase = AssociationMapBase,
+> = Array<Experience<Type, AssociationMap>>

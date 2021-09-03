@@ -1,5 +1,14 @@
 # src
 
+
+## Colors
+* Primary is based from branding
+* Secondary and accent are based from primary and generated from https://coolors.co/46748a-795663-A2D6F9
+* Rest are Vuetify defaults
+* Background colors from https://visme.co/blog/website-color-schemes/#:~:text=Corporate%20and%20Traditional
+  * See https://swissarmyman.com/
+* @TODO list down colors
+  * https://stackoverflow.com/a/41247934/13235279
 ## Build Setup
 
 ```bash

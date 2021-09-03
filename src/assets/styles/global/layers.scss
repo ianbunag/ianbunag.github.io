@@ -2,22 +2,22 @@
   z-index: $index !important;
 }
 
-.layer-background {
+.g-layer-background {
   @include layer($layer-background);
 }
 
-.layer-content {
+.g-layer-content {
   @include layer($layer-content);
 }
 
-.layer-navigation {
+.g-layer-navigation {
   @include layer($layer-navigation);
 }
 
-.layer-navigation-1 {
+.g-layer-navigation-1 {
   @include layer($layer-navigation-1);
 }
 
-.layer-modal {
+.g-layer-modal {
   @include layer($layer-modal);
 }

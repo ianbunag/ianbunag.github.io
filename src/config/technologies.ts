@@ -1,3 +1,4 @@
+import { createAccessibleLink } from '~/config/module'
 import { getIcon } from '~/config/icons'
 
 import type { ConfigIcons } from '~/config/icons'
@@ -343,4 +344,10 @@ export function getMappedTechnology (
     ...configTechnology,
     icon: getIcon(configTechnology.icon),
   }
+}
+
+export function createTechnologyLink (key: ConfigTechnologyKeys): string {
+  const { display, url = '' } = getTechnology(key) as Technology
+
+  return createAccessibleLink(display, url)
 }

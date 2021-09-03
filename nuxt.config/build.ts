@@ -1,3 +1,7 @@
+import { resolve } from 'path'
+
+import jsonImporter from 'node-sass-json-importer'
+
 export const build = {
   extractCSS: { ignoreOrder: true },
   postcss: { plugins: { cssnano: {} } },
@@ -11,4 +15,17 @@ export const build = {
      */
     'vuetify/lib/components/VGrid',
   ],
+  loaders: {
+    scss: {
+      sassOptions: {
+        importer: jsonImporter({
+          resolver (dir: string, url: string) {
+            return url.startsWith('~/')
+              ? resolve(dir, 'src', url.substr(2))
+              : resolve(dir, url)
+          },
+        }),
+      },
+    },
+  },
 }

@@ -1,5 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 
+import theme from '~/config/theme.json'
 import * as customIconComponents from '~/components/icons'
 import BrandingLogoIcon from '~/components/branding/logo/icon.vue'
 
@@ -34,9 +35,9 @@ export default {
     dark: true,
     themes: {
       dark: {
-        primary: colors.blue.darken2,
-        accent: colors.grey.darken3,
-        secondary: colors.amber.darken3,
+        primary: theme.primary,
+        secondary: theme.secondary,
+        accent: theme.accent,
         info: colors.teal.lighten1,
         warning: colors.amber.base,
         error: colors.deepOrange.accent4,

@@ -28,4 +28,7 @@ export const env = pick(process.env, [
   'RAIN_3D_ANIMATION_LINK',
   'WINE_3D_ANIMATION_LINK',
   'PLASMA_3D_ANIMATION_LINK',
+  'FEU_TECH_LINK',
+  'CODE_NINJA_LINK',
+  'IMPORTGENIUS_LINK',
 ])

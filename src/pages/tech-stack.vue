@@ -18,7 +18,7 @@ export default defineComponent({
 <template>
   <div class="mt-3 mx-0 px-0 mx-md-16 px-md-12 pb-4">
     <div class="text-center justify-center">
-      <span class="emphasized-title font-weight-bold text-h3 text-md-h2">
+      <span class="text-h3 text-md-h2 g-emphasized-title g-text-pair">
         Tech Stack
       </span>
     </div>
