@@ -1,0 +1,24 @@
+$light-theme-color: #1e1e1e;
+$dark-theme-color: #fff;
+
+.v-application {
+  .g-text-light {
+    color: $light-theme-color;
+  }
+
+  & .g-text-pair {
+    @extend .g-text-pair;
+  }
+
+  & .g-text-pair-accent {
+    @extend .g-text-pair-accent;
+  }
+
+  & .g-timeline-path-light {
+    &.v-timeline {
+      &::before {
+        background: $light-theme-color;
+      }
+    }
+  }
+}

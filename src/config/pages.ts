@@ -20,14 +20,14 @@ export const pages = definePageMap({
     route: '/',
     icon: icons.mdiHome,
   },
-  PROJECTS: {
-    name: 'Projects',
-    route: '/projects/',
-    icon: icons.mdiLightbulbOnOutline,
-  },
   TECH_STACK: {
     name: 'Tech Stack',
     route: '/tech-stack/',
     icon: icons.mdiFlashCircle,
+  },
+  PROJECTS: {
+    name: 'Projects',
+    route: '/projects/',
+    icon: icons.mdiLightbulbOnOutline,
   },
 })

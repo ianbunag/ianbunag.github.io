@@ -32,7 +32,7 @@ export default defineComponent({
     return {
       technology: ref(),
       noLink: computed(() => {
-        return toRef(props, 'url').value ? '' : 'no-link'
+        return toRef(props, 'url').value ? '' : 'g-default-cursor'
       }),
     }
   },
@@ -49,7 +49,7 @@ export default defineComponent({
       :href="url || null"
       :aria-label="display"
       :class="[noLink]"
-      rel="noreferrer nofollow"
+      rel="noopener noreferrer"
       target="_blank"
     >
       <v-btn
@@ -63,9 +63,3 @@ export default defineComponent({
     </a>
   </div>
 </template>
-
-<style scoped>
-.no-link {
-  cursor: default !important;
-}
-</style>

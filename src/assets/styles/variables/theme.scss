@@ -1,11 +1,3 @@
-$light-blue-green: #88bdbc;
-$blue-green: #254e58;
-$dark-blue-green: #112d32;
-$dark-slate-gray: #4f4a41;
-$slate-gray: #6e6658;
+@import '~/config/theme.json';
 
-$primary: $light-blue-green;
-$sub-primary: $blue-green;
-$accent: $dark-blue-green;
-$secondary: $slate-gray;
-$sub-secondary: $dark-slate-gray;
+$selection-color: $secondary;

@@ -1,0 +1,36 @@
+html {
+  scroll-behavior: smooth;
+  background-color: $background-median;
+}
+
+::-moz-selection {
+  background: $selection-color;
+}
+
+::selection {
+  background: $selection-color;
+}
+
+.g-main-bg {
+  background-color: $background-median;
+}
+
+.g-semi-transparent-bg {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.g-full-height {
+  height: 100%;
+}
+
+.g-absolute {
+  position: absolute;
+}
+
+.g-default-cursor {
+  cursor: default !important;
+}
+
+.g-fade-35 {
+  opacity: 0.35;
+}

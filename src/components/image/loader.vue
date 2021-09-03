@@ -6,7 +6,7 @@ export default { name: 'ImageLoader' }
   <v-row
     align="center"
     justify="center"
-    class="fill-height margin-less"
+    class="fill-height g-margin-less"
   >
     <v-progress-circular
       aria-label="image-loader"

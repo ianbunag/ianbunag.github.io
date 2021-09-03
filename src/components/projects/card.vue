@@ -12,12 +12,8 @@ export interface ThumbnailOptions {
 }
 
 export const thumbnailOptions = {
-  props: {
-    thumbnail: {
-      type: Object as Prop<ThumbnailOptions>,
-      default: () => ({}),
-    },
-  },
+  type: Object as Prop<ThumbnailOptions>,
+  default: () => ({}),
 }
 
 export default defineComponent({
@@ -26,12 +22,12 @@ export default defineComponent({
     Tags,
     ImagePreview,
   },
-  mixins: [thumbnailOptions],
   props: {
     project: {
       type: Object as Prop<ProfileProject>,
       required: true,
     },
+    thumbnail: thumbnailOptions,
   },
 })
 </script>
@@ -40,7 +36,7 @@ export default defineComponent({
   <v-hover>
     <template #default="{ hover }">
       <v-card
-        class="full-height d-flex flex-column transition-swing"
+        class="d-flex flex-column transition-swing g-full-height"
         :elevation="hover ? 16 : 8"
         ripple
         @click="(event) => $emit('click', event)"
@@ -49,8 +45,10 @@ export default defineComponent({
           :src="project.images[0] || ''"
           :max-height="thumbnail.maxHeight"
         />
-        <v-card-title>{{ project.name }}</v-card-title>
-        <v-card-subtitle class="text-left pt-1">
+        <v-card-title class="g-text-pair">
+          {{ project.name }}
+        </v-card-title>
+        <v-card-subtitle class="text-left pt-1 g-text-pair-accent">
           {{ project.period }}
         </v-card-subtitle>
         <tags :tags="project.tags" class="mt-0 pt-0 pa-4" />
