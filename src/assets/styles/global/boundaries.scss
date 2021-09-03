@@ -1,0 +1,16 @@
+.g-center {
+  margin: auto;
+}
+
+.g-margin-less {
+  margin: 0 !important;
+}
+
+.g-padding-less {
+  padding: 0 !important;
+}
+
+.g-bound-less {
+  @extend .g-margin-less;
+  @extend .g-padding-less;
+}

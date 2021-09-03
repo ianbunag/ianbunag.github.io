@@ -21,7 +21,7 @@ export const skills: ProfileSkills = [
   },
   {
     name: 'Back-end development',
-    description: 'I bring products to life through services that are modular, robust and reliable - powered by frameworks like Fastify, exhibiting full confidence in the API as it is significantly covered by test frameworks like Jest.',
+    description: 'I bring products to life through services that are modular, robust and reliable - powered by frameworks like Fastify and significantly covered by solid and resilient tests through frameworks like Jest.',
     icon: 'backEnd',
     technologies: [
       'fastify',

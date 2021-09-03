@@ -10,12 +10,16 @@ import ProjectsShowcase, {
 import type { ProfileProjects } from '~/config/profile/projects'
 
 export default defineComponent({
-  name: 'Projects',
+  name: 'PageRootProjects',
   components: { ProjectsShowcase },
   props: {
     projects: {
       type: Array as Prop<ProfileProjects>,
       required: true,
+    },
+    contentClass: {
+      type: String,
+      default: '',
     },
   },
   setup (props) {
@@ -38,11 +42,15 @@ export default defineComponent({
     align="center"
     class="text-center section"
   >
-    <v-col cols="12" class="layer-content bound-less mt-16 pt-6 pt-md-8">
-      <v-container class="bound-less" fluid>
+    <v-col
+      :class="contentClass"
+      cols="12"
+      class="g-layer-content g-bound-less"
+    >
+      <v-container class="g-bound-less" fluid>
         <v-row justify="center" align="center" dense>
           <v-col cols="12" md="10">
-            <div class="text-h3 text-center">
+            <div class="text-h3 text-center g-text-pair">
               <slot name="title" />
             </div>
           </v-col>
@@ -68,7 +76,7 @@ export default defineComponent({
         </v-row>
       </v-container>
     </v-col>
-    <div class="layer-background">
+    <div class="g-layer-background">
       <slot name="background" />
     </div>
   </v-row>

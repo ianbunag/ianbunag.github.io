@@ -1,6 +1,7 @@
 import { skills } from '~/config/profile/skills'
 import { projects } from '~/config/profile/projects'
 import { techStacks } from '~/config/profile/tech-stacks'
+import { experiences } from '~/config/profile/experiences'
 
 export const name = 'John Ian Buñag'
 
@@ -21,4 +22,5 @@ export {
   skills,
   projects,
   techStacks,
+  experiences,
 }

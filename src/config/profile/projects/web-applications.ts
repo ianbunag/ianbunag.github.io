@@ -4,8 +4,8 @@ import {
   createParagraph,
   createUnorderedList,
   emphasize,
-  LinkName,
-} from '~/config/profile/projects/module'
+} from '~/config/module'
+import { LinkName } from '~/config/profile/projects/module'
 
 import type {
   ProfileProject,
@@ -15,7 +15,7 @@ import type {
 export const webApplications: ProfileProjects = [
   {
     name: 'Personal Portfolio',
-    period: 'August 2021',
+    period: '2021 August',
     tags: [
       'TypeScript',
       'SSG',
@@ -56,7 +56,7 @@ export const webApplications: ProfileProjects = [
 
     return {
       name: 'Library System',
-      period: 'February 2019',
+      period: '2019 February',
       tags: [
         'SSR',
         'CMS',
@@ -128,7 +128,7 @@ export const webApplications: ProfileProjects = [
 
     return {
       name: 'Change - Onesimo Foundation Inc.',
-      period: 'February 2018',
+      period: '2018 February',
       tags: [
         'CMS',
         'web',
@@ -174,7 +174,7 @@ export const webApplications: ProfileProjects = [
   })(),
   {
     name: 'Optimus I.T. Solutions',
-    period: 'April 2018',
+    period: '2018 April',
     tags: [
       'web',
       'application',
@@ -195,7 +195,7 @@ export const webApplications: ProfileProjects = [
   },
   {
     name: 'CPU Scheduling Simulator',
-    period: 'October 2017',
+    period: '2017 October',
     tags: [
       'CPU',
       'web',
@@ -246,7 +246,7 @@ export const webApplications: ProfileProjects = [
 
     return {
       name: 'Creative Events by Casa Burgos',
-      period: 'October 2017',
+      period: '2017 October',
       tags: [
         'CMS',
         'web',

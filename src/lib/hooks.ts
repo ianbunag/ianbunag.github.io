@@ -2,9 +2,7 @@ import { useContext, reactive, computed } from '@nuxtjs/composition-api'
 
 export function useBreakPoints () {
   const { $vuetify } = useContext()
-  const isMobile = computed(
-    () => ['xs', 'sm'].includes($vuetify.breakpoint.name),
-  )
+  const isMobile = computed(() => $vuetify.breakpoint.smAndDown)
 
   return reactive({
     isMobile,

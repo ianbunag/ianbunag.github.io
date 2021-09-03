@@ -27,10 +27,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <v-container class="bound-less" fluid>
+  <v-container class="g-bound-less" fluid>
     <v-row dense>
       <v-col cols="12" class="mt-6">
-        <div class="font-weight-bold text-h5 text-md-h4">
+        <div class="font-weight-medium text-h5 text-md-h4">
           {{ techStack.category }}
         </div>
         <v-divider class="my-3" />

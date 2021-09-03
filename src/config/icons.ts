@@ -34,6 +34,10 @@ import {
   mdiLanguageJavascript,
   mdiFlashCircle,
   mdiLanguageMarkdownOutline,
+  mdiSchool,
+  mdiNotebookEdit,
+  mdiBriefcaseVariant,
+  mdiDomain,
 } from '@mdi/js'
 
 import { pluggedIcons } from '~/plugins/vuetify'
@@ -92,6 +96,10 @@ export const mdi = defineIconMap({
   mdiLanguageJavascript,
   mdiFlashCircle,
   mdiLanguageMarkdownOutline,
+  mdiSchool,
+  mdiNotebookEdit,
+  mdiBriefcaseVariant,
+  mdiDomain,
 })
 
 export const custom: CustomIcons = (() => {
@@ -114,7 +122,8 @@ export const icons = defineIconMap({
 
 export type ConfigIcons = typeof icons
 export type ConfigIconKeys = keyof ConfigIcons
+export type ConfigIcon = ConfigIcons[ConfigIconKeys]
 
-export function getIcon (key: ConfigIconKeys): ConfigIcons[ConfigIconKeys] {
+export function getIcon (key: ConfigIconKeys): ConfigIcon {
   return icons[key]
 }

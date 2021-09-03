@@ -18,6 +18,6 @@ const productionOptions = {
 export const vuetify = {
   optionsPath: '~/plugins/vuetify.ts',
   customVariables: ['~/assets/styles/vuetify/variables.scss'],
-  defaultAssets: { icons: false },
+  defaultAssets: false,
   ...(process.env.NODE_ENV === 'production' ? productionOptions : {}),
 }

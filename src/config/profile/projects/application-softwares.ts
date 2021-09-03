@@ -1,14 +1,12 @@
-import {
-  requireProgressiveImage,
-  LinkName,
-} from '~/config/profile/projects/module'
+import { requireProgressiveImage } from '~/config/module'
+import { LinkName } from '~/config/profile/projects/module'
 
 import type { ProfileProjects } from '~/config/profile/projects/module'
 
 export const applicationSoftwares: ProfileProjects = [
   {
     name: '@yvnbunag/dock',
-    period: 'July 2021',
+    period: '2021 July',
     tags: [
       'CLI',
       'BDD',
@@ -55,7 +53,7 @@ export const applicationSoftwares: ProfileProjects = [
   },
   {
     name: 'Simple Calculator',
-    period: 'October 2015',
+    period: '2015 October',
     tags: [
       'software',
       'application',
@@ -79,7 +77,7 @@ export const applicationSoftwares: ProfileProjects = [
   },
   {
     name: 'Simple Circuit Calculator',
-    period: 'October 2015',
+    period: '2015 October',
     tags: [
       'software',
       'application',
@@ -106,7 +104,7 @@ export const applicationSoftwares: ProfileProjects = [
   },
   {
     name: `Ohm's Law Calculator`,
-    period: 'October 2015',
+    period: '2015 October',
     tags: [
       'software',
       'application',

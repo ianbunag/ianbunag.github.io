@@ -51,7 +51,6 @@ export default defineComponent({
     ProjectModal,
     ProjectCard,
   },
-  mixins: [thumbnailOptions],
   props: {
     projects: {
       type: Array as Prop<ProfileProjects>,
@@ -73,6 +72,7 @@ export default defineComponent({
       type: String,
       default: undefined,
     },
+    thumbnail: thumbnailOptions,
   },
   setup (props) {
     const { projects, featuredFirst, descending, ascending } = toRefs(props)

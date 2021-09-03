@@ -36,11 +36,11 @@ export default defineComponent({
 </script>
 
 <template>
-  <v-container class="full-height" fluid>
+  <v-container class="g-full-height" fluid>
     <v-row
       justify="center"
       align="center"
-      class="text-center full-height"
+      class="text-center g-full-height"
     >
       <v-col cols="12">
         <v-icon x-large>

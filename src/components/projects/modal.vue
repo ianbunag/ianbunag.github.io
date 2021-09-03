@@ -119,10 +119,10 @@ export default defineComponent({
           </v-img>
         </v-carousel-item>
       </v-carousel>
-      <v-card-title class="text-h4">
+      <v-card-title class="text-h4 g-text-pair">
         {{ project.name }}
       </v-card-title>
-      <v-card-subtitle class="text-left text-subtitle-2 py-2">
+      <v-card-subtitle class="text-left text-subtitle-2 py-2 g-text-pair-accent">
         {{ project.period }}
       </v-card-subtitle>
       <!-- eslint-disable-next-line vue/no-v-html -->
@@ -160,7 +160,7 @@ export default defineComponent({
             :disabled="!Boolean(project.secondaryLink.link)"
             :href="project.secondaryLink.link"
             target="_blank"
-            rel="noreferrer nofollow"
+            rel="noopener noreferrer"
             :small="isMobile"
           >
             <v-icon class="mr-1" :small="isMobile">
@@ -174,7 +174,7 @@ export default defineComponent({
             :disabled="!Boolean(project.primaryLink.link)"
             :href="project.primaryLink.link"
             target="_blank"
-            rel="noreferrer nofollow"
+            rel="noopener noreferrer"
             :small="isMobile"
           >
             <v-icon class="mr-1" :small="isMobile">

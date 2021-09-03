@@ -46,7 +46,7 @@ export default defineComponent({
       :name="profile.name"
       :tag="profile.tag"
       :titles="profile.titles"
-      class="section-dark-blue-green"
+      class="section-background-darker"
     >
       <template #logo>
         <branding-logo-solid color="#fff" responsive />
@@ -55,7 +55,8 @@ export default defineComponent({
 
     <about
       :skills="profile.skills"
-      class="section-slate-gray"
+      content-class="mt-16 mb-8 pt-12 pt-md-16"
+      class="section-background-light"
     >
       <template #title>
         A little bit about myself
@@ -68,16 +69,27 @@ export default defineComponent({
           {{ introduction }}
         </div>
       </template>
+      <template #footer>
+        <v-btn
+          class="secondary"
+          :to="pages.TECH_STACK.route"
+          x-large
+        >
+          See my tech stack
+          <v-icon>{{ icons.mdiArrowTopRight }}</v-icon>
+        </v-btn>
+      </template>
       <template #background>
         <divider-tilt-top-left
-          class="shape-fill-dark-blue-green elevate-shape-bottom"
+          class="shape fill-background-darker elevate-bottom"
         />
       </template>
     </about>
 
     <projects
       :projects="profile.projects"
-      class="section-blue-green"
+      content-class="mt-16 pt-6 pt-md-8"
+      class="section-background-dark"
     >
       <template #title>
         Some awesome stuff
@@ -87,9 +99,9 @@ export default defineComponent({
       </template>
       <template #footer>
         <v-btn
-          class="secondary mt-3"
+          class="secondary"
           :to="pages.PROJECTS.route"
-          large
+          x-large
         >
           See all projects
           <v-icon>{{ icons.mdiArrowTopRight }}</v-icon>
@@ -97,16 +109,33 @@ export default defineComponent({
       </template>
       <template #background>
         <divider-tilt-top-right
-          class="shape-fill-slate-gray elevate-shape-bottom"
+          class="shape fill-background-light elevate-bottom offset-top-15"
         />
       </template>
     </projects>
 
-    <!-- @TODO remove style -->
-    <experience class="section-light-blue-green" style="color: black;">
+    <experience
+      :experiences="profile.experiences"
+      :timeline="{
+        labelClass: 'g-text-light',
+        timelineClass: 'g-timeline-path-light'
+      }"
+      content-class="mt-16 pt-8 pt-md-10 mx-md-16 px-md-12"
+      class="section-background-lighter"
+    >
+      <template #title>
+        <span class="g-text-light">
+          My professional journey
+        </span>
+      </template>
+      <template #description>
+        <span class="g-text-light">
+          Experiences that sculpted me to what I am today.
+        </span>
+      </template>
       <template #background>
         <divider-triangle-top-right
-          class="shape-fill-blue-green elevate-shape-bottom"
+          class="shape fill-background-dark elevate-bottom offset-top-10"
         />
       </template>
     </experience>
@@ -114,21 +143,11 @@ export default defineComponent({
     <contact>
       <template #background>
         <divider-triangle-top-left
-          class="shape-fill-light-blue-green elevate-shape-bottom"
+          class="shape fill-background-lighter elevate-bottom"
         />
       </template>
     </contact>
   </v-container>
 </template>
-
-<style lang="scss" scoped>
-  $shadow: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.65));
-
-  .elevate-shape-bottom {
-    filter: $shadow;
-    -webkit-filter: $shadow;
-    // clip-path: inset(-1px -25px -50px -25px); @TODO evaluate
-  }
-</style>
 
 <style src="~/assets/styles/pages/index.scss" lang="scss" scoped/>

@@ -1,3 +1,11 @@
+function createVuetifyFontPreload (font: string) {
+  return {
+    rel: 'preload stylesheet',
+    as: 'style',
+    href: `https://fonts.googleapis.com/css2?family=${font}:wght@100;300;400;500;700;900&display=swap`,
+  }
+}
+
 export const head = {
   titleTemplate: (titleChunk: string) => {
     const name = 'John Ian Buñag'
@@ -19,7 +27,9 @@ export const head = {
   ],
   link: [
     { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
-    //  See https://web.dev/uses-rel-preconnect/?utm_source=lighthouse&utm_medium=devtools
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
+    createVuetifyFontPreload('Roboto'),
+    createVuetifyFontPreload('Raleway'),
   ],
 }
