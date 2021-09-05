@@ -38,6 +38,12 @@ import {
   mdiNotebookEdit,
   mdiBriefcaseVariant,
   mdiDomain,
+  mdiPhone,
+  mdiEmail,
+  mdiLinkedin,
+  mdiTwitter,
+  mdiFacebook,
+  mdiContentCopy,
 } from '@mdi/js'
 
 import { pluggedIcons } from '~/plugins/vuetify'
@@ -100,6 +106,12 @@ export const mdi = defineIconMap({
   mdiNotebookEdit,
   mdiBriefcaseVariant,
   mdiDomain,
+  mdiPhone,
+  mdiEmail,
+  mdiLinkedin,
+  mdiTwitter,
+  mdiFacebook,
+  mdiContentCopy,
 })
 
 export const custom: CustomIcons = (() => {

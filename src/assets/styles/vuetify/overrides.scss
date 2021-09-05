@@ -21,4 +21,13 @@ $dark-theme-color: #fff;
       }
     }
   }
+
+  /**
+    * Override card to break words on overflow
+    *   See https://github.com/vuetifyjs/vuetify/issues/9130#issuecomment-678795229
+    */
+  .v-card__text,
+  .v-card__title {
+    word-break: normal;
+  }
 }

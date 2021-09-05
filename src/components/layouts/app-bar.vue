@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent, reactive } from '@nuxtjs/composition-api'
 
-import { name, titles } from '~/config/profile'
+import { name, titles, links } from '~/config/profile'
 import { icons, pages } from '~/config'
 
 export default defineComponent({
@@ -26,6 +26,7 @@ export default defineComponent({
       appBar,
       icons,
       pages,
+      links,
     }
   },
 })
@@ -92,6 +93,24 @@ export default defineComponent({
               <v-icon>{{ page.icon }}</v-icon>
             </v-list-item-icon>
             <v-list-item-title>{{ page.name }}</v-list-item-title>
+          </v-list-item>
+
+          <v-divider class="mb-3" />
+
+          <span class="text-overline px-2 g-text-pair-accent">
+            Find me online
+          </span>
+          <v-list-item
+            v-for="link in links"
+            :key="link.name"
+            :href="link.url"
+            :target="link.url ? '_blank' : undefined"
+            :rel="link.url ? 'noopener' : undefined"
+          >
+            <v-list-item-icon>
+              <v-icon>{{ link.icon }}</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>{{ link.name }}</v-list-item-title>
           </v-list-item>
 
           <v-divider class="mb-3" />

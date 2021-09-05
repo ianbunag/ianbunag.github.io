@@ -6,7 +6,7 @@ export default defineComponent({
   name: 'ResponsiveContainer',
   props: {
     justify: {
-      type: String as Prop<'start' | 'center' | 'end' | 'space-between' | 'space-around'>,
+      type: String as Prop<VuetifyProps.VRow['justify']>,
       default: 'start',
     },
   },
@@ -31,7 +31,10 @@ export default defineComponent({
     )
     const container = h(
       VContainer,
-      { props: { fluid: true } },
+      {
+        class: 'g-bound-less',
+        props: { fluid: true },
+      },
       [row],
     )
 

@@ -10,6 +10,7 @@ export default { name: 'ImageLoader' }
   >
     <v-progress-circular
       aria-label="image-loader"
+      color="accent"
       indeterminate
     />
   </v-row>

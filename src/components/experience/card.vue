@@ -82,7 +82,7 @@ export default defineComponent({
                 :href="mappedAssociation.url || undefined"
                 :aria-label="mappedAssociation.name || 'Association'"
                 :class="{ 'g-default-cursor': !mappedAssociation.url }"
-                rel="noopener noreferrer"
+                rel="noopener"
                 target="_blank"
               >
                 <v-img
