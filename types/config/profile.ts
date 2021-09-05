@@ -1,4 +1,4 @@
-import type { IconMap as IconMapBase } from '@/config/icons'
+import type { IconMap as IconMapBase, Icon } from '@/config/icons'
 import type { TechnologyMap as TechnologyMapBase } from '@/config/technologies'
 import type { AssociationMap as AssociationMapBase } from '@/config/associations'
 
@@ -75,3 +75,11 @@ export type Experiences<
   Type = string,
   AssociationMap extends AssociationMapBase = AssociationMapBase,
 > = Array<Experience<Type, AssociationMap>>
+
+export interface Link {
+  name: string,
+  icon: Icon,
+  url: string,
+}
+
+export type Links = Array<Link>

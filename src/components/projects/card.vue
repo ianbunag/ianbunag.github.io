@@ -48,7 +48,7 @@ export default defineComponent({
         <v-card-title class="g-text-pair">
           {{ project.name }}
         </v-card-title>
-        <v-card-subtitle class="text-left pt-1 g-text-pair-accent">
+        <v-card-subtitle class="text-left pt-1 pb-3 g-text-pair-accent">
           {{ project.period }}
         </v-card-subtitle>
         <tags :tags="project.tags" class="mt-0 pt-0 pa-4" />

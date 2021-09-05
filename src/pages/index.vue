@@ -55,25 +55,21 @@ export default defineComponent({
 
     <about
       :skills="profile.skills"
-      content-class="mt-16 mb-8 pt-12 pt-md-16"
+      content-class="mt-16 mb-6 pt-12 pt-md-16"
       class="section-background-light"
     >
       <template #title>
         A little bit about myself
       </template>
       <template #description>
-        <div
-          v-for="(introduction, index) in profile.introduction"
-          :key="index"
-        >
-          {{ introduction }}
-        </div>
+        {{ profile.introduction }}
       </template>
       <template #footer>
         <v-btn
-          class="secondary"
           :to="pages.TECH_STACK.route"
+          class="secondary"
           x-large
+          nuxt
         >
           See my tech stack
           <v-icon>{{ icons.mdiArrowTopRight }}</v-icon>
@@ -81,14 +77,14 @@ export default defineComponent({
       </template>
       <template #background>
         <divider-tilt-top-left
-          class="shape fill-background-darker elevate-bottom"
+          class="shape fill-background-darker elevate-bottom offset-top-10"
         />
       </template>
     </about>
 
     <projects
       :projects="profile.projects"
-      content-class="mt-16 pt-6 pt-md-8"
+      content-class="mt-16 pt-6 pt-md-4"
       class="section-background-dark"
     >
       <template #title>
@@ -99,9 +95,10 @@ export default defineComponent({
       </template>
       <template #footer>
         <v-btn
-          class="secondary"
           :to="pages.PROJECTS.route"
+          class="secondary"
           x-large
+          nuxt
         >
           See all projects
           <v-icon>{{ icons.mdiArrowTopRight }}</v-icon>
@@ -140,7 +137,21 @@ export default defineComponent({
       </template>
     </experience>
 
-    <contact>
+    <contact
+      :name="profile.name"
+      :email="profile.email"
+      :links="profile.links"
+      content-id="contact"
+      content-class="mt-16 pt-8 pt-md-10 mx-md-16 px-md-12 mb-8 mb-sm-0"
+    >
+      <template #title>
+        Let's grab some sushi 🍣
+      </template>
+      <template #description>
+        <span>
+          Or coffee - I would be delighted to get in touch.
+        </span>
+      </template>
       <template #background>
         <divider-triangle-top-left
           class="shape fill-background-lighter elevate-bottom"

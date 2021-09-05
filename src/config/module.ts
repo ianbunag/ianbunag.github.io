@@ -22,7 +22,7 @@ export function createAccessibleLink (display: string, url: string): string {
     `href="${url}"`,
     `aria-label="${display}"`,
     'target="_blank"',
-    'rel="noopener noreferrer"',
+    'rel="noopener"',
   ].join(' ')
 
   return `<a ${properties}>${display}</a>`
