@@ -37,7 +37,11 @@ export default defineComponent({
       class="g-layer-content g-bound-less"
     >
       <v-container class="g-bound-less" fluid>
-        <v-row justify="center" align="center">
+        <v-row
+          justify="center"
+          align="center"
+          dense
+        >
           <v-col cols="12" md="10">
             <div class="text-h3 text-center g-text-pair">
               <slot name="title" />
@@ -50,7 +54,7 @@ export default defineComponent({
           </v-col>
         </v-row>
 
-        <v-row justify="center" class="my-4">
+        <v-row justify="center" class="mt-5 mb-4">
           <v-col
             v-for="skill in skills"
             :key="skill.name"
@@ -66,7 +70,7 @@ export default defineComponent({
                   class="d-flex flex-column transition-swing g-full-height"
                   :elevation="hover ? 16 : 8"
                 >
-                  <div class="mt-5 px-4">
+                  <div class="mt-4 px-4">
                     <v-icon size="60px">
                       {{ getIcon(skill.icon) }}
                     </v-icon>
@@ -80,7 +84,7 @@ export default defineComponent({
                     <technology-icon-list
                       :technologies="skill.technologies"
                       justify="end"
-                      class="mb-1"
+                      class="mb-2 mx-2"
                     />
                   </v-card-actions>
                 </v-card>
@@ -88,6 +92,7 @@ export default defineComponent({
             </v-hover>
           </v-col>
         </v-row>
+
         <v-row
           justify="center"
           align="center"

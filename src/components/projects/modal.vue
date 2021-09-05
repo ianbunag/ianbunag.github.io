@@ -119,7 +119,7 @@ export default defineComponent({
           </v-img>
         </v-carousel-item>
       </v-carousel>
-      <v-card-title class="text-h4 g-text-pair">
+      <v-card-title class="text-h4 mb-2 g-text-pair">
         {{ project.name }}
       </v-card-title>
       <v-card-subtitle class="text-left text-subtitle-2 py-2 g-text-pair-accent">
@@ -146,7 +146,10 @@ export default defineComponent({
       </v-card-text>
       <v-divider />
       <v-card-actions>
-        <responsive-container justify="end">
+        <responsive-container
+          justify="end"
+          class="py-2"
+        >
           <v-btn
             text
             :small="isMobile"
@@ -160,7 +163,7 @@ export default defineComponent({
             :disabled="!Boolean(project.secondaryLink.link)"
             :href="project.secondaryLink.link"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             :small="isMobile"
           >
             <v-icon class="mr-1" :small="isMobile">
@@ -174,7 +177,7 @@ export default defineComponent({
             :disabled="!Boolean(project.primaryLink.link)"
             :href="project.primaryLink.link"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener"
             :small="isMobile"
           >
             <v-icon class="mr-1" :small="isMobile">

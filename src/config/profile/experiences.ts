@@ -10,6 +10,11 @@ export enum Type {
   INTERNSHIP,
   STUDIES,
 }
+
+/**
+ * @TODO Make consuming components pure by refactoring to pattern with
+ *  src/config/profile/links.ts reference implementation
+ */
 export type ProfileExperience = Experience<Type, ConfigAssociations>
 export type ProfileExperiences = Experiences<Type, ConfigAssociations>
 
@@ -104,7 +109,7 @@ export const experiences: ProfileExperiences = [
     },
     description: createUnorderedList([
       'Completed Bachelor of Science in Information Technology with Specialization in Digital Arts program',
-      'Member of the La Prisma Group, awarded best thesis, website, film and trailer of Capstone Project Batch 15',
+      'Member of the La Prisma Group - awarded the best thesis, website, film and trailer of BSITDA Capstone Project Batch 15',
     ]),
   },
 ]

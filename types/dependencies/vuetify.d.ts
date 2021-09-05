@@ -5,3 +5,9 @@ declare module 'vuetify/lib/components/VGrid' {
   const VRow: typeof components.VRow
   const VCol: typeof components.VCol
 }
+
+declare namespace VuetifyProps {
+  interface VRow {
+    justify: 'start' | 'center' | 'end' | 'space-between' | 'space-around',
+  }
+}

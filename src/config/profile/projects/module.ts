@@ -7,5 +7,9 @@ export enum LinkName {
   TRY_ME = 'Try me!',
   WATCH_ME = 'Watch me!',
 }
+/**
+ * @TODO Make consuming components pure by refactoring to pattern with
+ *  src/config/profile/links.ts reference implementation
+ */
 export type ProfileProject = Project<ConfigIcons, ConfigTechnologies>
 export type ProfileProjects = Projects<ConfigIcons, ConfigTechnologies>

@@ -40,7 +40,7 @@ export default defineComponent({
       <v-card
         :href="url || undefined"
         :target="url ? '_blank' : undefined"
-        :rel="url ? 'noopener noreferrer' : undefined"
+        :rel="url ? 'noopener' : undefined"
         :elevation="hover ? 8 : 4"
         class="transition-swing"
       >

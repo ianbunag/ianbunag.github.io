@@ -23,7 +23,7 @@ export default defineComponent({
       required: true,
     },
     justify: {
-      type: String as Prop<'start' | 'center' | 'end' | 'space-between' | 'space-around'>,
+      type: String as Prop<VuetifyProps.VRow['justify']>,
       default: 'start',
     },
   },

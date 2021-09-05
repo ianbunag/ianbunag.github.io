@@ -41,7 +41,10 @@ export default defineComponent({
 
 <template>
   <div>
-    <v-tooltip :top="tooltipTop" :activator="technology">
+    <v-tooltip
+      :activator="technology"
+      :top="tooltipTop"
+    >
       <span>{{ display }}</span>
     </v-tooltip>
     <a
@@ -49,7 +52,7 @@ export default defineComponent({
       :href="url || null"
       :aria-label="display"
       :class="[noLink]"
-      rel="noopener noreferrer"
+      rel="noopener"
       target="_blank"
     >
       <v-btn

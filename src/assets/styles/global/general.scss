@@ -1,6 +1,8 @@
+$main-background-color: $background-median;
+
 html {
   scroll-behavior: smooth;
-  background-color: $background-median;
+  background-color: $main-background-color;
 }
 
 ::-moz-selection {
@@ -12,7 +14,7 @@ html {
 }
 
 .g-main-bg {
-  background-color: $background-median;
+  background-color: $main-background-color;
 }
 
 .g-semi-transparent-bg {

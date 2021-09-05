@@ -30,4 +30,9 @@ export const pages = definePageMap({
     route: '/projects/',
     icon: icons.mdiLightbulbOnOutline,
   },
+  CONTACT: {
+    name: 'Contact',
+    route: '/#contact',
+    icon: icons.mdiPhone,
+  },
 })

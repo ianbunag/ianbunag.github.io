@@ -40,7 +40,7 @@ export default defineComponent({
   <v-row
     justify="center"
     align="center"
-    class="text-center section"
+    class="section"
   >
     <v-col
       :class="contentClass"
@@ -60,6 +60,7 @@ export default defineComponent({
             </div>
           </v-col>
         </v-row>
+
         <v-row justify="center" align="center">
           <v-col cols="12">
             <projects-showcase
@@ -69,7 +70,12 @@ export default defineComponent({
             />
           </v-col>
         </v-row>
-        <v-row justify="center" align="center">
+
+        <v-row
+          justify="center"
+          align="center"
+          class="text-center"
+        >
           <v-col cols="12">
             <slot name="footer" />
           </v-col>
