@@ -59,6 +59,7 @@ export const webApplications: ProfileProjects = [
       period: '2019 February',
       tags: [
         'SSR',
+        'SPA',
         'CMS',
         'web',
         'application',
@@ -95,11 +96,6 @@ export const webApplications: ProfileProjects = [
         text: LinkName.VIEW_SOURCE,
         icon: 'mdiGitlab',
         link: process.env.LIBRARY_SYSTEM_REPOSITORY,
-      },
-      primaryLink: {
-        text: LinkName.TRY_ME,
-        icon: 'mdiWeb',
-        link: process.env.LIBRARY_SYSTEM_URL,
       },
     }
   })(),

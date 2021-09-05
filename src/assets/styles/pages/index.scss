@@ -3,6 +3,7 @@
   min-height: 100vh;
   padding-left: 24px; // equivalent to Vuetify utility class pl-6
   padding-right: 24px; // equivalent to Vuetify utility class pr-6
+  overflow: hidden;
 }
 
 @mixin section-background-color($color: #000) {
@@ -37,7 +38,6 @@
   &.elevate-bottom {
     filter: $shadow;
     -webkit-filter: $shadow;
-    // clip-path: inset(-1px -25px -50px -25px); @TODO evaluate
   }
 
   @mixin shape-fill($color: #000) {

@@ -15,7 +15,7 @@ export default {
   target: 'static',
   srcDir: 'src',
   router: { base: '/portfolio/' },
-  loading: { color: theme.primary },
+  loading: { color: theme.accent },
   alias,
   env,
   head,

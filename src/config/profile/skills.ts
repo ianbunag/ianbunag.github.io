@@ -2,6 +2,10 @@ import type { ConfigIcons } from '~/config/icons'
 import type { ConfigTechnologies } from '~/config/technologies'
 import type { Skills } from '@/config/profile'
 
+/**
+ * @TODO Make consuming components pure by refactoring to pattern with
+ *  src/config/profile/links.ts reference implementation
+ */
 export type ProfileSkills = Skills<ConfigIcons, ConfigTechnologies>
 
 export const skills: ProfileSkills = [
