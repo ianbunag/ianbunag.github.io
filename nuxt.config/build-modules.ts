@@ -5,7 +5,6 @@ export const buildModules = [
   '@nuxtjs/style-resources',
   '@nuxtjs/stylelint-module', // https://go.nuxtjs.dev/stylelint
   '@nuxtjs/vuetify', // https://go.nuxtjs.dev/vuetify
-  ['@nuxtjs/google-gtag', { id: process.env.GOOGLE_GTAG_ID }],
   ...(() => {
     const {
       HOST: host = '',
