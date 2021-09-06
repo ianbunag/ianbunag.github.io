@@ -32,8 +32,11 @@ prepare:
     name: production
   only:
     - tags
+    - master
   script:
     - cp $ENV $ENV_NAME
+    - cat $GSC_VERIFICATION_MAP
+    - cat $GSC_VERIFICATION_MAP | while read file; do reference=${file%% *}; filename=public/${file##* }; echo $reference; echo ${!reference}; echo $filename; done;
   artifacts:
     name: $CI_JOB_NAME-ARTIFACTS
     expire_in: 10 mins
