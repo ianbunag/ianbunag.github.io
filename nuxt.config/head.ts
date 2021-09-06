@@ -24,6 +24,10 @@ export const head = {
       content: `John Ian Buñag's personal portfolio`,
     },
     { name: 'format-detection', content: 'telephone=no' },
+    {
+      name: 'google-site-verification',
+      content: process.env.GOOGLE_SITE_VERIFICATION,
+    },
   ],
   link: [
     { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
