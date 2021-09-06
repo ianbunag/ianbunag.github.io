@@ -1,3 +1,4 @@
+import { introduction } from '~/config/profile/introduction'
 import { skills } from '~/config/profile/skills'
 import { projects } from '~/config/profile/projects'
 import { techStacks } from '~/config/profile/tech-stacks'
@@ -16,9 +17,8 @@ export const titles = [
   'Front-end Developer',
 ]
 
-export const introduction = 'I am a Full Stack Engineer - with a strong belief in behavior and test driven development approach, importance of code readability and workflow optimization through development tooling.'
-
 export {
+  introduction,
   skills,
   projects,
   techStacks,
