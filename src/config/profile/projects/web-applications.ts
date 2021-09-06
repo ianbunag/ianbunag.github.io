@@ -29,7 +29,16 @@ export const webApplications: ProfileProjects = [
       'portfolio',
     ],
     description: `My personal portfolio, exploring Vue's next-generation Composition API supercharged by TypeScript. Modular, responsive and performant.`,
-    images: ['./assets/images/projects/personal-portfolio/introduction-section.png'].map(requireProgressiveImage),
+    images: [
+      './assets/images/projects/personal-portfolio/introduction-section.png',
+      './assets/images/projects/personal-portfolio/mobile-introduction-section.jpg',
+      './assets/images/projects/personal-portfolio/mobile-about-section.jpg',
+      './assets/images/projects/personal-portfolio/mobile-projects-section.jpg',
+      './assets/images/projects/personal-portfolio/mobile-experience-section.jpg',
+      './assets/images/projects/personal-portfolio/mobile-contact-section.jpg',
+      './assets/images/projects/personal-portfolio/mobile-tech-stack-page.jpg',
+      './assets/images/projects/personal-portfolio/mobile-projects-page.jpg',
+    ].map(requireProgressiveImage),
     technologies: [
       'nuxt',
       'vue',
