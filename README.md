@@ -1,78 +1,150 @@
-# src
+<!-- omit in toc -->
+# Personal Portfolio
 
+[![license](https://img.shields.io/npm/l/@yvnbunag/dock)](https://gitlab.com/yvnbunag/dock/-/blob/master/LICENSE)
+[![Continuous Delivery](https://img.shields.io/badge/dynamic/json?color=informational&label=%E2%9A%99%20CD&query=%24%5B0%5D.status&url=https%3A%2F%2Fgitlab.com%2Fapi%2Fv4%2Fprojects%2F28935241%2Fpipelines%3Fscope%3Dtags%26per_page%3D1)](https://gitlab.com/yvnbunag/portfolio/-/pipelines?page=1&scope=tags)
 
-## Colors
-* Primary is based from branding
-* Secondary and accent are based from primary and generated from https://coolors.co/46748a-795663-A2D6F9
-* Rest are Vuetify defaults
-* Background colors from https://visme.co/blog/website-color-schemes/#:~:text=Corporate%20and%20Traditional
-  * See https://swissarmyman.com/
-* @TODO list down colors
-  * https://stackoverflow.com/a/41247934/13235279
-## Build Setup
+John Ian Buñag's personal portfolio. Made with [Nuxt.js](https://nuxtjs.org/),
+[Vuetify](https://vuetifyjs.com/en/) and
+[TypeScript](https://www.typescriptlang.org/).
 
-```bash
-# install dependencies
-$ yarn install
+[See it live!](https://yvnbunag.gitlab.io/portfolio/)
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+<br/>
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+<!-- omit in toc -->
+## Contents
+- [Requirements](#requirements)
+- [Preparation](#preparation)
+- [Development](#development)
+- [Build](#build)
+- [Configuration](#configuration)
+  - [Profile](#profile)
+  - [Colors](#colors)
+    - [Theme Palette](#theme-palette)
+    - [Background Scheme](#background-scheme)
+- [Special Thanks](#special-thanks)
+  - [For the layout and design inspiration](#for-the-layout-and-design-inspiration)
+  - [For the free software](#for-the-free-software)
+  - [For the free assets](#for-the-free-assets)
 
-# generate static project
-$ yarn generate
+<br/>
+
+---
+
+## Requirements
+
+1. [Node](https://nodejs.org/en/) version 16.5.0 or higher
+
+<br/>
+
+---
+
+## Preparation
+
+1. Install dependencies
+```sh
+yarn install
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+2. Copy `.env.dist` to `.env` and populate missing values
+```sh
+cp .env.dist .env
+```
 
-## Special Directories
+<br/>
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+---
 
-### `assets`
+## Development
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+1. Start the development server
+```sh
+yarn dev
+```
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+<br/>
 
-### `components`
+---
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+## Build
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+1. Generate static build
+```sh
+yarn generate
+```
 
-### `layouts`
+2. Start static server
+```sh
+yarn start
+```
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+<br/>
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+---
 
+## Configuration
 
-### `pages`
+### Profile
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+See [src/config/profile](src/config/profile/index.ts).
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+### Colors
 
-### `plugins`
+Theme colors are centralized in [src/config/theme.json](src/config/theme.json)
+and is configured to be consumable via JavaScript and SCSS.
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+#### Theme Palette
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+Primary color is from my personal brand palette.  
+Secondary and accent colors are generated from
+[Coolors](https://coolors.co/46748a-795663-a2d6f9) to match background theme.  
+Alert colors are Vuetify defaults. See
+[src/plugins/vuetify.ts](src/plugins/vuetify.ts).
 
-### `static`
+|                                                                 	| Role      	| Key       	| Name         	| Hex Code 	|
+|-----------------------------------------------------------------	|-----------	|-----------	|--------------	|----------	|
+| ![#46748A](https://via.placeholder.com/15/46748A/000000?text=+) 	| Primary   	| primary   	| Teal Blue    	| #46748A  	|
+| ![#795663](https://via.placeholder.com/15/795663/000000?text=+) 	| Secondary 	| secondary 	| Deep Taupe   	| #795663  	|
+| ![#a2d6f9](https://via.placeholder.com/15/a2d6f9/000000?text=+) 	| Accent    	| accent    	| Uranian Blue 	| #a2d6f9  	|
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
+#### Background Scheme
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+All background colors are picked from a
+[Visme blog post](https://visme.co/blog/website-color-schemes/#:~:text=Corporate%20and%20Traditional),
+from the [Swiss Army Man Official Movie Site](https://swissarmyman.com/).
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+|                                                                 	| Role    	| Key                	| Name                       	| Hex Code 	|
+|-----------------------------------------------------------------	|---------	|--------------------	|----------------------------	|----------	|
+| ![#112d32](https://via.placeholder.com/15/112d32/000000?text=+) 	| Darker  	| background-darker  	| Outer Space Crayola        	| #112d32  	|
+| ![#254e58](https://via.placeholder.com/15/254e58/000000?text=+) 	| Dark    	| background-dark    	| Midnight Green Eagle Green 	| #254e58  	|
+| ![#4f4a41](https://via.placeholder.com/15/4f4a41/000000?text=+) 	| Median  	| background-median  	| Davys Grey                 	| #4f4a41  	|
+| ![#6e6658](https://via.placeholder.com/15/6e6658/000000?text=+) 	| Light   	| background-light   	| Dim Gray                   	| #6e6658  	|
+| ![#88bdbc](https://via.placeholder.com/15/88bdbc/000000?text=+) 	| Lighter 	| background-lighter 	| Opal                       	| #88bdbc  	|
 
-### `store`
+<br/>
 
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+---
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+## Special Thanks
+
+### For the layout and design inspiration
+- [Dorota Gil](https://github.com/Dorota1997) and contributor's [React Frontend Dev Portfolio](https://dorota1997.github.io/react-frontend-dev-portfolio/)
+  - [See repository](https://github.com/Dorota1997/react-frontend-dev-portfolio)
+- Simon Wuyts' [Personal Website](https://www.simonwuyts.com/)
+- [Muhammad Ahmad's](https://github.com/MA-Ahmad) [Personal Website](https://my-portfolio-ma-ahmad.vercel.app/)
+- [Swiss Army Man](https://swissarmyman.com/)
+
+### For the free software
+- [Photopea](https://www.photopea.com/)
+- [TinyJPG](https://tinyjpg.com/)
+- [Coolors](https://coolors.co)
+
+### For the free assets
+- [World Vector Logo](https://worldvectorlogo.com/)
+- [Seek Vector Logo](https://seekvectorlogo.com/)
+- [Vector Logo Zone](https://www.vectorlogo.zone/)
+- [Logo Wine](https://www.logo.wine/)
+- Icons by [itim2101](https://www.flaticon.com/authors/itim2101) from [www.flaticon.com](https://www.flaticon.com/)
+- Icons by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com/)
+- Icons by [turkkub](https://www.flaticon.com/authors/turkkub) from [www.flaticon.com](https://www.flaticon.com/)
