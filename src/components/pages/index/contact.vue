@@ -116,7 +116,7 @@ export default defineComponent({
       </div>
 
       <div class="mt-10">
-        <div class="text-subtitle-1 g-text-pair">
+        <div class="text-subtitle-1 pb-2 g-text-pair">
           Find me online
         </div>
         <link-icon-list
