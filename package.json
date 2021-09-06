@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "John Ian Buñag's personal portfolio",
-  "repository": "git@gitlab.com:yvnbunag/portfolio.git",
+  "repository": "git@gitlab.com:yvnbunag/yvnbunag.gitlab.io.git",
   "author": "Ian <jianbunag@gmail.com>",
   "license": "MIT",
   "scripts": {
