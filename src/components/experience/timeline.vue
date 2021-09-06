@@ -67,27 +67,23 @@ export default defineComponent({
       large
     >
       <template #opposite>
-        <v-lazy>
-          <div
-            :class="[timeline.labelClass]"
-            class="text-subtitle-1 g-text-pair"
-          >
-            {{ getRange(experience.period) }}
-          </div>
-          <div
-            :class="[timeline.labelClass]"
-            class="text-subtitle-2"
-          >
-            {{ getDuration(experience.period) }}
-          </div>
-        </v-lazy>
+        <div
+          :class="[timeline.labelClass]"
+          class="text-subtitle-1 g-text-pair"
+        >
+          {{ getRange(experience.period) }}
+        </div>
+        <div
+          :class="[timeline.labelClass]"
+          class="text-subtitle-2"
+        >
+          {{ getDuration(experience.period) }}
+        </div>
       </template>
-      <v-lazy>
-        <experience-card
-          :experience="experience"
-          :hide-period="!isMobile"
-        />
-      </v-lazy>
+      <experience-card
+        :experience="experience"
+        :hide-period="!isMobile"
+      />
     </v-timeline-item>
   </v-timeline>
 </template>
