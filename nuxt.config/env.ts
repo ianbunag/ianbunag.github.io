@@ -11,6 +11,7 @@ export const env = {
     'HOST',
     'PORT',
     'GOOGLE_SITE_VERIFICATION',
+    'GOOGLE_GTAG_ID',
     'EMAIL_ADDRESS',
     'GITLAB_LINK',
     'LINKEDIN_LINK',

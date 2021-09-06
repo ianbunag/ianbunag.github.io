@@ -1,3 +1,5 @@
+import { introduction } from '../src/config/profile/introduction'
+
 function createVuetifyFontPreload (font: string) {
   return {
     rel: 'preload stylesheet',
@@ -21,7 +23,7 @@ export const head = {
     {
       hid: 'description',
       name: 'description',
-      content: `John Ian Buñag's personal portfolio`,
+      content: introduction,
     },
     { name: 'format-detection', content: 'telephone=no' },
     {
