@@ -32,7 +32,7 @@ prepare:
     name: production
   only:
     - tags
-    - master
+    - main
   script:
     - cp $ENV $ENV_NAME
     - cat $GSC_VERIFICATION_MAP
