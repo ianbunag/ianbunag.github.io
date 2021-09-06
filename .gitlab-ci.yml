@@ -36,7 +36,7 @@ prepare:
   script:
     - cp $ENV $ENV_NAME
     - cat $GSC_VERIFICATION_MAP
-    - cat $GSC_VERIFICATION_MAP | while read file; do reference=${file%% *}; filename=public/${file##* }; echo $reference; echo $filename; cat ${!reference}; done;
+    - cat $GSC_VERIFICATION_MAP | while read file; do reference=${file%% *}; filename=public/${file##* }; echo $reference; echo $filename; cat $(eval echo \$$reference); done;
   artifacts:
     name: $CI_JOB_NAME-ARTIFACTS
     expire_in: 10 mins
