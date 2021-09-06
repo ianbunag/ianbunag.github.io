@@ -10,6 +10,7 @@ export const env = {
   ...pick(process.env, [
     'HOST',
     'PORT',
+    'GOOGLE_SITE_VERIFICATION',
     'EMAIL_ADDRESS',
     'GITLAB_LINK',
     'LINKEDIN_LINK',
