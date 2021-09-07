@@ -1,14 +1,9 @@
-function normalizeHost (host: string): string {
-  const trimmedHost = host.trim()
-
-  if (trimmedHost === 'localhost') { return 'http://127.0.0.1' }
-
-  return trimmedHost
-}
-
-function normalizeName (name: string): string {
-  return name.replace(/[/:]+/g, '-')
-}
+import {
+  normalizeHost,
+  normalizeName,
+  extractHostname,
+  extractBaseHostname,
+} from './module'
 
 function createSitemap (host: string, name?: string) {
   return {
@@ -26,12 +21,8 @@ export const buildModules = [
   '@nuxtjs/stylelint-module', // https://go.nuxtjs.dev/stylelint
   '@nuxtjs/vuetify', // https://go.nuxtjs.dev/vuetify
   ...(() => {
-    const { HOST: host = '', PORT: port } = process.env
-    const hostSuffix = port ? `:${port}` : ''
-    const hostname = `${normalizeHost(host)}${hostSuffix}`
     const robots = (() => {
-      const base = process.env.BASE || '/'
-      const baseHostname = `${hostname}${base}`
+      const baseHostname = extractBaseHostname(process.env)
 
       return {
         Allow: '/',
@@ -40,6 +31,7 @@ export const buildModules = [
       }
     })()
     const sitemaps = (() => {
+      const hostname = extractHostname(process.env)
       const extraHosts = (process.env.EXTRA_HOSTS || '')
         .split(',')
         .filter(Boolean)
