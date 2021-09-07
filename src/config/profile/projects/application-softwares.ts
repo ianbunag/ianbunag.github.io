@@ -6,7 +6,7 @@ import type { ProfileProjects } from '~/config/profile/projects/module'
 export const applicationSoftwares: ProfileProjects = [
   {
     name: '@yvnbunag/dock',
-    period: '2021 July',
+    period: '2021 August',
     tags: [
       'CLI',
       'BDD',
