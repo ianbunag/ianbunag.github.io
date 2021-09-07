@@ -15,10 +15,10 @@ import type {
 export const webApplications: ProfileProjects = [
   {
     name: 'Personal Portfolio',
-    period: '2021 August',
+    period: '2021 September',
     tags: [
-      'TypeScript',
       'SSG',
+      'TypeScript',
       'Vue',
       'Composition API',
       'web',

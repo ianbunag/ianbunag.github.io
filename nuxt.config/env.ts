@@ -9,6 +9,7 @@ export const env = {
   BASE: process.env.BASE || '/',
   ...pick(process.env, [
     'HOST',
+    'EXTRA_HOSTS',
     'PORT',
     'GOOGLE_SITE_VERIFICATION',
     'EMAIL_ADDRESS',
