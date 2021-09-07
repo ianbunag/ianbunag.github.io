@@ -19,4 +19,5 @@
     "editor.rulers": [80],
     "files.trimTrailingWhitespace": false
   },
+  "markdown.extension.toc.levels": "2..3"
 }
