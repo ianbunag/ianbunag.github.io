@@ -1,4 +1,5 @@
 import { introduction } from '../src/config/profile/introduction'
+import { extractBaseHostname } from './module'
 
 function createVuetifyFontPreload (font: string) {
   return {
@@ -32,6 +33,7 @@ export const head = {
     },
   ],
   link: [
+    { rel: 'canonical', href: extractBaseHostname(process.env) },
     { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
