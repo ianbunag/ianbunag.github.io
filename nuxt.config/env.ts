@@ -16,7 +16,7 @@ export const env = {
     'GITLAB_LINK',
     'LINKEDIN_LINK',
     'TWITTER_LINK',
-    'FACEBOOK_LINK',
+    'DOCKER_HUB_LINK',
     'NPM_LINK',
     'PORTFOLIO_REPOSITORY',
     'DOCK_REPOSITORY',

@@ -38,8 +38,8 @@ export const skills: ProfileSkills = [
     order: 2,
   },
   {
-    name: 'Operations',
-    description: 'I keep the development cycle rapid, steady and organized - with a pinch of knowledge in docker for development, continuous integration and deployment through Gitlab, and server management with providers like Google Cloud.',
+    name: 'Development Operations',
+    description: 'I keep the development cycle rapid, steady and organized, with a pinch of knowledge in operations - utilizing docker for development, continuous integration and deployment through Gitlab, and server management with providers like Google Cloud.',
     icon: 'devOps',
     technologies: [
       'docker',
