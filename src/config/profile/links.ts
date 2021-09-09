@@ -22,9 +22,9 @@ const referencedLinks: ReferencedLinks = [
     url: process.env.TWITTER_LINK || '',
   },
   {
-    name: 'Facebook',
-    icon: 'mdiFacebook',
-    url: process.env.FACEBOOK_LINK || '',
+    name: 'Docker Hub',
+    icon: 'mdiDocker',
+    url: process.env.DOCKER_HUB_LINK || '',
   },
   {
     name: 'NPM',

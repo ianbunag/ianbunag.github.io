@@ -18,6 +18,7 @@ export const webApplications: ProfileProjects = [
     period: '2021 September',
     tags: [
       'SSG',
+      'SEO',
       'TypeScript',
       'Vue',
       'Composition API',
@@ -28,7 +29,7 @@ export const webApplications: ProfileProjects = [
       'accessible',
       'portfolio',
     ],
-    description: `My personal portfolio, exploring Vue's next-generation Composition API supercharged by TypeScript. Modular, responsive and performant.`,
+    description: `My take on Vue's next-generation Composition API, supercharged by TypeScript. Modular, responsive and performant.`,
     images: [
       './assets/images/projects/personal-portfolio/introduction-section.png',
       './assets/images/projects/personal-portfolio/mobile-introduction-section.jpg',
@@ -132,7 +133,7 @@ export const webApplications: ProfileProjects = [
     ])
 
     return {
-      name: 'Change - Onesimo Foundation Inc.',
+      name: 'Change: A Hybrid Animation Film in a Database-Driven Website',
       period: '2018 February',
       tags: [
         'CMS',
