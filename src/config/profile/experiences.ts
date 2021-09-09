@@ -58,7 +58,7 @@ export const experiences: ProfileExperiences = [
         },
         description: createUnorderedList([
           workedForDescription,
-          `Core member of the ${recurly} integration team`,
+          `Core developer of the ${recurly} integration team`,
           `Implemented serverless services with ${aws}`,
         ]),
       },
@@ -93,9 +93,9 @@ export const experiences: ProfileExperiences = [
         end: '2018 July',
       },
       description: createUnorderedList([
-        `Maintained and enhanced the company's ${wordPress} site`,
+        `Enhanced and maintained the company's ${wordPress} site`,
         `Designed promotional banners for the company's website`,
-        `Designed promotional sticker for the company's van`,
+        `Designed promotional stickers for the company's van`,
       ]),
     }
   })(),

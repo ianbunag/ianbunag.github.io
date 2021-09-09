@@ -42,7 +42,6 @@ import {
   mdiEmail,
   mdiLinkedin,
   mdiTwitter,
-  mdiFacebook,
   mdiContentCopy,
 } from '@mdi/js'
 
@@ -110,7 +109,6 @@ export const mdi = defineIconMap({
   mdiEmail,
   mdiLinkedin,
   mdiTwitter,
-  mdiFacebook,
   mdiContentCopy,
 })
 
