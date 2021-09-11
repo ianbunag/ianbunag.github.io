@@ -1,17 +1,13 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 
-import ResponsiveContainer from '~/components/wrappers/responsive-container.vue'
 import LinkIcon from '~/components/links/icon.vue'
 
 import type { Links } from '@/config/profile'
 
 export default defineComponent({
   name: 'LinkIconList',
-  components: {
-    ResponsiveContainer,
-    LinkIcon,
-  },
+  components: { LinkIcon },
   props: {
     links: {
       type: Array as Prop<Links>,

@@ -4,17 +4,19 @@ import {
   createParagraph,
   createUnorderedList,
   emphasize,
-} from '~/config/module'
-import { LinkName } from '~/config/profile/projects/module'
+} from '~/lib/config'
+import { LinkName } from '~/lib/config/profile/projects'
+import { getProjectLink } from '~/lib/pages/projects'
 
 import type {
   ProfileProject,
   ProfileProjects,
-} from '~/config/profile/projects/module'
+} from '~/lib/config/profile/projects'
 
 export const webApplications: ProfileProjects = [
   {
     name: 'Personal Portfolio',
+    key: 'personal-portfolio',
     period: '2021 September',
     tags: [
       'SSG',
@@ -61,11 +63,12 @@ export const webApplications: ProfileProjects = [
   ((): ProfileProject => {
     const dockLink = createAccessibleLink(
       '@yvnbunag/dock',
-      process.env.DOCK_NPM_URL || '',
+      getProjectLink('yvnbunag-dock'),
     )
 
     return {
       name: 'Library System',
+      key: 'library-system',
       period: '2019 February',
       tags: [
         'SSR',
@@ -134,13 +137,16 @@ export const webApplications: ProfileProjects = [
 
     return {
       name: 'Change: A Hybrid Animation Film in a Database-Driven Website',
+      key: 'change-hybrid-animation-database-driven-website',
       period: '2018 February',
       tags: [
         'CMS',
         'web',
         'application',
-        'hybrid',
+        '3D',
+        '2D',
         'animation',
+        'design',
         'capstone',
         'thesis',
         'awards',
@@ -180,6 +186,7 @@ export const webApplications: ProfileProjects = [
   })(),
   {
     name: 'Optimus I.T. Solutions',
+    key: 'optimus-it-solutions',
     period: '2018 April',
     tags: [
       'web',
@@ -201,6 +208,7 @@ export const webApplications: ProfileProjects = [
   },
   {
     name: 'CPU Scheduling Simulator',
+    key: 'cpu-scheduling-simulator',
     period: '2017 October',
     tags: [
       'CPU',
@@ -252,6 +260,7 @@ export const webApplications: ProfileProjects = [
 
     return {
       name: 'Creative Events by Casa Burgos',
+      key: 'creative-events-casa-burgos',
       period: '2017 October',
       tags: [
         'CMS',

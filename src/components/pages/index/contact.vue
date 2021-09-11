@@ -66,15 +66,21 @@ export default defineComponent({
       :id="contentId"
       :class="contentClass"
       cols="12"
-      class="g-layer-content g-bound-less"
+      class="pf-layer-content pf-bound-less"
     >
       <div class="mb-10">
-        <div class="text-h3 pa-1 text-center g-text-pair">
+        <heading
+          level="2"
+          class="text-h3 pa-1 text-center pf-text-pair"
+        >
           <slot name="title" />
-        </div>
-        <div class="text-h5 pa-1 text-center">
-          <slot name="description" />
-        </div>
+        </heading>
+        <heading
+          level="3"
+          class="text-h5 pa-1 text-center"
+        >
+          <slot name="sub-title" />
+        </heading>
       </div>
 
       <v-btn
@@ -89,13 +95,14 @@ export default defineComponent({
       </v-btn>
 
       <div class="my-4">
-        <div class="text-h5 g-text-pair">
+        <div class="text-h5 pf-text-pair">
           {{ name }}
         </div>
         <div class="mailto-text">
           <a
             :href="`mailto:${email}`"
             aria-label="Send me an email"
+            class="pf-link-light"
           >{{ email }}</a>
           <v-btn
             :icon="true"
@@ -116,7 +123,7 @@ export default defineComponent({
       </div>
 
       <div class="mt-10">
-        <div class="text-subtitle-1 pb-2 g-text-pair">
+        <div class="text-subtitle-1 pb-2 pf-text-pair">
           Find me online
         </div>
         <link-icon-list
@@ -126,7 +133,7 @@ export default defineComponent({
         />
       </div>
     </v-col>
-    <div class="g-layer-background">
+    <div class="pf-layer-background">
       <slot name="background" />
     </div>
   </v-row>

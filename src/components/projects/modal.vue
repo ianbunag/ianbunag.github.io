@@ -3,17 +3,27 @@ import {
   defineComponent,
   toRefs,
   ref,
+  computed,
   watch,
 } from '@nuxtjs/composition-api'
 
-import { useBreakPoints } from '~/lib/hooks'
+import { useBreakPoints, useIsMounted } from '~/lib/hooks'
 import { getIcon } from '~/config/icons'
 import Tags from '~/components/tags.vue'
 import TechnologyIconList from '~/components/technology/icon-list.vue'
 import ImageLoader from '~/components/image/loader.vue'
-import ResponsiveContainer from '~/components/wrappers/responsive-container.vue'
 
 import type { ProfileProject } from '~/config/profile/projects'
+
+interface HeadingOptions {
+  title: Heading.Levels,
+  subtitle: Heading.Levels,
+}
+
+export const headingOptions = {
+  type: Object as Prop<HeadingOptions>,
+  default: () => ({}),
+}
 
 export default defineComponent({
   name: 'ProjectModal',
@@ -21,30 +31,46 @@ export default defineComponent({
     Tags,
     TechnologyIconList,
     ImageLoader,
-    ResponsiveContainer,
   },
   props: {
+    active: {
+      type: Boolean,
+      default: false,
+    },
     project: {
       type: Object as Prop<ProfileProject>,
       required: true,
     },
+    heading: headingOptions,
   },
-  setup () {
+  emits: ['active-changed'],
+  setup (props, { emit }) {
     const { isMobile } = toRefs(useBreakPoints())
-    const active = ref(false)
+    const isMounted = useIsMounted()
+    const { active } = toRefs(props)
     const carouselIndex = ref(0)
+
+    const computedActive = computed({
+      /**
+       * Prevent dialog from rendering while instance is not mounted. When
+       *  dialog's active state is initially true, it causes render errors due
+       *  to its dependency elements not yet existing before mounting completes
+       */
+      get (): boolean { return isMounted.value && active.value },
+      set (value: boolean) { emit('active-changed', value) },
+    })
     const contentClass = 'projects-showcase-dialog'
 
     function open () {
       carouselIndex.value = 0
-      active.value = true
+      computedActive.value = true
     }
 
     function close () {
-      active.value = false
+      computedActive.value = false
     }
 
-    watch(active, (flag) => {
+    watch(computedActive, (flag) => {
       const selector = `.v-dialog--active.${contentClass}`
       const content = document.querySelector(selector)
 
@@ -53,7 +79,7 @@ export default defineComponent({
 
     return {
       isMobile,
-      active,
+      computedActive,
       carouselIndex,
       contentClass,
       open,
@@ -66,8 +92,7 @@ export default defineComponent({
 
 <template>
   <v-dialog
-    v-if="project"
-    v-model="active"
+    v-model="computedActive"
     :width="isMobile ? undefined : '70vw'"
     :content-class="contentClass"
     class="projects-showcase-dialog-container"
@@ -76,6 +101,7 @@ export default defineComponent({
       <v-btn
         icon
         class="absolute"
+        aria-label="Close project modal"
         large
         @click="close"
       >
@@ -119,11 +145,21 @@ export default defineComponent({
           </v-img>
         </v-carousel-item>
       </v-carousel>
-      <v-card-title class="text-h4 mb-2 g-text-pair">
-        {{ project.name }}
+      <v-card-title class="mb-2">
+        <heading
+          :level="heading.title || 3"
+          class="text-h4 pf-text-pair"
+        >
+          {{ project.name }}
+        </heading>
       </v-card-title>
-      <v-card-subtitle class="text-left text-subtitle-2 py-2 g-text-pair-accent">
-        {{ project.period }}
+      <v-card-subtitle class="text-left py-2">
+        <heading
+          :level="heading.subtitle || 4"
+          class="text-subtitle-2 pf-text-pair-accent"
+        >
+          {{ project.period }}
+        </heading>
       </v-card-subtitle>
       <!-- eslint-disable-next-line vue/no-v-html -->
       <v-card-text class="text-body-1" v-html="project.description" />
@@ -162,8 +198,6 @@ export default defineComponent({
             color="secondary"
             :disabled="!Boolean(project.secondaryLink.link)"
             :href="project.secondaryLink.link"
-            target="_blank"
-            rel="noopener"
             :small="isMobile"
           >
             <v-icon class="mr-1" :small="isMobile">
@@ -176,8 +210,6 @@ export default defineComponent({
             color="primary"
             :disabled="!Boolean(project.primaryLink.link)"
             :href="project.primaryLink.link"
-            target="_blank"
-            rel="noopener"
             :small="isMobile"
           >
             <v-icon class="mr-1" :small="isMobile">

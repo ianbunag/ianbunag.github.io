@@ -2,19 +2,19 @@ $light-theme-color: #1e1e1e;
 $dark-theme-color: #fff;
 
 .v-application {
-  .g-text-light {
+  .pf-text-light {
     color: $light-theme-color;
   }
 
-  & .g-text-pair {
-    @extend .g-text-pair;
+  & .pf-text-pair {
+    @extend .pf-text-pair;
   }
 
-  & .g-text-pair-accent {
-    @extend .g-text-pair-accent;
+  & .pf-text-pair-accent {
+    @extend .pf-text-pair-accent;
   }
 
-  & .g-timeline-path-light {
+  & .pf-timeline-path-light {
     &.v-timeline {
       &::before {
         background: $light-theme-color;

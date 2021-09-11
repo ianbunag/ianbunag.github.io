@@ -6,17 +6,13 @@ import {
 } from '@nuxtjs/composition-api'
 
 import { getMappedTechnology } from '~/config/technologies'
-import ResponsiveContainer from '~/components/wrappers/responsive-container.vue'
 import TechnologyIcon from '~/components/technology/icon.vue'
 
 import type{ ConfigTechnologyKeys } from '~/config/technologies'
 
 export default defineComponent({
   name: 'TechnologyIconList',
-  components: {
-    ResponsiveContainer,
-    TechnologyIcon,
-  },
+  components: { TechnologyIcon },
   props: {
     technologies: {
       type: Array as Prop<Array<ConfigTechnologyKeys>>,

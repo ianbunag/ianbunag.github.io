@@ -1,10 +1,8 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import ResponsiveContainer from '~/components/wrappers/responsive-container.vue'
 
 export default defineComponent({
   name: 'Tags',
-  components: { ResponsiveContainer },
   props: {
     tags: {
       type: Array as Prop<Array<string>>,

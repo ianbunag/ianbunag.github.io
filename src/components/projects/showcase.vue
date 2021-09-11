@@ -5,10 +5,16 @@ import {
   computed,
   reactive,
   ref,
+  watch,
 } from '@nuxtjs/composition-api'
 
-import ProjectModal from '~/components/projects/modal.vue'
-import ProjectCard, { thumbnailOptions } from '~/components/projects/card.vue'
+import ProjectModal, {
+  headingOptions as modalHeadingOptions,
+} from '~/components/projects/modal.vue'
+import ProjectCard, {
+  headingOptions,
+  thumbnailOptions,
+} from '~/components/projects/card.vue'
 
 import type {
   ProfileProject,
@@ -19,6 +25,10 @@ interface Sort {
   (initial: ProfileProject, comparator: ProfileProject): number,
 }
 type SortChain = Array<Sort>
+interface Selected {
+  key: ProfileProject['key'],
+  shown: boolean,
+}
 
 export const featuredFirstOrder: Sort = (initial, comparator) => {
   if (initial.featured === comparator.featured) { return 0 }
@@ -46,12 +56,19 @@ export function createPrioritySort (sortChain: SortChain): Sort {
 }
 
 export default defineComponent({
-  name: 'ProjectShowcase',
+  name: 'ProjectsShowcase',
   components: {
     ProjectModal,
     ProjectCard,
   },
   props: {
+    selected: {
+      type: Object as Prop<Selected>,
+      default: () => ({
+        key: '',
+        shown: false,
+      }),
+    },
     projects: {
       type: Array as Prop<ProfileProjects>,
       required: true,
@@ -72,10 +89,19 @@ export default defineComponent({
       type: String,
       default: undefined,
     },
+    heading: headingOptions,
+    modalHeading: modalHeadingOptions,
     thumbnail: thumbnailOptions,
   },
-  setup (props) {
-    const { projects, featuredFirst, descending, ascending } = toRefs(props)
+  emits: ['selected-changed'],
+  setup (props, { emit }) {
+    const {
+      selected,
+      projects,
+      featuredFirst,
+      descending,
+      ascending,
+    } = toRefs(props)
     const sortChain = computed<SortChain>(
       () => [
         ...(featuredFirst.value ? [featuredFirstOrder] : []),
@@ -87,14 +113,33 @@ export default defineComponent({
     const formattedProjects = computed(() => projects.value.sort(sort.value))
 
     const modalRef = ref()
-    const modal = reactive({
-      project: formattedProjects.value[0],
-      open: (projectIndex: number) => {
-        modal.project = formattedProjects.value[projectIndex]
-        modalRef.value.open()
-      },
-      close: () => { modalRef.value.close() },
-    })
+    const modal = (() => {
+      const computedSelected = computed({
+        get (): Selected { return selected.value },
+        set (value: Selected) { emit('selected-changed', value) },
+      })
+      const initialProjectKey = Math.max(
+        formattedProjects.value.findIndex(
+          ({ key }) => key === selected.value.key,
+        ),
+        0,
+      )
+      const refs = reactive({
+        project: formattedProjects.value[initialProjectKey],
+        active: computedSelected.value.shown,
+        open: (projectIndex: number) => {
+          modal.project = formattedProjects.value[projectIndex]
+          modalRef.value.open()
+        },
+        close: () => { modalRef.value.close() },
+      })
+
+      watch(() => refs.active, () => {
+        computedSelected.value = { key: refs.project.key, shown: refs.active }
+      })
+
+      return refs
+    })()
 
     return {
       formattedProjects,
@@ -110,7 +155,7 @@ export default defineComponent({
     <v-row :justify="justify">
       <v-fade-transition
         v-for="(project, index) in formattedProjects"
-        :key="project.name"
+        :key="project.key"
       >
         <v-col
           cols="12"
@@ -120,6 +165,7 @@ export default defineComponent({
         >
           <project-card
             :project="project"
+            :heading="heading"
             :thumbnail="thumbnail"
             @click.stop="modal.open(index)"
           />
@@ -128,7 +174,10 @@ export default defineComponent({
     </v-row>
     <project-modal
       ref="modalRef"
+      :heading="modalHeading"
       :project="modal.project"
+      :active="modal.active"
+      @active-changed="modal.active = $event"
     />
   </v-container>
 </template>

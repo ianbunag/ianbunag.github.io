@@ -21,8 +21,7 @@ export function createAccessibleLink (display: string, url: string): string {
   const properties = [
     `href="${url}"`,
     `aria-label="${display}"`,
-    'target="_blank"',
-    'rel="noopener"',
+    'class="pf-link-light"',
   ].join(' ')
 
   return `<a ${properties}>${display}</a>`

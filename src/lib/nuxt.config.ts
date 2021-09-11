@@ -18,7 +18,14 @@ export function extractHostname (env: NodeJS.Process['env']): string {
 }
 
 export function extractBaseHostname (env: NodeJS.Process['env']): string {
-  const base = process.env.BASE || '/'
+  const base = env.BASE || '/'
 
   return `${extractHostname(env)}${base}`
+}
+
+export function createCanonicalLink (
+  env: NodeJS.Process['env'],
+  route = '',
+): string {
+  return `${extractHostname(env)}${route}`
 }

@@ -7,6 +7,7 @@ import { Type } from '~/config/profile/experiences'
 import ExperienceCard, {
   getRange,
   getDuration,
+  headingOptions,
 } from '~/components/experience/card.vue'
 
 import type { ProfileExperiences } from '~/config/profile/experiences'
@@ -41,6 +42,7 @@ export default defineComponent({
       required: true,
     },
     timeline: timelineOptions,
+    heading: headingOptions,
   },
   setup () {
     const { isMobile } = toRefs(useBreakPoints())
@@ -69,7 +71,7 @@ export default defineComponent({
       <template #opposite>
         <div
           :class="[timeline.labelClass]"
-          class="text-subtitle-1 g-text-pair"
+          class="text-subtitle-1 pf-text-pair"
         >
           {{ getRange(experience.period) }}
         </div>
@@ -83,6 +85,7 @@ export default defineComponent({
       <experience-card
         :experience="experience"
         :hide-period="!isMobile"
+        :heading="heading"
       />
     </v-timeline-item>
   </v-timeline>
