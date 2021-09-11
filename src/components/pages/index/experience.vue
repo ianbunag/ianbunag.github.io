@@ -53,21 +53,28 @@ export default defineComponent({
     <v-col
       cols="12"
       :class="contentClass"
-      class="g-layer-content g-bound-less"
+      class="pf-layer-content pf-bound-less"
     >
-      <div class="text-h3 pa-1 text-center g-text-pair">
+      <heading
+        level="2"
+        class="text-h3 pa-1 text-center pf-text-pair"
+      >
         <slot name="title" />
-      </div>
-      <div class="text-h5 pa-1 text-center">
-        <slot name="description" />
-      </div>
+      </heading>
+      <heading
+        level="3"
+        class="text-h5 pa-1 text-center"
+      >
+        <slot name="sub-title" />
+      </heading>
       <experience-timeline
         :experiences="sortedExperiences"
         :timeline="timeline"
+        :heading="{ title: 4, subtitle: 5 }"
         class="mt-6 mx-md-16"
       />
     </v-col>
-    <div class="g-layer-background">
+    <div class="pf-layer-background">
       <slot name="background" />
     </div>
   </v-row>

@@ -1,1 +1,4 @@
-export const plugins = ['~/plugins/vue-typer.client']
+export const plugins = [
+  '~/plugins/wrappers',
+  '~/plugins/vue-typer.client',
+]

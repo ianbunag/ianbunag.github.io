@@ -36,7 +36,7 @@ export default defineComponent({
   <div>
     <v-app-bar
       :inverted-scroll="invertedScroll"
-      class="px-2 g-layer-navigation g-semi-transparent-bg"
+      class="px-2 pf-layer-navigation pf-semi-transparent-bg"
       elevation="0"
       collapse
       dense
@@ -50,13 +50,13 @@ export default defineComponent({
 
     <v-navigation-drawer
       v-model="appBar.drawer"
-      class="g-layer-navigation-1"
+      class="pf-layer-navigation-1"
       temporary
       app
     >
       <v-list nav dense>
         <v-btn
-          class="float-right g-layer-navigation"
+          class="float-right pf-layer-navigation"
           aria-label="close-drawer"
           icon
           large
@@ -76,7 +76,7 @@ export default defineComponent({
             <v-list-item-title class="text-h6">
               {{ profile. name }}
             </v-list-item-title>
-            <v-list-item-subtitle class="g-text-pair">
+            <v-list-item-subtitle class="text-subtitle-2 pf-text-pair">
               {{ profile.title }}
             </v-list-item-subtitle>
           </v-list-item-content>
@@ -97,15 +97,13 @@ export default defineComponent({
 
           <v-divider class="mb-3" />
 
-          <span class="text-overline px-2 g-text-pair-accent">
+          <span class="text-overline px-2 pf-text-pair-accent">
             Find me online
           </span>
           <v-list-item
             v-for="link in links"
             :key="link.name"
             :href="link.url"
-            :target="link.url ? '_blank' : undefined"
-            :rel="link.url ? 'noopener' : undefined"
           >
             <v-list-item-icon>
               <v-icon>{{ link.icon }}</v-icon>

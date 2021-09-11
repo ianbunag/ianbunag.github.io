@@ -7,7 +7,7 @@ import { threeDimensionDesign } from '~/config/profile/projects/three-dimension-
 import type {
   ProfileProject,
   ProfileProjects,
-} from '~/config/profile/projects/module'
+} from '~/lib/config/profile/projects'
 
 export const projects: ProfileProjects = [
   ...webApplications,

@@ -1,4 +1,4 @@
-import { icons } from '~/config'
+import { icons } from '~/config/icons'
 
 interface Page {
   name: string,

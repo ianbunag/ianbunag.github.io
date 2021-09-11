@@ -1,11 +1,12 @@
-import { requireProgressiveImage } from '~/config/module'
-import { LinkName } from '~/config/profile/projects/module'
+import { requireProgressiveImage } from '~/lib/config'
+import { LinkName } from '~/lib/config/profile/projects'
 
-import type { ProfileProjects } from '~/config/profile/projects/module'
+import type { ProfileProjects } from '~/lib/config/profile/projects'
 
 export const kata: ProfileProjects = [
   {
     name: 'Python Challenges',
+    key: 'python-challenges',
     period: '2019 May',
     tags: [
       'Python',

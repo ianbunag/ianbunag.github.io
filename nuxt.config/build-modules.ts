@@ -3,7 +3,7 @@ import {
   normalizeName,
   extractHostname,
   extractBaseHostname,
-} from './module'
+} from '../src/lib/nuxt.config'
 
 function createSitemap (host: string, name?: string) {
   return {

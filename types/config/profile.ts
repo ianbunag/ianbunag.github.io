@@ -31,6 +31,7 @@ export interface Project<
   TechnologyMap extends TechnologyMapBase = TechnologyMapBase,
 > {
   name: string,
+  key: string,
   period: string,
   tags: Array<string>,
   description: string,

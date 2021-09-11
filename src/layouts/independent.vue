@@ -11,7 +11,7 @@ export default defineComponent({
 <template>
   <v-app dark>
     <app-bar />
-    <v-main class="px-6 pb-13 g-main-bg">
+    <v-main class="px-6 pb-13 pf-main-bg">
       <Nuxt />
     </v-main>
     <app-footer />
