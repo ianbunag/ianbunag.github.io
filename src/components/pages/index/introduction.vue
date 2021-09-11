@@ -80,6 +80,7 @@ export default defineComponent({
     }
 
     const nameTyper = reactive({
+      name,
       tag,
       startNameTransition,
     })
@@ -102,8 +103,8 @@ export default defineComponent({
     align="center"
     class="text-center section"
   >
-    <v-col cols="12" class="g-layer-content">
-      <v-responsive max-width="300px" class="g-center">
+    <v-col cols="12" class="pf-layer-content">
+      <v-responsive max-width="300px" class="pf-center">
         <slot name="logo" />
       </v-responsive>
 
@@ -118,14 +119,23 @@ export default defineComponent({
             @completed="nameTyper.startNameTransition"
           />
           <span
-            v-else
+            v-else-if="![
+              NameState.TYPING_TAG,
+              NameState.REPLACED_NAME
+            ].includes(nameState)"
             ref="glitchedName"
             class="introduction-name"
           >{{ nameTyper.tag }}</span>
+          <heading
+            v-show="nameState === NameState.REPLACED_NAME"
+            class="introduction-name"
+          >
+            {{ nameTyper.name }}
+          </heading>
         </client-only>
       </div>
 
-      <div class="introduction-role-container g-text-pair">
+      <div class="introduction-role-container pf-text-pair">
         <client-only>
           <vue-typer
             v-bind="typerSettings"
@@ -139,7 +149,7 @@ export default defineComponent({
         </client-only>
       </div>
     </v-col>
-    <div class="g-layer-background">
+    <div class="pf-layer-background">
       <slot name="background" />
     </div>
   </v-row>

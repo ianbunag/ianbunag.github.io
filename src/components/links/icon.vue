@@ -37,20 +37,14 @@ export default defineComponent({
     >
       <span>{{ name }}</span>
     </v-tooltip>
-    <a
+    <v-btn
       ref="link"
       :href="url"
       :aria-label="name"
-      rel="noopener"
-      target="_blank"
+      elevation="6"
+      icon
     >
-      <v-btn
-        elevation="6"
-        :aria-label="name"
-        icon
-      >
-        <v-icon>{{ icon }}</v-icon>
-      </v-btn>
-    </a>
+      <v-icon>{{ icon }}</v-icon>
+    </v-btn>
   </div>
 </template>

@@ -32,7 +32,7 @@ export default defineComponent({
     return {
       technology: ref(),
       noLink: computed(() => {
-        return toRef(props, 'url').value ? '' : 'g-default-cursor'
+        return toRef(props, 'url').value ? '' : 'pf-default-cursor'
       }),
     }
   },
@@ -47,22 +47,15 @@ export default defineComponent({
     >
       <span>{{ display }}</span>
     </v-tooltip>
-    <a
+    <v-btn
       ref="technology"
-      :href="url || null"
+      elevation="6"
+      :href="url || undefined"
       :aria-label="display"
       :class="[noLink]"
-      rel="noopener"
-      target="_blank"
+      icon
     >
-      <v-btn
-        elevation="6"
-        :aria-label="display"
-        :class="[noLink]"
-        icon
-      >
-        <v-icon>{{ icon }}</v-icon>
-      </v-btn>
-    </a>
+      <v-icon>{{ icon }}</v-icon>
+    </v-btn>
   </div>
 </template>

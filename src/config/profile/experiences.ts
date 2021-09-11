@@ -1,5 +1,6 @@
-import { createUnorderedList, createAccessibleLink } from '~/config/module'
+import { createUnorderedList, createAccessibleLink } from '~/lib/config'
 import { createTechnologyLink } from '~/config/technologies'
+import { getProjectLink } from '~/lib/pages/projects'
 
 import type { ConfigAssociations } from '~/config/associations'
 import type { ConfigTechnologyKeys } from '~/config/technologies'
@@ -58,7 +59,7 @@ export const experiences: ProfileExperiences = [
         },
         description: createUnorderedList([
           workedForDescription,
-          `Core developer of the ${recurly} integration team`,
+          `Core developer on the ${recurly} integration team`,
           `Implemented serverless services with ${aws}`,
         ]),
       },
@@ -83,6 +84,14 @@ export const experiences: ProfileExperiences = [
       'WordPress',
       'https://wordpress.com',
     )
+    const promotionalBanners = createAccessibleLink(
+      'promotional banners',
+      getProjectLink('keywest-internationale-sales-banners'),
+    )
+    const promotionalStickers = createAccessibleLink(
+      'promotional stickers',
+      getProjectLink('keywest-internationale-van-stickers'),
+    )
 
     return {
       role: 'Web Developer Intern',
@@ -94,22 +103,29 @@ export const experiences: ProfileExperiences = [
       },
       description: createUnorderedList([
         `Enhanced and maintained the company's ${wordPress} site`,
-        `Designed promotional banners for the company's website`,
-        `Designed promotional stickers for the company's van`,
+        `Designed ${promotionalBanners} for the company's website`,
+        `Designed ${promotionalStickers} for the company's van`,
       ]),
     }
   })(),
-  {
-    role: 'BSITDA Alumni',
-    type: Type.STUDIES,
-    association: 'feu-tech',
-    period: {
-      start: '2014 July',
-      end: '2019 March',
-    },
-    description: createUnorderedList([
-      'Completed Bachelor of Science in Information Technology with Specialization in Digital Arts program',
-      'Member of the La Prisma Group - awarded the best thesis, website, film and trailer of BSITDA Capstone Project Batch 15',
-    ]),
-  },
+  ((): ProfileExperience => {
+    const change = createAccessibleLink(
+      'Change: A Hybrid Animation Film in a Database-Driven Website',
+      getProjectLink('change-hybrid-animation-database-driven-website'),
+    )
+
+    return {
+      role: 'BSITDA Alumni',
+      type: Type.STUDIES,
+      association: 'feu-tech',
+      period: {
+        start: '2014 July',
+        end: '2019 March',
+      },
+      description: createUnorderedList([
+        'Completed Bachelor of Science in Information Technology with Specialization in Digital Arts program',
+        `Web developer for the capstone project ${change} by La Prisma - awarded the best thesis, website, film and trailer`,
+      ]),
+    }
+  })(),
 ]

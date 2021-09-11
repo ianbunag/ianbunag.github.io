@@ -1,9 +1,9 @@
-import { requireProgressiveImage, createAccessibleLink } from '~/config/module'
+import { requireProgressiveImage, createAccessibleLink } from '~/lib/config'
 
 import type {
   ProfileProject,
   ProfileProjects,
-} from '~/config/profile/projects/module'
+} from '~/lib/config/profile/projects'
 
 export const graphicsDesign: ProfileProjects = [
   ((): ProfileProject => {
@@ -14,6 +14,7 @@ export const graphicsDesign: ProfileProjects = [
 
     return {
       name: 'Keywest Internationale Sales Banners',
+      key: 'keywest-internationale-sales-banners',
       period: '2018 July',
       tags: [
         'graphic',
@@ -41,6 +42,7 @@ export const graphicsDesign: ProfileProjects = [
 
     return {
       name: 'Crane Philippines Banners',
+      key: 'crane-philippines-banners',
       period: '2018 July',
       tags: [
         'graphic',
@@ -68,6 +70,7 @@ export const graphicsDesign: ProfileProjects = [
 
     return {
       name: 'Optimum Industrial Sales Banners',
+      key: 'optimum-industrial-sales-banners',
       period: '2018 July',
       tags: [
         'graphic',
@@ -93,7 +96,8 @@ export const graphicsDesign: ProfileProjects = [
     )
 
     return {
-      name: 'Keywest Internationale Sales Van Sticker',
+      name: 'Keywest Internationale Sales Van Stickers',
+      key: 'keywest-internationale-van-stickers',
       period: '2018 July',
       tags: [
         'graphic',
@@ -118,6 +122,7 @@ export const graphicsDesign: ProfileProjects = [
 
     return {
       name: 'Rustic Table Menu',
+      key: 'rustic-table-menu',
       period: '2017 March',
       tags: [
         'graphic',

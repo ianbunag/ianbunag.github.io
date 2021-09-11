@@ -6,6 +6,16 @@ import TechnologyStack from '~/components/technology/stack.vue'
 
 import type { ProfileTechStack } from '~/config/profile/tech-stacks'
 
+interface HeadingOptions {
+  section: Heading.Levels,
+  stack: Heading.Levels,
+}
+
+export const headingOptions = {
+  type: Object as Prop<HeadingOptions>,
+  default: () => ({}),
+}
+
 export default defineComponent({
   name: 'TechnologyStackList',
   components: { TechnologyStack },
@@ -14,6 +24,7 @@ export default defineComponent({
       type: Object as Prop<ProfileTechStack>,
       required: true,
     },
+    heading: headingOptions,
   },
   setup (props) {
     const { techStack } = toRefs(props)
@@ -27,12 +38,15 @@ export default defineComponent({
 </script>
 
 <template>
-  <v-container class="g-bound-less" fluid>
+  <v-container class="pf-bound-less" fluid>
     <v-row dense>
       <v-col cols="12" class="mt-6">
-        <div class="font-weight-medium text-h5 text-md-h4">
+        <heading
+          :level="heading.section || 3"
+          class="font-weight-medium text-h5 text-md-h4"
+        >
           {{ techStack.category }}
-        </div>
+        </heading>
         <v-divider class="my-3" />
       </v-col>
 
@@ -44,7 +58,10 @@ export default defineComponent({
         md="4"
         xl="3"
       >
-        <technology-stack v-bind="mappedTechnology" />
+        <technology-stack
+          v-bind="mappedTechnology"
+          :heading="heading.stack"
+        />
       </v-col>
     </v-row>
   </v-container>

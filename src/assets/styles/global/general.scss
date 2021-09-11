@@ -13,26 +13,26 @@ html {
   background: $selection-color;
 }
 
-.g-main-bg {
+.pf-main-bg {
   background-color: $main-background-color;
 }
 
-.g-semi-transparent-bg {
+.pf-semi-transparent-bg {
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
-.g-full-height {
+.pf-full-height {
   height: 100%;
 }
 
-.g-absolute {
+.pf-absolute {
   position: absolute;
 }
 
-.g-default-cursor {
+.pf-default-cursor {
   cursor: default !important;
 }
 
-.g-fade-35 {
+.pf-fade-35 {
   opacity: 0.35;
 }
