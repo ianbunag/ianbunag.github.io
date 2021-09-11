@@ -127,94 +127,13 @@ from the [Swiss Army Man Official Movie Site](https://swissarmyman.com/).
 
 ### Environment Variables
 
-Listed are the important build variables.
-
-#### HOST
-- Host where the app will be served
-- **Required**, set to localhost for local package generation
-- Used for generating root sitemap (`sitemap.xml`) in build package root
-- Protocol must be prefixed (`http://` or `https://`)
-- `localhost` value gets automatically mapped to `http://127.0.0.1`
-- If serving on a specific port, it should be defined in `PORT` variable
-
-#### EXTRA_HOSTS
-- Used for generating sitemaps for additional subdomains, e.g.
-  `https://www.domain.com`
-- **Optional**, leave blank if not needed
-- Separate each entry with a comma (`,`)
-- Protocol must be prefixed (`http://` or `https://`)
-- If serving on a specific port, include suffix, e.g.
-  `https://www.domain.com:3000`
-
-#### PORT
-- Port where the app will be served
-- **Optional**, leave blank if not needed
-
-#### BASE
-- Base URL of the app
-- **Optional**, leave blank if not needed
-  - Defaults to `/`
-- Used when serving the app under a different context root
-  - e.g. a non root project in GitLab pages with format
-    `https://namespace.gitlab.io/project-name`
-
-#### GOOGLE_SITE_VERIFICATION
-- Used to verify domain ownership in
-  [Google Search Console](https://search.google.com/search-console/)
-- Injects `google-site-verification` metadata header with provided value
-- **Optional**, leave blank if not needed
+See [Environment Variables Reference](documentation/environment-variables.md)
 
 <br/>
 
 ### GitLab CI/CD Variables
 
-Listed are the variables used during CI/CD, consumed in
-[.gitlab-ci.yml](.gitlab-ci.yml).
-
-#### CI_GIT_EMAIL
-- Email to use when pushing bumped up package version to main branch
-- Example is `runner@gitlab.example.org`
-#### CI_GIT_USERNAME
-- Username to use when pushing bumped up package version to main branch
-- Example is `Portfolio CI/CD Runner`
-
-#### ENV
-- Environment variable file to be used during CD build
-- Should be of type `File`
-
-#### GITLAB_ACCESS_TOKEN
-- Access token to use to authorize pushing of bumped up package version to main
-  branch from CI/CD
-- Current token used is a
-  [Personal Access Token](https://gitlab.com/-/profile/personal_access_tokens),
-  with scopes `api` and `read_user`
-
-#### GSC_VERIFICATION_MAP
-- Used for including
-  [Google Search Console](https://search.google.com/search-console/)
-  verification files in build package
-- Should be of type `File`
-- Entry format is `<environment-file-reference><space><file-name>`
-- Where `<environment-file-reference>` is:
-  - An environment variable of type `File`
-  - With content provided by
-    [Google Search Console](https://search.google.com/search-console/)
-- Entries should be delimited by newline
-- Use case:
-  - Given the following entries:
-  ```
-  GSC_GITLAB_PERSONAL_EMAIL_VERIFICATION googlexvcpiixa6r3s77mr.html
-  GSC_GITLAB_WORK_EMAIL_VERIFICATION googlesd46813r5g2wp6t3.html
-  ```
-  - Then the following environment (file) variables should be configured:
-    - GSC_GITLAB_PERSONAL_EMAIL_VERIFICATION
-    ```
-    google-site-verification: googlexvcpiixa6r3s77mr.html
-    ```
-    - GSC_GITLAB_WORK_EMAIL_VERIFICATION
-    ```
-    google-site-verification: googlesd46813r5g2wp6t3.html
-    ```
+See [GitLab CI/CD Variables Reference](documentation/gitlab-ci-cd-variables.md)
 
 <br/>
 

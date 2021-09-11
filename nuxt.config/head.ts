@@ -1,5 +1,5 @@
-import { introduction } from '../src/config/profile/introduction'
-import { extractBaseHostname } from './module'
+import { shortIntroduction } from '../src/config/profile/introduction'
+import theme from '../src/config/theme.json'
 
 function createVuetifyFontPreload (font: string) {
   return {
@@ -24,17 +24,23 @@ export const head = {
     {
       hid: 'description',
       name: 'description',
-      content: introduction,
+      content: shortIntroduction,
     },
+    { name: 'theme-color', content: theme['background-darker'] },
     { name: 'format-detection', content: 'telephone=no' },
+    { name: 'robots', content: 'index, follow' },
     {
       name: 'google-site-verification',
       content: process.env.GOOGLE_SITE_VERIFICATION,
     },
   ],
   link: [
-    { rel: 'canonical', href: extractBaseHostname(process.env) },
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
+    {
+      rel: 'apple-touch-icon',
+      type: 'image/png',
+      href: '/touch-icon.png',
+    },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
     createVuetifyFontPreload('Roboto'),

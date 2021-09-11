@@ -32,7 +32,7 @@ export default defineComponent({
     const container = h(
       VContainer,
       {
-        class: 'g-bound-less',
+        class: 'pf-bound-less',
         props: { fluid: true },
       },
       [row],

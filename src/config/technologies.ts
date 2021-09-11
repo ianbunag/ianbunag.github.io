@@ -1,4 +1,4 @@
-import { createAccessibleLink } from '~/config/module'
+import { createAccessibleLink } from '~/lib/config'
 import { getIcon } from '~/config/icons'
 
 import type { ConfigIcons } from '~/config/icons'

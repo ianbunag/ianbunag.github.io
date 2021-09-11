@@ -36,11 +36,11 @@ export default defineComponent({
 </script>
 
 <template>
-  <v-container class="g-full-height" fluid>
+  <v-container class="pf-full-height" fluid>
     <v-row
       justify="center"
       align="center"
-      class="text-center g-full-height"
+      class="text-center pf-full-height"
     >
       <v-col cols="12">
         <v-icon x-large>
@@ -50,7 +50,10 @@ export default defineComponent({
         <div class="text-h5">
           {{ message }}
         </div>
-        <a :href="pages.HOME.route">
+        <a
+          :href="pages.HOME.route"
+          class="pf-link-light"
+        >
           Let us head back home.
         </a>
       </v-col>

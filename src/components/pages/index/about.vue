@@ -34,23 +34,29 @@ export default defineComponent({
     <v-col
       :class="contentClass"
       cols="12"
-      class="g-layer-content g-bound-less"
+      class="pf-layer-content pf-bound-less"
     >
-      <v-container class="g-bound-less" fluid>
+      <v-container class="pf-bound-less" fluid>
         <v-row
           justify="center"
           align="center"
           dense
         >
           <v-col cols="12" md="10">
-            <div class="text-h3 text-center g-text-pair">
+            <heading
+              level="2"
+              class="text-h3 text-center pf-text-pair"
+            >
               <slot name="title" />
-            </div>
+            </heading>
           </v-col>
           <v-col cols="12" md="10">
-            <div class="text-h5 text-center">
-              <slot name="description" />
-            </div>
+            <heading
+              level="3"
+              class="text-h5 text-center"
+            >
+              <slot name="sub-title" />
+            </heading>
           </v-col>
         </v-row>
 
@@ -67,7 +73,7 @@ export default defineComponent({
             <v-hover>
               <template #default="{ hover }">
                 <v-card
-                  class="d-flex flex-column transition-swing g-full-height"
+                  class="d-flex flex-column transition-swing pf-full-height"
                   :elevation="hover ? 16 : 8"
                 >
                   <div class="mt-4 px-4">
@@ -75,7 +81,7 @@ export default defineComponent({
                       {{ getIcon(skill.icon) }}
                     </v-icon>
                   </div>
-                  <v-card-title class="g-text-pair">
+                  <v-card-title class="pf-text-pair">
                     {{ skill.name }}
                   </v-card-title>
                   <v-card-text>{{ skill.description }}</v-card-text>
@@ -104,7 +110,7 @@ export default defineComponent({
         </v-row>
       </v-container>
     </v-col>
-    <div class="g-layer-background">
+    <div class="pf-layer-background">
       <slot name="background" />
     </div>
   </v-row>

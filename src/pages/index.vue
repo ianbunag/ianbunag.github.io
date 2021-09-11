@@ -1,8 +1,9 @@
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useMeta } from '@nuxtjs/composition-api'
 
 import { profile, icons, pages } from '~/config'
 
+import { createCanonicalLink } from '~/lib/nuxt.config'
 import Introduction from '~/components/pages/index/introduction.vue'
 import About from '~/components/pages/index/about.vue'
 import Projects from '~/components/pages/index/projects.vue'
@@ -31,12 +32,17 @@ export default defineComponent({
   },
   layout: 'single-page',
   setup () {
+    const { env } = useContext()
+
+    useMeta({ link: [{ rel: 'canonical', href: createCanonicalLink(env) }] })
+
     return {
       profile,
       icons,
       pages,
     }
   },
+  head: {},
 })
 </script>
 
@@ -61,7 +67,7 @@ export default defineComponent({
       <template #title>
         A little bit about myself
       </template>
-      <template #description>
+      <template #sub-title>
         {{ profile.introduction }}
       </template>
       <template #footer>
@@ -90,7 +96,7 @@ export default defineComponent({
       <template #title>
         Some awesome stuff
       </template>
-      <template #description>
+      <template #sub-title>
         Projects that showcase my technical growth over the years.
       </template>
       <template #footer>
@@ -114,19 +120,19 @@ export default defineComponent({
     <experience
       :experiences="profile.experiences"
       :timeline="{
-        labelClass: 'g-text-light',
-        timelineClass: 'g-timeline-path-light'
+        labelClass: 'pf-text-light',
+        timelineClass: 'pf-timeline-path-light'
       }"
       content-class="mt-16 pt-8 pt-md-10 mx-md-16 px-md-12"
       class="section-background-lighter"
     >
       <template #title>
-        <span class="g-text-light">
+        <span class="pf-text-light">
           My professional journey
         </span>
       </template>
-      <template #description>
-        <span class="g-text-light">
+      <template #sub-title>
+        <span class="pf-text-light">
           Experiences that sculpted me to what I am today.
         </span>
       </template>
@@ -147,7 +153,7 @@ export default defineComponent({
       <template #title>
         Let's grab some sushi 🍣
       </template>
-      <template #description>
+      <template #sub-title>
         <span>
           Or coffee - I would be delighted to get in touch.
         </span>

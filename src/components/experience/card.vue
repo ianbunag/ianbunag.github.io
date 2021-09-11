@@ -8,6 +8,16 @@ import { getAssociation } from '~/config/associations'
 
 import type { ProfileExperience } from '~/config/profile/experiences'
 
+interface HeadingOptions {
+  title: Heading.Levels,
+  subtitle: Heading.Levels,
+}
+
+export const headingOptions = {
+  type: Object as Prop<HeadingOptions>,
+  default: () => ({}),
+}
+
 export function getRange (period: ProfileExperience['period']): string {
   return `${period.start} - ${period.end || 'Present'}`
 }
@@ -45,6 +55,7 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    heading: headingOptions,
   },
   setup (props) {
     const { isMobile } = toRefs(useBreakPoints())
@@ -76,70 +87,79 @@ export default defineComponent({
         class="transition-swing"
       >
         <table>
-          <tr>
-            <td>
-              <a
-                :href="mappedAssociation.url || undefined"
-                :aria-label="mappedAssociation.name || 'Association'"
-                :class="{ 'g-default-cursor': !mappedAssociation.url }"
-                rel="noopener"
-                target="_blank"
-              >
-                <v-img
-                  :src="mappedAssociation.logoURL"
-                  :class="{ 'link-logo': mappedAssociation.url }"
-                  :style="imgCSSProps"
-                  transition="scale-transition"
-                  aspect-ratio="1"
-                  min-width="45px"
-                  max-width="45px"
-                  class="ma-3"
-                  contain
+          <tbody>
+            <tr>
+              <td>
+                <a
+                  :href="mappedAssociation.url || undefined"
+                  :aria-label="mappedAssociation.name || 'Association'"
+                  :class="{ 'pf-default-cursor': !mappedAssociation.url }"
                 >
-                  <template #placeholder>
-                    <v-row
-                      align="center"
-                      justify="center"
-                      class="g-full-height g-margin-less g-fade-35"
-                    >
-                      <v-icon size="100%" class="g-absolute">
-                        {{ icons.mdiDomain }}
-                      </v-icon>
-                    </v-row>
-                  </template>
-                </v-img>
-              </a>
-            </td>
-            <td :class="{ 'py-1': !hidePeriod }">
-              <v-card-title
-                :class="{ 'text-subtitle-1 pb-3': isMobile }"
-                class="pt-0 px-0 g-text-pair"
-              >
-                {{ experience.role }}
-              </v-card-title>
-              <template v-if="hidePeriod">
-                <v-card-subtitle class="pb-0 px-0 text-body-1">
-                  {{ mappedAssociation.name }}
-                </v-card-subtitle>
-              </template>
-              <template v-else>
+                  <v-img
+                    :src="mappedAssociation.logoURL"
+                    :class="{ 'link-logo': mappedAssociation.url }"
+                    :style="imgCSSProps"
+                    transition="scale-transition"
+                    aspect-ratio="1"
+                    min-width="45px"
+                    max-width="45px"
+                    class="ma-3"
+                    contain
+                  >
+                    <template #placeholder>
+                      <v-row
+                        align="center"
+                        justify="center"
+                        class="pf-full-height pf-margin-less pf-fade-35"
+                      >
+                        <v-icon size="100%" class="pf-absolute">
+                          {{ icons.mdiDomain }}
+                        </v-icon>
+                      </v-row>
+                    </template>
+                  </v-img>
+                </a>
+              </td>
+              <td :class="{ 'py-1': !hidePeriod }">
+                <v-card-title class="pt-0 px-0">
+                  <heading
+                    :level="heading.title || 3"
+                    :class="{ 'text-subtitle-1': isMobile }"
+                    class="text-h6 experience-card pf-text-pair"
+                  >
+                    {{ experience.role }}
+                  </heading>
+                </v-card-title>
                 <v-card-subtitle class="pb-0 px-0">
-                  <div class="text-body-2">
-                    {{ mappedAssociation.name }}
-                  </div>
-                  <div class="text-caption g-text-pair-accent">
-                    {{ getRange(experience.period) }}
-                    <strong>({{ getDuration(experience.period) }})</strong>
-                  </div>
+                  <template v-if="hidePeriod">
+                    <heading
+                      :level="heading.subtitle || 4"
+                      class="text-body-1"
+                    >
+                      {{ mappedAssociation.name }}
+                    </heading>
+                  </template>
+                  <template v-else>
+                    <heading
+                      :level="heading.subtitle || 4"
+                      class="text-body-2"
+                    >
+                      {{ mappedAssociation.name }}
+                    </heading>
+                    <div class="text-caption pf-text-pair-accent">
+                      {{ getRange(experience.period) }}
+                      <strong>({{ getDuration(experience.period) }})</strong>
+                    </div>
+                  </template>
                 </v-card-subtitle>
-              </template>
-            </td>
-          </tr>
+              </td>
+            </tr>
+          </tbody>
         </table>
 
         <!-- eslint-disable vue/no-v-html -->
         <v-card-text
-          class="px-3 pb-3 g-bound-less"
+          class="px-3 pb-3 pf-bound-less"
           v-html="experience.description"
         />
         <!-- eslint-enable vue/no-v-html -->
@@ -155,5 +175,10 @@ export default defineComponent({
   :hover {
     border-bottom: 1.5px solid var(--logo-accent);
   }
+}
+
+.experience-card {
+  display: inline-block;
+  line-height: 1.5;
 }
 </style>

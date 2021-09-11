@@ -1,16 +1,16 @@
-.g-center {
+.pf-center {
   margin: auto;
 }
 
-.g-margin-less {
+.pf-margin-less {
   margin: 0 !important;
 }
 
-.g-padding-less {
+.pf-padding-less {
   padding: 0 !important;
 }
 
-.g-bound-less {
-  @extend .g-margin-less;
-  @extend .g-padding-less;
+.pf-bound-less {
+  @extend .pf-margin-less;
+  @extend .pf-padding-less;
 }
