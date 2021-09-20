@@ -34,4 +34,34 @@ export const kata: ProfileProjects = [
       link: process.env.PYTHON_CHALLENGES_REPOSITORY,
     },
   },
+  {
+    name: 'TypeScript Challenges',
+    key: 'typescript-challenges',
+    period: '2021 October',
+    tags: [
+      'TypeScript',
+      'Node.js Notebooks',
+      'kata',
+      'types',
+      'intellisense',
+    ],
+    description: 'Collection of TypeScript type challenges for practice with Node.js Notebooks.',
+    images: [
+      './assets/images/projects/typescript-challenges/readme.png',
+      './assets/images/projects/typescript-challenges/initial.png',
+      './assets/images/projects/typescript-challenges/half-solved.png',
+      './assets/images/projects/typescript-challenges/solved.png',
+    ].map(requireProgressiveImage),
+    technologies: [
+      'typescript',
+      'node-js',
+      'vs-code',
+    ],
+    featured: true,
+    secondaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      icon: 'mdiGitlab',
+      link: process.env.TYPESCRIPT_CHALLENGES_REPOSITORY,
+    },
+  },
 ]
