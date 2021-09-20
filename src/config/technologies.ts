@@ -232,6 +232,13 @@ export const serverManagement = defineTechnologyMap({
 })
 
 export const applications = defineTechnologyMap({
+  'vs-code': {
+    display: 'Visual Studio Code',
+    description: 'Code editor by Microsoft',
+    icon: 'mdiMicrosoftVisualStudioCode',
+    logoURL: 'logos/vs-code.svg',
+    url: 'https://code.visualstudio.com/',
+  },
   docker: {
     display: 'Docker',
     description: 'Container management toolkit',

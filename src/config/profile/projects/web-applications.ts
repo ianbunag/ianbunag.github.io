@@ -104,7 +104,6 @@ export const webApplications: ProfileProjects = [
         'yvnbunag-dock',
         'gitlab',
       ],
-      featured: true,
       secondaryLink: {
         text: LinkName.VIEW_SOURCE,
         icon: 'mdiGitlab',
