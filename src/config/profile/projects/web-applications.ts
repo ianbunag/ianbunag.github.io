@@ -109,6 +109,11 @@ export const webApplications: ProfileProjects = [
         icon: 'mdiGitlab',
         link: process.env.LIBRARY_SYSTEM_REPOSITORY,
       },
+      primaryLink: {
+        text: 'Preview me!',
+        icon: 'mdiWeb',
+        link: process.env.LIBRARY_SYSTEM_URL,
+      },
     }
   })(),
   ((): ProfileProject => {
