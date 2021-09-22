@@ -1,19 +1,24 @@
 import { createAccessibleLink } from '~/lib/config'
-import { getIcon } from '~/config/icons'
+import { icons } from '~/config/icons'
 
-import type { ConfigIcons } from '~/config/icons'
-import type { TechnologyMap, Technology } from '@/config/technologies'
+import type { Technology } from '@/config/technologies'
 
-/**
- * Helper to preserve map keys while allowing inference during suggestion
- */
-function defineTechnologyMap<Map extends TechnologyMap<ConfigIcons>> (
+type ReferencedTechnology = Override<Technology, { icon: keyof typeof icons}>
+type ReferencedTechnologyMap = Record<string, ReferencedTechnology>
+
+function mapTechnology <Map extends ReferencedTechnologyMap> (
   map: Map,
-): Map {
-  return map
+) {
+  const mapEntries = Object.entries(map)
+  const mappedEntries: Array<[keyof Map, Technology]> = mapEntries
+    .map(([key, { icon, ...technology }]) => {
+      return [key, { ...technology, icon: icons[icon] }]
+    })
+
+  return Object.fromEntries(mappedEntries) as Record<keyof Map, Technology>
 }
 
-export const languages = defineTechnologyMap({
+export const languages = mapTechnology({
   typescript: {
     display: 'TypeScript',
     description: 'JavaScript superset with static types',
@@ -81,7 +86,7 @@ export const languages = defineTechnologyMap({
   },
 })
 
-export const developmentTools = defineTechnologyMap({
+export const developmentTools = mapTechnology({
   webpack: {
     display: 'Webpack',
     description: '',
@@ -117,7 +122,7 @@ export const developmentTools = defineTechnologyMap({
   },
 })
 
-export const UIlibraries = defineTechnologyMap({
+export const UIlibraries = mapTechnology({
   vuetify: {
     display: 'Vuetify',
     description: 'Material design framework for Vue',
@@ -140,7 +145,7 @@ export const UIlibraries = defineTechnologyMap({
   },
 })
 
-export const frontEndFrameworks = defineTechnologyMap({
+export const frontEndFrameworks = mapTechnology({
   nuxt: {
     display: 'Nuxt',
     description: 'Vue universal applications framework',
@@ -157,7 +162,7 @@ export const frontEndFrameworks = defineTechnologyMap({
   },
 })
 
-export const backEndFrameworks = defineTechnologyMap({
+export const backEndFrameworks = mapTechnology({
   fastify: {
     display: 'Fastify',
     description: 'Fast and low overhead web framework',
@@ -188,7 +193,7 @@ export const backEndFrameworks = defineTechnologyMap({
   },
 })
 
-export const testFrameworks = defineTechnologyMap({
+export const testFrameworks = mapTechnology({
   jest: {
     display: 'Jest',
     description: 'Simple JavaScript testing framework',
@@ -198,7 +203,7 @@ export const testFrameworks = defineTechnologyMap({
   },
 })
 
-export const databases = defineTechnologyMap({
+export const databases = mapTechnology({
   mysql: {
     display: 'MySQL',
     description: 'Open-source relational database',
@@ -208,7 +213,7 @@ export const databases = defineTechnologyMap({
   },
 })
 
-export const serverManagement = defineTechnologyMap({
+export const serverManagement = mapTechnology({
   nginx: {
     display: 'NGINX',
     description: 'HTTP server and reverse proxy',
@@ -231,7 +236,7 @@ export const serverManagement = defineTechnologyMap({
   },
 })
 
-export const applications = defineTechnologyMap({
+export const applications = mapTechnology({
   'vs-code': {
     display: 'Visual Studio Code',
     description: 'Code editor by Microsoft',
@@ -290,7 +295,7 @@ export const applications = defineTechnologyMap({
   },
 })
 
-export const providers = defineTechnologyMap({
+export const providers = mapTechnology({
   gitlab: {
     display: 'GitLab',
     description: 'Single tool for the DevOps lifecycle',
@@ -320,7 +325,7 @@ export const providers = defineTechnologyMap({
   },
 })
 
-export const technologies = defineTechnologyMap({
+export const technologies = {
   ...languages,
   ...developmentTools,
   ...UIlibraries,
@@ -331,30 +336,12 @@ export const technologies = defineTechnologyMap({
   ...serverManagement,
   ...applications,
   ...providers,
-})
-
-export type ConfigTechnologies = typeof technologies
-export type ConfigTechnologyKeys = keyof ConfigTechnologies
-
-export function getTechnology (
-  key: ConfigTechnologyKeys,
-): ConfigTechnologies[ConfigTechnologyKeys] {
-  return technologies[key]
 }
 
-export function getMappedTechnology (
-  key: ConfigTechnologyKeys,
-): Technology {
-  const configTechnology = getTechnology(key)
-
-  return {
-    ...configTechnology,
-    icon: getIcon(configTechnology.icon),
-  }
-}
-
-export function createTechnologyLink (key: ConfigTechnologyKeys): string {
-  const { display, url = '' } = getTechnology(key) as Technology
+export function createTechnologyLink (
+  technologyKey: keyof typeof technologies,
+): string {
+  const { display, url = '' } = technologies[technologyKey]
 
   return createAccessibleLink(display, url)
 }

@@ -1,26 +1,22 @@
 <script lang = "ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 
-import { getIcon } from '~/config/icons'
 import TechnologyIconList from '~/components/technology/icon-list.vue'
 
-import type { ProfileSkills } from '~/config/profile/skills'
+import type { Skills } from '@/config/profile'
 
 export default defineComponent({
   name: 'PageRootAbout',
   components: { TechnologyIconList },
   props: {
     skills: {
-      type: Array as Prop<ProfileSkills>,
+      type: Array as Prop<Skills>,
       required: true,
     },
     contentClass: {
       type: String,
       default: '',
     },
-  },
-  setup () {
-    return { getIcon }
   },
 })
 </script>
@@ -78,7 +74,7 @@ export default defineComponent({
                 >
                   <div class="mt-4 px-4">
                     <v-icon size="60px">
-                      {{ getIcon(skill.icon) }}
+                      {{ skill.icon }}
                     </v-icon>
                   </div>
                   <v-card-title class="pf-text-pair">

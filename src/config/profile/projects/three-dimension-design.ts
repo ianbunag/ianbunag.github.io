@@ -1,9 +1,7 @@
-import { LinkName } from '~/lib/config/profile/projects'
+import { mapReferencedProjects, LinkName } from '~/lib/config/profile/projects'
 import { requireProgressiveImage } from '~/lib/config'
 
-import type { ProfileProjects } from '~/lib/config/profile/projects'
-
-export const threeDimensionDesign: ProfileProjects = [
+export const threeDimensionDesign = mapReferencedProjects([
   {
     name: 'Wine',
     key: 'wine',
@@ -27,8 +25,8 @@ export const threeDimensionDesign: ProfileProjects = [
     ],
     primaryLink: {
       text: LinkName.WATCH_ME,
-      icon: 'mdiYoutube',
       link: process.env.WINE_3D_ANIMATION_LINK,
+      linkIcon: 'mdiYoutube',
     },
   },
   {
@@ -54,8 +52,8 @@ export const threeDimensionDesign: ProfileProjects = [
     ],
     primaryLink: {
       text: LinkName.WATCH_ME,
-      icon: 'mdiYoutube',
       link: process.env.PLASMA_3D_ANIMATION_LINK,
+      linkIcon: 'mdiYoutube',
     },
   },
   {
@@ -81,8 +79,8 @@ export const threeDimensionDesign: ProfileProjects = [
     ],
     primaryLink: {
       text: LinkName.WATCH_ME,
-      icon: 'mdiYoutube',
       link: process.env.RAIN_3D_ANIMATION_LINK,
+      linkIcon: 'mdiYoutube',
     },
   },
   {
@@ -119,4 +117,4 @@ export const threeDimensionDesign: ProfileProjects = [
       'adobe-illustrator',
     ],
   },
-]
+])

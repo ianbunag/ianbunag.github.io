@@ -5,15 +5,9 @@ import ExperienceTimeline, {
   timelineOptions,
 } from '~/components/experience/timeline.vue'
 
-import type {
-  ProfileExperience,
-  ProfileExperiences,
-} from '~/config/profile/experiences'
+import type { Experience, Experiences } from '@/config/profile'
 
-function descendingSort (
-  initial: ProfileExperience,
-  comparator: ProfileExperience,
-): number {
+function descendingSort (initial: Experience, comparator: Experience): number {
   const initialDate = +(new Date(initial.period.start))
   const comparatorDate = +(new Date(comparator.period.start))
 
@@ -25,7 +19,7 @@ export default defineComponent({
   components: { ExperienceTimeline },
   props: {
     experiences: {
-      type: Array as Prop<ProfileExperiences>,
+      type: Array as Prop<Experiences>,
       required: true,
     },
     contentClass: {

@@ -6,33 +6,42 @@ interface Page {
   icon: string,
 }
 type PageMap = Record<string, Page>
+type ReferencedPage = Override<
+  Page,
+  { icon: keyof typeof icons }
+>
+type ReferencedPageMap = Record<string, ReferencedPage>
 
-/**
- * Helper to preserve map keys while allowing inference during suggestion
- */
-function definePageMap<Map extends PageMap> (map: Map): Map {
-  return map
+function mapReferencedPages (map: ReferencedPageMap): PageMap {
+  const mapEntries = Object.entries(map)
+  const mappedEntries: Array<[keyof ReferencedPageMap, Page]> = mapEntries
+    .map(([key, { icon, ...page }]) => {
+      return [key, { ...page, icon: icons[icon] }]
+    })
+
+  return Object
+    .fromEntries(mappedEntries) as Record<keyof ReferencedPageMap, Page>
 }
 
-export const pages = definePageMap({
+export const pages = mapReferencedPages({
   HOME: {
     name: 'Home',
     route: '/',
-    icon: icons.mdiHome,
+    icon: 'mdiHome',
   },
   TECH_STACK: {
     name: 'Tech Stack',
     route: '/tech-stack/',
-    icon: icons.mdiFlashCircle,
+    icon: 'mdiFlashCircle',
   },
   PROJECTS: {
     name: 'Projects',
     route: '/projects/',
-    icon: icons.mdiLightbulbOnOutline,
+    icon: 'mdiLightbulbOnOutline',
   },
   CONTACT: {
     name: 'Contact',
     route: '/#contact',
-    icon: icons.mdiPhone,
+    icon: 'mdiPhone',
   },
 })

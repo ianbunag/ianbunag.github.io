@@ -16,17 +16,14 @@ import ProjectCard, {
   thumbnailOptions,
 } from '~/components/projects/card.vue'
 
-import type {
-  ProfileProject,
-  ProfileProjects,
-} from '~/config/profile/projects'
+import type { Project, Projects } from '@/config/profile'
 
 interface Sort {
-  (initial: ProfileProject, comparator: ProfileProject): number,
+  (initial: Project, comparator: Project): number,
 }
 type SortChain = Array<Sort>
 interface Selected {
-  key: ProfileProject['key'],
+  key: Project['key'],
   shown: boolean,
 }
 
@@ -70,7 +67,7 @@ export default defineComponent({
       }),
     },
     projects: {
-      type: Array as Prop<ProfileProjects>,
+      type: Array as Prop<Projects>,
       required: true,
     },
     featuredFirst: {

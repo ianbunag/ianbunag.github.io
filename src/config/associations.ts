@@ -29,12 +29,3 @@ export const associations = defineAssociationMap({
     logoAccent: '#fff',
   },
 })
-
-export type ConfigAssociations = typeof associations
-export type ConfigAssociationKeys = keyof ConfigAssociations
-
-export function getAssociation (
-  key: ConfigAssociationKeys,
-): ConfigAssociations[ConfigAssociationKeys] {
-  return associations[key]
-}

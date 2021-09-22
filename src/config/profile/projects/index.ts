@@ -4,20 +4,12 @@ import { kata } from '~/config/profile/projects/kata'
 import { graphicsDesign } from '~/config/profile/projects/graphic-design'
 import { threeDimensionDesign } from '~/config/profile/projects/three-dimension-design'
 
-import type {
-  ProfileProject,
-  ProfileProjects,
-} from '~/lib/config/profile/projects'
+import type { Projects } from '@/config/profile'
 
-export const projects: ProfileProjects = [
+export const projects: Projects = [
   ...webApplications,
   ...applicationSoftwares,
   ...kata,
   ...graphicsDesign,
   ...threeDimensionDesign,
 ]
-
-export {
-  ProfileProject,
-  ProfileProjects,
-}
