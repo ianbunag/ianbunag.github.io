@@ -5,15 +5,12 @@ import {
   createUnorderedList,
   emphasize,
 } from '~/lib/config'
-import { LinkName } from '~/lib/config/profile/projects'
+import { mapReferencedProjects, LinkName } from '~/lib/config/profile/projects'
 import { getProjectLink } from '~/lib/pages/projects'
 
-import type {
-  ProfileProject,
-  ProfileProjects,
-} from '~/lib/config/profile/projects'
+import type { ReferencedProject } from '~/lib/config/profile/projects'
 
-export const webApplications: ProfileProjects = [
+export const webApplications = mapReferencedProjects([
   {
     name: 'Personal Portfolio',
     key: 'personal-portfolio',
@@ -56,11 +53,11 @@ export const webApplications: ProfileProjects = [
     featured: true,
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
-      icon: 'mdiGitlab',
       link: process.env.PORTFOLIO_REPOSITORY,
+      linkIcon: 'mdiGitlab',
     },
   },
-  ((): ProfileProject => {
+  ((): ReferencedProject => {
     const dockLink = createAccessibleLink(
       '@yvnbunag/dock',
       getProjectLink('yvnbunag-dock'),
@@ -106,17 +103,17 @@ export const webApplications: ProfileProjects = [
       ],
       secondaryLink: {
         text: LinkName.VIEW_SOURCE,
-        icon: 'mdiGitlab',
         link: process.env.LIBRARY_SYSTEM_REPOSITORY,
+        linkIcon: 'mdiGitlab',
       },
       primaryLink: {
         text: 'Preview me!',
-        icon: 'mdiWeb',
         link: process.env.LIBRARY_SYSTEM_URL,
+        linkIcon: 'mdiWeb',
       },
     }
   })(),
-  ((): ProfileProject => {
+  ((): ReferencedProject => {
     const onesimoFoundation = createAccessibleLink(
       'Onesimo Foundation Inc.',
       process.env.ONESIMO_FOUNDATION_LINK || '',
@@ -178,13 +175,13 @@ export const webApplications: ProfileProjects = [
       featured: true,
       secondaryLink: {
         text: 'Watch trailer',
-        icon: 'mdiYoutube',
         link: process.env.ONESIMO_FOUNDATION_CHANGE_TRAILER_LINK,
+        linkIcon: 'mdiYoutube',
       },
       primaryLink: {
         text: 'Watch film',
-        icon: 'mdiYoutube',
         link: process.env.ONESIMO_FOUNDATION_CHANGE_FILM_LINK,
+        linkIcon: 'mdiYoutube',
       },
     }
   })(),
@@ -241,16 +238,16 @@ export const webApplications: ProfileProjects = [
     ],
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
-      icon: 'mdiGitlab',
       link: process.env.CPU_SCHEDULING_SIMULATOR_REPOSITORY,
+      linkIcon: 'mdiGitlab',
     },
     primaryLink: {
       text: LinkName.TRY_ME,
-      icon: 'mdiWeb',
       link: process.env.CPU_SCHEDULING_SIMULATOR_URL,
+      linkIcon: 'mdiWeb',
     },
   },
-  ((): ProfileProject => {
+  ((): ReferencedProject => {
     const casaBurgos = createAccessibleLink(
       'Casa Burgos',
       process.env.CASA_BURGOS_LINK || '',
@@ -283,4 +280,4 @@ export const webApplications: ProfileProjects = [
       ],
     }
   })(),
-]
+])

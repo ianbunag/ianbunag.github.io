@@ -1,12 +1,10 @@
+import { mapReferencedProjects } from '~/lib/config/profile/projects'
 import { requireProgressiveImage, createAccessibleLink } from '~/lib/config'
 
-import type {
-  ProfileProject,
-  ProfileProjects,
-} from '~/lib/config/profile/projects'
+import type { ReferencedProject } from '~/lib/config/profile/projects'
 
-export const graphicsDesign: ProfileProjects = [
-  ((): ProfileProject => {
+export const graphicsDesign = mapReferencedProjects([
+  ((): ReferencedProject => {
     const keywestInternationaleSales = createAccessibleLink(
       'Keywest Internationale Sales Corp.',
       process.env.KEYWEST_INTERNATIONALE_LINK || '',
@@ -34,7 +32,7 @@ export const graphicsDesign: ProfileProjects = [
       ],
     }
   })(),
-  ((): ProfileProject => {
+  ((): ReferencedProject => {
     const cranePhilippines = createAccessibleLink(
       'Crane Philippines',
       process.env.CRANE_PHILIPPINES_LINK || '',
@@ -62,7 +60,7 @@ export const graphicsDesign: ProfileProjects = [
       ],
     }
   })(),
-  ((): ProfileProject => {
+  ((): ReferencedProject => {
     const optimumIndustrialSales = createAccessibleLink(
       'Optimum Industrial Sales Corp.',
       process.env.OPTIMUM_INDUSTRIAL_LINK || '',
@@ -89,7 +87,7 @@ export const graphicsDesign: ProfileProjects = [
       ],
     }
   })(),
-  ((): ProfileProject => {
+  ((): ReferencedProject => {
     const keywestInternationaleSales = createAccessibleLink(
       'Keywest Internationale Sales Corp.',
       process.env.KEYWEST_INTERNATIONALE_LINK || '',
@@ -114,7 +112,7 @@ export const graphicsDesign: ProfileProjects = [
       ],
     }
   })(),
-  ((): ProfileProject => {
+  ((): ReferencedProject => {
     const rusticTable = createAccessibleLink(
       'Rustic Table',
       process.env.RUSTIC_TABLE_LINK || '',
@@ -145,4 +143,4 @@ export const graphicsDesign: ProfileProjects = [
       ],
     }
   })(),
-]
+])

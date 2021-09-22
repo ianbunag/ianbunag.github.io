@@ -1,21 +1,16 @@
 <script lang="ts">
-import {
-  defineComponent,
-  computed,
-  toRef,
-} from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
 
-import { getMappedTechnology } from '~/config/technologies'
 import TechnologyIcon from '~/components/technology/icon.vue'
 
-import type{ ConfigTechnologyKeys } from '~/config/technologies'
+import type { Technologies } from '@/config/technologies'
 
 export default defineComponent({
   name: 'TechnologyIconList',
   components: { TechnologyIcon },
   props: {
     technologies: {
-      type: Array as Prop<Array<ConfigTechnologyKeys>>,
+      type: Array as Prop<Technologies>,
       required: true,
     },
     justify: {
@@ -23,22 +18,15 @@ export default defineComponent({
       default: 'start',
     },
   },
-  setup (props) {
-    const mappedTechnologies = computed(
-      () => toRef(props, 'technologies').value.map(getMappedTechnology),
-    )
-
-    return { mappedTechnologies }
-  },
 })
 </script>
 
 <template>
   <responsive-container :justify="justify">
     <technology-icon
-      v-for="mappedTechnology of mappedTechnologies"
-      :key="mappedTechnology.display"
-      v-bind="mappedTechnology"
+      v-for="technology of technologies"
+      :key="technology.display"
+      v-bind="technology"
       tooltip-top
     />
   </responsive-container>

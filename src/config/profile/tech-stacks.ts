@@ -1,14 +1,29 @@
-import type { ConfigTechnologies } from '~/config/technologies'
+import { technologies } from '~/config/technologies'
+
 import type { TechStack, TechStacks } from '@/config/profile'
 
-/**
- * @TODO Make consuming components pure by refactoring to pattern with
- *  src/config/profile/links.ts reference implementation
- */
-export type ProfileTechStack = TechStack<ConfigTechnologies>
-export type ProfileTechStacks = TechStacks<ConfigTechnologies>
+type ReferencedTechStack = Override<
+  TechStack,
+  { technologies: Array<keyof typeof technologies> }
+>
+type ReferencedTechStacks = Array<ReferencedTechStack>
 
-export const techStacks: ProfileTechStacks = [
+function mapReferencedTechStacks (
+  referencedTechStacks: ReferencedTechStacks,
+): TechStacks {
+  return referencedTechStacks.map((referencedTechStack) => {
+    const mappedTechnologies = referencedTechStack.technologies.map(
+      referencedTechnology => technologies[referencedTechnology],
+    )
+
+    return {
+      ...referencedTechStack,
+      technologies: mappedTechnologies,
+    }
+  })
+}
+
+export const techStacks = mapReferencedTechStacks([
   {
     category: 'Languages',
     technologies: [
@@ -70,4 +85,4 @@ export const techStacks: ProfileTechStacks = [
       'google-cloud',
     ],
   },
-]
+])

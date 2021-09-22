@@ -1,15 +1,59 @@
-import type { ConfigIcons } from '~/config/icons'
-import type { ConfigTechnologies } from '~/config/technologies'
-import type { Project, Projects } from '@/config/profile'
+import { icons } from '~/config/icons'
+import { technologies } from '~/config/technologies'
 
+import type { ProjectLink, Project, Projects } from '@/config/profile'
+
+type ReferencedProjectLink = Override<
+  ProjectLink,
+  { linkIcon: keyof typeof icons }
+>
+
+export type ReferencedProject = Override<
+  Project,
+  {
+    technologies: Array<keyof typeof technologies>,
+    primaryLink?: ReferencedProjectLink,
+    secondaryLink?: ReferencedProjectLink,
+  }
+>
+export type ReferencedProjects = Array<ReferencedProject>
 export enum LinkName {
   VIEW_SOURCE= 'View source',
   TRY_ME = 'Try me!',
   WATCH_ME = 'Watch me!',
 }
-/**
- * @TODO Make consuming components pure by refactoring to pattern with
- *  src/config/profile/links.ts reference implementation
- */
-export type ProfileProject = Project<ConfigIcons, ConfigTechnologies>
-export type ProfileProjects = Projects<ConfigIcons, ConfigTechnologies>
+
+function mapReferencedProjectLink (
+  referencedProjectLink: ReferencedProjectLink,
+): ProjectLink {
+  const { linkIcon, ...projectLink } = referencedProjectLink
+
+  return {
+    ...projectLink,
+    linkIcon: icons[linkIcon],
+  }
+}
+
+export function mapReferencedProjects (
+  referencedProjects: ReferencedProjects,
+): Projects {
+  return referencedProjects.map((referencedProject) => {
+    const mappedTechnologies = referencedProject.technologies.map(
+      referencedTechnology => technologies[referencedTechnology],
+    )
+
+    const primaryLink = referencedProject.primaryLink
+      ? mapReferencedProjectLink(referencedProject.primaryLink)
+      : undefined
+    const secondaryLink = referencedProject.secondaryLink
+      ? mapReferencedProjectLink(referencedProject.secondaryLink)
+      : undefined
+
+    return {
+      ...referencedProject,
+      technologies: mappedTechnologies,
+      primaryLink,
+      secondaryLink,
+    }
+  })
+}

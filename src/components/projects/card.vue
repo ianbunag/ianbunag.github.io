@@ -5,7 +5,7 @@ import Tags from '~/components/tags.vue'
 import ImagePreview from '~/components/image/preview.vue'
 
 import type { ThumbnailMaxHeight } from '~/components/image/preview.vue'
-import type { ProfileProject } from '~/config/profile/projects'
+import type { Project } from '@/config/profile'
 
 interface HeadingOptions {
   title: Heading.Levels,
@@ -34,7 +34,7 @@ export default defineComponent({
   },
   props: {
     project: {
-      type: Object as Prop<ProfileProject>,
+      type: Object as Prop<Project>,
       required: true,
     },
     heading: headingOptions,

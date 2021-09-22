@@ -1,9 +1,7 @@
+import { mapReferencedProjects, LinkName } from '~/lib/config/profile/projects'
 import { requireProgressiveImage } from '~/lib/config'
-import { LinkName } from '~/lib/config/profile/projects'
 
-import type { ProfileProjects } from '~/lib/config/profile/projects'
-
-export const applicationSoftwares: ProfileProjects = [
+export const applicationSoftwares = mapReferencedProjects([
   {
     name: '@yvnbunag/dock',
     key: 'yvnbunag-dock',
@@ -43,13 +41,13 @@ export const applicationSoftwares: ProfileProjects = [
     featured: true,
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
-      icon: 'mdiGitlab',
       link: process.env.DOCK_REPOSITORY,
+      linkIcon: 'mdiGitlab',
     },
     primaryLink: {
       text: LinkName.TRY_ME,
-      icon: 'mdiConsole',
       link: process.env.DOCK_NPM_URL,
+      linkIcon: 'mdiConsole',
     },
   },
   {
@@ -73,8 +71,8 @@ export const applicationSoftwares: ProfileProjects = [
     technologies: ['java'],
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
-      icon: 'mdiGitlab',
       link: process.env.SIMPLE_CALCULATOR_REPOSITORY,
+      linkIcon: 'mdiGitlab',
     },
   },
   {
@@ -101,8 +99,8 @@ export const applicationSoftwares: ProfileProjects = [
     technologies: ['java'],
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
-      icon: 'mdiGitlab',
       link: process.env.SIMPLE_CIRCUIT_CALCULATOR_REPOSITORY,
+      linkIcon: 'mdiGitlab',
     },
   },
   {
@@ -125,8 +123,8 @@ export const applicationSoftwares: ProfileProjects = [
     technologies: ['java'],
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
-      icon: 'mdiGitlab',
       link: process.env.OHMS_LAW_CALCULATOR_REPOSITORY,
+      linkIcon: 'mdiGitlab',
     },
   },
-]
+])

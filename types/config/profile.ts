@@ -1,70 +1,55 @@
-import type { IconMap as IconMapBase, Icon } from '@/config/icons'
-import type { TechnologyMap as TechnologyMapBase } from '@/config/technologies'
-import type { AssociationMap as AssociationMapBase } from '@/config/associations'
+import type { Icon } from '@/config/icons'
+import type { Technologies } from '@/config/technologies'
+import type { Association } from '@/config/associations'
 
-export interface Skill<
-  IconMap extends IconMapBase = IconMapBase,
-  TechnologyMap extends TechnologyMapBase = TechnologyMapBase,
-> {
+export interface Skill {
   name: string,
   description: string,
-  icon: keyof IconMap,
-  technologies: Array<keyof TechnologyMap>,
+  icon: Icon,
+  technologies: Technologies,
   order: number,
 }
 
-export type Skills<
-  IconMap extends IconMapBase = IconMapBase,
-  TechnologyMap extends TechnologyMapBase = TechnologyMapBase,
-> = Array<Skill<IconMap, TechnologyMap>>
+export type Skills = Array<Skill>
 
-export interface ButtonLink<
-  IconMap extends IconMapBase = IconMapBase,
-> {
+export interface ProjectLink {
   text: string,
-  icon: keyof IconMap,
   link?: string,
+  linkIcon: Icon,
 }
 
-export interface Project<
-  IconMap extends IconMapBase = IconMapBase,
-  TechnologyMap extends TechnologyMapBase = TechnologyMapBase,
-> {
+export interface Project {
   name: string,
   key: string,
   period: string,
   tags: Array<string>,
   description: string,
   images: Array<string>,
-  technologies: Array<keyof TechnologyMap>,
+  technologies: Technologies,
   featured?: boolean,
-  primaryLink?: ButtonLink<IconMap>,
-  secondaryLink?: ButtonLink<IconMap>,
+  primaryLink?: ProjectLink,
+  secondaryLink?: ProjectLink,
 }
 
-export type Projects<
-  IconMap extends IconMapBase = IconMapBase,
-  TechnologyMap extends TechnologyMapBase = TechnologyMapBase,
-> = Array<Project<IconMap, TechnologyMap>>
+export type Projects = Array<Project>
 
-export interface TechStack<
-  TechnologyMap extends TechnologyMapBase = TechnologyMapBase,
-> {
+export interface TechStack {
   category: string,
-  technologies: Array<keyof TechnologyMap>,
+  technologies: Technologies,
 }
 
-export type TechStacks<
-  TechnologyMap extends TechnologyMapBase = TechnologyMapBase,
-> = Array<TechStack<TechnologyMap>>
+export type TechStacks = Array<TechStack>
 
-export interface Experience<
-  Type = string,
-  AssociationMap extends AssociationMapBase = AssociationMapBase,
-> {
+export enum ExperienceType {
+  FULL_TIME_JOB,
+  INTERNSHIP,
+  STUDIES,
+}
+
+export interface Experience {
   role: string,
-  type: Type,
-  association: keyof AssociationMap,
+  type: ExperienceType,
+  association: Association,
   period: {
     start: string,
     end?: string,
@@ -72,10 +57,7 @@ export interface Experience<
   description: string,
 }
 
-export type Experiences<
-  Type = string,
-  AssociationMap extends AssociationMapBase = AssociationMapBase,
-> = Array<Experience<Type, AssociationMap>>
+export type Experiences = Array<Experience>
 
 export interface Link {
   name: string,
