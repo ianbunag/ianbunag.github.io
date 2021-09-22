@@ -1,10 +1,9 @@
 <script lang="ts">
-import { defineComponent, computed, toRefs } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
 
-import { getMappedTechnology } from '~/config/technologies'
 import TechnologyStack from '~/components/technology/stack.vue'
 
-import type { ProfileTechStack } from '~/config/profile/tech-stacks'
+import type { TechStack } from '@/config/profile'
 
 interface HeadingOptions {
   section: Heading.Levels,
@@ -21,18 +20,10 @@ export default defineComponent({
   components: { TechnologyStack },
   props: {
     techStack: {
-      type: Object as Prop<ProfileTechStack>,
+      type: Object as Prop<TechStack>,
       required: true,
     },
     heading: headingOptions,
-  },
-  setup (props) {
-    const { techStack } = toRefs(props)
-    const mappedTechnologies = computed(
-      () => techStack.value.technologies.map(getMappedTechnology),
-    )
-
-    return { mappedTechnologies }
   },
 })
 </script>
@@ -51,15 +42,15 @@ export default defineComponent({
       </v-col>
 
       <v-col
-        v-for="mappedTechnology in mappedTechnologies"
-        :key="mappedTechnology.display"
+        v-for="technology in techStack.technologies"
+        :key="technology.display"
         cols="12"
         sm="6"
         md="4"
         xl="3"
       >
         <technology-stack
-          v-bind="mappedTechnology"
+          v-bind="technology"
           :heading="heading.stack"
         />
       </v-col>

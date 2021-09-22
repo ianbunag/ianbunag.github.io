@@ -131,11 +131,3 @@ export const icons = defineIconMap({
   ...mdi,
   ...custom,
 })
-
-export type ConfigIcons = typeof icons
-export type ConfigIconKeys = keyof ConfigIcons
-export type ConfigIcon = ConfigIcons[ConfigIconKeys]
-
-export function getIcon (key: ConfigIconKeys): ConfigIcon {
-  return icons[key]
-}

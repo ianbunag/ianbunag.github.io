@@ -8,12 +8,12 @@ import {
 } from '@nuxtjs/composition-api'
 
 import { useBreakPoints, useIsMounted } from '~/lib/hooks'
-import { getIcon } from '~/config/icons'
+import { icons } from '~/config/icons'
 import Tags from '~/components/tags.vue'
 import TechnologyIconList from '~/components/technology/icon-list.vue'
 import ImageLoader from '~/components/image/loader.vue'
 
-import type { ProfileProject } from '~/config/profile/projects'
+import type { Project } from '@/config/profile'
 
 interface HeadingOptions {
   title: Heading.Levels,
@@ -38,7 +38,7 @@ export default defineComponent({
       default: false,
     },
     project: {
-      type: Object as Prop<ProfileProject>,
+      type: Object as Prop<Project>,
       required: true,
     },
     heading: headingOptions,
@@ -84,7 +84,7 @@ export default defineComponent({
       contentClass,
       open,
       close,
-      getIcon,
+      icons,
     }
   },
 })
@@ -106,7 +106,7 @@ export default defineComponent({
         @click="close"
       >
         <v-icon large>
-          {{ getIcon('mdiClose') }}
+          {{ icons.mdiClose }}
         </v-icon>
       </v-btn>
       <!--
@@ -201,7 +201,7 @@ export default defineComponent({
             :small="isMobile"
           >
             <v-icon class="mr-1" :small="isMobile">
-              {{ getIcon(project.secondaryLink.icon) }}
+              {{ project.secondaryLink.linkIcon }}
             </v-icon>
             {{ project.secondaryLink.text }}
           </v-btn>
@@ -213,7 +213,7 @@ export default defineComponent({
             :small="isMobile"
           >
             <v-icon class="mr-1" :small="isMobile">
-              {{ getIcon(project.primaryLink.icon) }}
+              {{ project.primaryLink.linkIcon }}
             </v-icon>
             {{ project.primaryLink.text }}
           </v-btn>

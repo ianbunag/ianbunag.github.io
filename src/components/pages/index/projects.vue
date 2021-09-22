@@ -7,14 +7,14 @@ import ProjectsShowcase, {
   createPrioritySort,
 } from '~/components/projects/showcase.vue'
 
-import type { ProfileProjects } from '~/config/profile/projects'
+import type { Projects } from '@/config/profile'
 
 export default defineComponent({
   name: 'PageRootProjects',
   components: { ProjectsShowcase },
   props: {
     projects: {
-      type: Array as Prop<ProfileProjects>,
+      type: Array as Prop<Projects>,
       required: true,
     },
     contentClass: {

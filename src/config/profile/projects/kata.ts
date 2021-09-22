@@ -1,9 +1,7 @@
+import { mapReferencedProjects, LinkName } from '~/lib/config/profile/projects'
 import { requireProgressiveImage } from '~/lib/config'
-import { LinkName } from '~/lib/config/profile/projects'
 
-import type { ProfileProjects } from '~/lib/config/profile/projects'
-
-export const kata: ProfileProjects = [
+export const kata = mapReferencedProjects([
   {
     name: 'Python Challenges',
     key: 'python-challenges',
@@ -30,8 +28,8 @@ export const kata: ProfileProjects = [
     technologies: ['python'],
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
-      icon: 'mdiGitlab',
       link: process.env.PYTHON_CHALLENGES_REPOSITORY,
+      linkIcon: 'mdiGitlab',
     },
   },
   {
@@ -60,8 +58,8 @@ export const kata: ProfileProjects = [
     featured: true,
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
-      icon: 'mdiGitlab',
       link: process.env.TYPESCRIPT_CHALLENGES_REPOSITORY,
+      linkIcon: 'mdiGitlab',
     },
   },
-]
+])

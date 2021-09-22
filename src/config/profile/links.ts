@@ -2,10 +2,21 @@ import { icons } from '~/config/icons'
 
 import type { Link, Links } from '@/config/profile'
 
-type ReferencedLink = Link & { icon: keyof typeof icons }
+type ReferencedLink = Override<Link, { icon: keyof typeof icons }>
 type ReferencedLinks = Array<ReferencedLink>
 
-const referencedLinks: ReferencedLinks = [
+function mapReferencedLinks (referencedLinks: ReferencedLinks): Links {
+  return referencedLinks.map((referencedLink) => {
+    const { icon, ...link } = referencedLink
+
+    return {
+      ...link,
+      icon: icons[icon],
+    }
+  })
+}
+
+export const links = mapReferencedLinks([
   {
     name: 'GitLab',
     icon: 'mdiGitlab',
@@ -31,13 +42,4 @@ const referencedLinks: ReferencedLinks = [
     icon: 'mdiNpm',
     url: process.env.NPM_LINK || '',
   },
-]
-
-export const links: Links = referencedLinks.map(
-  (referencedLink: ReferencedLink): Link => {
-    return {
-      ...referencedLink,
-      icon: icons[referencedLink.icon],
-    }
-  },
-)
+])
