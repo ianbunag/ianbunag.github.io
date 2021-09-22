@@ -1,32 +1,41 @@
-import { createUnorderedList, createAccessibleLink } from '~/lib/config'
+import { associations } from '~/config/associations'
 import { createTechnologyLink } from '~/config/technologies'
+import { createUnorderedList, createAccessibleLink } from '~/lib/config'
 import { getProjectLink } from '~/lib/pages/projects'
 
-import type { ConfigAssociations } from '~/config/associations'
-import type { ConfigTechnologyKeys } from '~/config/technologies'
+import type { technologies } from '~/config/technologies'
+
+import { ExperienceType } from '@/config/profile'
+
 import type { Experience, Experiences } from '@/config/profile'
 
-export enum Type {
-  FULL_TIME_JOB,
-  INTERNSHIP,
-  STUDIES,
+type ReferencedExperience = Override<
+  Experience,
+  { association: keyof typeof associations }
+>
+type ReferencedExperiences = Array<ReferencedExperience>
+
+function mapReferencedExperiences (
+  referencedExperiences: ReferencedExperiences,
+): Experiences {
+  return referencedExperiences.map((referencedExperience) => {
+    const { association, ...experience } = referencedExperience
+
+    return {
+      ...experience,
+      association: associations[association],
+    }
+  })
 }
 
-/**
- * @TODO Make consuming components pure by refactoring to pattern with
- *  src/config/profile/links.ts reference implementation
- */
-export type ProfileExperience = Experience<Type, ConfigAssociations>
-export type ProfileExperiences = Experiences<Type, ConfigAssociations>
-
-export const experiences: ProfileExperiences = [
-  ...((): ProfileExperiences => {
+export const experiences = mapReferencedExperiences([
+  ...((): ReferencedExperiences => {
     const association = 'code-ninja'
     const importGenius = createAccessibleLink(
       'ImportGenius',
       process.env.IMPORTGENIUS_LINK || '',
     )
-    const technologies: Array<ConfigTechnologyKeys> = [
+    const technologyKeys: Array<keyof typeof technologies> = [
       'nuxt',
       'lumen',
       'express',
@@ -45,13 +54,13 @@ export const experiences: ProfileExperiences = [
       lumen,
       express,
       aws,
-    ] = technologies.map(technology => createTechnologyLink(technology))
+    ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
     const workedForDescription = `Worked for the ${importGenius} startup`
 
     return [
       {
         role: 'Full Stack Engineer',
-        type: Type.FULL_TIME_JOB,
+        type: ExperienceType.FULL_TIME_JOB,
         association,
         period: {
           start: '2019 June',
@@ -65,7 +74,7 @@ export const experiences: ProfileExperiences = [
       },
       {
         role: 'Full Stack Engineering Intern',
-        type: Type.INTERNSHIP,
+        type: ExperienceType.INTERNSHIP,
         association,
         period: {
           start: '2018 September',
@@ -79,7 +88,7 @@ export const experiences: ProfileExperiences = [
       },
     ]
   })(),
-  ((): ProfileExperience => {
+  ((): ReferencedExperience => {
     const wordPress = createAccessibleLink(
       'WordPress',
       'https://wordpress.com',
@@ -95,7 +104,7 @@ export const experiences: ProfileExperiences = [
 
     return {
       role: 'Web Developer Intern',
-      type: Type.INTERNSHIP,
+      type: ExperienceType.INTERNSHIP,
       association: 'keywest-internationale',
       period: {
         start: '2018 April',
@@ -108,7 +117,7 @@ export const experiences: ProfileExperiences = [
       ]),
     }
   })(),
-  ((): ProfileExperience => {
+  ((): ReferencedExperience => {
     const change = createAccessibleLink(
       'Change: A Hybrid Animation Film in a Database-Driven Website',
       getProjectLink('change-hybrid-animation-database-driven-website'),
@@ -116,7 +125,7 @@ export const experiences: ProfileExperiences = [
 
     return {
       role: 'BSITDA Alumni',
-      type: Type.STUDIES,
+      type: ExperienceType.STUDIES,
       association: 'feu-tech',
       period: {
         start: '2014 July',
@@ -128,4 +137,4 @@ export const experiences: ProfileExperiences = [
       ]),
     }
   })(),
-]
+])

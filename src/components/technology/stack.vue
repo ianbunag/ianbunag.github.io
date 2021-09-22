@@ -2,6 +2,7 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 
 import { icons } from '~/config'
+
 import type { Technology } from '@/config/technologies'
 
 export const headingOption = {

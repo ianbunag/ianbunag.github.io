@@ -1,14 +1,32 @@
-import type { ConfigIcons } from '~/config/icons'
-import type { ConfigTechnologies } from '~/config/technologies'
-import type { Skills } from '@/config/profile'
+import { icons } from '~/config/icons'
+import { technologies } from '~/config/technologies'
 
-/**
- * @TODO Make consuming components pure by refactoring to pattern with
- *  src/config/profile/links.ts reference implementation
- */
-export type ProfileSkills = Skills<ConfigIcons, ConfigTechnologies>
+import type { Skill, Skills } from '@/config/profile'
 
-export const skills: ProfileSkills = [
+type ReferencedSkill = Override<
+  Skill,
+  {
+    icon: keyof typeof icons,
+    technologies: Array<keyof typeof technologies>,
+  }
+>
+type ReferencedSkills = Array<ReferencedSkill>
+
+function mapReferencedSkills (referencedSkills: ReferencedSkills): Skills {
+  return referencedSkills.map((referencedSkill) => {
+    const mappedTechnologies = referencedSkill.technologies.map(
+      referencedTechnology => technologies[referencedTechnology],
+    )
+
+    return {
+      ...referencedSkill,
+      icon: icons[referencedSkill.icon],
+      technologies: mappedTechnologies,
+    }
+  })
+}
+
+export const skills = mapReferencedSkills([
   {
     name: 'Front-end development',
     description: 'I transform prototypes into responsive, scalable and performant web applications - leveraging frameworks like Vue, UI frameworks like Vuetify, and tooling like SASS to deliver requirements ahead of time.',
@@ -49,4 +67,4 @@ export const skills: ProfileSkills = [
     ],
     order: 3,
   },
-]
+])

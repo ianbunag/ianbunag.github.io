@@ -2,16 +2,17 @@
 import { defineComponent, toRefs } from '@nuxtjs/composition-api'
 
 import { useBreakPoints } from '~/lib/hooks'
-import { getIcon } from '~/config/icons'
-import { Type } from '~/config/profile/experiences'
+import { icons } from '~/config/icons'
 import ExperienceCard, {
   getRange,
   getDuration,
   headingOptions,
 } from '~/components/experience/card.vue'
 
-import type { ProfileExperiences } from '~/config/profile/experiences'
-import type { ConfigIconKeys, ConfigIcon } from '~/config/icons'
+import { ExperienceType } from '@/config/profile'
+
+import type { Icon } from '@/config/icons'
+import type { Experiences } from '@/config/profile'
 
 interface TimelineOptions {
   labelClass: string,
@@ -23,14 +24,10 @@ export const timelineOptions = {
   default: () => ({}),
 }
 
-const typeIcon: Record<Type, ConfigIconKeys> = {
-  [Type.FULL_TIME_JOB]: 'mdiBriefcaseVariant',
-  [Type.INTERNSHIP]: 'mdiNotebookEdit',
-  [Type.STUDIES]: 'mdiSchool',
-}
-
-function getTypeIcon (type: Type): ConfigIcon {
-  return getIcon(typeIcon[type])
+const experienceIcon: Record<ExperienceType, Icon> = {
+  [ExperienceType.FULL_TIME_JOB]: icons.mdiBriefcaseVariant,
+  [ExperienceType.INTERNSHIP]: icons.mdiNotebookEdit,
+  [ExperienceType.STUDIES]: icons.mdiSchool,
 }
 
 export default defineComponent({
@@ -38,7 +35,7 @@ export default defineComponent({
   components: { ExperienceCard },
   props: {
     experiences: {
-      type: Array as Prop<ProfileExperiences>,
+      type: Array as Prop<Experiences>,
       required: true,
     },
     timeline: timelineOptions,
@@ -49,7 +46,7 @@ export default defineComponent({
 
     return {
       isMobile,
-      getTypeIcon,
+      experienceIcon,
       getRange,
       getDuration,
     }
@@ -65,7 +62,7 @@ export default defineComponent({
     <v-timeline-item
       v-for="(experience, index) in experiences"
       :key="index"
-      :icon="getTypeIcon(experience.type)"
+      :icon="experienceIcon[experience.type]"
       large
     >
       <template #opposite>

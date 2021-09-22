@@ -4,9 +4,8 @@ import moment from 'moment'
 
 import { useBreakPoints } from '~/lib/hooks'
 import { icons } from '~/config/icons'
-import { getAssociation } from '~/config/associations'
 
-import type { ProfileExperience } from '~/config/profile/experiences'
+import type { Experience } from '@/config/profile'
 
 interface HeadingOptions {
   title: Heading.Levels,
@@ -18,11 +17,11 @@ export const headingOptions = {
   default: () => ({}),
 }
 
-export function getRange (period: ProfileExperience['period']): string {
+export function getRange (period: Experience['period']): string {
   return `${period.start} - ${period.end || 'Present'}`
 }
 
-export function getDuration (period: ProfileExperience['period']): string {
+export function getDuration (period: Experience['period']): string {
   const ranges = ['years', 'months', 'days'] as const
   const date = {
     from: moment(new Date(period.start)),
@@ -48,7 +47,7 @@ export default defineComponent({
   name: 'ExperienceCard',
   props: {
     experience: {
-      type: Object as Prop<ProfileExperience>,
+      type: Object as Prop<Experience>,
       required: true,
     },
     hidePeriod: {
@@ -60,16 +59,12 @@ export default defineComponent({
   setup (props) {
     const { isMobile } = toRefs(useBreakPoints())
     const { experience } = toRefs(props)
-    const mappedAssociation = computed(
-      () => getAssociation(experience.value.association),
-    )
     const imgCSSProps = computed(() => ({
-      '--logo-accent': mappedAssociation.value.logoAccent,
+      '--logo-accent': experience.value.association.logoAccent,
     }))
 
     return {
       isMobile,
-      mappedAssociation,
       icons,
       imgCSSProps,
       getRange,
@@ -91,13 +86,13 @@ export default defineComponent({
             <tr>
               <td>
                 <a
-                  :href="mappedAssociation.url || undefined"
-                  :aria-label="mappedAssociation.name || 'Association'"
-                  :class="{ 'pf-default-cursor': !mappedAssociation.url }"
+                  :href="experience.association.url || undefined"
+                  :aria-label="experience.association.name || 'Association'"
+                  :class="{ 'pf-default-cursor': !experience.association.url }"
                 >
                   <v-img
-                    :src="mappedAssociation.logoURL"
-                    :class="{ 'link-logo': mappedAssociation.url }"
+                    :src="experience.association.logoURL"
+                    :class="{ 'link-logo': experience.association.url }"
                     :style="imgCSSProps"
                     transition="scale-transition"
                     aspect-ratio="1"
@@ -136,7 +131,7 @@ export default defineComponent({
                       :level="heading.subtitle || 4"
                       class="text-body-1"
                     >
-                      {{ mappedAssociation.name }}
+                      {{ experience.association.name }}
                     </heading>
                   </template>
                   <template v-else>
@@ -144,7 +139,7 @@ export default defineComponent({
                       :level="heading.subtitle || 4"
                       class="text-body-2"
                     >
-                      {{ mappedAssociation.name }}
+                      {{ experience.association.name }}
                     </heading>
                     <div class="text-caption pf-text-pair-accent">
                       {{ getRange(experience.period) }}
