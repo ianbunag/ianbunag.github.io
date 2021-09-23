@@ -1,7 +1,4 @@
 {
-  "vetur.validation.script": true,
-  "vetur.validation.templateProps": true,
-  "vetur.experimental.templateInterpolationService": false,
   "[javascript]": {
     "editor.tabSize": 2,
     "editor.rulers": [80]
