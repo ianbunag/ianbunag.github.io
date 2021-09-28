@@ -24,7 +24,7 @@ export default defineComponent({
 <template>
   <responsive-container :justify="justify">
     <technology-icon
-      v-for="technology of technologies"
+      v-for="technology in technologies"
       :key="technology.display"
       v-bind="technology"
       tooltip-top

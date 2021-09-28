@@ -28,7 +28,7 @@ export default defineComponent({
 <template>
   <responsive-container :justify="justify">
     <link-icon
-      v-for="link of links"
+      v-for="link in links"
       v-bind="link"
       :key="link.name"
       :class="iconClass"
