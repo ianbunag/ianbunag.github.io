@@ -37,7 +37,7 @@ export default defineComponent({
     </div>
 
     <technology-stack-list
-      v-for="techStack of techStacks"
+      v-for="techStack in techStacks"
       :key="techStack.category"
       :tech-stack="techStack"
       :heading="{ section: 2, stack: 3 }"

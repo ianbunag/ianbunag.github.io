@@ -15,7 +15,7 @@ export default defineComponent({
 <template>
   <responsive-container>
     <div
-      v-for="tag of tags"
+      v-for="tag in tags"
       :key="tag"
       class="text-body-2 rounded elevation-8 tag"
     >
