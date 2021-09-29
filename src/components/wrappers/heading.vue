@@ -11,11 +11,11 @@ export default defineComponent({
   },
   // Only Vue/Nuxt v2 render syntax is supported at the time of creation
   render (h) {
-    const { default: defaultProps = [] } = this.$slots
+    const { default: defaultSlots = [] } = this.$slots
     // @ts-expect-error prop has default value
     const { level } = this.$props
 
-    return h(`h${level}`, defaultProps)
+    return h(`h${level}`, defaultSlots)
   },
 })
 </script>

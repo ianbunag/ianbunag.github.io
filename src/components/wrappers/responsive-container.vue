@@ -12,10 +12,10 @@ export default defineComponent({
   },
   // Only Vue/Nuxt v2 render syntax is supported at the time of creation
   render (h) {
-    const { default: defaultProps = [] } = this.$slots
+    const { default: defaultSlots = [] } = this.$slots
     // @ts-expect-error prop has default value
     const { justify } = this.$props
-    const columns = defaultProps.map((defaultProp) => {
+    const columns = defaultSlots.map((defaultProp) => {
       if (!defaultProp.tag) { return defaultProp }
 
       return h(
