@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, h } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   name: 'Heading',
@@ -9,13 +9,8 @@ export default defineComponent({
       default: 1,
     },
   },
-  // Only Vue/Nuxt v2 render syntax is supported at the time of creation
-  render (h) {
-    const { default: defaultSlots = [] } = this.$slots
-    // @ts-expect-error prop has default value
-    const { level } = this.$props
-
-    return h(`h${level}`, defaultSlots)
+  setup (props, { slots }) {
+    return () => h(`h${props.level}`, undefined, slots.default?.())
   },
 })
 </script>
