@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, h } from '@nuxtjs/composition-api'
 import { VContainer, VRow, VCol } from 'vuetify/lib/components/VGrid'
 
 export default defineComponent({
@@ -10,35 +10,33 @@ export default defineComponent({
       default: 'start',
     },
   },
-  // Only Vue/Nuxt v2 render syntax is supported at the time of creation
-  render (h) {
-    const { default: defaultSlots = [] } = this.$slots
-    // @ts-expect-error prop has default value
-    const { justify } = this.$props
-    const columns = defaultSlots.map((defaultProp) => {
-      if (!defaultProp.tag) { return defaultProp }
+  setup (props, { slots }) {
+    return () => {
+      const columns = (slots.default?.() || []).map((defaultSlot) => {
+        if (!defaultSlot.tag) { return defaultSlot }
 
-      return h(
-        VCol,
-        { props: { cols: 'auto' } },
-        [defaultProp],
+        return h(
+          VCol,
+          { props: { cols: 'auto' } },
+          [defaultSlot],
+        )
+      })
+      const row = h(
+        VRow,
+        { props: { justify: props.justify, dense: true } },
+        columns,
       )
-    })
-    const row = h(
-      VRow,
-      { props: { justify, dense: true } },
-      [columns],
-    )
-    const container = h(
-      VContainer,
-      {
-        class: 'pf-bound-less',
-        props: { fluid: true },
-      },
-      [row],
-    )
+      const container = h(
+        VContainer,
+        {
+          class: 'pf-bound-less',
+          props: { fluid: true },
+        },
+        [row],
+      )
 
-    return container
+      return container
+    }
   },
 })
 </script>
