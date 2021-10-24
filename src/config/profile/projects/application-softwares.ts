@@ -3,6 +3,45 @@ import { requireProgressiveImage } from '~/lib/config'
 
 export const applicationSoftwares = mapReferencedProjects([
   {
+    name: '@yvnbunag/scaffold',
+    key: 'yvnbunag-scaffold',
+    period: '2021 October',
+    tags: [
+      'CLI',
+      'TypeScript',
+      'npm',
+      'software',
+      'application',
+      'scaffold',
+      'boilerplate',
+      'generator',
+    ],
+    description: 'CLI tool to quickly generate project boilerplate.',
+    images: [
+      './assets/images/projects/scaffold/initial.png',
+      './assets/images/projects/scaffold/scaffolded.png',
+      './assets/images/projects/scaffold/setup.png',
+      './assets/images/projects/scaffold/test.png',
+      './assets/images/projects/scaffold/development.png',
+      './assets/images/projects/scaffold/production.png',
+    ].map(requireProgressiveImage),
+    technologies: [
+      'node-js',
+      'npm',
+    ],
+    featured: true,
+    secondaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      link: process.env.SCAFFOLD_REPOSITORY,
+      linkIcon: 'mdiGitlab',
+    },
+    primaryLink: {
+      text: LinkName.TRY_ME,
+      link: process.env.SCAFFOLD_NPM_URL,
+      linkIcon: 'mdiConsole',
+    },
+  },
+  {
     name: '@yvnbunag/dock',
     key: 'yvnbunag-dock',
     period: '2021 August',
