@@ -16,7 +16,7 @@ export const applicationSoftwares = mapReferencedProjects([
       'boilerplate',
       'generator',
     ],
-    description: 'CLI tool to quickly generate project boilerplate.',
+    description: 'CLI tool to quickly generate project from boilerplate.',
     images: [
       './assets/images/projects/scaffold/initial.png',
       './assets/images/projects/scaffold/scaffolded.png',
