@@ -46,5 +46,6 @@ export const env = {
     'FEU_TECH_LINK',
     'CODE_NINJA_LINK',
     'IMPORTGENIUS_LINK',
+    'LIGHTSPEED_LINK',
   ]),
 }

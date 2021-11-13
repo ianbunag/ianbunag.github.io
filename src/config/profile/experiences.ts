@@ -29,6 +29,13 @@ function mapReferencedExperiences (
 }
 
 export const experiences = mapReferencedExperiences([
+  {
+    role: 'Software Developer',
+    type: ExperienceType.FULL_TIME_JOB,
+    association: 'lightspeed',
+    period: { start: '2021 November' },
+    description: createUnorderedList([`Developer on the Hospitality team`]),
+  },
   ...((): ReferencedExperiences => {
     const association = 'code-ninja'
     const importGenius = createAccessibleLink(
