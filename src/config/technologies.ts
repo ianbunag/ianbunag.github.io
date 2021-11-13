@@ -160,6 +160,13 @@ export const frontEndFrameworks = mapTechnology({
     logoURL: 'logos/vue.svg',
     url: 'https://vuejs.org',
   },
+  react: {
+    display: 'React',
+    description: 'Library for building user interfaces',
+    icon: 'mdiReact',
+    logoURL: 'logos/react.svg',
+    url: 'https://reactjs.org/',
+  },
 })
 
 export const backEndFrameworks = mapTechnology({

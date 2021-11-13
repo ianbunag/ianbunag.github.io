@@ -44,6 +44,7 @@ import {
   mdiTwitter,
   mdiContentCopy,
   mdiMicrosoftVisualStudioCode,
+  mdiReact,
 } from '@mdi/js'
 
 import { pluggedIcons } from '~/plugins/vuetify'
@@ -112,6 +113,7 @@ export const mdi = defineIconMap({
   mdiTwitter,
   mdiContentCopy,
   mdiMicrosoftVisualStudioCode,
+  mdiReact,
 })
 
 export const custom: CustomIcons = (() => {

@@ -38,8 +38,9 @@ export const techStacks = mapReferencedTechStacks([
     ],
   },
   {
-    category: 'Frameworks',
+    category: 'Libraries / Frameworks',
     technologies: [
+      'react',
       'nuxt',
       'vue',
       'fastify',
@@ -49,7 +50,7 @@ export const techStacks = mapReferencedTechStacks([
     ],
   },
   {
-    category: 'UI Libraries',
+    category: 'UI Libraries / Design Systems',
     technologies: [
       'vuetify',
       'bootstrap-vue',
