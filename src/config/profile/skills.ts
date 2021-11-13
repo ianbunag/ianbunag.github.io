@@ -32,6 +32,7 @@ export const skills = mapReferencedSkills([
     description: 'I transform prototypes into responsive, scalable and performant web applications - leveraging frameworks like Vue, UI frameworks like Vuetify, and tooling like SASS to deliver requirements ahead of time.',
     icon: 'frontEnd',
     technologies: [
+      'react',
       'nuxt',
       'vue',
       'vuetify',
