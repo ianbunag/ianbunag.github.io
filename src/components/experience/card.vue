@@ -12,6 +12,10 @@ interface HeadingOptions {
   subtitle: Heading.Levels,
 }
 
+function removeLastLetter (word: string) {
+  return word.slice(0, -1)
+}
+
 export const headingOptions = {
   type: Object as Prop<HeadingOptions>,
   default: () => ({}),
@@ -23,6 +27,7 @@ export function getRange (period: Experience['period']): string {
 
 export function getDuration (period: Experience['period']): string {
   const ranges = ['years', 'months', 'days'] as const
+  const { length } = ranges
   const date = {
     from: moment(new Date(period.start)),
     to: moment(period.end ? new Date(period.end) : Date.now()),
@@ -31,10 +36,17 @@ export function getDuration (period: Experience['period']): string {
   for (const range of ranges) {
     const currentDuration = date.to.diff(date.from, range)
 
+    if (
+      range === ranges[length - 1] &&
+      currentDuration >= 0
+    ) {
+      const secondToTheLastRange = removeLastLetter(ranges[length - 2])
+
+      return `~1 ${secondToTheLastRange}`
+    }
+
     if (currentDuration) {
-      const period = currentDuration !== 1
-        ? range
-        : range.slice(0, -1)
+      const period = currentDuration !== 1 ? range : removeLastLetter(range)
 
       return `${currentDuration} ${period}`
     }

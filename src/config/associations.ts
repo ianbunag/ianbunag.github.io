@@ -28,4 +28,10 @@ export const associations = defineAssociationMap({
     logoURL: 'logos/code-ninja.png',
     logoAccent: '#fff',
   },
+  lightspeed: {
+    name: 'Lightspeed',
+    url: process.env.LIGHTSPEED_LINK,
+    logoURL: 'logos/lightspeed.png',
+    logoAccent: '#e81c1c',
+  },
 })
