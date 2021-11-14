@@ -45,6 +45,7 @@ import {
   mdiContentCopy,
   mdiMicrosoftVisualStudioCode,
   mdiReact,
+  mdiGamepadVariantOutline,
 } from '@mdi/js'
 
 import { pluggedIcons } from '~/plugins/vuetify'
@@ -114,6 +115,7 @@ export const mdi = defineIconMap({
   mdiContentCopy,
   mdiMicrosoftVisualStudioCode,
   mdiReact,
+  mdiGamepadVariantOutline,
 })
 
 export const custom: CustomIcons = (() => {
