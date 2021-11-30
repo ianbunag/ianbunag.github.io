@@ -29,13 +29,23 @@ function mapReferencedExperiences (
 }
 
 export const experiences = mapReferencedExperiences([
-  {
-    role: 'Software Developer',
-    type: ExperienceType.FULL_TIME_JOB,
-    association: 'lightspeed',
-    period: { start: '2021 November' },
-    description: createUnorderedList([`Developer on the Hospitality team`]),
-  },
+  ((): ReferencedExperience => {
+    const informGroup = createAccessibleLink(
+      'Inform Group',
+      process.env.INFORM_GROUP_LINK || '',
+    )
+
+    return {
+      role: 'Software Developer',
+      type: ExperienceType.FULL_TIME_JOB,
+      association: 'lightspeed',
+      period: { start: '2021 November' },
+      description: createUnorderedList([
+        `Employed under ${informGroup}`,
+        `Developer on the Hospitality team`,
+      ]),
+    }
+  })(),
   ...((): ReferencedExperiences => {
     const association = 'code-ninja'
     const importGenius = createAccessibleLink(
