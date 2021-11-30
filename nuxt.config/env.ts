@@ -49,5 +49,6 @@ export const env = {
     'CODE_NINJA_LINK',
     'IMPORTGENIUS_LINK',
     'LIGHTSPEED_LINK',
+    'INFORM_GROUP_LINK',
   ]),
 }
