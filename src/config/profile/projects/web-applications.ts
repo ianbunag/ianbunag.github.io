@@ -143,11 +143,6 @@ export const webApplications = mapReferencedProjects([
         link: process.env.LIBRARY_SYSTEM_REPOSITORY,
         linkIcon: 'mdiGitlab',
       },
-      primaryLink: {
-        text: 'Preview me!',
-        link: process.env.LIBRARY_SYSTEM_URL,
-        linkIcon: 'mdiWeb',
-      },
     }
   })(),
   ((): ReferencedProject => {
