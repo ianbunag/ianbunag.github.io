@@ -18,6 +18,11 @@ function mapReferencedLinks (referencedLinks: ReferencedLinks): Links {
 
 export const links = mapReferencedLinks([
   {
+    name: 'GitHub',
+    icon: 'mdiGithub',
+    url: process.env.GITHUB_LINK || '',
+  },
+  {
     name: 'GitLab',
     icon: 'mdiGitlab',
     url: process.env.GITLAB_LINK || '',

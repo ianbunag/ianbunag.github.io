@@ -69,7 +69,7 @@ export default defineComponent({
                       class="pf-full-height pf-margin-less pf-fade-35"
                     >
                       <v-icon size="100%" class="pf-absolute">
-                        {{ icon || icons.mdiFlashCircle }}
+                        {{ icon || icons.mdiLightningBoltCircle }}
                       </v-icon>
                     </v-row>
                   </template>

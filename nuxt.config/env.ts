@@ -13,6 +13,7 @@ export const env = {
     'PORT',
     'GOOGLE_SITE_VERIFICATION',
     'EMAIL_ADDRESS',
+    'GITHUB_LINK',
     'GITLAB_LINK',
     'LINKEDIN_LINK',
     'TWITTER_LINK',

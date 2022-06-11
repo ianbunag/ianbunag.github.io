@@ -32,7 +32,7 @@ import {
   mdiYoutube,
   mdiLanguageHtml5,
   mdiLanguageJavascript,
-  mdiFlashCircle,
+  mdiLightningBoltCircle,
   mdiLanguageMarkdownOutline,
   mdiSchool,
   mdiNotebookEdit,
@@ -46,6 +46,9 @@ import {
   mdiMicrosoftVisualStudioCode,
   mdiReact,
   mdiGamepadVariantOutline,
+  mdiGithub,
+  mdiLanguageGo,
+  mdiTerraform,
 } from '@mdi/js'
 
 import { pluggedIcons } from '~/plugins/vuetify'
@@ -102,7 +105,7 @@ export const mdi = defineIconMap({
   mdiYoutube,
   mdiLanguageHtml5,
   mdiLanguageJavascript,
-  mdiFlashCircle,
+  mdiLightningBoltCircle,
   mdiLanguageMarkdownOutline,
   mdiSchool,
   mdiNotebookEdit,
@@ -116,6 +119,9 @@ export const mdi = defineIconMap({
   mdiMicrosoftVisualStudioCode,
   mdiReact,
   mdiGamepadVariantOutline,
+  mdiGithub,
+  mdiLanguageGo,
+  mdiTerraform,
 })
 
 export const custom: CustomIcons = (() => {

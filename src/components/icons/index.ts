@@ -21,6 +21,8 @@ import lumen from '~/components/icons/lumen.vue'
 import swagger from '~/components/icons/swagger.vue'
 import pm2 from '~/components/icons/pm2.vue'
 import awsChalice from '~/components/icons/aws-chalice.vue'
+import circleCI from '~/components/icons/circle-ci.vue'
+import cypress from '~/components/icons/cypress.vue'
 
 export {
   fastify,
@@ -46,4 +48,6 @@ export {
   swagger,
   pm2,
   awsChalice,
+  circleCI,
+  cypress,
 }
