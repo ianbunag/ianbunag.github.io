@@ -32,7 +32,7 @@ export const pages = mapReferencedPages({
   TECH_STACK: {
     name: 'Tech Stack',
     route: '/tech-stack/',
-    icon: 'mdiFlashCircle',
+    icon: 'mdiLightningBoltCircle',
   },
   PROJECTS: {
     name: 'Projects',

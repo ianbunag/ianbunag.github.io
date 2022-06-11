@@ -19,6 +19,13 @@ function mapTechnology <Map extends ReferencedTechnologyMap> (
 }
 
 export const languages = mapTechnology({
+  go: {
+    display: 'Go',
+    description: 'Expressive, concise and efficient language',
+    icon: 'mdiLanguageGo',
+    logoURL: 'logos/go.svg',
+    url: 'https://go.dev/',
+  },
   typescript: {
     display: 'TypeScript',
     description: 'JavaScript superset with static types',
@@ -208,6 +215,13 @@ export const testFrameworks = mapTechnology({
     logoURL: 'logos/jest.svg',
     url: 'https://jestjs.io',
   },
+  cypress: {
+    display: 'Cypress',
+    description: 'Browser testing framework',
+    icon: 'cypress',
+    logoURL: 'logos/cypress.svg',
+    url: 'https://www.cypress.io/',
+  },
 })
 
 export const databases = mapTechnology({
@@ -303,6 +317,20 @@ export const applications = mapTechnology({
 })
 
 export const providers = mapTechnology({
+  terraform: {
+    display: 'Terraform',
+    description: 'Infrastructure as code tool',
+    icon: 'mdiTerraform',
+    logoURL: 'logos/terraform.svg',
+    url: 'https://www.terraform.io/',
+  },
+  github: {
+    display: 'GitHub',
+    description: 'Source code management platform',
+    icon: 'mdiGithub',
+    logoURL: 'logos/github.svg',
+    url: 'https://github.com/',
+  },
   gitlab: {
     display: 'GitLab',
     description: 'Single tool for the DevOps lifecycle',
@@ -323,6 +351,13 @@ export const providers = mapTechnology({
     icon: 'mdiGoogleCloud',
     logoURL: 'logos/google-cloud.svg',
     url: 'https://cloud.google.com',
+  },
+  circleci: {
+    display: 'CircleCI',
+    description: 'Continuous integration platform',
+    icon: 'circleCI',
+    logoURL: 'logos/circle-ci.svg',
+    url: 'https://circleci.com/',
   },
   npm: {
     display: 'NPM',

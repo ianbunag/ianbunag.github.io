@@ -34,6 +34,16 @@ export const experiences = mapReferencedExperiences([
       'Inform Group',
       process.env.INFORM_GROUP_LINK || '',
     )
+    const technologyKeys: Array<keyof typeof technologies> = [
+      'react',
+      'amazon-web-services',
+      'terraform',
+    ]
+    const [
+      react,
+      aws,
+      terraform,
+    ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
 
     return {
       role: 'Software Developer',
@@ -41,8 +51,9 @@ export const experiences = mapReferencedExperiences([
       association: 'lightspeed',
       period: { start: '2021 November' },
       description: createUnorderedList([
-        `Employed under ${informGroup}`,
-        `Developer on the Hospitality team`,
+        `Currently employed under ${informGroup}`,
+        `Developing for the Hospitality team`,
+        `Utilizing tools and platforms like ${react}, ${aws} and ${terraform}`,
       ]),
     }
   })(),
