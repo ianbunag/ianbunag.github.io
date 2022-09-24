@@ -73,6 +73,7 @@ export default defineComponent({
               :projects="featuredProjects"
               :heading="{ title: 4, subtitle: 5 }"
               :thumbnail="{ maxHeight: { desktop: '200px' } }"
+              descending
               justify="center"
             />
           </v-col>

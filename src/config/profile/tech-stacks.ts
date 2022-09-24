@@ -31,29 +31,22 @@ export const techStacks = mapReferencedTechStacks([
       'node-js',
       'javascript',
       'go',
-      'python',
-      'php',
+      'java',
       'markdown',
       'html',
       'css',
     ],
   },
   {
+    category: 'Cloud Platforms',
+    technologies: ['amazon-web-services'],
+  },
+  {
     category: 'Libraries / Frameworks',
     technologies: [
       'react',
-      'nuxt',
       'vue',
-      'fastify',
-      'aws-chalice',
-      'express',
-    ],
-  },
-  {
-    category: 'UI Libraries / Design Systems',
-    technologies: [
-      'vuetify',
-      'bootstrap-vue',
+      'nuxt',
     ],
   },
   {
@@ -61,15 +54,12 @@ export const techStacks = mapReferencedTechStacks([
     technologies: [
       'terraform',
       'github',
-      'gitlab',
       'circleci',
       'jest',
       'cypress',
-      'docker',
-      'swagger',
       'eslint',
-      'sass',
-      'stylelint',
+      'swagger',
+      'docker',
     ],
   },
   {
@@ -77,17 +67,27 @@ export const techStacks = mapReferencedTechStacks([
     technologies: ['mysql'],
   },
   {
-    category: 'Server Management',
+    category: 'Previous Technologies',
     technologies: [
+      // Languages
+      'python',
+      'php',
+      // Cloud Platforms
+      'google-cloud',
+      // Libraries / Frameworks
+      'fastify',
+      'aws-chalice',
+      'express',
+      'lumen',
+      // UI Libraries / Design Systems
+      'vuetify',
+      'bootstrap-vue',
+      // Tooling
+      'gitlab',
       'nginx',
       'pm2',
-    ],
-  },
-  {
-    category: 'Cloud Platforms',
-    technologies: [
-      'amazon-web-services',
-      'google-cloud',
+      'sass',
+      'stylelint',
     ],
   },
 ])
