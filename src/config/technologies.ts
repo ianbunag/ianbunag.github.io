@@ -69,8 +69,9 @@ export const languages = mapTechnology({
   },
   java: {
     display: 'Java',
-    description: '',
+    description: 'Object oriented programming language',
     icon: 'mdiLanguageJava',
+    logoURL: 'logos/java.svg',
     url: 'https://www.java.com',
   },
   html: {

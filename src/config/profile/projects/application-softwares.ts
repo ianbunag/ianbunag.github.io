@@ -29,7 +29,6 @@ export const applicationSoftwares = mapReferencedProjects([
       'node-js',
       'npm',
     ],
-    featured: true,
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
       link: process.env.SCAFFOLD_REPOSITORY,

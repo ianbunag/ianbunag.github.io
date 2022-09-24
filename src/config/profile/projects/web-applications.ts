@@ -87,7 +87,6 @@ export const webApplications = mapReferencedProjects([
       'photopea',
       'gitlab',
     ],
-    featured: true,
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
       link: process.env.PORTFOLIO_REPOSITORY,
@@ -204,7 +203,6 @@ export const webApplications = mapReferencedProjects([
         'adobe-after-effects',
         'adobe-audition',
       ],
-      featured: true,
       secondaryLink: {
         text: 'Watch trailer',
         link: process.env.ONESIMO_FOUNDATION_CHANGE_TRAILER_LINK,
