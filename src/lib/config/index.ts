@@ -38,3 +38,24 @@ export function createParagraph (sections: Array<string>): string {
 export function emphasize (text: string): string {
   return `<strong>${text}</strong>`
 }
+
+export function createHeader (
+  level: 1 | 2 | 3 | 4 | 5 | 6,
+  text: string,
+): string {
+  return `<h${level}>${text}</h${level}>`
+}
+
+export function createImage (
+  src: string,
+  alt: string,
+  link?: string,
+): string {
+  const image = `<img src="${src}" alt="${alt}"/>`
+
+  if (link) {
+    return `<a href="${link}">${image}</a>`
+  }
+
+  return image
+}

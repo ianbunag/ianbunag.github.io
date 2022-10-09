@@ -54,7 +54,7 @@ export default defineComponent({
           :href="pages.HOME.route"
           class="pf-link-light"
         >
-          Let us head back home.
+          Head back home.
         </a>
       </v-col>
     </v-row>
