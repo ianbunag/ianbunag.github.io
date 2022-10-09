@@ -368,6 +368,15 @@ export const providers = mapTechnology({
   },
 })
 
+export const kataProviders = mapTechnology({
+  codewars: {
+    display: 'Codewars',
+    description: 'Coding practice website for all programming levels',
+    icon: 'codewars',
+    url: 'https://www.codewars.com/',
+  },
+})
+
 export const technologies = {
   ...languages,
   ...developmentTools,
@@ -379,6 +388,7 @@ export const technologies = {
   ...serverManagement,
   ...applications,
   ...providers,
+  ...kataProviders,
 }
 
 export function createTechnologyLink (

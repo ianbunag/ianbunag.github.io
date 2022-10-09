@@ -1,55 +1,80 @@
-import { mapReferencedProjects, LinkName } from '~/lib/config/profile/projects'
-import { requireProgressiveImage } from '~/lib/config'
+import { mapReferencedProjects, LinkName, ReferencedProject } from '~/lib/config/profile/projects'
+import { createHeader, createImage, createParagraph, requireProgressiveImage } from '~/lib/config'
 
+const { CODEWARS_USERNAME = '' } = process.env
 export const kata = mapReferencedProjects([
-  {
-    name: 'Java Kata',
-    key: 'java-kata',
-    period: 'Present',
-    tags: [
-      'Java',
-      'Codewars',
-      'TDD',
-      'Big O',
-      'kata',
-      'data',
-      'structures',
-      'algorithm',
-    ],
-    description: 'Collection of Java kata challenges.',
-    images: ['./assets/images/projects/java-kata/java-kata.png'].map(requireProgressiveImage),
-    technologies: ['java'],
-    featured: true,
-    secondaryLink: {
-      text: LinkName.VIEW_SOURCE,
-      link: process.env.JAVA_KATA_REPOSITORY,
-      linkIcon: 'mdiGithub',
-    },
-  },
-  {
-    name: 'Go Kata',
-    key: 'go-kata',
-    period: 'Present',
-    tags: [
-      'Go',
-      'Codewars',
-      'TDD',
-      'Big O',
-      'kata',
-      'data',
-      'structures',
-      'algorithm',
-    ],
-    description: 'Collection of Go kata challenges.',
-    images: ['./assets/images/projects/go-kata/go-kata.png'].map(requireProgressiveImage),
-    technologies: ['go'],
-    featured: true,
-    secondaryLink: {
-      text: LinkName.VIEW_SOURCE,
-      link: process.env.GO_KATA_REPOSITORY,
-      linkIcon: 'mdiGithub',
-    },
-  },
+  ((): ReferencedProject => {
+    const description = createParagraph([
+      'Collection of Java kata challenges.',
+      createHeader(2, 'Find me in Codewars'),
+      createImage(
+        `https://www.codewars.com/users/${CODEWARS_USERNAME}/badges/small`,
+        `Find ${CODEWARS_USERNAME} in Codewars`,
+        `https://www.codewars.com/users/${CODEWARS_USERNAME}`,
+      ),
+    ])
+
+    return {
+      name: 'Java Kata',
+      key: 'java-kata',
+      period: 'Present',
+      tags: [
+        'Java',
+        'Codewars',
+        'TDD',
+        'Big O',
+        'kata',
+        'data',
+        'structures',
+        'algorithm',
+      ],
+      description,
+      images: ['./assets/images/projects/java-kata/java-kata.png'].map(requireProgressiveImage),
+      technologies: ['java', 'codewars'],
+      featured: true,
+      secondaryLink: {
+        text: LinkName.VIEW_SOURCE,
+        link: process.env.JAVA_KATA_REPOSITORY,
+        linkIcon: 'mdiGithub',
+      },
+    }
+  })(),
+  ((): ReferencedProject => {
+    const description = createParagraph([
+      'Collection of Go kata challenges.',
+      createHeader(2, 'Find me in Codewars'),
+      createImage(
+        `https://www.codewars.com/users/${CODEWARS_USERNAME}/badges/small`,
+        `Find ${CODEWARS_USERNAME} in Codewars`,
+        `https://www.codewars.com/users/${CODEWARS_USERNAME}`,
+      ),
+    ])
+
+    return {
+      name: 'Go Kata',
+      key: 'go-kata',
+      period: 'Present',
+      tags: [
+        'Go',
+        'Codewars',
+        'TDD',
+        'Big O',
+        'kata',
+        'data',
+        'structures',
+        'algorithm',
+      ],
+      description,
+      images: ['./assets/images/projects/go-kata/go-kata.png'].map(requireProgressiveImage),
+      technologies: ['go', 'codewars'],
+      featured: true,
+      secondaryLink: {
+        text: LinkName.VIEW_SOURCE,
+        link: process.env.GO_KATA_REPOSITORY,
+        linkIcon: 'mdiGithub',
+      },
+    }
+  })(),
   {
     name: 'TypeScript Challenges',
     key: 'typescript-challenges',

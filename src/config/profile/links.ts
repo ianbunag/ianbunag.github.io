@@ -23,6 +23,11 @@ export const links = mapReferencedLinks([
     url: process.env.GITHUB_LINK || '',
   },
   {
+    name: 'Codewars',
+    icon: 'codewars',
+    url: `https://www.codewars.com/users/${process.env.CODEWARS_USERNAME || ''}`,
+  },
+  {
     name: 'GitLab',
     icon: 'mdiGitlab',
     url: process.env.GITLAB_LINK || '',

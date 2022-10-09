@@ -23,6 +23,7 @@ import pm2 from '~/components/icons/pm2.vue'
 import awsChalice from '~/components/icons/aws-chalice.vue'
 import circleCI from '~/components/icons/circle-ci.vue'
 import cypress from '~/components/icons/cypress.vue'
+import codewars from '~/components/icons/codewars.vue'
 
 export {
   fastify,
@@ -50,4 +51,5 @@ export {
   awsChalice,
   circleCI,
   cypress,
+  codewars,
 }
