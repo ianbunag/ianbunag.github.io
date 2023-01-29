@@ -10,7 +10,7 @@ export const kata = mapReferencedProjects([
       createHeader(2, 'Find me in LeetCode'),
       createImage(
         `https://leetcode-stats-six.vercel.app/?username=${LEETCODE_USERNAME}`,
-        'Find me in LeetCode',
+        `Find ${LEETCODE_USERNAME} in LeetCode`,
         { link: `https://leetcode.com/${LEETCODE_USERNAME}`, height: 125 },
       ),
       createHeader(2, 'Find me in Codewars'),
@@ -53,7 +53,7 @@ export const kata = mapReferencedProjects([
       createHeader(2, 'Find me in LeetCode'),
       createImage(
         `https://leetcode-stats-six.vercel.app/?username=${LEETCODE_USERNAME}`,
-        'Find me in LeetCode',
+        `Find ${LEETCODE_USERNAME} in LeetCode`,
         { link: `https://leetcode.com/${LEETCODE_USERNAME}`, height: 125 },
       ),
       createHeader(2, 'Find me in Codewars'),
