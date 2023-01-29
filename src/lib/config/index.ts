@@ -46,12 +46,22 @@ export function createHeader (
   return `<h${level}>${text}</h${level}>`
 }
 
+type CreateImageOptions = {
+  link?: string,
+  height?: number,
+}
+
 export function createImage (
   src: string,
   alt: string,
-  link?: string,
+  { link, height }: CreateImageOptions = {},
 ): string {
-  const image = `<img src="${src}" alt="${alt}"/>`
+  const attributes = [
+    `src="${src}"`,
+    `alt="${alt}"`,
+    height && `height="${height}"`,
+  ].filter(Boolean).join(' ')
+  const image = `<img ${attributes}/>`
 
   if (link) {
     return `<a href="${link}">${image}</a>`

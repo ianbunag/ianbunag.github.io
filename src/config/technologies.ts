@@ -369,6 +369,12 @@ export const providers = mapTechnology({
 })
 
 export const kataProviders = mapTechnology({
+  leetcode: {
+    display: 'LeetCode',
+    description: 'Algorithm challenge website to practice and improve skills',
+    icon: 'leetcode',
+    url: 'https://leetcode.com/',
+  },
   codewars: {
     display: 'Codewars',
     description: 'Coding practice website for all programming levels',

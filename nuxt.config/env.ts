@@ -19,6 +19,7 @@ export const env = {
     'TWITTER_LINK',
     'DOCKER_HUB_LINK',
     'NPM_LINK',
+    'LEETCODE_USERNAME',
     'CODEWARS_USERNAME',
     'PORTFOLIO_REPOSITORY',
     'DOCK_REPOSITORY',

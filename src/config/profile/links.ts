@@ -23,6 +23,11 @@ export const links = mapReferencedLinks([
     url: process.env.GITHUB_LINK || '',
   },
   {
+    name: 'LeetCode',
+    icon: 'leetcode',
+    url: `https://leetcode.com/${process.env.LEETCODE_USERNAME || ''}`,
+  },
+  {
     name: 'Codewars',
     icon: 'codewars',
     url: `https://www.codewars.com/users/${process.env.CODEWARS_USERNAME || ''}`,

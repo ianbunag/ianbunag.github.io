@@ -24,6 +24,7 @@ import awsChalice from '~/components/icons/aws-chalice.vue'
 import circleCI from '~/components/icons/circle-ci.vue'
 import cypress from '~/components/icons/cypress.vue'
 import codewars from '~/components/icons/codewars.vue'
+import leetcode from '~/components/icons/leetcode.vue'
 
 export {
   fastify,
@@ -52,4 +53,5 @@ export {
   circleCI,
   cypress,
   codewars,
+  leetcode,
 }
