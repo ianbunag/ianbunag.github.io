@@ -33,6 +33,8 @@ export const head = {
       name: 'google-site-verification',
       content: process.env.GOOGLE_SITE_VERIFICATION,
     },
+    { property: 'og:type', content: 'profile' },
+    { property: 'og:image', content: '/og-image.png' },
   ],
   link: [
     { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
