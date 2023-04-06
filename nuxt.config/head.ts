@@ -1,4 +1,4 @@
-import { shortIntroduction } from '../src/config/profile/introduction'
+import { introduction } from '../src/config/profile/introduction'
 import theme from '../src/config/theme.json'
 
 function createVuetifyFontPreload (font: string) {
@@ -24,7 +24,7 @@ export const head = {
     {
       hid: 'description',
       name: 'description',
-      content: shortIntroduction,
+      content: introduction,
     },
     { name: 'theme-color', content: theme['background-darker'] },
     { name: 'format-detection', content: 'telephone=no' },

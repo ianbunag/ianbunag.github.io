@@ -43,6 +43,7 @@ John Ian Buñag's personal portfolio. Made with [Nuxt.js](https://nuxtjs.org/),
 
 1. Install dependencies
 ```sh
+nvm use
 yarn install
 ```
 

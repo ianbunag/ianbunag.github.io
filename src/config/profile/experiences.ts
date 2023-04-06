@@ -46,7 +46,7 @@ export const experiences = mapReferencedExperiences([
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
 
     return {
-      role: 'Software Developer',
+      role: 'Software Developer II',
       type: ExperienceType.FULL_TIME_JOB,
       association: 'lightspeed',
       period: { start: '2021 November' },
