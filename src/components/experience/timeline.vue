@@ -4,8 +4,6 @@ import { defineComponent, toRefs } from '@nuxtjs/composition-api'
 import { useBreakPoints } from '~/lib/hooks'
 import { icons } from '~/config/icons'
 import ExperienceCard, {
-  getRange,
-  getDuration,
   headingOptions,
 } from '~/components/experience/card.vue'
 
@@ -13,6 +11,7 @@ import { ExperienceType } from '@/config/profile'
 
 import type { Icon } from '@/config/icons'
 import type { Experiences } from '@/config/profile'
+import { getRange, getDuration } from './period'
 
 interface TimelineOptions {
   labelClass: string,

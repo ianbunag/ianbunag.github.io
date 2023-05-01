@@ -29,7 +29,7 @@ function mapReferencedExperiences (
 }
 
 export const experiences = mapReferencedExperiences([
-  ((): ReferencedExperience => {
+  ...((): ReferencedExperiences => {
     const informGroup = createAccessibleLink(
       'Inform Group',
       process.env.INFORM_GROUP_LINK || '',
@@ -44,18 +44,28 @@ export const experiences = mapReferencedExperiences([
       aws,
       terraform,
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
+    const description = createUnorderedList([
+      `Currently employed under ${informGroup}`,
+      `Developing for the Hospitality team`,
+      `Utilizing tools and platforms like ${react}, ${aws} and ${terraform}`,
+    ])
 
-    return {
-      role: 'Software Developer II',
-      type: ExperienceType.FULL_TIME_JOB,
-      association: 'lightspeed',
-      period: { start: '2021 November' },
-      description: createUnorderedList([
-        `Currently employed under ${informGroup}`,
-        `Developing for the Hospitality team`,
-        `Utilizing tools and platforms like ${react}, ${aws} and ${terraform}`,
-      ]),
-    }
+    return [
+      {
+        role: 'Software Developer II',
+        type: ExperienceType.FULL_TIME_JOB,
+        association: 'lightspeed',
+        period: { start: '2023 April' },
+        description,
+      },
+      {
+        role: 'Software Developer I',
+        type: ExperienceType.FULL_TIME_JOB,
+        association: 'lightspeed',
+        period: { start: '2021 November', end: '2023 April' },
+        description,
+      },
+    ]
   })(),
   ...((): ReferencedExperiences => {
     const association = 'code-ninja'
