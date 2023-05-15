@@ -59,6 +59,7 @@ export const techStacks = mapReferencedTechStacks([
       'cypress',
       'eslint',
       'swagger',
+      'kubernetes',
       'docker',
     ],
   },

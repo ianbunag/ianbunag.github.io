@@ -38,17 +38,14 @@ export const experiences = mapReferencedExperiences([
       'react',
       'amazon-web-services',
       'terraform',
+      'kubernetes',
     ]
     const [
       react,
       aws,
       terraform,
+      kubernetes,
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
-    const description = createUnorderedList([
-      `Currently employed under ${informGroup}`,
-      `Developing for the Hospitality team`,
-      `Utilizing tools and platforms like ${react}, ${aws} and ${terraform}`,
-    ])
 
     return [
       {
@@ -56,14 +53,22 @@ export const experiences = mapReferencedExperiences([
         type: ExperienceType.FULL_TIME_JOB,
         association: 'lightspeed',
         period: { start: '2023 April' },
-        description,
+        description: createUnorderedList([
+          `Currently employed under ${informGroup}`,
+          'Developing a platform migration software',
+          `Utilizing tools and platforms such as ${react}, ${kubernetes} and ${terraform}`,
+        ]),
       },
       {
         role: 'Software Developer I',
         type: ExperienceType.FULL_TIME_JOB,
         association: 'lightspeed',
-        period: { start: '2021 November', end: '2023 April' },
-        description,
+        period: { start: '2021 November', end: '2023 March' },
+        description: createUnorderedList([
+          `Employed under ${informGroup}`,
+          'Developed a restaurant inventory management software',
+          `Utilized tools and platforms such as ${react}, ${aws} and ${terraform}`,
+        ]),
       },
     ]
   })(),
@@ -75,7 +80,6 @@ export const experiences = mapReferencedExperiences([
     )
     const technologyKeys: Array<keyof typeof technologies> = [
       'nuxt',
-      'lumen',
       'express',
       'amazon-web-services',
     ]
@@ -89,7 +93,6 @@ export const experiences = mapReferencedExperiences([
     )
     const [
       nuxt,
-      lumen,
       express,
       aws,
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
@@ -106,7 +109,7 @@ export const experiences = mapReferencedExperiences([
         },
         description: createUnorderedList([
           workedForDescription,
-          `Core developer on the ${recurly} integration team`,
+          `Integrated ${recurly} with the platform`,
           `Implemented serverless services with ${aws}`,
         ]),
       },
@@ -120,8 +123,8 @@ export const experiences = mapReferencedExperiences([
         },
         description: createUnorderedList([
           workedForDescription,
-          `Utilized frameworks like ${nuxt}, ${lumen} and ${express}`,
-          `Contributed to the ${elasticsearch} integration`,
+          'Developed a global trade intelligence software',
+          `Utilized frameworks and tools such as ${nuxt}, ${express} and ${elasticsearch}`,
         ]),
       },
     ]
@@ -170,8 +173,8 @@ export const experiences = mapReferencedExperiences([
         end: '2019 March',
       },
       description: createUnorderedList([
-        'Completed Bachelor of Science in Information Technology with Specialization in Digital Arts program',
-        `Web developer for the capstone project ${change} by La Prisma - awarded the best thesis, website, film and trailer`,
+        'Completed Bachelor of Science in Information Technology with specialization in Digital Arts program',
+        `Developed the web application of the capstone project ${change} by the La Prisma Group`,
       ]),
     }
   })(),

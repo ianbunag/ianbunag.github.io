@@ -49,6 +49,7 @@ import {
   mdiGithub,
   mdiLanguageGo,
   mdiTerraform,
+  mdiKubernetes,
 } from '@mdi/js'
 
 import { pluggedIcons } from '~/plugins/vuetify'
@@ -122,6 +123,7 @@ export const mdi = defineIconMap({
   mdiGithub,
   mdiLanguageGo,
   mdiTerraform,
+  mdiKubernetes,
 })
 
 export const custom: CustomIcons = (() => {

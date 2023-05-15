@@ -173,7 +173,7 @@ export const frontEndFrameworks = mapTechnology({
     description: 'Library for building user interfaces',
     icon: 'mdiReact',
     logoURL: 'logos/react.svg',
-    url: 'https://reactjs.org/',
+    url: 'https://react.dev',
   },
 })
 
@@ -272,6 +272,13 @@ export const applications = mapTechnology({
     icon: 'mdiDocker',
     logoURL: 'logos/docker.svg',
     url: 'https://www.docker.com',
+  },
+  kubernetes: {
+    display: 'Kubernetes',
+    description: 'Container management platform',
+    icon: 'mdiKubernetes',
+    logoURL: 'logos/kubernetes.svg',
+    url: 'https://kubernetes.io',
   },
   photopea: {
     display: 'Photopea',
