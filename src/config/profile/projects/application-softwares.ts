@@ -1,11 +1,11 @@
-import { mapReferencedProjects, LinkName } from '~/lib/config/profile/projects'
 import { requireProgressiveImage } from '~/lib/config'
+import { LinkName, mapReferencedProjects } from '~/lib/config/profile/projects'
 
 export const applicationSoftwares = mapReferencedProjects([
   {
     name: '@yvnbunag/scaffold',
     key: 'yvnbunag-scaffold',
-    period: '2021 October',
+    period: '2023 July',
     tags: [
       'CLI',
       'TypeScript',
@@ -25,10 +25,8 @@ export const applicationSoftwares = mapReferencedProjects([
       './assets/images/projects/scaffold/development.png',
       './assets/images/projects/scaffold/production.png',
     ].map(requireProgressiveImage),
-    technologies: [
-      'node-js',
-      'npm',
-    ],
+    technologies: ['node-js', 'npm'],
+    featured: true,
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
       link: process.env.SCAFFOLD_REPOSITORY,
@@ -57,7 +55,8 @@ export const applicationSoftwares = mapReferencedProjects([
       'application',
       'completion',
     ],
-    description: 'CLI tool to help manage and consume development environments containerized with docker.',
+    description:
+      'CLI tool to help manage and consume development environments containerized with docker.',
     images: [
       './assets/images/projects/dock/root-help.png',
       './assets/images/projects/dock/projects.png',
@@ -92,13 +91,9 @@ export const applicationSoftwares = mapReferencedProjects([
     name: 'Simple Calculator',
     key: 'simple-calculator',
     period: '2015 October',
-    tags: [
-      'software',
-      'application',
-      'university',
-      'programming',
-    ],
-    description: 'University project application to compute basic arithmetic operations. Includes type or click input, clear, value negation and system message.',
+    tags: ['software', 'application', 'university', 'programming'],
+    description:
+      'University project application to compute basic arithmetic operations. Includes type or click input, clear, value negation and system message.',
     images: [
       './assets/images/projects/simple-calculator/initial.png',
       './assets/images/projects/simple-calculator/input.png',
@@ -117,13 +112,9 @@ export const applicationSoftwares = mapReferencedProjects([
     name: 'Simple Circuit Calculator',
     key: 'simple-circuit-calculator',
     period: '2015 October',
-    tags: [
-      'software',
-      'application',
-      'university',
-      'physics',
-    ],
-    description: 'University project application to compute for the total of a simple series or parallel circuit based on the Ohm’s Law Physics equation. Includes auto-fill for missing and constant variables.',
+    tags: ['software', 'application', 'university', 'physics'],
+    description:
+      'University project application to compute for the total of a simple series or parallel circuit based on the Ohm’s Law Physics equation. Includes auto-fill for missing and constant variables.',
     images: [
       './assets/images/projects/simple-circuit-calculator/initial.png',
       './assets/images/projects/simple-circuit-calculator/series-constant-auto-solve.png',
@@ -145,12 +136,7 @@ export const applicationSoftwares = mapReferencedProjects([
     name: `Ohm's Law Calculator`,
     key: 'ohms-law-calculator',
     period: '2015 October',
-    tags: [
-      'software',
-      'application',
-      'university',
-      'physics',
-    ],
+    tags: ['software', 'application', 'university', 'physics'],
     description: `University project application to compute for one of Voltage (V), Ampere (I) or Resistance (Ω) based on the Ohm’s Law Physics equation.`,
     images: [
       './assets/images/projects/ohms-law-calculator/initial.png',
