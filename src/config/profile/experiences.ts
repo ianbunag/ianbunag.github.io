@@ -1,6 +1,6 @@
 import { associations } from '~/config/associations'
 import { createTechnologyLink } from '~/config/technologies'
-import { createUnorderedList, createAccessibleLink } from '~/lib/config'
+import { createAccessibleLink, createUnorderedList } from '~/lib/config'
 import { getProjectLink } from '~/lib/pages/projects'
 
 import type { technologies } from '~/config/technologies'
@@ -39,12 +39,14 @@ export const experiences = mapReferencedExperiences([
       'amazon-web-services',
       'terraform',
       'kubernetes',
+      'next',
     ]
     const [
       react,
       aws,
       terraform,
       kubernetes,
+      next,
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
 
     return [
@@ -56,7 +58,7 @@ export const experiences = mapReferencedExperiences([
         description: createUnorderedList([
           `Currently employed under ${informGroup}`,
           'Developing a platform migration software',
-          `Utilizing tools and platforms such as ${react}, ${kubernetes} and ${terraform}`,
+          `Utilizing tools and platforms such as ${next} and ${kubernetes}`,
         ]),
       },
       {
