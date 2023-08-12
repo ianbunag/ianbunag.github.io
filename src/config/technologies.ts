@@ -175,11 +175,11 @@ export const frontEndFrameworks = mapTechnology({
     logoURL: 'logos/react.svg',
     url: 'https://react.dev',
   },
-  next: {
+  nextjs: {
     display: 'Next.js',
     description: 'The React Framework for the Web',
-    icon: 'next',
-    logoURL: 'logos/next.svg',
+    icon: 'nextjs',
+    logoURL: 'logos/nextjs.svg',
     url: 'https://nextjs.org',
   },
 })

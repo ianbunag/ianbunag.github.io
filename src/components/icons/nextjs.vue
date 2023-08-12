@@ -1,5 +1,5 @@
 <script lang="ts">
-export default { name: 'IconNext' }
+export default { name: 'IconNextJs' }
 </script>
 
 <template>
@@ -11,7 +11,7 @@ export default { name: 'IconNext' }
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     preserveAspectRatio="xMidYMid"
-    class="icon-next"
+    class="icon-next-js"
   >
     <g>
       <path
@@ -22,7 +22,7 @@ export default { name: 'IconNext' }
 </template>
 
 <style>
-.icon-next {
+.icon-next-js {
   fill: currentColor;
 }
 </style>

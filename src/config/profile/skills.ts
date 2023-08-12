@@ -33,7 +33,7 @@ export const skills = mapReferencedSkills([
     icon: 'frontEnd',
     technologies: [
       'react',
-      'next',
+      'nextjs',
       'typescript',
       'cypress',
     ],

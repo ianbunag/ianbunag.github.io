@@ -39,14 +39,14 @@ export const experiences = mapReferencedExperiences([
       'amazon-web-services',
       'terraform',
       'kubernetes',
-      'next',
+      'nextjs',
     ]
     const [
       react,
       aws,
       terraform,
       kubernetes,
-      next,
+      nextjs,
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
 
     return [
@@ -58,7 +58,7 @@ export const experiences = mapReferencedExperiences([
         description: createUnorderedList([
           `Currently employed under ${informGroup}`,
           'Developing a platform migration software',
-          `Utilizing tools and platforms such as ${next} and ${kubernetes}`,
+          `Utilizing tools and platforms such as ${nextjs} and ${kubernetes}`,
         ]),
       },
       {

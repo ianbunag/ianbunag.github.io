@@ -18,7 +18,7 @@ import jest from '~/components/icons/jest.vue'
 import leetcode from '~/components/icons/leetcode.vue'
 import lumen from '~/components/icons/lumen.vue'
 import mysql from '~/components/icons/mysql.vue'
-import next from '~/components/icons/next.vue'
+import nextjs from '~/components/icons/nextjs.vue'
 import nginx from '~/components/icons/nginx.vue'
 import photopea from '~/components/icons/photopea.vue'
 import pm2 from '~/components/icons/pm2.vue'
@@ -48,7 +48,7 @@ export {
   leetcode,
   lumen,
   mysql,
-  next,
+  nextjs,
   nginx,
   photopea,
   pm2,
