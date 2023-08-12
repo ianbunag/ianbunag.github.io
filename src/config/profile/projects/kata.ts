@@ -1,5 +1,14 @@
-import { mapReferencedProjects, LinkName, ReferencedProject } from '~/lib/config/profile/projects'
-import { createHeader, createImage, createParagraph, requireProgressiveImage } from '~/lib/config'
+import {
+  createHeader,
+  createImage,
+  createParagraph,
+  requireProgressiveImage,
+} from '~/lib/config'
+import {
+  LinkName,
+  ReferencedProject,
+  mapReferencedProjects,
+} from '~/lib/config/profile/projects'
 
 const CODEWARS_USERNAME = process.env.CODEWARS_USERNAME
 const LEETCODE_USERNAME = process.env.LEETCODE_USERNAME
@@ -17,14 +26,17 @@ export const kata = mapReferencedProjects([
       createImage(
         `https://www.codewars.com/users/${CODEWARS_USERNAME}/badges/small`,
         `Find ${CODEWARS_USERNAME} in Codewars`,
-        { link: `https://www.codewars.com/users/${CODEWARS_USERNAME}`, height: 20 },
+        {
+          link: `https://www.codewars.com/users/${CODEWARS_USERNAME}`,
+          height: 20,
+        },
       ),
     ])
 
     return {
       name: 'Java Kata',
       key: 'java-kata',
-      period: 'Present',
+      period: '2023 May',
       tags: [
         'Java',
         'LeetCode',
@@ -37,7 +49,9 @@ export const kata = mapReferencedProjects([
         'algorithm',
       ],
       description,
-      images: ['./assets/images/projects/java-kata/java-kata.png'].map(requireProgressiveImage),
+      images: ['./assets/images/projects/java-kata/java-kata.png'].map(
+        requireProgressiveImage,
+      ),
       technologies: ['java', 'leetcode', 'codewars'],
       featured: true,
       secondaryLink: {
@@ -60,14 +74,17 @@ export const kata = mapReferencedProjects([
       createImage(
         `https://www.codewars.com/users/${CODEWARS_USERNAME}/badges/small`,
         `Find ${CODEWARS_USERNAME} in Codewars`,
-        { link: `https://www.codewars.com/users/${CODEWARS_USERNAME}`, height: 20 },
+        {
+          link: `https://www.codewars.com/users/${CODEWARS_USERNAME}`,
+          height: 20,
+        },
       ),
     ])
 
     return {
       name: 'Go Kata',
       key: 'go-kata',
-      period: 'Present',
+      period: '2023 May',
       tags: [
         'Go',
         'LeetCode',
@@ -80,7 +97,9 @@ export const kata = mapReferencedProjects([
         'algorithm',
       ],
       description,
-      images: ['./assets/images/projects/go-kata/go-kata.png'].map(requireProgressiveImage),
+      images: ['./assets/images/projects/go-kata/go-kata.png'].map(
+        requireProgressiveImage,
+      ),
       technologies: ['go', 'leetcode', 'codewars'],
       featured: true,
       secondaryLink: {
@@ -94,25 +113,16 @@ export const kata = mapReferencedProjects([
     name: 'TypeScript Challenges',
     key: 'typescript-challenges',
     period: '2021 October',
-    tags: [
-      'TypeScript',
-      'Node.js Notebooks',
-      'kata',
-      'types',
-      'intellisense',
-    ],
-    description: 'Collection of TypeScript type challenges for practice with Node.js Notebooks.',
+    tags: ['TypeScript', 'Node.js Notebooks', 'kata', 'types', 'intellisense'],
+    description:
+      'Collection of TypeScript type challenges for practice with Node.js Notebooks.',
     images: [
       './assets/images/projects/typescript-challenges/readme.png',
       './assets/images/projects/typescript-challenges/initial.png',
       './assets/images/projects/typescript-challenges/half-solved.png',
       './assets/images/projects/typescript-challenges/solved.png',
     ].map(requireProgressiveImage),
-    technologies: [
-      'typescript',
-      'node-js',
-      'vs-code',
-    ],
+    technologies: ['typescript', 'node-js', 'vs-code'],
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
       link: process.env.TYPESCRIPT_CHALLENGES_REPOSITORY,
@@ -133,7 +143,8 @@ export const kata = mapReferencedProjects([
       'design',
       'patterns',
     ],
-    description: 'Collection of various coding challenge answers - exploring python basics, data structures, regular expressions and design patterns.',
+    description:
+      'Collection of various coding challenge answers - exploring python basics, data structures, regular expressions and design patterns.',
     images: [
       './assets/images/projects/python-challenges/root.png',
       './assets/images/projects/python-challenges/navigation.png',
