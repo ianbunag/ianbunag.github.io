@@ -33,7 +33,7 @@ export const skills = mapReferencedSkills([
     icon: 'frontEnd',
     technologies: [
       'react',
-      'vue',
+      'next',
       'typescript',
       'cypress',
     ],
@@ -59,6 +59,7 @@ export const skills = mapReferencedSkills([
       'terraform',
       'amazon-web-services',
       'docker',
+      'kubernetes',
       'circleci',
     ],
     order: 3,

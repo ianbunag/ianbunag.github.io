@@ -1,5 +1,5 @@
-import { createAccessibleLink } from '~/lib/config'
 import { icons } from '~/config/icons'
+import { createAccessibleLink } from '~/lib/config'
 
 import type { Technology } from '@/config/technologies'
 
@@ -174,6 +174,13 @@ export const frontEndFrameworks = mapTechnology({
     icon: 'mdiReact',
     logoURL: 'logos/react.svg',
     url: 'https://react.dev',
+  },
+  next: {
+    display: 'Next.js',
+    description: 'The React Framework for the Web',
+    icon: 'next',
+    logoURL: 'logos/next.svg',
+    url: 'https://nextjs.org',
   },
 })
 
