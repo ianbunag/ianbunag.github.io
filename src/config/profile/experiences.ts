@@ -30,9 +30,9 @@ function mapReferencedExperiences (
 
 export const experiences = mapReferencedExperiences([
   ...((): ReferencedExperiences => {
-    const informGroup = createAccessibleLink(
-      'Inform Group',
-      process.env.INFORM_GROUP_LINK || '',
+    const enableOurTeam = createAccessibleLink(
+      'Enable Our Team',
+      process.env.ENABLE_OUR_TEAM_LINK || '',
     )
     const technologyKeys: Array<keyof typeof technologies> = [
       'react',
@@ -56,9 +56,9 @@ export const experiences = mapReferencedExperiences([
         association: 'lightspeed',
         period: { start: '2023 April' },
         description: createUnorderedList([
-          `Currently employed under ${informGroup}`,
+          `Employed under ${enableOurTeam}`,
           'Developing a platform migration software',
-          `Utilizing tools and platforms such as ${nextjs} and ${kubernetes}`,
+          `Leveraging sophisticated tools and platforms, such as ${nextjs} and ${kubernetes}`,
         ]),
       },
       {
@@ -67,18 +67,18 @@ export const experiences = mapReferencedExperiences([
         association: 'lightspeed',
         period: { start: '2021 November', end: '2023 March' },
         description: createUnorderedList([
-          `Employed under ${informGroup}`,
+          `Employed under ${enableOurTeam}`,
           'Developed a restaurant inventory management software',
-          `Utilized tools and platforms such as ${react}, ${aws} and ${terraform}`,
+          `Utilized technologies like ${react}, ${aws} and ${terraform}`,
         ]),
       },
     ]
   })(),
   ...((): ReferencedExperiences => {
-    const association = 'code-ninja'
-    const importGenius = createAccessibleLink(
-      'ImportGenius',
-      process.env.IMPORTGENIUS_LINK || '',
+    const association = 'importgenius'
+    const codeNinja = createAccessibleLink(
+      'Code Ninja I.T. Solutions Inc.',
+      process.env.CODE_NINJA_LINK || '',
     )
     const technologyKeys: Array<keyof typeof technologies> = [
       'nuxt',
@@ -98,7 +98,7 @@ export const experiences = mapReferencedExperiences([
       express,
       aws,
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
-    const workedForDescription = `Worked for the ${importGenius} startup`
+    const workedForDescription = `Employed under ${codeNinja}`
 
     return [
       {
@@ -112,7 +112,7 @@ export const experiences = mapReferencedExperiences([
         description: createUnorderedList([
           workedForDescription,
           `Integrated ${recurly} with the platform`,
-          `Implemented serverless services with ${aws}`,
+          `Implemented serverless solutions using ${aws}`,
         ]),
       },
       {
@@ -126,7 +126,7 @@ export const experiences = mapReferencedExperiences([
         description: createUnorderedList([
           workedForDescription,
           'Developed a global trade intelligence software',
-          `Utilized frameworks and tools such as ${nuxt}, ${express} and ${elasticsearch}`,
+          `Utilized frameworks and tools including ${nuxt}, ${express} and ${elasticsearch}`,
         ]),
       },
     ]
@@ -154,15 +154,15 @@ export const experiences = mapReferencedExperiences([
         end: '2018 July',
       },
       description: createUnorderedList([
-        `Enhanced and maintained the company's ${wordPress} site`,
-        `Designed ${promotionalBanners} for the company's website`,
-        `Designed ${promotionalStickers} for the company's van`,
+        `Improved and maintained a ${wordPress} e-commerce website`,
+        `Created eye-catching ${promotionalBanners}`,
+        `Designed appealing ${promotionalStickers} for the company's van`,
       ]),
     }
   })(),
   ((): ReferencedExperience => {
     const change = createAccessibleLink(
-      'Change: A Hybrid Animation Film in a Database-Driven Website',
+      '‘Change: A Hybrid Animation Film in a Database-Driven Website’',
       getProjectLink('change-hybrid-animation-database-driven-website'),
     )
 
@@ -175,8 +175,8 @@ export const experiences = mapReferencedExperiences([
         end: '2019 March',
       },
       description: createUnorderedList([
-        'Completed Bachelor of Science in Information Technology with specialization in Digital Arts program',
-        `Developed the web application of the capstone project ${change} by the La Prisma Group`,
+        'Earned a Bachelor\'s degree in Information Technology specializing in Digital Arts',
+        `Spearheaded the development of a content management system for the capstone project ${change} of the La Prisma Group, earning the awards for Best Thesis, Website, Film and Trailer`,
       ]),
     }
   })(),

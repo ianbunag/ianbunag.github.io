@@ -1,9 +1,9 @@
 <script lang = "ts">
 import { defineComponent, ref } from '@nuxtjs/composition-api'
 
-import { icons } from '~/config/icons'
-import NotificationPopUp from '~/components/notifications/pop-up.vue'
 import LinkIconList from '~/components/links/icon-list.vue'
+import NotificationPopUp from '~/components/notifications/pop-up.vue'
+import { icons } from '~/config/icons'
 
 import type { Links } from '@/config/profile'
 
@@ -88,7 +88,7 @@ export default defineComponent({
         :href="`mailto:${email}`"
         x-large
       >
-        Drop me an email
+        Send me an email
         <v-icon class="pl-1">
           {{ icons.mdiEmail }}
         </v-icon>

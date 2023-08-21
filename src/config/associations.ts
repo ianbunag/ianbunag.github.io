@@ -28,6 +28,12 @@ export const associations = defineAssociationMap({
     logoURL: 'logos/code-ninja.png',
     logoAccent: '#fff',
   },
+  importgenius: {
+    name: 'ImportGenius',
+    url: process.env.IMPORTGENIUS_LINK,
+    logoURL: 'logos/importgenius.png',
+    logoAccent: '#fff',
+  },
   lightspeed: {
     name: 'Lightspeed Commerce',
     url: process.env.LIGHTSPEED_LINK,

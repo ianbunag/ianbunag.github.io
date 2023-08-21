@@ -1,20 +1,20 @@
 <script lang="ts">
 import { defineComponent, useContext, useMeta } from '@nuxtjs/composition-api'
 
-import { profile, icons, pages } from '~/config'
+import { icons, pages, profile } from '~/config'
 
-import { createCanonicalLink } from '~/lib/nuxt.config'
-import Introduction from '~/components/pages/index/introduction.vue'
 import About from '~/components/pages/index/about.vue'
-import Projects from '~/components/pages/index/projects.vue'
-import Experience from '~/components/pages/index/experience.vue'
 import Contact from '~/components/pages/index/contact.vue'
+import Experience from '~/components/pages/index/experience.vue'
+import Introduction from '~/components/pages/index/introduction.vue'
+import Projects from '~/components/pages/index/projects.vue'
+import { createCanonicalLink } from '~/lib/nuxt.config'
 
 import BrandingLogoSolid from '~/components/branding/logo/solid.vue'
 import DividerTiltTopLeft from '~/components/dividers/tilt-top-left.vue'
 import DividerTiltTopRight from '~/components/dividers/tilt-top-right.vue'
-import DividerTriangleTopLeft from '~/components/dividers/triangle-top-right.vue'
 import DividerTriangleTopRight from '~/components/dividers/triangle-top-left.vue'
+import DividerTriangleTopLeft from '~/components/dividers/triangle-top-right.vue'
 
 export default defineComponent({
   name: 'PageRoot',
@@ -77,7 +77,7 @@ export default defineComponent({
           x-large
           nuxt
         >
-          See my tech stack
+          Tech stack
           <v-icon>{{ icons.mdiArrowTopRight }}</v-icon>
         </v-btn>
       </template>
@@ -94,7 +94,7 @@ export default defineComponent({
       class="section-background-dark"
     >
       <template #title>
-        Some awesome stuff
+        Noteworthy Endeavors
       </template>
       <template #sub-title>
         Projects that showcase my technical growth over the years.
@@ -106,7 +106,7 @@ export default defineComponent({
           x-large
           nuxt
         >
-          See all projects
+          All projects
           <v-icon>{{ icons.mdiArrowTopRight }}</v-icon>
         </v-btn>
       </template>
@@ -133,7 +133,7 @@ export default defineComponent({
       </template>
       <template #sub-title>
         <span class="pf-text-light">
-          Experiences that sculpted me to what I am today.
+          Steps along my career evolution.
         </span>
       </template>
       <template #background>
@@ -155,7 +155,7 @@ export default defineComponent({
       </template>
       <template #sub-title>
         <span>
-          Or coffee - I would be delighted to get in touch.
+          Or a cup of coffee? I'm excited to connect.
         </span>
       </template>
       <template #background>
