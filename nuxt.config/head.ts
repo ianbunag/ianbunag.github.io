@@ -24,7 +24,7 @@ export const head = {
     {
       hid: 'description',
       name: 'description',
-      content: introduction,
+      content: introduction.constant,
     },
     { name: 'theme-color', content: theme['background-darker'] },
     { name: 'format-detection', content: 'telephone=no' },

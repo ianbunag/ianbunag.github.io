@@ -68,7 +68,7 @@ export default defineComponent({
         A little bit about myself
       </template>
       <template #sub-title>
-        {{ profile.introduction }}
+        {{ profile.introduction.dynamic() }}
       </template>
       <template #footer>
         <v-btn
