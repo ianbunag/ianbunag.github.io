@@ -30,9 +30,9 @@ function mapReferencedExperiences (
 
 export const experiences = mapReferencedExperiences([
   ...((): ReferencedExperiences => {
-    const enableOurTeam = createAccessibleLink(
-      'Enable Our Team',
-      process.env.ENABLE_OUR_TEAM_LINK || '',
+    const informGroup = createAccessibleLink(
+      'Inform Group',
+      process.env.INFORM_GROUP_LINK || '',
     )
     const technologyKeys: Array<keyof typeof technologies> = [
       'react',
@@ -56,7 +56,7 @@ export const experiences = mapReferencedExperiences([
         association: 'lightspeed',
         period: { start: '2023 April' },
         description: createUnorderedList([
-          `Employed under ${enableOurTeam}`,
+          `Employed under ${informGroup}`,
           'Developing a platform migration software',
           `Leveraging sophisticated tools and platforms, such as ${nextjs} and ${kubernetes}`,
         ]),
@@ -67,7 +67,7 @@ export const experiences = mapReferencedExperiences([
         association: 'lightspeed',
         period: { start: '2021 November', end: '2023 March' },
         description: createUnorderedList([
-          `Employed under ${enableOurTeam}`,
+          `Employed under ${informGroup}`,
           'Developed a restaurant inventory management software',
           `Utilized technologies like ${react}, ${aws} and ${terraform}`,
         ]),
