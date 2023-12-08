@@ -19,8 +19,8 @@ export const kata = mapReferencedProjects([
     period: 'Present',
     tags: [
       'Go',
-      'Quantum',
-      'Computing',
+      'quantum',
+      'computing',
       'TDD',
       'kata',
     ],
