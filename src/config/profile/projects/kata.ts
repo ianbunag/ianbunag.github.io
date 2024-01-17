@@ -13,33 +13,6 @@ import {
 const CODEWARS_USERNAME = process.env.CODEWARS_USERNAME
 const LEETCODE_USERNAME = process.env.LEETCODE_USERNAME
 export const kata = mapReferencedProjects([
-  {
-    name: 'Quantum Computing Exercises',
-    key: 'quantum-computing-exercises',
-    period: 'Present',
-    tags: [
-      'Go',
-      'Quantum',
-      'Computing',
-      'TDD',
-      'kata',
-    ],
-    description:
-      createParagraph([
-        'Collection of Quantum computing programming exercises.',
-        'From the book Quantum Computing for Computer Scientists (Noson S. Yanofsky, Mirco A. Mannucci).',
-      ]),
-    images: ['./assets/images/projects/quantum-computing-exercises/quantum-computing-exercises.png'].map(
-      requireProgressiveImage,
-    ),
-    technologies: ['go'],
-    featured: true,
-    secondaryLink: {
-      text: LinkName.VIEW_SOURCE,
-      link: process.env.QUANTUM_COMPUTING_EXERCISES_REPOSITORY,
-      linkIcon: 'mdiGithub',
-    },
-  },
   ((): ReferencedProject => {
     const description = createParagraph([
       'Collection of Java kata challenges.',
