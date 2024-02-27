@@ -80,7 +80,6 @@ export const experiences = mapReferencedExperiences([
     const technologyKeys: Array<keyof typeof technologies> = [
       'nuxt',
       'express',
-      'amazon-web-services',
     ]
     const elasticsearch = createAccessibleLink(
       'Elasticsearch',
@@ -93,7 +92,6 @@ export const experiences = mapReferencedExperiences([
     const [
       nuxt,
       express,
-      aws,
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
 
     return [
@@ -107,8 +105,8 @@ export const experiences = mapReferencedExperiences([
           end: ' 2021 July',
         },
         description: createUnorderedList([
-          `Integrated ${recurly} with the platform`,
-          `Implemented serverless solutions using ${aws}`,
+          `Incorporated ${recurly} into the platform via data migration, API integration, and user account synchronization, streamlining migration from legacy to modern subscription management through testing and phased deployment.`,
+          `Engineered a global trade intelligence software utilizing frameworks and tools such as ${nuxt}, ${express}, and ${elasticsearch}, empowering businesses with comprehensive trade records, insights and analytics capabilities.`,
         ]),
       },
       {
@@ -120,10 +118,7 @@ export const experiences = mapReferencedExperiences([
           start: '2018 September',
           end: '2018 December',
         },
-        description: createUnorderedList([
-          'Developed a global trade intelligence software',
-          `Utilized frameworks and tools including ${nuxt}, ${express} and ${elasticsearch}`,
-        ]),
+        description: '',
       },
     ]
   })(),
