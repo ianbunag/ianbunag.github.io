@@ -1,9 +1,7 @@
 import { associations } from '~/config/associations'
-import { createTechnologyLink } from '~/config/technologies'
+import { createTechnologyLink, technologies } from '~/config/technologies'
 import { createAccessibleLink, createUnorderedList } from '~/lib/config'
 import { getProjectLink } from '~/lib/pages/projects'
-
-import type { technologies } from '~/config/technologies'
 
 import { ExperienceType } from '@/config/profile'
 
@@ -36,18 +34,17 @@ export const experiences = mapReferencedExperiences([
   ...((): ReferencedExperiences => {
     const technologyKeys: Array<keyof typeof technologies> = [
       'react',
-      'amazon-web-services',
       'terraform',
       'kubernetes',
       'nextjs',
     ]
     const [
       react,
-      aws,
       terraform,
       kubernetes,
       nextjs,
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
+    const aws = createAccessibleLink('AWS', technologies['amazon-web-services'].url || '')
 
     return [
       {
@@ -69,8 +66,10 @@ export const experiences = mapReferencedExperiences([
         intermediary: 'inform-group',
         period: { start: '2021 November', end: '2023 March' },
         description: createUnorderedList([
-          'Developed a restaurant inventory management software',
-          `Utilized technologies like ${react}, ${aws} and ${terraform}`,
+          `Built a restaurant inventory management software with ${react}, ${aws}, and ${terraform}, enhancing stock tracking, simplifying recipe management, and streamlining supply ordering for restaurant businesses.`,
+          'Enhanced end-to-end test suite efficiency with parallelization and flakiness eradication using Cypress, reducing the test run duration from 45 to 15 minutes, with an estimated annual developer cost savings of $10,000.',
+          'Liaised with Quality Assurance to craft maintainable, readable end-to-end testing scripts, using a declarative approach to abstract test steps, reducing script creation and updates from 6 to 3 days.',
+          'Decommissioned a redundant development environment, transferring relevant functions to a production-like environment, resulting in an estimated annual infrastructure cost savings of $4,000.',
         ]),
       },
     ]
