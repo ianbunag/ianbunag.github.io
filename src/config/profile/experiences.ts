@@ -145,9 +145,9 @@ export const experiences = mapReferencedExperiences([
         end: '2018 July',
       },
       description: createUnorderedList([
-        `Improved and maintained a ${wordPress} e-commerce website`,
-        `Created eye-catching ${promotionalBanners}`,
-        `Designed appealing ${promotionalStickers} for the company's van`,
+        `Orchestrated enhancements and maintenance of an e-commerce platform powered by ${wordPress}, refining its performance and user interface.`,
+        `Crafted visually striking ${promotionalBanners} to boost brand awareness and drive traffic to the company's offerings.`,
+        `Designed captivating full-body ${promotionalStickers} for the company's van, effectively enhancing brand visibility on the move and at various locations.`,
       ]),
     }
   })(),
