@@ -46,8 +46,6 @@ export const techStacks = mapReferencedTechStacks([
     technologies: [
       'react',
       'nextjs',
-      'vue',
-      'nuxt',
     ],
   },
   {
@@ -77,6 +75,8 @@ export const techStacks = mapReferencedTechStacks([
       // Cloud Platforms
       'google-cloud',
       // Libraries / Frameworks
+      'vue',
+      'nuxt',
       'fastify',
       'aws-chalice',
       'express',
