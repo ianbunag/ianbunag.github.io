@@ -53,7 +53,6 @@ export const kata = mapReferencedProjects([
         requireProgressiveImage,
       ),
       technologies: ['java', 'leetcode', 'codewars'],
-      featured: true,
       secondaryLink: {
         text: LinkName.VIEW_SOURCE,
         link: process.env.JAVA_KATA_REPOSITORY,
@@ -101,7 +100,6 @@ export const kata = mapReferencedProjects([
         requireProgressiveImage,
       ),
       technologies: ['go', 'leetcode', 'codewars'],
-      featured: true,
       secondaryLink: {
         text: LinkName.VIEW_SOURCE,
         link: process.env.GO_KATA_REPOSITORY,
