@@ -1,53 +1,16 @@
 import {
-  requireProgressiveImage,
   createAccessibleLink,
   createParagraph,
   createUnorderedList,
   emphasize,
+  requireProgressiveImage,
 } from '~/lib/config'
-import { mapReferencedProjects, LinkName } from '~/lib/config/profile/projects'
+import { LinkName, mapReferencedProjects } from '~/lib/config/profile/projects'
 import { getProjectLink } from '~/lib/pages/projects'
 
 import type { ReferencedProject } from '~/lib/config/profile/projects'
 
 export const webApplications = mapReferencedProjects([
-  {
-    name: 'Tic-Tac-Toe',
-    key: 'tic-tac-toe',
-    period: '2021 November',
-    tags: [
-      'React',
-      'TypeScript',
-      'web',
-      'application',
-      'functional',
-      'components',
-      'hooks',
-    ],
-    description: 'React functional components and hooks with TypeScript practice from React tutorial.',
-    images: [
-      './assets/images/projects/tic-tac-toe/initial.png',
-      './assets/images/projects/tic-tac-toe/2-moves.png',
-      './assets/images/projects/tic-tac-toe/5-moves.png',
-      './assets/images/projects/tic-tac-toe/win.png',
-      './assets/images/projects/tic-tac-toe/history-travel.png',
-      './assets/images/projects/tic-tac-toe/history-order.png',
-    ].map(requireProgressiveImage),
-    technologies: [
-      'react',
-      'typescript',
-    ],
-    secondaryLink: {
-      text: LinkName.VIEW_SOURCE,
-      link: process.env.TIC_TAC_TOE_REPOSITORY,
-      linkIcon: 'mdiGitlab',
-    },
-    primaryLink: {
-      text: 'Play me!',
-      link: process.env.TIC_TAC_TOE_URL,
-      linkIcon: 'mdiGamepadVariantOutline',
-    },
-  },
   {
     name: 'Personal Portfolio',
     key: 'personal-portfolio',
