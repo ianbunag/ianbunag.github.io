@@ -57,8 +57,9 @@ export const experiences = mapReferencedExperiences([
         intermediary: 'inform-group',
         period: { start: '2023 April' },
         description: createUnorderedList([
-          'Developing a platform migration software',
-          `Leveraging sophisticated tools and platforms, such as ${nextjs} and ${kubernetes}`,
+          'Architected a hospitality platform migration software, facilitating concurrent development of data processing and UI components, and successfully delivered the first version within the scheduled 2-month timeframe.',
+          'Conducted system analysis, defined requirements, and formulated a strategic implementation plan for the migration software, utilizing research methodologies including document analysis, usability testing, and expert validation.',
+          `Developed the migration software extracting, transforming and importing entities from source platforms to the flagship platform using ${nextjs} and ${kubernetes}, ensuring scalability across multiple migrations.`,
         ]),
       },
       {
