@@ -153,22 +153,19 @@ export const experiences = mapReferencedExperiences([
   })(),
   ((): ReferencedExperience => {
     const change = createAccessibleLink(
-      '‘Change: A Hybrid Animation Film in a Database-Driven Website’',
+      '"Change: A Hybrid Animation Film in a Database-Driven Website"',
       getProjectLink('change-hybrid-animation-database-driven-website'),
     )
 
     return {
-      role: 'BSITDA Alumni',
+      role: 'Bachelor of Science in Information Technology',
       type: ExperienceType.STUDIES,
       association: 'feu-tech',
       period: {
         start: '2014 July',
         end: '2019 March',
       },
-      description: createUnorderedList([
-        'Earned a Bachelor\'s degree in Information Technology specializing in Digital Arts',
-        `Spearheaded the development of a content management system for the capstone project ${change} of the La Prisma Group, earning the awards for Best Thesis, Website, Film and Trailer`,
-      ]),
+      description: createUnorderedList([`Led the development of a content management system for the capstone project ${change} for the La Prisma Group, winning Best Thesis, Website, Film, and Trailer.`]),
     }
   })(),
 ])
