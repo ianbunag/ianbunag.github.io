@@ -106,6 +106,13 @@ export default defineComponent({
                       class="text-body-1"
                     >
                       {{ experience.association.name }}
+                      <span v-if="experience.intermediary">
+                        (under <a
+                          :href="experience.intermediary.url || undefined"
+                          :aria-label="experience.intermediary.name || 'Intermediary'"
+                          class="pf-link-light"
+                        >{{ experience.intermediary.name }}</a>)
+                      </span>
                     </heading>
                   </template>
                   <template v-else>
@@ -114,6 +121,13 @@ export default defineComponent({
                       class="text-body-2"
                     >
                       {{ experience.association.name }}
+                      <span v-if="experience.intermediary">
+                        (under <a
+                          :href="experience.intermediary.url || undefined"
+                          :aria-label="experience.intermediary.name || 'Intermediary'"
+                          class="pf-link-light"
+                        >{{ experience.intermediary.name }}</a>)
+                      </span>
                     </heading>
                     <div class="text-caption pf-text-pair-accent">
                       {{ getRange(experience.period) }}

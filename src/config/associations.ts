@@ -17,22 +17,24 @@ export const associations = defineAssociationMap({
     logoAccent: '#fcbd14',
   },
   'keywest-internationale': {
-    name: 'Keywest Internationale Sales Corp.',
+    name: 'Keywest Internationale Sales Corp',
     url: process.env.KEYWEST_INTERNATIONALE_LINK,
     logoURL: 'logos/keywest-internationale.png',
     logoAccent: '#ef134f',
   },
   'code-ninja': {
-    name: 'Code Ninja I.T. Solutions Inc.',
+    name: 'Code Ninja I.T. Solutions Inc',
     url: process.env.CODE_NINJA_LINK,
-    logoURL: 'logos/code-ninja.png',
-    logoAccent: '#fff',
   },
   importgenius: {
     name: 'ImportGenius',
     url: process.env.IMPORTGENIUS_LINK,
     logoURL: 'logos/importgenius.png',
     logoAccent: '#fff',
+  },
+  'inform-group': {
+    name: 'Inform Group',
+    url: process.env.INFORM_GROUP_LINK,
   },
   lightspeed: {
     name: 'Lightspeed Commerce',

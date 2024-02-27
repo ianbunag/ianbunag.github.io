@@ -11,7 +11,10 @@ import type { Experience, Experiences } from '@/config/profile'
 
 type ReferencedExperience = Override<
   Experience,
-  { association: keyof typeof associations }
+  {
+    association: keyof typeof associations,
+    intermediary?: keyof typeof associations,
+  }
 >
 type ReferencedExperiences = Array<ReferencedExperience>
 
@@ -19,21 +22,18 @@ function mapReferencedExperiences (
   referencedExperiences: ReferencedExperiences,
 ): Experiences {
   return referencedExperiences.map((referencedExperience) => {
-    const { association, ...experience } = referencedExperience
+    const { association, intermediary, ...experience } = referencedExperience
 
     return {
       ...experience,
       association: associations[association],
+      intermediary: intermediary ? associations[intermediary] : undefined,
     }
   })
 }
 
 export const experiences = mapReferencedExperiences([
   ...((): ReferencedExperiences => {
-    const informGroup = createAccessibleLink(
-      'Inform Group',
-      process.env.INFORM_GROUP_LINK || '',
-    )
     const technologyKeys: Array<keyof typeof technologies> = [
       'react',
       'amazon-web-services',
@@ -54,9 +54,9 @@ export const experiences = mapReferencedExperiences([
         role: 'Software Developer II',
         type: ExperienceType.FULL_TIME_JOB,
         association: 'lightspeed',
+        intermediary: 'inform-group',
         period: { start: '2023 April' },
         description: createUnorderedList([
-          `Employed under ${informGroup}`,
           'Developing a platform migration software',
           `Leveraging sophisticated tools and platforms, such as ${nextjs} and ${kubernetes}`,
         ]),
@@ -65,9 +65,9 @@ export const experiences = mapReferencedExperiences([
         role: 'Software Developer I',
         type: ExperienceType.FULL_TIME_JOB,
         association: 'lightspeed',
+        intermediary: 'inform-group',
         period: { start: '2021 November', end: '2023 March' },
         description: createUnorderedList([
-          `Employed under ${informGroup}`,
           'Developed a restaurant inventory management software',
           `Utilized technologies like ${react}, ${aws} and ${terraform}`,
         ]),
@@ -76,10 +76,7 @@ export const experiences = mapReferencedExperiences([
   })(),
   ...((): ReferencedExperiences => {
     const association = 'importgenius'
-    const codeNinja = createAccessibleLink(
-      'Code Ninja I.T. Solutions Inc.',
-      process.env.CODE_NINJA_LINK || '',
-    )
+    const intermediary = 'code-ninja'
     const technologyKeys: Array<keyof typeof technologies> = [
       'nuxt',
       'express',
@@ -98,19 +95,18 @@ export const experiences = mapReferencedExperiences([
       express,
       aws,
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
-    const workedForDescription = `Employed under ${codeNinja}`
 
     return [
       {
         role: 'Full Stack Engineer',
         type: ExperienceType.FULL_TIME_JOB,
         association,
+        intermediary,
         period: {
           start: '2019 June',
           end: ' 2021 July',
         },
         description: createUnorderedList([
-          workedForDescription,
           `Integrated ${recurly} with the platform`,
           `Implemented serverless solutions using ${aws}`,
         ]),
@@ -119,12 +115,12 @@ export const experiences = mapReferencedExperiences([
         role: 'Full Stack Engineering Intern',
         type: ExperienceType.INTERNSHIP,
         association,
+        intermediary,
         period: {
           start: '2018 September',
           end: '2018 December',
         },
         description: createUnorderedList([
-          workedForDescription,
           'Developed a global trade intelligence software',
           `Utilized frameworks and tools including ${nuxt}, ${express} and ${elasticsearch}`,
         ]),
