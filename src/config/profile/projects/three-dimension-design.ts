@@ -1,5 +1,5 @@
-import { mapReferencedProjects, LinkName } from '~/lib/config/profile/projects'
 import { requireProgressiveImage } from '~/lib/config'
+import { LinkName, mapReferencedProjects } from '~/lib/config/profile/projects'
 
 export const threeDimensionDesign = mapReferencedProjects([
   {
@@ -12,7 +12,7 @@ export const threeDimensionDesign = mapReferencedProjects([
       'animation',
       'university',
     ],
-    description: '3D animation of a wine being poured into a wine glass.',
+    description: 'Animated a wine bottle pouring into a glass using Autodesk Maya, demonstrating intricate fluid simulation techniques and smart image-based lighting (SIBL) for a visually stunning result.',
     images: [
       './assets/images/projects/wine/wine-1.jpg',
       './assets/images/projects/wine/wine-2.jpg',
@@ -39,7 +39,7 @@ export const threeDimensionDesign = mapReferencedProjects([
       'animation',
       'university',
     ],
-    description: '3D animation of a plasma globe.',
+    description: 'Crafted an animated plasma globe in Autodesk Maya, meticulously detailing electricity animation and seamlessly integrating it with a dynamic 360-degree panoramic background.',
     images: [
       './assets/images/projects/plasma/plasma-1.jpg',
       './assets/images/projects/plasma/plasma-2.jpg',
@@ -66,7 +66,7 @@ export const threeDimensionDesign = mapReferencedProjects([
       'animation',
       'university',
     ],
-    description: '3D animation of a thunderstorm.',
+    description: 'Crafted a thunderstorm scene in Autodesk Maya, seamlessly integrating particle effects, lifelike illumination, and dynamic shadows to enhance depth and realism.',
     images: [
       './assets/images/projects/rain/rain-1.jpg',
       './assets/images/projects/rain/rain-2.jpg',
@@ -93,7 +93,7 @@ export const threeDimensionDesign = mapReferencedProjects([
       'modeling',
       'university',
     ],
-    description: 'Semi-realistic 3D model of a tank in snowy terrain.',
+    description: 'Modeled a semi-realistic tank in a snowy terrain using Autodesk Maya, incorporating particle simulation, image-based displacement mapping, and smart image-based lighting (SIBL) to enhance realism.',
     images: [requireProgressiveImage('./assets/images/projects/snow-leopard/snow-leopard.jpg')],
     technologies: [
       'autodesk-maya',
@@ -110,7 +110,7 @@ export const threeDimensionDesign = mapReferencedProjects([
       'modeling',
       'university',
     ],
-    description: 'Advanced 3D model of Corey’s bedroom from Grojband with his band-mate Laney.',
+    description: 'Modeled Corey\'s bedroom from Grojband, including his bandmate Laney, with emphasis on translucent material lighting and image-based texture mapping.',
     images: [requireProgressiveImage('./assets/images/projects/coreys-bedroom/coreys-bedroom.jpg')],
     technologies: [
       'autodesk-maya',

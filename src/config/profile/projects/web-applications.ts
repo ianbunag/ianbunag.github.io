@@ -1,8 +1,6 @@
 import {
   createAccessibleLink,
-  createParagraph,
   createUnorderedList,
-  emphasize,
   requireProgressiveImage,
 } from '~/lib/config'
 import { LinkName, mapReferencedProjects } from '~/lib/config/profile/projects'
@@ -109,25 +107,19 @@ export const webApplications = mapReferencedProjects([
   })(),
   ((): ReferencedProject => {
     const onesimoFoundation = createAccessibleLink(
-      'Onesimo Foundation Inc.',
+      'Onesimo Foundation Inc',
       process.env.ONESIMO_FOUNDATION_LINK || '',
     )
-    const awards = createUnorderedList([
-      'Best Thesis',
-      'Best Website',
-      'Best Film',
-      'Best Trailer',
-    ])
-    const members = createUnorderedList([
-      'Rosette Andrea Ceriola (Project Manager, Graphics Designer)',
-      'Christian Josef Luntok (Hybrid Animator, Character Designer)',
-      'Miguel Jehiel Ang (Script Writer, Assistant 3D Animator)',
-      'John Ian Buñag (Web Developer, Assistant 2D Animator)',
-    ])
-    const description = createParagraph([
-      `University capstone project by La Prisma Group from Bachelor of Science in Information Technology Major in Digital Arts Thesis Batch 15. A promotional website for ${onesimoFoundation} with a hybrid animation film and data, user and content management system.`,
-      `${emphasize('Awards')}${awards}`,
-      `${emphasize('Members')}${members}`,
+    const description = createUnorderedList([
+      `Developed a comprehensive promotional website for ${onesimoFoundation}, featuring a hybrid animation film and content management system, as part of the capstone project undertaken by the La Prisma Group from Bachelor of Science in Information Technology Major in Digital Arts Thesis Batch 15. The project garnered recognition for Best Thesis, Website, Film, and Trailer.`,
+      'Collaborated with team members including:',
+      [
+        'Rosette Andrea Ceriola, Project Manager, and Graphics Designer.',
+        'Christian Josef Luntok, Lead Animator, and Character Designer.',
+        'Miguel Jehiel Ang, Director, and Assistant 3D Animator.',
+        'John Ian Buñag, Web Developer, and Assistant 2D Animator.',
+
+      ],
     ])
 
     return {
@@ -213,7 +205,7 @@ export const webApplications = mapReferencedProjects([
       'chart',
       'university',
     ],
-    description: 'Application to simulate CPU scheduling algorithms with summary and gantt chart report.',
+    description: 'Built a CPU scheduling simulator featuring algorithms such as first come first serve, shortest job first, and priority. Visualized processes and presented results through tables and Gantt charts, offering insights into system performance and algorithm efficiency.',
     images: [
       './assets/images/projects/cpu-scheduling-simulator/initial.png',
       './assets/images/projects/cpu-scheduling-simulator/first-come-first-serve-prepared.png',
@@ -245,12 +237,6 @@ export const webApplications = mapReferencedProjects([
       'Casa Burgos',
       process.env.CASA_BURGOS_LINK || '',
     )
-    const features = createUnorderedList([
-      'File based content management',
-      'Content editing interface',
-      'Content back up',
-      'Mobile view emulator',
-    ])
 
     return {
       name: 'Creative Events by Casa Burgos',
@@ -263,7 +249,7 @@ export const webApplications = mapReferencedProjects([
         'responsive',
         'freelance',
       ],
-      description: `Promotional website for ${casaBurgos}, featuring: ${features}`,
+      description: `Crafted a promotional website for ${casaBurgos}, offering file-based content management, a visual editing interface, content backup functionality, and a mobile view emulator. These features ensured easy content management, enhanced user experience, and seamless navigation across devices.`,
       images: [requireProgressiveImage('./assets/images/projects/creative-events-by-casa-burgos/landing-section.jpg')],
       technologies: [
         'php',

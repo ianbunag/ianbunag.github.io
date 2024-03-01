@@ -128,7 +128,7 @@ export const graphicsDesign = mapReferencedProjects([
         'menu',
         'freelance',
       ],
-      description: `Menu design for ${rusticTable}.`,
+      description: `Crafted ${rusticTable}'s menu with a modern design, enhancing visual appeal and user experience.`,
       images: [
         './assets/images/projects/rustic-table/cover.jpg',
         './assets/images/projects/rustic-table/page-1-2.jpg',

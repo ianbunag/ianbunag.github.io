@@ -98,7 +98,7 @@ export const applicationSoftwares = mapReferencedProjects([
     period: '2015 October',
     tags: ['software', 'application', 'university', 'programming'],
     description:
-      'University project application to compute basic arithmetic operations. Includes type or click input, clear, value negation and system message.',
+      'Developed a user-friendly calculator application capable of performing basic arithmetic operations. Implemented features such as type or click input, clear functionality, value negation, and system message prompts to enhance usability and functionality.',
     images: [
       './assets/images/projects/simple-calculator/initial.png',
       './assets/images/projects/simple-calculator/input.png',
@@ -119,7 +119,7 @@ export const applicationSoftwares = mapReferencedProjects([
     period: '2015 October',
     tags: ['software', 'application', 'university', 'physics'],
     description:
-      'University project application to compute for the total of a simple series or parallel circuit based on the Ohm’s Law Physics equation. Includes auto-fill for missing and constant variables.',
+      'Engineered a circuit calculator application facilitating calculations for total resistance in both series and parallel circuits, adhering to Ohm\'s Law Physics equation. Integrated features such as auto-fill for missing and constant variables, streamlining the calculation process and ensuring accuracy in results.',
     images: [
       './assets/images/projects/simple-circuit-calculator/initial.png',
       './assets/images/projects/simple-circuit-calculator/series-constant-auto-solve.png',
@@ -142,7 +142,7 @@ export const applicationSoftwares = mapReferencedProjects([
     key: 'ohms-law-calculator',
     period: '2015 October',
     tags: ['software', 'application', 'university', 'physics'],
-    description: `University project application to compute for one of Voltage (V), Ampere (I) or Resistance (Ω) based on the Ohm’s Law Physics equation.`,
+    description: 'Developed a versatile Ohm\'s Law calculator application enabling computation of Voltage (V), Ampere (I), or Resistance (Ω) based on the Ohm\'s Law Physics equation. Designed for ease of use, the application empowers users to input known variables and calculate the desired parameter with precision and efficiency.',
     images: [
       './assets/images/projects/ohms-law-calculator/initial.png',
       './assets/images/projects/ohms-law-calculator/calculate-voltage.png',
