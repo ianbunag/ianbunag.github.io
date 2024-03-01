@@ -1,12 +1,12 @@
+import { createAccessibleLink, requireProgressiveImage } from '~/lib/config'
 import { mapReferencedProjects } from '~/lib/config/profile/projects'
-import { requireProgressiveImage, createAccessibleLink } from '~/lib/config'
 
 import type { ReferencedProject } from '~/lib/config/profile/projects'
 
 export const graphicsDesign = mapReferencedProjects([
   ((): ReferencedProject => {
     const keywestInternationaleSales = createAccessibleLink(
-      'Keywest Internationale Sales Corp.',
+      'Keywest Internationale Sales Corp',
       process.env.KEYWEST_INTERNATIONALE_LINK || '',
     )
 
@@ -20,7 +20,7 @@ export const graphicsDesign = mapReferencedProjects([
         'banners',
         'internship',
       ],
-      description: `Banner Designs for ${keywestInternationaleSales}.`,
+      description: `Designed visually captivating promotional banners for children's toy products at ${keywestInternationaleSales}, boosting brand visibility and attracting potential customers to the company's product line.`,
       images: [
         './assets/images/projects/keywest-internationale/banners/perler-beads.jpg',
         './assets/images/projects/keywest-internationale/banners/thinking-putty.jpg',
@@ -48,7 +48,7 @@ export const graphicsDesign = mapReferencedProjects([
         'banners',
         'internship',
       ],
-      description: `Banner Designs for ${cranePhilippines}.`,
+      description: `Crafted visually captivating promotional banners for ${cranePhilippines}' humidifier products, boosting brand recognition and driving consumer engagement towards the company's product range.`,
       images: [
         './assets/images/projects/crane-philippines/banners/humidifier-liquids.jpg',
         './assets/images/projects/crane-philippines/banners/oscillating-tower-fan.jpg',
@@ -62,7 +62,7 @@ export const graphicsDesign = mapReferencedProjects([
   })(),
   ((): ReferencedProject => {
     const optimumIndustrialSales = createAccessibleLink(
-      'Optimum Industrial Sales Corp.',
+      'Optimum Industrial Sales Corp',
       process.env.OPTIMUM_INDUSTRIAL_LINK || '',
     )
 
@@ -76,7 +76,7 @@ export const graphicsDesign = mapReferencedProjects([
         'banners',
         'internship',
       ],
-      description: `Banner Designs for ${optimumIndustrialSales}.`,
+      description: `Designed compelling promotional banners for ${optimumIndustrialSales} showcasing construction supplies, boosting brand visibility and attracting potential customers to the company's product offerings.`,
       images: [
         './assets/images/projects/optimum-industrial-banners/banners/bolts-and-nuts.jpg',
         './assets/images/projects/optimum-industrial-banners/banners/scaffolding-materials.jpg',
@@ -89,7 +89,7 @@ export const graphicsDesign = mapReferencedProjects([
   })(),
   ((): ReferencedProject => {
     const keywestInternationaleSales = createAccessibleLink(
-      'Keywest Internationale Sales Corp.',
+      'Keywest Internationale Sales Corp',
       process.env.KEYWEST_INTERNATIONALE_LINK || '',
     )
 
@@ -104,7 +104,7 @@ export const graphicsDesign = mapReferencedProjects([
         'sticker',
         'internship',
       ],
-      description: `Sticker design for the Mitsubishi L300 van of ${keywestInternationaleSales}.`,
+      description: `Designed captivating full-body promotional stickers for the ${keywestInternationaleSales}'s van, effectively enhancing brand visibility on the move and at various locations.`,
       images: [requireProgressiveImage('./assets/images/projects/keywest-internationale/stickers/mitsubishi-L300.jpg')],
       technologies: [
         'adobe-photoshop',

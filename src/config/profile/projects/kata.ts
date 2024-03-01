@@ -122,7 +122,7 @@ export const kata = mapReferencedProjects([
     key: 'typescript-challenges',
     period: '2021 October',
     tags: ['TypeScript', 'Node.js Notebooks', 'kata', 'types', 'intellisense'],
-    description: createUnorderedList(['Participated in TypeScript coding challenges, addressing concepts like conditional typing and type-level arithmetic. Used TypeScript and Node.js Notebooks, engaging in community discussions to refine skills and discover best practices. Enhanced proficiency in TypeScript development for future projects.']),
+    description: 'Participated in TypeScript coding challenges, addressing concepts like conditional typing and type-level arithmetic. Used TypeScript and Node.js Notebooks, engaging in community discussions to refine skills and discover best practices. Enhanced proficiency in TypeScript development for future projects.',
     images: [
       './assets/images/projects/typescript-challenges/readme.png',
       './assets/images/projects/typescript-challenges/initial.png',
@@ -150,8 +150,7 @@ export const kata = mapReferencedProjects([
       'design',
       'patterns',
     ],
-    description:
-      'Collection of various coding challenge answers - exploring python basics, data structures, regular expressions and design patterns.',
+    description: 'Completed coding exercises on platforms such as Tutorialspoint and w3resource, strengthening Python proficiency and mastering concepts like data structures, design patterns, and regular expressions. Improved skills in searching and sorting algorithms, clean coding practices, and pattern matching for future projects.',
     images: [
       './assets/images/projects/python-challenges/root.png',
       './assets/images/projects/python-challenges/navigation.png',

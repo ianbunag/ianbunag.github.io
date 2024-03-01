@@ -28,7 +28,7 @@ export const webApplications = mapReferencedProjects([
       'accessible',
       'portfolio',
     ],
-    description: createUnorderedList(['Developed a personal portfolio using Nuxt.js with beta support for Vue.js next-generation Composition API. Designed for optimal performance with fast page load times, responsive layouts, and modular configuration.']),
+    description: 'Developed a personal portfolio using Nuxt.js with beta support for Vue.js next-generation Composition API. Designed for optimal performance with fast page load times, responsive layouts, and modular configuration.',
     images: [
       './assets/images/projects/personal-portfolio/introduction-section.png',
       './assets/images/projects/personal-portfolio/mobile-introduction-section.jpg',
@@ -77,7 +77,7 @@ export const webApplications = mapReferencedProjects([
         'system',
         'university',
       ],
-      description: `University project turned proof-of-concept for ${dockLink}. Features resource borrowing, resource management and email notification.`,
+      description: `Created a library management system with Express backend and Nuxt frontend, offering resource borrowing, search, filtering, catalog management, inventory tracking, and deadline notifications. Streamlined resource discovery and management, eventually serving as a proof-of-concept for ${dockLink}.`,
       images: [
         './assets/images/projects/library-system/printed-resources.jpg',
         './assets/images/projects/library-system/login-page.jpg',
@@ -189,7 +189,7 @@ export const webApplications = mapReferencedProjects([
       'ajax',
       'freelance',
     ],
-    description: 'Tabular resource management application with an inline editing interface and asynchronous data sync.',
+    description: 'Created a comprehensive computer parts inventory and quotation management software, featuring search, filtering, interactive tabular management, and seamless data syncing between frontend and backend. Streamlined daily workflows for computer technicians.',
     images: [requireProgressiveImage('./assets/images/projects/optimus-it-solutions/database.png')],
     technologies: [
       'php',
