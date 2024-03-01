@@ -1,4 +1,4 @@
-import { createParagraph, requireProgressiveImage } from '~/lib/config'
+import { createUnorderedList, requireProgressiveImage } from '~/lib/config'
 import { LinkName, mapReferencedProjects } from '~/lib/config/profile/projects'
 
 export const applicationSoftwares = mapReferencedProjects([
@@ -16,9 +16,9 @@ export const applicationSoftwares = mapReferencedProjects([
       'boilerplate',
       'generator',
     ],
-    description: createParagraph([
-      'CLI tool to streamline front-end and back-end project launches with JavaScript, offering functionalities for initialization, directory structure creation, dependency installation, and configuration setup.',
-      'Simplifies foundational setup, enhancing coding challenge efficiency with automation tools to ensure standardized structure and offer clear documentation and tutorials.',
+    description: createUnorderedList([
+      'Designed a CLI tool, "Scaffold", to streamline front-end and back-end project launches with JavaScript, offering functionalities for initialization, directory structure creation, dependency installation, and configuration setup.',
+      'Simplified foundational setup, enhancing coding challenge efficiency with automation tools to ensure standardized structure and offer clear documentation and tutorials.',
     ]),
     images: [
       './assets/images/projects/scaffold/initial.png',
@@ -58,9 +58,9 @@ export const applicationSoftwares = mapReferencedProjects([
       'application',
       'completion',
     ],
-    description: createParagraph([
-      'CLI tool to optimize containerized development environment management using TypeScript and Docker.',
-      'Enables handling of multi-service containers using lightweight container orchestration tools, thereby optimizing container images, particularly for individuals facing computational constraints on their work/personal computers.',
+    description: createUnorderedList([
+      'Created a CLI tool to optimize containerized development environment management using TypeScript and Docker.',
+      'Enabled handling of multi-service containers using lightweight container orchestration tools, thereby optimizing container images, particularly for individuals facing computational constraints on their work/personal computers.',
     ]),
     images: [
       './assets/images/projects/dock/root-help.png',

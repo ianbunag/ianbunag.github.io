@@ -27,12 +27,34 @@ export function createAccessibleLink (display: string, url: string): string {
   return `<a ${properties}>${display}</a>`
 }
 
-export function createUnorderedList (entries: Array<string>): string {
-  return `<ul><li>${entries.join('</li><li>')}</li></ul>`
+export function createUnorderedList<Points extends Array<string | Points>> (
+  points: Points,
+): string {
+  const flattenedEntries = points.map((point) => {
+    if (Array.isArray(point)) {
+      return createUnorderedList(point)
+    }
+
+    return `<li>${point}</li>`
+  })
+
+  return `<ul>${flattenedEntries.join('')}</ul>`
 }
 
-export function createParagraph (sections: Array<string>): string {
-  return `<p>${sections.join('</p><p>')}</p>`
+export const PARAGRAPH_SPACER = Symbol('paragraph-spacer')
+
+export function createParagraph (
+  sections: Array<string | typeof PARAGRAPH_SPACER>,
+): string {
+  const flattenedSections = sections.map((section) => {
+    if (section === PARAGRAPH_SPACER) {
+      return '<br/>'
+    }
+
+    return `<p>${section}</p>`
+  })
+
+  return flattenedSections.join('')
 }
 
 export function emphasize (text: string): string {

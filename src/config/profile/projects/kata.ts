@@ -1,7 +1,9 @@
 import {
+  PARAGRAPH_SPACER,
   createHeader,
   createImage,
   createParagraph,
+  createUnorderedList,
   requireProgressiveImage,
 } from '~/lib/config'
 import {
@@ -15,7 +17,11 @@ const LEETCODE_USERNAME = process.env.LEETCODE_USERNAME
 export const kata = mapReferencedProjects([
   ((): ReferencedProject => {
     const description = createParagraph([
-      'Collection of Java kata challenges.',
+      createUnorderedList([
+        'Participated in coding challenges covering array manipulation, string algorithms, and tree traversal using Java, employing systematic problem-solving approach, broadening expertise in fundamental data structures.',
+        'Enhanced understanding of concepts such as trees, dynamic programming, and time/space complexity optimizations through practical exercises on platforms like LeetCode and Codewars.',
+      ]),
+      PARAGRAPH_SPACER,
       createHeader(2, 'Find me in LeetCode'),
       createImage(
         `https://leetcode-stats-six.vercel.app/?username=${LEETCODE_USERNAME}`,
@@ -62,7 +68,11 @@ export const kata = mapReferencedProjects([
   })(),
   ((): ReferencedProject => {
     const description = createParagraph([
-      'Collection of Go kata challenges.',
+      createUnorderedList([
+        'Participated in coding challenges covering array manipulation, string algorithms, and tree traversal using Go, employing systematic problem-solving approach, broadening expertise in fundamental data structures.',
+        'Enhanced understanding of concepts such as trees, dynamic programming, and time/space complexity optimizations through practical exercises on platforms like LeetCode and Codewars.',
+      ]),
+      PARAGRAPH_SPACER,
       createHeader(2, 'Find me in LeetCode'),
       createImage(
         `https://leetcode-stats-six.vercel.app/?username=${LEETCODE_USERNAME}`,
@@ -112,8 +122,7 @@ export const kata = mapReferencedProjects([
     key: 'typescript-challenges',
     period: '2021 October',
     tags: ['TypeScript', 'Node.js Notebooks', 'kata', 'types', 'intellisense'],
-    description:
-      'Collection of TypeScript type challenges for practice with Node.js Notebooks.',
+    description: createUnorderedList(['Participated in TypeScript coding challenges, addressing concepts like conditional typing and type-level arithmetic. Used TypeScript and Node.js Notebooks, engaging in community discussions to refine skills and discover best practices. Enhanced proficiency in TypeScript development for future projects.']),
     images: [
       './assets/images/projects/typescript-challenges/readme.png',
       './assets/images/projects/typescript-challenges/initial.png',

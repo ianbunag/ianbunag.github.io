@@ -28,7 +28,7 @@ export const webApplications = mapReferencedProjects([
       'accessible',
       'portfolio',
     ],
-    description: `My take on Vue's next-generation Composition API, supercharged by TypeScript. Modular, responsive and performant.`,
+    description: createUnorderedList(['Developed a personal portfolio using Nuxt.js with beta support for Vue.js next-generation Composition API. Designed for optimal performance with fast page load times, responsive layouts, and modular configuration.']),
     images: [
       './assets/images/projects/personal-portfolio/introduction-section.png',
       './assets/images/projects/personal-portfolio/mobile-introduction-section.jpg',
