@@ -54,6 +54,7 @@ export const techStacks = mapReferencedTechStacks([
       'terraform',
       'github',
       'circleci',
+      'vitest',
       'jest',
       'cypress',
       'eslint',
@@ -64,7 +65,7 @@ export const techStacks = mapReferencedTechStacks([
   },
   {
     category: 'Databases',
-    technologies: ['mysql'],
+    technologies: ['mysql', 'postgresql'],
   },
   {
     category: 'Previous Technologies',

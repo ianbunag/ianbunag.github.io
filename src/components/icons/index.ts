@@ -26,6 +26,8 @@ import stylelint from '~/components/icons/stylelint.vue'
 import swagger from '~/components/icons/swagger.vue'
 import xampp from '~/components/icons/xampp.vue'
 import yvnbunagDock from '~/components/icons/yvnbunag-dock.vue'
+import vitest from '~/components/icons/vitest.vue'
+import postgresql from '~/components/icons/postgresql.vue'
 
 export {
   adobeAfterEffects,
@@ -56,4 +58,6 @@ export {
   swagger,
   xampp,
   yvnbunagDock,
+  vitest,
+  postgresql,
 }

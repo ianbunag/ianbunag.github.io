@@ -230,15 +230,29 @@ export const testFrameworks = mapTechnology({
     logoURL: 'logos/cypress.svg',
     url: 'https://www.cypress.io/',
   },
+  vitest: {
+    display: 'Vitest',
+    description: 'Vite-native JavaScript testing framework.',
+    icon: 'vitest',
+    logoURL: 'logos/vitest.svg',
+    url: 'https://vitest.dev/',
+  },
 })
 
 export const databases = mapTechnology({
   mysql: {
     display: 'MySQL',
-    description: 'Open-source relational database.',
+    description: 'Popular open-source relational database.',
     icon: 'mysql',
     logoURL: 'logos/mysql.svg',
     url: 'https://www.mysql.com',
+  },
+  postgresql: {
+    display: 'PostgreSQL',
+    description: 'Advanced open-source relational database.',
+    icon: 'postgresql',
+    logoURL: 'logos/postgresql.svg',
+    url: 'https://www.postgresql.org/',
   },
 })
 
