@@ -119,10 +119,7 @@ export default defineComponent({
 
     <experience
       :experiences="profile.experiences"
-      :timeline="{
-        labelClass: 'pf-text-light',
-        timelineClass: 'pf-timeline-path-light'
-      }"
+      :timeline="{ timelineClass: 'pf-timeline-path-light' }"
       content-class="mt-16 pt-8 pt-md-10 mx-md-16 px-md-12"
       class="section-background-lighter"
     >

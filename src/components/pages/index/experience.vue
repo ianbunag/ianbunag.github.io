@@ -1,6 +1,7 @@
 <script lang = "ts">
-import { defineComponent, toRef, computed } from '@nuxtjs/composition-api'
+import { defineComponent, toRef, toRefs, computed } from '@nuxtjs/composition-api'
 
+import { useBreakPoints } from '~/lib/hooks'
 import ExperienceTimeline, {
   timelineOptions,
 } from '~/components/experience/timeline.vue'
@@ -29,11 +30,15 @@ export default defineComponent({
     timeline: timelineOptions,
   },
   setup (props) {
+    const { isMobile } = toRefs(useBreakPoints())
     const sortedExperiences = computed(() => {
       return toRef(props, 'experiences').value.sort(descendingSort)
     })
 
-    return { sortedExperiences }
+    return {
+      isMobile,
+      sortedExperiences,
+    }
   },
 })
 </script>
@@ -45,7 +50,7 @@ export default defineComponent({
     class="section"
   >
     <v-col
-      cols="12"
+      :cols="isMobile ? '12' : '11'"
       :class="contentClass"
       class="pf-layer-content pf-bound-less"
     >
@@ -64,7 +69,7 @@ export default defineComponent({
       <experience-timeline
         :experiences="sortedExperiences"
         :timeline="timeline"
-        :heading="{ title: 4, subtitle: 5 }"
+        :heading="{ company: 4, position: 5, period: 6 }"
         class="mt-6 mx-md-16"
       />
     </v-col>

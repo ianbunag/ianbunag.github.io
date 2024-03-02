@@ -1,15 +1,15 @@
 <script lang = "ts">
-import { defineComponent, toRefs, computed } from '@nuxtjs/composition-api'
+import { computed, defineComponent, toRefs } from '@nuxtjs/composition-api'
 
-import { useBreakPoints } from '~/lib/hooks'
 import { icons } from '~/config/icons'
 
 import type { Experience } from '@/config/profile'
 import { getDuration, getRange } from './period'
 
 interface HeadingOptions {
-  title: Heading.Levels,
-  subtitle: Heading.Levels,
+  company: Heading.Levels,
+  position: Heading.Levels,
+  period: Heading.Levels,
 }
 
 export const headingOptions = {
@@ -24,21 +24,15 @@ export default defineComponent({
       type: Object as Prop<Experience>,
       required: true,
     },
-    hidePeriod: {
-      type: Boolean,
-      default: false,
-    },
     heading: headingOptions,
   },
   setup (props) {
-    const { isMobile } = toRefs(useBreakPoints())
     const { experience } = toRefs(props)
     const imgCSSProps = computed(() => ({
       '--logo-accent': experience.value.association.logoAccent,
     }))
 
     return {
-      isMobile,
       icons,
       imgCSSProps,
       getRange,
@@ -51,10 +45,7 @@ export default defineComponent({
 <template>
   <v-hover>
     <template #default="{ hover }">
-      <v-card
-        :elevation="hover ? 16 : 8"
-        class="transition-swing"
-      >
+      <v-card :elevation="hover ? 16 : 8" class="transition-swing">
         <table>
           <tbody>
             <tr>
@@ -76,11 +67,7 @@ export default defineComponent({
                     contain
                   >
                     <template #placeholder>
-                      <v-row
-                        align="center"
-                        justify="center"
-                        class="pf-full-height pf-margin-less pf-fade-35"
-                      >
+                      <v-row align="center" justify="center" class="pf-full-height pf-margin-less pf-fade-35">
                         <v-icon size="100%" class="pf-absolute">
                           {{ icons.mdiDomain }}
                         </v-icon>
@@ -89,51 +76,30 @@ export default defineComponent({
                   </v-img>
                 </a>
               </td>
-              <td :class="{ 'py-1': !hidePeriod }">
+              <td class="py-1">
                 <v-card-title class="pt-0 px-0">
                   <heading
-                    :level="heading.title || 3"
-                    :class="{ 'text-subtitle-1': isMobile }"
-                    class="text-h6 experience-card pf-text-pair"
+                    :level="heading.company || 3"
+                    class="text-subtitle-1 experience-card pf-text-pair"
                   >
-                    {{ experience.role }}
+                    {{ experience.association.name }}
+                    <span v-if="experience.intermediary">
+                      (under <a
+                        :href="experience.intermediary.url || undefined"
+                        :aria-label="experience.intermediary.name || 'Intermediary'"
+                        class="pf-link-light"
+                      >{{
+                        experience.intermediary.name }}</a>)
+                    </span>
                   </heading>
                 </v-card-title>
                 <v-card-subtitle class="pb-0 px-0">
-                  <template v-if="hidePeriod">
-                    <heading
-                      :level="heading.subtitle || 4"
-                      class="text-body-1"
-                    >
-                      {{ experience.association.name }}
-                      <span v-if="experience.intermediary">
-                        (under <a
-                          :href="experience.intermediary.url || undefined"
-                          :aria-label="experience.intermediary.name || 'Intermediary'"
-                          class="pf-link-light"
-                        >{{ experience.intermediary.name }}</a>)
-                      </span>
-                    </heading>
-                  </template>
-                  <template v-else>
-                    <heading
-                      :level="heading.subtitle || 4"
-                      class="text-body-2"
-                    >
-                      {{ experience.association.name }}
-                      <span v-if="experience.intermediary">
-                        (under <a
-                          :href="experience.intermediary.url || undefined"
-                          :aria-label="experience.intermediary.name || 'Intermediary'"
-                          class="pf-link-light"
-                        >{{ experience.intermediary.name }}</a>)
-                      </span>
-                    </heading>
-                    <div class="text-caption pf-text-pair-accent">
-                      {{ getRange(experience.period) }}
-                      <strong>({{ getDuration(experience.period) }})</strong>
-                    </div>
-                  </template>
+                  <heading :level="heading.position || 4" class="text-subtitle-2 pf-text-pair-accent">
+                    {{ experience.role }}
+                  </heading>
+                  <heading :level="heading.position || 5" class="text-body-2 pf-text-pair">
+                    {{ getRange(experience.period) }} ({{ getDuration(experience.period) }})
+                  </heading>
                 </v-card-subtitle>
               </td>
             </tr>
@@ -141,10 +107,7 @@ export default defineComponent({
         </table>
 
         <!-- eslint-disable vue/no-v-html -->
-        <v-card-text
-          class="px-3 pb-3 pf-bound-less"
-          v-html="experience.description"
-        />
+        <v-card-text class="px-3 pb-3 pf-bound-less" v-html="experience.description" />
         <!-- eslint-enable vue/no-v-html -->
       </v-card>
     </template>

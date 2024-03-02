@@ -54,6 +54,7 @@ export interface Experience {
   role: string,
   type: ExperienceType,
   association: Association,
+  intermediary?: Association,
   period: {
     start: string,
     end?: string,

@@ -1,7 +1,6 @@
 <script lang = "ts">
-import { defineComponent, toRefs } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
 
-import { useBreakPoints } from '~/lib/hooks'
 import { icons } from '~/config/icons'
 import ExperienceCard, {
   headingOptions,
@@ -14,7 +13,6 @@ import type { Experiences } from '@/config/profile'
 import { getRange, getDuration } from './period'
 
 interface TimelineOptions {
-  labelClass: string,
   timelineClass: string,
 }
 
@@ -41,10 +39,7 @@ export default defineComponent({
     heading: headingOptions,
   },
   setup () {
-    const { isMobile } = toRefs(useBreakPoints())
-
     return {
-      isMobile,
       experienceIcon,
       getRange,
       getDuration,
@@ -55,8 +50,8 @@ export default defineComponent({
 
 <template>
   <v-timeline
-    :dense="isMobile"
     :class="timeline.timelineClass"
+    dense
   >
     <v-timeline-item
       v-for="(experience, index) in experiences"
@@ -64,23 +59,8 @@ export default defineComponent({
       :icon="experienceIcon[experience.type]"
       large
     >
-      <template #opposite>
-        <div
-          :class="[timeline.labelClass]"
-          class="text-subtitle-1 pf-text-pair"
-        >
-          {{ getRange(experience.period) }}
-        </div>
-        <div
-          :class="[timeline.labelClass]"
-          class="text-subtitle-2"
-        >
-          {{ getDuration(experience.period) }}
-        </div>
-      </template>
       <experience-card
         :experience="experience"
-        :hide-period="!isMobile"
         :heading="heading"
       />
     </v-timeline-item>
