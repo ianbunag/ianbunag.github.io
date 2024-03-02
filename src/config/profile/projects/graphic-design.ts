@@ -33,8 +33,8 @@ export const graphicsDesign = mapReferencedProjects([
     }
   })(),
   ((): ReferencedProject => {
-    const cranePhilippines = createAccessibleLink(
-      'Crane Philippines',
+    const createCraneLink = (content: string) => createAccessibleLink(
+      content,
       process.env.CRANE_PHILIPPINES_LINK || '',
     )
 
@@ -48,7 +48,7 @@ export const graphicsDesign = mapReferencedProjects([
         'banners',
         'internship',
       ],
-      description: `Crafted visually captivating promotional banners for ${cranePhilippines}' humidifier products, boosting brand recognition and driving consumer engagement towards the company's product range.`,
+      description: `Crafted visually captivating promotional banners for ${createCraneLink('Crane Philippines\'')} humidifier products, boosting brand recognition and driving consumer engagement towards the company's product range.`,
       images: [
         './assets/images/projects/crane-philippines/banners/humidifier-liquids.jpg',
         './assets/images/projects/crane-philippines/banners/oscillating-tower-fan.jpg',
@@ -88,8 +88,8 @@ export const graphicsDesign = mapReferencedProjects([
     }
   })(),
   ((): ReferencedProject => {
-    const keywestInternationaleSales = createAccessibleLink(
-      'Keywest Internationale Sales Corp',
+    const createKeywestLink = (content: string) => createAccessibleLink(
+      content,
       process.env.KEYWEST_INTERNATIONALE_LINK || '',
     )
 
@@ -104,7 +104,7 @@ export const graphicsDesign = mapReferencedProjects([
         'sticker',
         'internship',
       ],
-      description: `Designed captivating full-body promotional stickers for the ${keywestInternationaleSales}'s van, effectively enhancing brand visibility on the move and at various locations.`,
+      description: `Designed captivating full-body promotional stickers for the ${createKeywestLink('Keywest Internationale Sales Corp\'s')} van, effectively enhancing brand visibility on the move and at various locations.`,
       images: [requireProgressiveImage('./assets/images/projects/keywest-internationale/stickers/mitsubishi-L300.jpg')],
       technologies: [
         'adobe-photoshop',

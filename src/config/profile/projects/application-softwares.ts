@@ -28,7 +28,7 @@ export const applicationSoftwares = mapReferencedProjects([
       './assets/images/projects/scaffold/development.png',
       './assets/images/projects/scaffold/production.png',
     ].map(requireProgressiveImage),
-    technologies: ['node-js', 'npm'],
+    technologies: ['node-js', 'npm', 'gitlab'],
     featured: true,
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
