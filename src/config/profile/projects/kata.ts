@@ -18,57 +18,6 @@ export const kata = mapReferencedProjects([
   ((): ReferencedProject => {
     const description = createParagraph([
       createUnorderedList([
-        'Participated in coding challenges covering array manipulation, string algorithms, and tree traversal using Java, employing systematic problem-solving approach, broadening expertise in fundamental data structures.',
-        'Enhanced understanding of concepts such as trees, dynamic programming, and time/space complexity optimizations through practical exercises on platforms like LeetCode and Codewars.',
-      ]),
-      PARAGRAPH_SPACER,
-      createHeader(2, 'Find me in LeetCode'),
-      createImage(
-        `https://leetcode-stats-six.vercel.app/?username=${LEETCODE_USERNAME}`,
-        `Find ${LEETCODE_USERNAME} in LeetCode`,
-        { link: `https://leetcode.com/${LEETCODE_USERNAME}`, height: 125 },
-      ),
-      createHeader(2, 'Find me in Codewars'),
-      createImage(
-        `https://www.codewars.com/users/${CODEWARS_USERNAME}/badges/small`,
-        `Find ${CODEWARS_USERNAME} in Codewars`,
-        {
-          link: `https://www.codewars.com/users/${CODEWARS_USERNAME}`,
-          height: 20,
-        },
-      ),
-    ])
-
-    return {
-      name: 'Java Kata',
-      key: 'java-kata',
-      period: '2023 May',
-      tags: [
-        'Java',
-        'LeetCode',
-        'Codewars',
-        'TDD',
-        'Big O',
-        'kata',
-        'data',
-        'structures',
-        'algorithm',
-      ],
-      description,
-      images: ['./assets/images/projects/java-kata/java-kata.png'].map(
-        requireProgressiveImage,
-      ),
-      technologies: ['java', 'leetcode', 'codewars'],
-      secondaryLink: {
-        text: LinkName.VIEW_SOURCE,
-        link: process.env.JAVA_KATA_REPOSITORY,
-        linkIcon: 'mdiGithub',
-      },
-    }
-  })(),
-  ((): ReferencedProject => {
-    const description = createParagraph([
-      createUnorderedList([
         'Participated in coding challenges covering array manipulation, string algorithms, and tree traversal using Go, employing systematic problem-solving approach, broadening expertise in fundamental data structures.',
         'Enhanced understanding of concepts such as trees, dynamic programming, and time/space complexity optimizations through practical exercises on platforms like LeetCode and Codewars.',
       ]),
@@ -113,6 +62,57 @@ export const kata = mapReferencedProjects([
       secondaryLink: {
         text: LinkName.VIEW_SOURCE,
         link: process.env.GO_KATA_REPOSITORY,
+        linkIcon: 'mdiGithub',
+      },
+    }
+  })(),
+  ((): ReferencedProject => {
+    const description = createParagraph([
+      createUnorderedList([
+        'Participated in coding challenges covering array manipulation, string algorithms, and tree traversal using Java, employing systematic problem-solving approach, broadening expertise in fundamental data structures.',
+        'Enhanced understanding of concepts such as trees, dynamic programming, and time/space complexity optimizations through practical exercises on platforms like LeetCode and Codewars.',
+      ]),
+      PARAGRAPH_SPACER,
+      createHeader(2, 'Find me in LeetCode'),
+      createImage(
+        `https://leetcode-stats-six.vercel.app/?username=${LEETCODE_USERNAME}`,
+        `Find ${LEETCODE_USERNAME} in LeetCode`,
+        { link: `https://leetcode.com/${LEETCODE_USERNAME}`, height: 125 },
+      ),
+      createHeader(2, 'Find me in Codewars'),
+      createImage(
+        `https://www.codewars.com/users/${CODEWARS_USERNAME}/badges/small`,
+        `Find ${CODEWARS_USERNAME} in Codewars`,
+        {
+          link: `https://www.codewars.com/users/${CODEWARS_USERNAME}`,
+          height: 20,
+        },
+      ),
+    ])
+
+    return {
+      name: 'Java Kata',
+      key: 'java-kata',
+      period: '2023 May',
+      tags: [
+        'Java',
+        'LeetCode',
+        'Codewars',
+        'TDD',
+        'Big O',
+        'kata',
+        'data',
+        'structures',
+        'algorithm',
+      ],
+      description,
+      images: ['./assets/images/projects/java-kata/java-kata.png'].map(
+        requireProgressiveImage,
+      ),
+      technologies: ['java', 'leetcode', 'codewars'],
+      secondaryLink: {
+        text: LinkName.VIEW_SOURCE,
+        link: process.env.JAVA_KATA_REPOSITORY,
         linkIcon: 'mdiGithub',
       },
     }
