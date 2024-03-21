@@ -42,7 +42,7 @@ export const kata = mapReferencedProjects([
     return {
       name: 'Go Kata',
       key: 'go-kata',
-      period: '2023 May',
+      period: 'Present',
       tags: [
         'Go',
         'LeetCode',
