@@ -5,6 +5,7 @@ import Tags from '~/components/tags.vue'
 import ImagePreview from '~/components/image/preview.vue'
 
 import type { ThumbnailMaxHeight } from '~/components/image/preview.vue'
+import { formatPeriod } from '~/lib/config/profile'
 import type { Project } from '@/config/profile'
 
 interface HeadingOptions {
@@ -40,6 +41,7 @@ export default defineComponent({
     heading: headingOptions,
     thumbnail: thumbnailOptions,
   },
+  methods: { formatPeriod },
 })
 </script>
 
@@ -69,7 +71,7 @@ export default defineComponent({
             :level="heading.subtitle || 4"
             class="text-subtitle-2 pf-text-pair-accent"
           >
-            {{ project.period }}
+            {{ formatPeriod(project.period) }}
           </heading>
         </v-card-subtitle>
         <tags :tags="project.tags" class="mt-0 pt-0 pa-4" />

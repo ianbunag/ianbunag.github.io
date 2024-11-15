@@ -2,6 +2,7 @@ import { createAccessibleLink, requireProgressiveImage } from '~/lib/config'
 import { mapReferencedProjects } from '~/lib/config/profile/projects'
 
 import type { ReferencedProject } from '~/lib/config/profile/projects'
+import { createPeriod } from '~/lib/config/profile'
 
 export const graphicsDesign = mapReferencedProjects([
   ((): ReferencedProject => {
@@ -13,7 +14,7 @@ export const graphicsDesign = mapReferencedProjects([
     return {
       name: 'Keywest Internationale Sales Banners',
       key: 'keywest-internationale-sales-banners',
-      period: '2018 July',
+      period: createPeriod(2018, 'July'),
       tags: [
         'graphic',
         'design',
@@ -41,7 +42,7 @@ export const graphicsDesign = mapReferencedProjects([
     return {
       name: 'Crane Philippines Banners',
       key: 'crane-philippines-banners',
-      period: '2018 July',
+      period: createPeriod(2018, 'July'),
       tags: [
         'graphic',
         'design',
@@ -69,7 +70,7 @@ export const graphicsDesign = mapReferencedProjects([
     return {
       name: 'Optimum Industrial Sales Banners',
       key: 'optimum-industrial-sales-banners',
-      period: '2018 July',
+      period: createPeriod(2018, 'July'),
       tags: [
         'graphic',
         'design',
@@ -96,7 +97,7 @@ export const graphicsDesign = mapReferencedProjects([
     return {
       name: 'Keywest Internationale Sales Van Stickers',
       key: 'keywest-internationale-van-stickers',
-      period: '2018 July',
+      period: createPeriod(2018, 'July'),
       tags: [
         'graphic',
         'design',
@@ -121,7 +122,7 @@ export const graphicsDesign = mapReferencedProjects([
     return {
       name: 'Rustic Table Menu',
       key: 'rustic-table-menu',
-      period: '2017 March',
+      period: createPeriod(2017, 'March'),
       tags: [
         'graphic',
         'design',

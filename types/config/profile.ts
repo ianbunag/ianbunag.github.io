@@ -1,3 +1,4 @@
+import type { Moment } from 'moment'
 import type { Icon } from '@/config/icons'
 import type { Technologies } from '@/config/technologies'
 import type { Association } from '@/config/associations'
@@ -18,14 +19,10 @@ export interface ProjectLink {
   linkIcon: Icon,
 }
 
-type Month = 'January' | 'February' | 'March' | 'April' | 'May' | 'June' | 'July' | 'August' | 'September' | 'October' | 'November' | 'December'
-
-type Year = `${number}${number}${number}${number}`
-
 export interface Project {
   name: string,
   key: string,
-  period: `${Year} ${Month}` | 'Present',
+  period: Moment | 'Present',
   tags: Array<string>,
   description: string,
   images: Array<string>,

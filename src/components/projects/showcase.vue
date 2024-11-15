@@ -33,11 +33,12 @@ export const featuredFirstOrder: Sort = (initial, comparator) => {
   return initial.featured ? -1 : 1
 }
 export const descendingOrder: Sort = (initial, comparator) => {
-  if (initial.period === comparator.period) { return 0 }
+  if (initial.period === 'Present' && comparator.period === 'Present') { return 0 }
   if (initial.period === 'Present') { return -1 }
   if (comparator.period === 'Present') { return 1 }
+  if (initial.period.isSame(comparator.period)) { return 0 }
 
-  return +(new Date(comparator.period)) - +(new Date(initial.period))
+  return comparator.period.diff(initial.period)
 }
 export const ascendingOrder: Sort = (initial, comparator) => {
   return descendingOrder(initial, comparator) * -1

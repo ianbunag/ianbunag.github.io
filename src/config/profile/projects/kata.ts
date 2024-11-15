@@ -11,6 +11,7 @@ import {
   ReferencedProject,
   mapReferencedProjects,
 } from '~/lib/config/profile/projects'
+import { createPeriod } from '~/lib/config/profile'
 
 const CODEWARS_USERNAME = process.env.CODEWARS_USERNAME
 const LEETCODE_USERNAME = process.env.LEETCODE_USERNAME
@@ -42,7 +43,7 @@ export const kata = mapReferencedProjects([
     return {
       name: 'Go Kata',
       key: 'go-kata',
-      period: '2024 June',
+      period: createPeriod(2024, 'June'),
       tags: [
         'Go',
         'LeetCode',
@@ -93,7 +94,7 @@ export const kata = mapReferencedProjects([
     return {
       name: 'Java Kata',
       key: 'java-kata',
-      period: '2023 May',
+      period: createPeriod(2023, 'May'),
       tags: [
         'Java',
         'LeetCode',
@@ -120,7 +121,7 @@ export const kata = mapReferencedProjects([
   {
     name: 'TypeScript Challenges',
     key: 'typescript-challenges',
-    period: '2021 October',
+    period: createPeriod(2021, 'October'),
     tags: ['TypeScript', 'Node.js Notebooks', 'kata', 'types', 'intellisense'],
     description: 'Participated in TypeScript coding challenges, addressing concepts like conditional typing and type-level arithmetic. Used TypeScript and Node.js Notebooks, engaging in community discussions to refine skills and discover best practices. Enhanced proficiency in TypeScript development for future projects.',
     images: [
@@ -139,7 +140,7 @@ export const kata = mapReferencedProjects([
   {
     name: 'Python Challenges',
     key: 'python-challenges',
-    period: '2019 May',
+    period: createPeriod(2019, 'May'),
     tags: [
       'Python',
       'kata',

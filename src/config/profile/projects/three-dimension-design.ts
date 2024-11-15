@@ -1,11 +1,12 @@
 import { requireProgressiveImage } from '~/lib/config'
 import { LinkName, mapReferencedProjects } from '~/lib/config/profile/projects'
+import { createPeriod } from '~/lib/config/profile'
 
 export const threeDimensionDesign = mapReferencedProjects([
   {
     name: 'Wine',
     key: 'wine',
-    period: '2017 February',
+    period: createPeriod(2017, 'February'),
     tags: [
       '3D',
       'design',
@@ -32,7 +33,7 @@ export const threeDimensionDesign = mapReferencedProjects([
   {
     name: 'Plasma',
     key: 'plasma',
-    period: '2017 February',
+    period: createPeriod(2017, 'February'),
     tags: [
       '3D',
       'design',
@@ -59,7 +60,7 @@ export const threeDimensionDesign = mapReferencedProjects([
   {
     name: 'Rain',
     key: 'rain',
-    period: '2016 December',
+    period: createPeriod(2016, 'December'),
     tags: [
       '3D',
       'design',
@@ -86,7 +87,7 @@ export const threeDimensionDesign = mapReferencedProjects([
   {
     name: 'Snow Leopard',
     key: 'snow-leopard',
-    period: '2016 May',
+    period: createPeriod(2016, 'May'),
     tags: [
       '3D',
       'design',
@@ -103,7 +104,7 @@ export const threeDimensionDesign = mapReferencedProjects([
   {
     name: `Corey's Bedroom`,
     key: 'coreys-bedroom',
-    period: '2016 April',
+    period: createPeriod(2016, 'April'),
     tags: [
       '3D',
       'design',

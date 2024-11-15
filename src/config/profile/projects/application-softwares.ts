@@ -1,11 +1,12 @@
 import { createUnorderedList, requireProgressiveImage } from '~/lib/config'
 import { LinkName, mapReferencedProjects } from '~/lib/config/profile/projects'
+import { createPeriod } from '~/lib/config/profile'
 
 export const applicationSoftwares = mapReferencedProjects([
   {
     name: '@yvnbunag/scaffold',
     key: 'yvnbunag-scaffold',
-    period: '2023 July',
+    period: createPeriod(2023, 'July'),
     tags: [
       'CLI',
       'TypeScript',
@@ -44,7 +45,7 @@ export const applicationSoftwares = mapReferencedProjects([
   {
     name: '@yvnbunag/dock',
     key: 'yvnbunag-dock',
-    period: '2021 August',
+    period: createPeriod(2021, 'August'),
     tags: [
       'CLI',
       'BDD',
@@ -95,7 +96,7 @@ export const applicationSoftwares = mapReferencedProjects([
   {
     name: 'Simple Calculator',
     key: 'simple-calculator',
-    period: '2015 October',
+    period: createPeriod(2015, 'October'),
     tags: ['software', 'application', 'university', 'programming'],
     description:
       'Developed a user-friendly calculator application capable of performing basic arithmetic operations. Implemented features such as type or click input, clear functionality, value negation, and system message prompts to enhance usability and functionality.',
@@ -116,7 +117,7 @@ export const applicationSoftwares = mapReferencedProjects([
   {
     name: 'Simple Circuit Calculator',
     key: 'simple-circuit-calculator',
-    period: '2015 October',
+    period: createPeriod(2015, 'October'),
     tags: ['software', 'application', 'university', 'physics'],
     description:
       'Engineered a circuit calculator application facilitating calculations for total resistance in both series and parallel circuits, adhering to Ohm\'s Law Physics equation. Integrated features such as auto-fill for missing and constant variables, streamlining the calculation process and ensuring accuracy in results.',
@@ -140,7 +141,7 @@ export const applicationSoftwares = mapReferencedProjects([
   {
     name: `Ohm's Law Calculator`,
     key: 'ohms-law-calculator',
-    period: '2015 October',
+    period: createPeriod(2015, 'October'),
     tags: ['software', 'application', 'university', 'physics'],
     description: 'Developed a versatile Ohm\'s Law calculator application enabling computation of Voltage (V), Ampere (I), or Resistance (Ω) based on the Ohm\'s Law Physics equation. Designed for ease of use, the application empowers users to input known variables and calculate the desired parameter with precision and efficiency.',
     images: [

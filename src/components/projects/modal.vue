@@ -13,6 +13,7 @@ import Tags from '~/components/tags.vue'
 import TechnologyIconList from '~/components/technology/icon-list.vue'
 import ImageLoader from '~/components/image/loader.vue'
 
+import { formatPeriod } from '~/lib/config/profile'
 import type { Project } from '@/config/profile'
 
 interface HeadingOptions {
@@ -87,6 +88,7 @@ export default defineComponent({
       icons,
     }
   },
+  methods: { formatPeriod },
 })
 </script>
 
@@ -158,7 +160,7 @@ export default defineComponent({
           :level="heading.subtitle || 4"
           class="text-subtitle-2 pf-text-pair-accent"
         >
-          {{ project.period }}
+          {{ formatPeriod(project.period) }}
         </heading>
       </v-card-subtitle>
       <!-- eslint-disable-next-line vue/no-v-html -->
