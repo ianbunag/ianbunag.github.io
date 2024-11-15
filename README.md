@@ -106,9 +106,9 @@ Alert colors are Vuetify defaults. See
 
 |                                                                 	| Role      	| Key       	| Name         	| Hex Code 	|
 |-----------------------------------------------------------------	|-----------	|-----------	|--------------	|----------	|
-| ![#46748A](https://via.placeholder.com/15/46748A/000000?text=+) 	| Primary   	| primary   	| Teal Blue    	| #46748A  	|
-| ![#795663](https://via.placeholder.com/15/795663/000000?text=+) 	| Secondary 	| secondary 	| Deep Taupe   	| #795663  	|
-| ![#a2d6f9](https://via.placeholder.com/15/a2d6f9/000000?text=+) 	| Accent    	| accent    	| Uranian Blue 	| #a2d6f9  	|
+| ![#46748A](https://dummyimage.com/15x15/46748A/46748A.png) 	| Primary   	| primary   	| Teal Blue    	| #46748A  	|
+| ![#795663](https://dummyimage.com/15x15/795663/795663.png) 	| Secondary 	| secondary 	| Deep Taupe   	| #795663  	|
+| ![#a2d6f9](https://dummyimage.com/15x15/a2d6f9/a2d6f9.png) 	| Accent    	| accent    	| Uranian Blue 	| #a2d6f9  	|
 
 #### Background Scheme
 
@@ -118,11 +118,11 @@ from the [Swiss Army Man Official Movie Site](https://swissarmyman.com/).
 
 |                                                                 	| Role    	| Key                	| Name                       	| Hex Code 	|
 |-----------------------------------------------------------------	|---------	|--------------------	|----------------------------	|----------	|
-| ![#112d32](https://via.placeholder.com/15/112d32/000000?text=+) 	| Darker  	| background-darker  	| Outer Space Crayola        	| #112d32  	|
-| ![#254e58](https://via.placeholder.com/15/254e58/000000?text=+) 	| Dark    	| background-dark    	| Midnight Green Eagle Green 	| #254e58  	|
-| ![#4f4a41](https://via.placeholder.com/15/4f4a41/000000?text=+) 	| Median  	| background-median  	| Davys Grey                 	| #4f4a41  	|
-| ![#6e6658](https://via.placeholder.com/15/6e6658/000000?text=+) 	| Light   	| background-light   	| Dim Gray                   	| #6e6658  	|
-| ![#88bdbc](https://via.placeholder.com/15/88bdbc/000000?text=+) 	| Lighter 	| background-lighter 	| Opal                       	| #88bdbc  	|
+| ![#112d32](https://dummyimage.com/15x15/112d32/112d32.png) 	| Darker  	| background-darker  	| Outer Space Crayola        	| #112d32  	|
+| ![#254e58](https://dummyimage.com/15x15/254e58/254e58.png) 	| Dark    	| background-dark    	| Midnight Green Eagle Green 	| #254e58  	|
+| ![#4f4a41](https://dummyimage.com/15x15/4f4a41/4f4a41.png) 	| Median  	| background-median  	| Davys Grey                 	| #4f4a41  	|
+| ![#6e6658](https://dummyimage.com/15x15/6e6658/6e6658.png) 	| Light   	| background-light   	| Dim Gray                   	| #6e6658  	|
+| ![#88bdbc](https://dummyimage.com/15x15/88bdbc/88bdbc.png) 	| Lighter 	| background-lighter 	| Opal                       	| #88bdbc  	|
 
 <br/>
 
