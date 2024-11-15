@@ -37,12 +37,18 @@ export const experiences = mapReferencedExperiences([
       'terraform',
       'kubernetes',
       'nextjs',
+      'transifex',
+      'heap',
+      'intercom',
     ]
     const [
       react,
       terraform,
       kubernetes,
       nextjs,
+      transifex,
+      heap,
+      intercom,
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
     const aws = createAccessibleLink('AWS', technologies['amazon-web-services'].url || '')
 
@@ -54,9 +60,9 @@ export const experiences = mapReferencedExperiences([
         intermediary: 'inform-group',
         period: { start: '2023 April' },
         description: createUnorderedList([
-          'Architected a hospitality platform migration software, facilitating concurrent development of data processing and UI components, and successfully delivered the first version within the scheduled 2-month timeframe.',
+          `Developed a mobile app for restaurant managers to monitor business performance in real-time, integrating localization through ${transifex}, tracking user interactions with ${heap}, and incorporating customer engagement features via ${intercom}, enhancing usability and boosting user engagement.`,
+          `Architected a hospitality platform migration tool, enabling concurrent development of data processing and UI components, and delivering the first version within 2 months using ${nextjs} and ${kubernetes}.`,
           'Conducted system analysis, defined requirements, and formulated a strategic implementation plan for the migration software, utilizing research methodologies including document analysis, usability testing, and expert validation.',
-          `Developed the migration software extracting, transforming and importing entities from source platforms to the flagship platform using ${nextjs} and ${kubernetes}, ensuring scalability across multiple migrations.`,
         ]),
       },
       {
@@ -69,7 +75,6 @@ export const experiences = mapReferencedExperiences([
           `Built a restaurant inventory management software with ${react}, ${aws}, and ${terraform}, enhancing stock tracking, simplifying recipe management, and streamlining supply ordering for restaurant businesses.`,
           'Enhanced end-to-end test suite efficiency with parallelization and flakiness eradication using Cypress, reducing the test run duration from 45 to 15 minutes, with an estimated annual developer cost savings of $10,000.',
           'Liaised with Quality Assurance to craft maintainable, readable end-to-end testing scripts, using a declarative approach to abstract test steps, reducing script creation and updates from 6 to 3 days.',
-          'Decommissioned a redundant development environment, transferring relevant functions to a production-like environment, resulting in an estimated annual infrastructure cost savings of $4,000.',
         ]),
       },
     ]

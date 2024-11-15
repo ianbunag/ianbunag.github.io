@@ -394,6 +394,24 @@ export const providers = mapTechnology({
     icon: 'mdiNpm',
     url: 'https://www.npmjs.com',
   },
+  transifex: {
+    display: 'Transifex',
+    description: 'Localization platform.',
+    icon: 'mdiWebPlus',
+    url: 'https://transifex.com',
+  },
+  heap: {
+    display: 'Heap',
+    description: 'Product analytics platform.',
+    icon: 'mdiWebPlus',
+    url: 'https://heap.io',
+  },
+  intercom: {
+    display: 'Intercom',
+    description: 'Customer communication platform.',
+    icon: 'mdiWebPlus',
+    url: 'https://intercom.com',
+  },
 })
 
 export const kataProviders = mapTechnology({
