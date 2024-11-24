@@ -175,6 +175,13 @@ export const frontEndFrameworks = mapTechnology({
     logoURL: 'logos/react.svg',
     url: 'https://react.dev',
   },
+  reactNative: {
+    display: 'React Native',
+    description: 'The React Framework for mobile.',
+    icon: 'reactNative',
+    logoURL: 'logos/react-native.svg',
+    url: 'https://reactnative.dev',
+  },
   nextjs: {
     display: 'Next.js',
     description: 'The React Framework for the Web.',

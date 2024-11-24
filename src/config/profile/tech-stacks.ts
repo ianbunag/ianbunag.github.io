@@ -44,6 +44,7 @@ export const techStacks = mapReferencedTechStacks([
   {
     category: 'Libraries / Frameworks',
     technologies: [
+      'reactNative',
       'react',
       'nextjs',
     ],

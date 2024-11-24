@@ -32,6 +32,7 @@ export const skills = mapReferencedSkills([
     description: 'I convert design prototypes into responsive, scalable, and high-performance web applications. I use frontend frameworks, design systems, and testing tools to deliver ahead of schedule.',
     icon: 'frontEnd',
     technologies: [
+      'reactNative',
       'react',
       'nextjs',
       'typescript',

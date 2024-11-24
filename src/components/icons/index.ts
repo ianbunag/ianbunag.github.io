@@ -28,6 +28,7 @@ import xampp from '~/components/icons/xampp.vue'
 import yvnbunagDock from '~/components/icons/yvnbunag-dock.vue'
 import vitest from '~/components/icons/vitest.vue'
 import postgresql from '~/components/icons/postgresql.vue'
+import reactNative from '~/components/icons/react-native.vue'
 
 export {
   adobeAfterEffects,
@@ -60,4 +61,5 @@ export {
   yvnbunagDock,
   vitest,
   postgresql,
+  reactNative,
 }

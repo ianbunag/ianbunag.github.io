@@ -94,7 +94,7 @@ export default defineComponent({
       class="section-background-dark"
     >
       <template #title>
-        Noteworthy Endeavors
+        Significant Works
       </template>
       <template #sub-title>
         Projects that showcase my technical growth over the years.
