@@ -29,6 +29,7 @@ import yvnbunagDock from '~/components/icons/yvnbunag-dock.vue'
 import vitest from '~/components/icons/vitest.vue'
 import postgresql from '~/components/icons/postgresql.vue'
 import reactNative from '~/components/icons/react-native.vue'
+import bluesky from '~/components/icons/bluesky.vue'
 
 export {
   adobeAfterEffects,
@@ -62,4 +63,5 @@ export {
   vitest,
   postgresql,
   reactNative,
+  bluesky,
 }

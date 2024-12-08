@@ -43,9 +43,9 @@ export const links = mapReferencedLinks([
     url: process.env.LINKEDIN_LINK || '',
   },
   {
-    name: 'Twitter',
-    icon: 'mdiTwitter',
-    url: process.env.TWITTER_LINK || '',
+    name: 'Bluesky',
+    icon: 'bluesky',
+    url: process.env.BLUESKY_LINK || '',
   },
   {
     name: 'Docker Hub',

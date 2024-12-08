@@ -16,7 +16,7 @@ export const env = {
     'GITHUB_LINK',
     'GITLAB_LINK',
     'LINKEDIN_LINK',
-    'TWITTER_LINK',
+    'BLUESKY_LINK',
     'DOCKER_HUB_LINK',
     'NPM_LINK',
     'LEETCODE_USERNAME',
