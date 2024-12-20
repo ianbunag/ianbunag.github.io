@@ -9,10 +9,7 @@ import ExperienceTimeline, {
 import type { Experience, Experiences } from '@/config/profile'
 
 function descendingSort (initial: Experience, comparator: Experience): number {
-  const initialDate = +(new Date(initial.period.start))
-  const comparatorDate = +(new Date(comparator.period.start))
-
-  return comparatorDate - initialDate
+  return comparator.period.start.valueOf() - initial.period.start.valueOf()
 }
 
 export default defineComponent({

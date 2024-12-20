@@ -1,14 +1,15 @@
 import moment from 'moment'
+import { formatPeriod } from '~/lib/config/profile'
 import { Experience } from '@/config/profile'
 
 export function getRange (period: Experience['period']): string {
-  return `${period.start} - ${period.end || 'Present'}`
+  const rangeEnd = period.end ? formatPeriod(period.end) : 'Present'
+
+  return `${formatPeriod(period.start)} - ${rangeEnd}`
 }
 
 export function getDuration (period: Experience['period']): string {
-  const from = moment(new Date(period.start))
-  const to = moment(period.end ? new Date(period.end) : Date.now())
-  const totalMonthDuration = to.diff(from, 'months')
+  const totalMonthDuration = (period.end || moment()).diff(period.start, 'months')
 
   if (totalMonthDuration < 1) {
     return '~1 month'

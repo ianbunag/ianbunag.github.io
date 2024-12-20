@@ -53,8 +53,8 @@ export interface Experience {
   association: Association,
   intermediary?: Association,
   period: {
-    start: string,
-    end?: string,
+    start: Moment,
+    end?: Moment,
   },
   description: string,
 }

@@ -2,6 +2,7 @@ import { associations } from '~/config/associations'
 import { createTechnologyLink, technologies } from '~/config/technologies'
 import { createAccessibleLink, createUnorderedList } from '~/lib/config'
 import { getProjectLink } from '~/lib/pages/projects'
+import { createPeriod } from '~/lib/config/profile'
 
 import { ExperienceType } from '@/config/profile'
 
@@ -20,7 +21,11 @@ function mapReferencedExperiences (
   referencedExperiences: ReferencedExperiences,
 ): Experiences {
   return referencedExperiences.map((referencedExperience) => {
-    const { association, intermediary, ...experience } = referencedExperience
+    const {
+      association,
+      intermediary,
+      ...experience
+    } = referencedExperience
 
     return {
       ...experience,
@@ -54,11 +59,22 @@ export const experiences = mapReferencedExperiences([
 
     return [
       {
+        role: 'Senior Software Developer',
+        type: ExperienceType.FULL_TIME_JOB,
+        association: 'lightspeed',
+        intermediary: 'inform-group',
+        period: { start: createPeriod(2025, 'January') },
+        description: createUnorderedList([]),
+      },
+      {
         role: 'Software Developer II',
         type: ExperienceType.FULL_TIME_JOB,
         association: 'lightspeed',
         intermediary: 'inform-group',
-        period: { start: '2023 April' },
+        period: {
+          start: createPeriod(2023, 'April'),
+          end: createPeriod(2024, 'December'),
+        },
         description: createUnorderedList([
           `Developed a mobile app for restaurant managers to monitor business performance in real-time, integrating localization through ${transifex}, tracking user interactions with ${heap}, and incorporating customer engagement features via ${intercom}, enhancing usability and boosting user engagement.`,
           `Architected a hospitality platform migration tool, enabling concurrent development of data processing and UI components, and delivering the first version within 2 months using ${nextjs} and ${kubernetes}.`,
@@ -70,7 +86,10 @@ export const experiences = mapReferencedExperiences([
         type: ExperienceType.FULL_TIME_JOB,
         association: 'lightspeed',
         intermediary: 'inform-group',
-        period: { start: '2021 November', end: '2023 March' },
+        period: {
+          start: createPeriod(2021, 'November'),
+          end: createPeriod(2023, 'March'),
+        },
         description: createUnorderedList([
           `Built a restaurant inventory management software with ${react}, ${aws}, and ${terraform}, enhancing stock tracking, simplifying recipe management, and streamlining supply ordering for restaurant businesses.`,
           'Enhanced end-to-end test suite efficiency with parallelization and flakiness eradication using Cypress, reducing the test run duration from 45 to 15 minutes, with an estimated annual developer cost savings of $10,000.',
@@ -106,8 +125,8 @@ export const experiences = mapReferencedExperiences([
         association,
         intermediary,
         period: {
-          start: '2019 June',
-          end: ' 2021 July',
+          start: createPeriod(2019, 'June'),
+          end: createPeriod(2021, 'July'),
         },
         description: createUnorderedList([
           `Incorporated ${recurly} into the platform via data migration, API integration, and user account synchronization, streamlining migration from legacy to modern subscription management through testing and phased deployment.`,
@@ -120,8 +139,8 @@ export const experiences = mapReferencedExperiences([
         association,
         intermediary,
         period: {
-          start: '2018 September',
-          end: '2018 December',
+          start: createPeriod(2018, 'September'),
+          end: createPeriod(2018, 'December'),
         },
         description: '',
       },
@@ -146,8 +165,8 @@ export const experiences = mapReferencedExperiences([
       type: ExperienceType.INTERNSHIP,
       association: 'keywest-internationale',
       period: {
-        start: '2018 April',
-        end: '2018 July',
+        start: createPeriod(2018, 'April'),
+        end: createPeriod(2018, 'July'),
       },
       description: createUnorderedList([
         `Orchestrated enhancements and maintenance of an e-commerce platform powered by ${wordPress}, refining its performance and user interface.`,
@@ -167,8 +186,8 @@ export const experiences = mapReferencedExperiences([
       type: ExperienceType.STUDIES,
       association: 'feu-tech',
       period: {
-        start: '2014 July',
-        end: '2019 March',
+        start: createPeriod(2014, 'July'),
+        end: createPeriod(2019, 'March'),
       },
       description: createUnorderedList([`Led the development of a content management system for the capstone project ${change} for the La Prisma Group, winning Best Thesis, Website, Film, and Trailer.`]),
     }

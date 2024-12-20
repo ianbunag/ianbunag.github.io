@@ -14,8 +14,7 @@ export const email = process.env.EMAIL_ADDRESS || ''
 export const titles = [
   'Software Developer',
   'Full Stack Engineer',
-  'Backend Developer',
-  'Frontend Developer',
+  'Mobile Developer',
 ]
 
 export {
