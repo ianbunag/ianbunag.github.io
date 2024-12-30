@@ -7,7 +7,7 @@ import { links } from '~/config/profile/links'
 
 export const name = 'John Ian Buñag'
 
-export const tag = '@yvnbunag'
+export const tag = '@ianbunag'
 
 export const email = process.env.EMAIL_ADDRESS || ''
 
