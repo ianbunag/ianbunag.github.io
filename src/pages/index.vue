@@ -65,7 +65,7 @@ export default defineComponent({
       class="section-background-light"
     >
       <template #title>
-        A little bit about myself
+        A Little Bit About Myself
       </template>
       <template #sub-title>
         {{ profile.introduction.dynamic() }}
@@ -125,7 +125,7 @@ export default defineComponent({
     >
       <template #title>
         <span class="pf-text-light">
-          My professional journey
+          My Professional Journey
         </span>
       </template>
       <template #sub-title>
@@ -148,11 +148,11 @@ export default defineComponent({
       content-class="mt-16 pt-8 pt-md-10 mx-md-16 px-md-12 mb-8 mb-sm-0"
     >
       <template #title>
-        Let's grab some sushi 🍣
+        Let's Grab Some Sushi 🍣
       </template>
       <template #sub-title>
         <span>
-          Or a cup of coffee? I'm excited to connect.
+          Or a cup of coffee ~ Let's connect!
         </span>
       </template>
       <template #background>
