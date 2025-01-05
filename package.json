@@ -19,7 +19,7 @@
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
-    "*.{css,vue}": "styglelint"
+    "*.{css,vue}": "stylelint"
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.26.0",

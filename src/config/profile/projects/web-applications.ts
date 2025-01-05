@@ -57,8 +57,8 @@ export const webApplications = mapReferencedProjects([
   },
   ((): ReferencedProject => {
     const dockLink = createAccessibleLink(
-      '@yvnbunag/dock',
-      getProjectLink('yvnbunag-dock'),
+      '@ianbunag/dock',
+      getProjectLink('ianbunag-dock'),
     )
 
     return {
@@ -71,7 +71,7 @@ export const webApplications = mapReferencedProjects([
         'CMS',
         'web',
         'application',
-        '@yvnbunag/dock',
+        '@ianbunag/dock',
         'library',
         'system',
         'university',
@@ -96,7 +96,7 @@ export const webApplications = mapReferencedProjects([
         'mysql',
         'nginx',
         'docker',
-        'yvnbunag-dock',
+        'ianbunag-dock',
         'gitlab',
       ],
       secondaryLink: {

@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-[![license](https://img.shields.io/npm/l/@yvnbunag/dock)](https://gitlab.com/ianbunag/dock/-/blob/master/LICENSE)
+[![license](https://img.shields.io/npm/l/@ianbunag/dock)](https://gitlab.com/ianbunag/dock/-/blob/master/LICENSE)
 [![Continuous Delivery](https://img.shields.io/badge/dynamic/json?color=informational&label=%E2%9A%99%20CD&query=%24%5B0%5D.status&url=https%3A%2F%2Fgitlab.com%2Fapi%2Fv4%2Fprojects%2F28935241%2Fpipelines%3Fscope%3Dtags%26per_page%3D1)](https://gitlab.com/ianbunag/ianbunag.gitlab.io/-/pipelines?page=1&scope=tags)
 
 John Ian Buñag's personal portfolio. Made with [Nuxt.js](https://nuxtjs.org/),

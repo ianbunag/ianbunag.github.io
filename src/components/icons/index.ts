@@ -25,7 +25,7 @@ import pm2 from '~/components/icons/pm2.vue'
 import stylelint from '~/components/icons/stylelint.vue'
 import swagger from '~/components/icons/swagger.vue'
 import xampp from '~/components/icons/xampp.vue'
-import yvnbunagDock from '~/components/icons/yvnbunag-dock.vue'
+import ianbunagDock from '~/components/icons/ianbunag-dock.vue'
 import vitest from '~/components/icons/vitest.vue'
 import postgresql from '~/components/icons/postgresql.vue'
 import reactNative from '~/components/icons/react-native.vue'
@@ -59,7 +59,7 @@ export {
   stylelint,
   swagger,
   xampp,
-  yvnbunagDock,
+  ianbunagDock,
   vitest,
   postgresql,
   reactNative,

@@ -1,5 +1,5 @@
 <script lang="ts">
-export default { name: 'IconYvnbunagDock' }
+export default { name: 'IconIanbunagDock' }
 </script>
 
 <template>
@@ -10,7 +10,7 @@ export default { name: 'IconYvnbunagDock' }
     viewBox="0 0 360 360"
     width="360"
     height="360"
-    class="icon-yvnbunag-dock"
+    class="icon-ianbunag-dock"
   >
     <g>
       <path d="M206.05 128.73L219.78 128.73L219.78 141.05L206.05 141.05L206.05 128.73Z" />
@@ -51,7 +51,7 @@ export default { name: 'IconYvnbunagDock' }
 </template>
 
 <style>
-.icon-yvnbunag-dock {
+.icon-ianbunag-dock {
   fill: currentColor;
 }
 </style>

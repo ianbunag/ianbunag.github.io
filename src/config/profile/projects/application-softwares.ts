@@ -4,8 +4,8 @@ import { createPeriod } from '~/lib/config/profile'
 
 export const applicationSoftwares = mapReferencedProjects([
   {
-    name: '@yvnbunag/scaffold',
-    key: 'yvnbunag-scaffold',
+    name: '@ianbunag/scaffold',
+    key: 'ianbunag-scaffold',
     period: createPeriod(2023, 'July'),
     tags: [
       'CLI',
@@ -43,8 +43,8 @@ export const applicationSoftwares = mapReferencedProjects([
     },
   },
   {
-    name: '@yvnbunag/dock',
-    key: 'yvnbunag-dock',
+    name: '@ianbunag/dock',
+    key: 'ianbunag-dock',
     period: createPeriod(2021, 'August'),
     tags: [
       'CLI',

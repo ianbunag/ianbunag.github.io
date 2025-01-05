@@ -115,10 +115,10 @@ export const developmentTools = mapTechnology({
     logoURL: 'logos/stylelint.svg',
     url: 'https://stylelint.io',
   },
-  'yvnbunag-dock': {
-    display: '@yvnbunag/dock',
+  'ianbunag-dock': {
+    display: '@ianbunag/dock',
     description: 'CLI tool for managing containerized development environments.',
-    icon: 'yvnbunagDock',
+    icon: 'ianbunagDock',
     url: process.env.DOCK_NPM_URL,
   },
   swagger: {
