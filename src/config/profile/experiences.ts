@@ -49,8 +49,6 @@ export const experiences = mapReferencedExperiences([
     const [
       react,
       terraform,
-      kubernetes,
-      nextjs,
       transifex,
       heap,
       intercom,
@@ -64,7 +62,10 @@ export const experiences = mapReferencedExperiences([
         association: 'lightspeed',
         intermediary: 'inform-group',
         period: { start: createPeriod(2025, 'January') },
-        description: createUnorderedList([]),
+        description: createUnorderedList([
+          'Engineered a store credit functionality through agentic coding, accelerating time-to-market by 30% while maintaining quality.',
+          'Refactored key database queries on customer and order tables, slashing heavy query run time by 75% and reducing database load, which led to substantial savings in cloud infrastructure costs.',
+        ]),
       },
       {
         role: 'Software Developer II',
@@ -76,9 +77,8 @@ export const experiences = mapReferencedExperiences([
           end: createPeriod(2024, 'December'),
         },
         description: createUnorderedList([
-          `Developed a mobile app for restaurant managers to monitor business performance in real-time, integrating localization through ${transifex}, tracking user interactions with ${heap}, and incorporating customer engagement features via ${intercom}, enhancing usability and boosting user engagement.`,
-          `Architected a hospitality platform migration tool, enabling concurrent development of data processing and UI components, and delivering the first version within 2 months using ${nextjs} and ${kubernetes}.`,
-          'Conducted system analysis, defined requirements, and formulated a strategic implementation plan for the migration software, utilizing research methodologies including document analysis, usability testing, and expert validation.',
+          `Developed a real-time mobile app for restaurant managers, integrating localization through ${transifex}, user tracking with ${heap}, and customer engagement features via ${intercom} to boost usability and user engagement.`,
+          'Architected a hospitality platform migration tool that enabled concurrent team development, resulting in a two-month delivery and an 80% reduction in manual effort for the sales team when migrating customer data.',
         ]),
       },
       {
@@ -91,9 +91,8 @@ export const experiences = mapReferencedExperiences([
           end: createPeriod(2023, 'March'),
         },
         description: createUnorderedList([
-          `Built a restaurant inventory management software with ${react}, ${aws}, and ${terraform}, enhancing stock tracking, simplifying recipe management, and streamlining supply ordering for restaurant businesses.`,
-          'Enhanced end-to-end test suite efficiency with parallelization and flakiness eradication using Cypress, reducing the test run duration from 45 to 15 minutes, with an estimated annual developer cost savings of $10,000.',
-          'Liaised with Quality Assurance to craft maintainable, readable end-to-end testing scripts, using a declarative approach to abstract test steps, reducing script creation and updates from 6 to 3 days.',
+          `Built a restaurant inventory management software with ${react}, ${aws}, and ${terraform}, enhancing stock tracking, simplifying recipe management, and streamlining supply ordering.`,
+          'Enhanced end-to-end test suite efficiency using Cypress, reducing the test run duration from 45 to 15 minutes, with an estimated annual developer cost savings of $10,000.',
         ]),
       },
     ]
@@ -129,8 +128,8 @@ export const experiences = mapReferencedExperiences([
           end: createPeriod(2021, 'July'),
         },
         description: createUnorderedList([
-          `Incorporated ${recurly} into the platform via data migration, API integration, and user account synchronization, streamlining migration from legacy to modern subscription management through testing and phased deployment.`,
-          `Engineered a global trade intelligence software utilizing frameworks and tools such as ${nuxt}, ${express}, and ${elasticsearch}, empowering businesses with comprehensive trade records, insights and analytics capabilities.`,
+          `Incorporated ${recurly} into the platform via data migration, API integration, and user account synchronization, which streamlined the migration to a modern subscription management system.`,
+          `Engineered a global trade intelligence software using ${nuxt}, ${express}, and ${elasticsearch}, providing businesses with comprehensive trade records, insights, and analytics capabilities.`,
         ]),
       },
       {
@@ -142,7 +141,7 @@ export const experiences = mapReferencedExperiences([
           start: createPeriod(2018, 'September'),
           end: createPeriod(2018, 'December'),
         },
-        description: '',
+        description: createUnorderedList([`Engineered a global trade intelligence software using ${nuxt}, ${express}, and ${elasticsearch}, providing businesses with comprehensive trade records, insights, and analytics capabilities.`]),
       },
     ]
   })(),
@@ -150,14 +149,6 @@ export const experiences = mapReferencedExperiences([
     const wordPress = createAccessibleLink(
       'WordPress',
       'https://wordpress.com',
-    )
-    const promotionalBanners = createAccessibleLink(
-      'promotional banners',
-      getProjectLink('keywest-internationale-sales-banners'),
-    )
-    const promotionalStickers = createAccessibleLink(
-      'promotional stickers',
-      getProjectLink('keywest-internationale-van-stickers'),
     )
 
     return {
@@ -168,11 +159,7 @@ export const experiences = mapReferencedExperiences([
         start: createPeriod(2018, 'April'),
         end: createPeriod(2018, 'July'),
       },
-      description: createUnorderedList([
-        `Orchestrated enhancements and maintenance of an e-commerce platform powered by ${wordPress}, refining its performance and user interface.`,
-        `Crafted visually striking ${promotionalBanners} to boost brand awareness and drive traffic to the company's offerings.`,
-        `Designed captivating full-body ${promotionalStickers} for the company's van, effectively enhancing brand visibility on the move and at various locations.`,
-      ]),
+      description: createUnorderedList([`Directed the continuous refinement of a ${wordPress} e-commerce platform, enhancing its performance and user interface to ensure a seamless and modern user experience.`]),
     }
   })(),
   ((): ReferencedExperience => {
@@ -189,7 +176,7 @@ export const experiences = mapReferencedExperiences([
         start: createPeriod(2014, 'July'),
         end: createPeriod(2019, 'March'),
       },
-      description: createUnorderedList([`Led the development of a content management system for the capstone project ${change} for the La Prisma Group, winning Best Thesis, Website, Film, and Trailer.`]),
+      description: createUnorderedList([`Led the development of a content management system (CMS) for the capstone project ${change}. The project won Best Thesis, Website, Film, and Trailer.`]),
     }
   })(),
 ])

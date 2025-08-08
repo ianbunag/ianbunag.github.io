@@ -6,14 +6,14 @@ import moment from 'moment'
  */
 
 const constant =
-  'Experienced Software Developer with hands-on expertise in crafting clean code, optimizing workflows through developer tools, and adopting a behavior and test-driven development approach to consistently deliver high-quality software using TypeScript, React, and Node.js. Proven track record through key contributions including a 2 month delivery of a full platform migration software, and test parallelization saving $10,000+.'
+  'With over 6 years of experience, I build robust and scalable applications by applying advanced methodologies like Agent-Driven Development and TDD. My work has accelerated time-to-market by 30% and reduced manual effort by 80%, showcasing a commitment to delivering high-impact, innovative solutions.'
 
 function dynamic (): string {
   const yearsOfExperience = moment()
     .diff(moment('June 01, 2019'), 'years', false)
     .toFixed(0)
 
-  return `Experienced Software Developer with over ${yearsOfExperience} years of hands-on expertise in crafting clean code, optimizing workflows through developer tools, and adopting a behavior and test-driven development approach to consistently deliver high-quality software using TypeScript, React, and Node.js. Proven track record through key contributions including a 2 month delivery of a full platform migration software, and test parallelization saving $10,000+.`
+  return `With over ${yearsOfExperience} years of experience, I build robust and scalable applications by applying advanced methodologies like Agent-Driven Development and TDD. My work has accelerated time-to-market by 30% and reduced manual effort by 80%, showcasing a commitment to delivering high-impact, innovative solutions.`
 }
 
 export const introduction = {
