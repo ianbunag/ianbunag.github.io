@@ -11,7 +11,7 @@ function defineAssociationMap<Map extends AssociationMap> (
 
 export const associations = defineAssociationMap({
   'feu-tech': {
-    name: 'Far Eastern University Institute of Technology',
+    name: 'FEU Institute of Technology',
     url: process.env.FEU_TECH_LINK,
     logoURL: 'logos/feu-tech.png',
     logoAccent: '#fcbd14',
