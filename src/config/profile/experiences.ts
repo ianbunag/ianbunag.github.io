@@ -40,18 +40,12 @@ export const experiences = mapReferencedExperiences([
     const technologyKeys: Array<keyof typeof technologies> = [
       'react',
       'terraform',
-      'kubernetes',
-      'nextjs',
-      'transifex',
-      'heap',
-      'intercom',
+      'cypress',
     ]
     const [
       react,
       terraform,
-      transifex,
-      heap,
-      intercom,
+      cypress,
     ] = technologyKeys.map(technologyKey => createTechnologyLink(technologyKey))
     const aws = createAccessibleLink('AWS', technologies['amazon-web-services'].url || '')
 
@@ -63,7 +57,7 @@ export const experiences = mapReferencedExperiences([
         intermediary: 'inform-group',
         period: { start: createPeriod(2025, 'January') },
         description: createUnorderedList([
-          'Engineered a store credit functionality through agentic coding, accelerating time-to-market by 30% while maintaining quality.',
+          'Engineered a store credit functionality through collaborative agentic programming, accelerating time-to-market by 30% while maintaining quality.',
           'Refactored key database queries on customer and order tables, slashing heavy query run time by 75% and reducing database load, which led to substantial savings in cloud infrastructure costs.',
         ]),
       },
@@ -77,7 +71,7 @@ export const experiences = mapReferencedExperiences([
           end: createPeriod(2024, 'December'),
         },
         description: createUnorderedList([
-          `Developed a real-time mobile app for restaurant managers, integrating localization through ${transifex}, user tracking with ${heap}, and customer engagement features via ${intercom} to boost usability and user engagement.`,
+          'Developed a mobile app for restaurant managers, integrating localization, usage tracking, and engagement features to provide real-time analysis and boost decision-making.',
           'Architected a hospitality platform migration tool that enabled concurrent team development, resulting in a two-month delivery and an 80% reduction in manual effort for the sales team when migrating customer data.',
         ]),
       },
@@ -92,7 +86,7 @@ export const experiences = mapReferencedExperiences([
         },
         description: createUnorderedList([
           `Built a restaurant inventory management software with ${react}, ${aws}, and ${terraform}, enhancing stock tracking, simplifying recipe management, and streamlining supply ordering.`,
-          'Enhanced end-to-end test suite efficiency using Cypress, reducing the test run duration from 45 to 15 minutes, with an estimated annual developer cost savings of $10,000.',
+          `Enhanced end-to-end test suite efficiency using ${cypress}, reducing the test run duration from 45 to 15 minutes, with an estimated annual developer cost savings of $10,000.`,
         ]),
       },
     ]

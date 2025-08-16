@@ -30,8 +30,8 @@ export const techStacks = mapReferencedTechStacks([
       'typescript',
       'node-js',
       'javascript',
+      'php',
       'go',
-      'java',
       'markdown',
       'html',
       'css',
@@ -52,16 +52,16 @@ export const techStacks = mapReferencedTechStacks([
   {
     category: 'Tooling',
     technologies: [
-      'terraform',
+      'docker',
       'github',
       'circleci',
       'vitest',
       'jest',
       'cypress',
       'eslint',
+      'terraform',
       'swagger',
       'kubernetes',
-      'docker',
     ],
   },
   {
@@ -72,8 +72,8 @@ export const techStacks = mapReferencedTechStacks([
     category: 'Previous Technologies',
     technologies: [
       // Languages
+      'java',
       'python',
-      'php',
       // Cloud Platforms
       'google-cloud',
       // Libraries / Frameworks
