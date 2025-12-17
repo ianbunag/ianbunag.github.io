@@ -83,14 +83,16 @@ export default defineComponent({
                     class="text-subtitle-1 experience-card pf-text-pair"
                   >
                     {{ experience.association.name }}
-                    <span v-if="experience.intermediary">
-                      (under <a
-                        :href="experience.intermediary.url || undefined"
-                        :aria-label="experience.intermediary.name || 'Intermediary'"
-                        class="pf-link-light"
-                      >{{
-                        experience.intermediary.name }}</a>)
-                    </span>
+                    <!-- eslint-disable -->
+<!--                    <span v-if="experience.intermediary">-->
+<!--                      (under <a-->
+<!--                        :href="experience.intermediary.url || undefined"-->
+<!--                        :aria-label="experience.intermediary.name || 'Intermediary'"-->
+<!--                        class="pf-link-light"-->
+<!--                      >{{-->
+<!--                        experience.intermediary.name }}</a>)-->
+<!--                    </span>-->
+                    <!-- eslint-enable -->
                   </heading>
                 </v-card-title>
                 <v-card-subtitle class="pb-0 px-0">
