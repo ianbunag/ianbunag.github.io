@@ -36,6 +36,15 @@ function mapReferencedExperiences (
 }
 
 export const experiences = mapReferencedExperiences([
+  {
+    role: 'Master of Science in Software Engineering',
+    type: ExperienceType.STUDIES,
+    association: 'sjsu',
+    period: {
+      start: createPeriod(2026, 'January'),
+    },
+    description: '',
+  },
   ...((): ReferencedExperiences => {
     const technologyKeys: Array<keyof typeof technologies> = [
       'react',
@@ -55,10 +64,13 @@ export const experiences = mapReferencedExperiences([
         type: ExperienceType.FULL_TIME_JOB,
         association: 'lightspeed',
         intermediary: 'inform-group',
-        period: { start: createPeriod(2025, 'January') },
+        period: {
+          start: createPeriod(2025, 'January'),
+          end: createPeriod(2025, 'December'),
+        },
         description: createUnorderedList([
           'Engineered a store credit functionality through collaborative agentic programming, accelerating time-to-market by 30% while maintaining quality.',
-          'Refactored key database queries on customer and order tables, slashing heavy query run time by 75% and reducing database load, which led to substantial savings in cloud infrastructure costs.',
+          'Modernized the primary product login page, mitigating all identified security risks and cutting the integration time for new authentication features by 30%.',
         ]),
       },
       {

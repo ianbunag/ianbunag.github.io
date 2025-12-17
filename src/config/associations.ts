@@ -10,6 +10,12 @@ function defineAssociationMap<Map extends AssociationMap> (
 }
 
 export const associations = defineAssociationMap({
+  sjsu: {
+    name: 'San José State University',
+    url: process.env.SJSU_LINK,
+    logoURL: 'logos/sjsu.png',
+    logoAccent: '#e6a923',
+  },
   'feu-tech': {
     name: 'FEU Institute of Technology',
     url: process.env.FEU_TECH_LINK,

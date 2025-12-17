@@ -152,7 +152,7 @@ export default defineComponent({
       </template>
       <template #sub-title>
         <span>
-          Or a cup of coffee, I am ecstatic to connect!
+          Or a cup of coffee, I am happy to connect!
         </span>
       </template>
       <template #background>
