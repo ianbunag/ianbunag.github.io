@@ -119,7 +119,6 @@ export const webApplications = mapReferencedProjects([
         'Christian Josef Luntok, Lead Animator, and Character Designer.',
         'Miguel Jehiel Ang, Director, and Assistant 3D Animator.',
         'John Ian Buñag, Web Developer, and Assistant 2D Animator.',
-
       ],
     ])
 

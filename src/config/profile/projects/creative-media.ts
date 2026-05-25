@@ -1,10 +1,39 @@
-import { createAccessibleLink, requireProgressiveImage } from '~/lib/config'
+import { createAccessibleLink, createUnorderedList, requireProgressiveImage } from '~/lib/config'
 import { LinkName, mapReferencedProjects } from '~/lib/config/profile/projects'
 import { createPeriod } from '~/lib/config/profile'
 
 import type { ReferencedProject } from '~/lib/config/profile/projects'
 
 export const creativeMedia = mapReferencedProjects([
+  {
+    name: 'Are We Living in a Simulation I am Not Sure Anymore',
+    key: 'are-we-living-in-a-simulation',
+    period: createPeriod(2026, 'April'),
+    tags: [
+      'creative',
+      'media',
+      'video',
+      'production',
+      'content',
+      'creation',
+    ],
+    description: createUnorderedList([
+      'This laboratory activity demonstrates a hybrid workflow combining AI text generation with human technical production. The project uses an AI generated script to explore computational power and the simulation argument. The execution focuses on directing the visual flow and managing the full video production pipeline. This approach showcases how to effectively leverage automation tools while retaining total creative control over the final multimedia asset.',
+      'Presented by:',
+      [
+        'Brandon Rivera',
+        'Mulugeta Girmay',
+        'John Ian Buñag',
+      ],
+    ]),
+    images: [requireProgressiveImage('./assets/images/projects/are-we-living-in-a-simulation/thumbnail.jpg')],
+    technologies: [],
+    primaryLink: {
+      text: LinkName.WATCH_ME,
+      link: process.env.ARE_WE_LIVING_IN_A_SIMULATION_YT_LINK,
+      linkIcon: 'mdiYoutube',
+    },
+  },
   ((): ReferencedProject => {
     const keywestInternationaleSales = createAccessibleLink(
       'Keywest Internationale Sales Corp',

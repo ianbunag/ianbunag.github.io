@@ -53,5 +53,6 @@ export const env = {
     'IMPORTGENIUS_LINK',
     'LIGHTSPEED_LINK',
     'INFORM_GROUP_LINK',
+    'ARE_WE_LIVING_IN_A_SIMULATION_YT_LINK',
   ]),
 }

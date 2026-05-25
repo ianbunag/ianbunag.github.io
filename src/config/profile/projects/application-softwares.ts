@@ -30,7 +30,6 @@ export const applicationSoftwares = mapReferencedProjects([
       './assets/images/projects/scaffold/production.png',
     ].map(requireProgressiveImage),
     technologies: ['node-js', 'npm', 'gitlab'],
-    featured: true,
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
       link: process.env.SCAFFOLD_REPOSITORY,
@@ -81,7 +80,6 @@ export const applicationSoftwares = mapReferencedProjects([
       'npm',
       'gitlab',
     ],
-    featured: true,
     secondaryLink: {
       text: LinkName.VIEW_SOURCE,
       link: process.env.DOCK_REPOSITORY,
