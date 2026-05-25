@@ -1,3 +1,13 @@
+import anaconda from '~/components/icons/anaconda.vue'
+import claude from '~/components/icons/claude.vue'
+import davinciResolve from '~/components/icons/davinci-resolve.vue'
+import gemini from '~/components/icons/gemini.vue'
+import githubCopilot from '~/components/icons/github-copilot.vue'
+import junie from '~/components/icons/junie.vue'
+import notebooklm from '~/components/icons/notebooklm.vue'
+import windsurf from '~/components/icons/windsurf.vue'
+import ns3 from '~/components/icons/ns-3.vue'
+import wireshark from '~/components/icons/wireshark.vue'
 import adobeAfterEffects from '~/components/icons/adobe-after-effects.vue'
 import adobeAudition from '~/components/icons/adobe-audition.vue'
 import adobeIllustrator from '~/components/icons/adobe-illustrator.vue'
@@ -32,6 +42,16 @@ import reactNative from '~/components/icons/react-native.vue'
 import bluesky from '~/components/icons/bluesky.vue'
 
 export {
+  anaconda,
+  claude,
+  davinciResolve,
+  gemini,
+  githubCopilot,
+  junie,
+  notebooklm,
+  windsurf,
+  ns3,
+  wireshark,
   adobeAfterEffects,
   adobeAudition,
   adobeIllustrator,

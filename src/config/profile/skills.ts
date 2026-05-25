@@ -32,6 +32,7 @@ export const skills = mapReferencedSkills([
     description: 'I convert design prototypes into responsive, scalable, and high-performance web applications. I use frontend frameworks, design systems, and testing tools to deliver ahead of schedule.',
     icon: 'frontEnd',
     technologies: [
+      'github-copilot',
       'react',
       'typescript',
       'javascript',
@@ -43,6 +44,7 @@ export const skills = mapReferencedSkills([
     description: 'I engineer products with modular, robust, and dependable services. I work across various languages in managed and serverless environments, backed by comprehensive unit and integration tests.',
     icon: 'backEnd',
     technologies: [
+      'github-copilot',
       'typescript',
       'javascript',
       'php',
@@ -57,8 +59,10 @@ export const skills = mapReferencedSkills([
     description: 'I maintain a rapid, steady, and organized development cycle with a blend of operational knowledge. I leverage Docker for development, ensure continuous integration and delivery via CircleCI, and orchestrate infrastructure using Terraform.',
     icon: 'devOps',
     technologies: [
+      'github-copilot',
       'docker',
       'circleci',
+      'google-cloud',
       'amazon-web-services',
       'terraform',
       'kubernetes',

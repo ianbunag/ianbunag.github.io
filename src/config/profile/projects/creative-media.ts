@@ -27,7 +27,10 @@ export const creativeMedia = mapReferencedProjects([
       ],
     ]),
     images: [requireProgressiveImage('./assets/images/projects/are-we-living-in-a-simulation/thumbnail.jpg')],
-    technologies: [],
+    technologies: [
+      'davinci-resolve',
+      'photopea',
+    ],
     primaryLink: {
       text: LinkName.WATCH_ME,
       link: process.env.ARE_WE_LIVING_IN_A_SIMULATION_YT_LINK,

@@ -286,6 +286,51 @@ export const serverManagement = mapTechnology({
   },
 })
 
+export const aiTools = mapTechnology({
+  claude: {
+    display: 'Claude',
+    description: 'AI assistant by Anthropic.',
+    icon: 'claude',
+    logoURL: 'logos/claude.svg',
+    url: 'https://claude.ai',
+  },
+  gemini: {
+    display: 'Gemini',
+    description: 'AI assistant by Google.',
+    icon: 'gemini',
+    logoURL: 'logos/gemini.svg',
+    url: 'https://gemini.google.com',
+  },
+  'github-copilot': {
+    display: 'GitHub Copilot',
+    description: 'AI coding assistant by GitHub.',
+    icon: 'githubCopilot',
+    logoURL: 'logos/github-copilot.svg',
+    url: 'https://github.com/features/copilot',
+  },
+  junie: {
+    display: 'Junie',
+    description: 'AI coding agent by JetBrains.',
+    icon: 'junie',
+    logoURL: 'logos/junie.svg',
+    url: 'https://www.jetbrains.com/junie',
+  },
+  notebooklm: {
+    display: 'NotebookLM',
+    description: 'AI research and note-taking tool by Google.',
+    icon: 'notebooklm',
+    logoURL: 'logos/notebooklm.svg',
+    url: 'https://notebooklm.google',
+  },
+  windsurf: {
+    display: 'Windsurf',
+    description: 'AI code editor by Codeium.',
+    icon: 'windsurf',
+    logoURL: 'logos/windsurf.svg',
+    url: 'https://windsurf.com',
+  },
+})
+
 export const applications = mapTechnology({
   'vs-code': {
     display: 'Visual Studio Code',
@@ -349,6 +394,30 @@ export const applications = mapTechnology({
     description: 'Audio editing software.',
     icon: 'adobeAudition',
     url: 'https://www.adobe.com/products/audition.html',
+  },
+  anaconda: {
+    display: 'Anaconda',
+    description: 'Python distribution for data science.',
+    icon: 'anaconda',
+    url: 'https://www.anaconda.com',
+  },
+  'davinci-resolve': {
+    display: 'DaVinci Resolve',
+    description: 'Video editing and color grading software.',
+    icon: 'davinciResolve',
+    url: 'https://www.blackmagicdesign.com/products/davinciresolve',
+  },
+  'ns-3': {
+    display: 'ns-3',
+    description: 'Discrete-event network simulator.',
+    icon: 'ns3',
+    url: 'https://www.nsnam.org',
+  },
+  wireshark: {
+    display: 'Wireshark',
+    description: 'Network protocol analyzer.',
+    icon: 'wireshark',
+    url: 'https://www.wireshark.org',
   },
 })
 
@@ -445,6 +514,7 @@ export const technologies = {
   ...testFrameworks,
   ...databases,
   ...serverManagement,
+  ...aiTools,
   ...applications,
   ...providers,
   ...kataProviders,

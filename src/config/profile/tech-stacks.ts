@@ -25,6 +25,17 @@ function mapReferencedTechStacks (
 
 export const techStacks = mapReferencedTechStacks([
   {
+    category: 'AI Tools',
+    technologies: [
+      'gemini',
+      'notebooklm',
+      'github-copilot',
+      'claude',
+      'junie',
+      'windsurf',
+    ],
+  },
+  {
     category: 'Languages',
     technologies: [
       'typescript',
@@ -39,7 +50,10 @@ export const techStacks = mapReferencedTechStacks([
   },
   {
     category: 'Cloud Platforms',
-    technologies: ['amazon-web-services'],
+    technologies: [
+      'google-cloud',
+      'amazon-web-services',
+    ],
   },
   {
     category: 'Libraries / Frameworks',
@@ -74,8 +88,6 @@ export const techStacks = mapReferencedTechStacks([
       // Languages
       'java',
       'python',
-      // Cloud Platforms
-      'google-cloud',
       // Libraries / Frameworks
       'vue',
       'nuxt',
