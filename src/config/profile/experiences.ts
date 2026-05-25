@@ -37,13 +37,25 @@ function mapReferencedExperiences (
 
 export const experiences = mapReferencedExperiences([
   {
-    role: 'Master of Science in Software Engineering',
+    role: 'Community Desk Assistant',
+    type: ExperienceType.INTERNSHIP,
+    association: 'sjsu',
+    period: {
+      start: createPeriod(2026, 'August'),
+    },
+    description: '',
+  },
+  {
+    role: 'M.S. in Software Engineering, Cybersecurity Specialization | GPA: 3.8 / 4.0',
     type: ExperienceType.STUDIES,
     association: 'sjsu',
     period: {
       start: createPeriod(2026, 'January'),
     },
-    description: '',
+    description: createUnorderedList([
+      'Spearheaded multidisciplinary teams through complex engineering challenges, utilizing collaborative styles to delegate tasks effectively and deliver high-quality presentations.',
+      'Completed the Leadership and Career Certificate Program to master competencies in inclusive leadership, active listening, and strategic professional networking.',
+    ]),
   },
   ...((): ReferencedExperiences => {
     const technologyKeys: Array<keyof typeof technologies> = [
