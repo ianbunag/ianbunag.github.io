@@ -41,16 +41,10 @@ export const filters: Array<Filter> = [
     tags: ['kata'],
   },
   {
-    name: 'GRAPHIC DESIGN',
-    key: 'graphic-design',
+    name: 'CREATIVE MEDIA',
+    key: 'creative-media',
     icon: icons.mdiPencilRuler,
-    tags: ['graphic', 'design'],
-  },
-  {
-    name: '3D DESIGN',
-    key: '3D-design',
-    icon: icons.mdiCube,
-    tags: ['3D', 'design'],
+    tags: ['creative', 'media'],
   },
 ]
 
