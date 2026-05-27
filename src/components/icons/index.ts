@@ -1,5 +1,6 @@
 import anaconda from '~/components/icons/anaconda.vue'
 import claude from '~/components/icons/claude.vue'
+import cpp from '~/components/icons/cpp.vue'
 import davinciResolve from '~/components/icons/davinci-resolve.vue'
 import gemini from '~/components/icons/gemini.vue'
 import githubCopilot from '~/components/icons/github-copilot.vue'
@@ -44,6 +45,7 @@ import bluesky from '~/components/icons/bluesky.vue'
 export {
   anaconda,
   claude,
+  cpp,
   davinciResolve,
   gemini,
   githubCopilot,

@@ -74,6 +74,12 @@ export const languages = mapTechnology({
     logoURL: 'logos/java.svg',
     url: 'https://www.java.com',
   },
+  'c++': {
+    display: 'C++',
+    description: 'General-purpose object-oriented programming language.',
+    icon: 'cpp',
+    url: 'https://isocpp.org',
+  },
   html: {
     display: 'HTML',
     description: 'Standard markup language of the web.',

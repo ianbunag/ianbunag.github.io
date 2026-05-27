@@ -21,6 +21,7 @@ export enum LinkName {
   VIEW_SOURCE= 'View source',
   TRY_ME = 'Try me!',
   WATCH_ME = 'Watch me!',
+  READ_PAPER = 'Read paper',
 }
 
 function mapReferencedProjectLink (

@@ -51,6 +51,7 @@ import {
   mdiTerraform,
   mdiKubernetes,
   mdiWebPlus,
+  mdiFilePdfBox,
 } from '@mdi/js'
 
 import { pluggedIcons } from '~/plugins/vuetify'
@@ -126,6 +127,7 @@ export const mdi = defineIconMap({
   mdiTerraform,
   mdiKubernetes,
   mdiWebPlus,
+  mdiFilePdfBox,
 })
 
 export const custom: CustomIcons = (() => {
