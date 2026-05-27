@@ -55,6 +55,51 @@ export const coursework = mapReferencedProjects([
     },
   },
   {
+    name: 'Data Mining - Air Quality Analysis for Health and Environmental Protection',
+    key: 'cmpe-255-air-quality-analysis',
+    period: createPeriod(2026, 'May'),
+    tags: [
+      'sjsu',
+      'data-mining',
+      'machine-learning',
+      'python',
+      'classification',
+      'data-science',
+      'jupyter',
+      'health',
+    ],
+    description: createUnorderedList([
+      'A graduate research project for the CMPE-255 data mining course investigating whether air quality indicators (nitrogen dioxide, carbon monoxide, UV index, ozone) can predict RSV (respiratory syncytial virus) positivity levels using CDC epidemiological data. The team performed exploratory data analysis, data cleaning and transformation, hypothesis testing for seasonality, and trained Random Forest and Logistic Regression classifiers - achieving ~65% accuracy on the multi-class classification task.',
+      'Built by:',
+      [
+        'Hung Pham',
+        'Bhimsen Thapa Chhetri',
+        'John Ian Buñag',
+      ],
+    ]),
+    images: [
+      './assets/images/projects/cmpe-255-air-quality-analysis/paper.png',
+      './assets/images/projects/cmpe-255-air-quality-analysis/distribution.png',
+      './assets/images/projects/cmpe-255-air-quality-analysis/correlation.png',
+      './assets/images/projects/cmpe-255-air-quality-analysis/confusion-matrix.png',
+    ].map(requireProgressiveImage),
+    technologies: [
+      'python',
+      'jupyter',
+      'anaconda',
+    ],
+    primaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      link: process.env.CMPE_255_AIR_QUALITY_ANALYSIS_REPO_LINK,
+      linkIcon: 'mdiGithub',
+    },
+    secondaryLink: {
+      text: LinkName.READ_PAPER,
+      link: process.env.CMPE_255_AIR_QUALITY_ANALYSIS_PAPER_LINK,
+      linkIcon: 'mdiFilePdfBox',
+    },
+  },
+  {
     name: 'Computer Network Design - TCP vs UDP Performance Comparison',
     key: 'cmpe-206-tcp-vs-udp-comparison',
     period: createPeriod(2026, 'May'),

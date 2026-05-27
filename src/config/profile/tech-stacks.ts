@@ -43,6 +43,7 @@ export const techStacks = mapReferencedTechStacks([
       'javascript',
       'php',
       'go',
+      'java',
       'markdown',
       'html',
       'css',

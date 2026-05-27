@@ -5,6 +5,7 @@ import davinciResolve from '~/components/icons/davinci-resolve.vue'
 import gemini from '~/components/icons/gemini.vue'
 import githubCopilot from '~/components/icons/github-copilot.vue'
 import junie from '~/components/icons/junie.vue'
+import jupyter from '~/components/icons/jupyter.vue'
 import notebooklm from '~/components/icons/notebooklm.vue'
 import windsurf from '~/components/icons/windsurf.vue'
 import ns3 from '~/components/icons/ns-3.vue'
@@ -50,6 +51,7 @@ export {
   gemini,
   githubCopilot,
   junie,
+  jupyter,
   notebooklm,
   windsurf,
   ns3,

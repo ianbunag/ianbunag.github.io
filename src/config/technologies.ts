@@ -134,6 +134,12 @@ export const developmentTools = mapTechnology({
     logoURL: 'logos/swagger.svg',
     url: 'https://swagger.io',
   },
+  jupyter: {
+    display: 'Jupyter',
+    description: 'Interactive computing notebook environment.',
+    icon: 'jupyter',
+    url: 'https://jupyter.org',
+  },
 })
 
 export const UIlibraries = mapTechnology({
