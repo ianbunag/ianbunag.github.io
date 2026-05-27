@@ -23,6 +23,12 @@ export const filters: Array<Filter> = [
     tags: [],
   },
   {
+    name: 'COURSEWORK',
+    key: 'sjsu',
+    icon: icons.mdiSchool,
+    tags: ['sjsu'],
+  },
+  {
     name: 'WEB APPLICATION',
     key: 'web-application',
     icon: icons.mdiWeb,

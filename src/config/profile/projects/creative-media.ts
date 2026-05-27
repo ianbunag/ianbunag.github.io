@@ -10,6 +10,7 @@ export const creativeMedia = mapReferencedProjects([
     key: 'are-we-living-in-a-simulation',
     period: createPeriod(2026, 'April'),
     tags: [
+      'sjsu',
       'creative',
       'media',
       'video',
