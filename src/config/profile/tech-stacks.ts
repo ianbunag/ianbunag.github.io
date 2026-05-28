@@ -87,7 +87,6 @@ export const techStacks = mapReferencedTechStacks([
     category: 'Previous Technologies',
     technologies: [
       // Languages
-      'java',
       'python',
       // Libraries / Frameworks
       'vue',

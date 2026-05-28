@@ -49,6 +49,7 @@ export const skills = mapReferencedSkills([
       'javascript',
       'php',
       'go',
+      'java',
       'mysql',
       'postgresql',
     ],
