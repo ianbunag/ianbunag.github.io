@@ -187,7 +187,7 @@ export const experiences = mapReferencedExperiences([
     )
 
     return {
-      role: 'Bachelor of Science in Information Technology',
+      role: 'B.S. in Information Technology, Digital Arts Major | GPA: 2.65 / 4.0',
       type: ExperienceType.STUDIES,
       association: 'feu-tech',
       period: {
