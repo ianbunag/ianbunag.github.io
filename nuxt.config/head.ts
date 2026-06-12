@@ -29,10 +29,6 @@ export const head = {
     { name: 'theme-color', content: theme['background-darker'] },
     { name: 'format-detection', content: 'telephone=no' },
     { name: 'robots', content: 'index, follow' },
-    {
-      name: 'google-site-verification',
-      content: process.env.GOOGLE_SITE_VERIFICATION,
-    },
     { property: 'og:type', content: 'profile' },
     { property: 'og:image', content: '/og-image.png' },
   ],

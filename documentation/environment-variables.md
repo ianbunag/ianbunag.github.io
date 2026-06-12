@@ -30,9 +30,3 @@ Listed are the important build variables.
 - Used when serving the app under a different context root
   - e.g. a non root project in GitLab pages with format
     `https://namespace.gitlab.io/project-name`
-
-## GOOGLE_SITE_VERIFICATION
-- Used to verify domain ownership in
-  [Google Search Console](https://search.google.com/search-console/)
-- Injects `google-site-verification` metadata header with provided value
-- **Optional**, leave blank if not needed
