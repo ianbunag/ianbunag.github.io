@@ -1,13 +1,10 @@
 # Personal Portfolio
 
-[![license](https://img.shields.io/npm/l/@ianbunag/dock)](https://gitlab.com/ianbunag/dock/-/blob/master/LICENSE)
-[![Continuous Delivery](https://img.shields.io/badge/dynamic/json?color=informational&label=%E2%9A%99%20CD&query=%24%5B0%5D.status&url=https%3A%2F%2Fgitlab.com%2Fapi%2Fv4%2Fprojects%2F28935241%2Fpipelines%3Fscope%3Dtags%26per_page%3D1)](https://gitlab.com/ianbunag/ianbunag.gitlab.io/-/pipelines?page=1&scope=tags)
-
 John Ian Buñag's personal portfolio. Made with [Nuxt.js](https://nuxtjs.org/),
 [Vuetify](https://vuetifyjs.com/en/) and
 [TypeScript](https://www.typescriptlang.org/).
 
-[See it live!](https://ianbunag.gitlab.io/)
+[See it live!](https://ianbunag.github.io/)
 
 <br/>
 
@@ -21,7 +18,7 @@ John Ian Buñag's personal portfolio. Made with [Nuxt.js](https://nuxtjs.org/),
   - [Profile](#profile)
   - [Colors](#colors)
   - [Environment Variables](#environment-variables)
-  - [GitLab CI/CD Variables](#gitlab-cicd-variables)
+  - [GitHub Actions Variables](#github-actions-variables)
 - [Special Thanks](#special-thanks)
   - [For the layout and design inspiration](#for-the-layout-and-design-inspiration)
   - [For the free software](#for-the-free-software)
@@ -132,9 +129,9 @@ See [Environment Variables Reference](documentation/environment-variables.md)
 
 <br/>
 
-### GitLab CI/CD Variables
+### GitHub Actions Variables
 
-See [GitLab CI/CD Variables Reference](documentation/gitlab-ci-cd-variables.md)
+See [GitHub Actions Variables Reference](documentation/github-actions-variables.md)
 
 <br/>
 
