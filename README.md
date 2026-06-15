@@ -49,7 +49,7 @@ cp .env.dist .env
 
 ## Development
 
-1. Start the containers (builds the app container and runs an Nginx reverse proxy):
+1. Start the container:
 ```sh
 docker compose up -d
 ```

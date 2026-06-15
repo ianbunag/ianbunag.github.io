@@ -10,7 +10,6 @@ Listed are the important build variables.
 - `localhost` value gets automatically mapped to `http://127.0.0.1`
 - `0.0.0.0` value gets automatically mapped to `http://0.0.0.0`
 - If serving on a specific port, it should be defined in `PORT` variable
-- **Docker note**: For containerized development, keep `HOST=localhost`. An Nginx reverse proxy runs alongside the app in a shared network namespace to route port-forwarded traffic from the host machine to the container's loopback interface.
 
 ## EXTRA_HOSTS
 - Used for generating sitemaps for additional subdomains, e.g.
