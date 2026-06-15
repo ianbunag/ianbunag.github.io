@@ -515,6 +515,12 @@ export const kataProviders = mapTechnology({
     icon: 'codewars',
     url: 'https://www.codewars.com/',
   },
+  tryhackme: {
+    display: 'TryHackMe',
+    description: 'Hands-on cyber security training platform.',
+    icon: 'tryhackme',
+    url: 'https://tryhackme.com/',
+  },
 })
 
 export const technologies = {
