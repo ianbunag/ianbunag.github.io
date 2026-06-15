@@ -25,9 +25,9 @@ export const kata = mapReferencedProjects([
       PARAGRAPH_SPACER,
       createHeader(2, 'Find me in LeetCode'),
       createImage(
-        `https://leetcode-stats-six.vercel.app/?username=${LEETCODE_USERNAME}`,
+        `https://img.shields.io/badge/dynamic/json?style=for-the-badge&labelColor=black&color=%23ffa116&label=Solved&query=solved&url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2F${LEETCODE_USERNAME}&logo=leetcode&logoColor=yellow`,
         `Find ${LEETCODE_USERNAME} in LeetCode`,
-        { link: `https://leetcode.com/${LEETCODE_USERNAME}`, height: 125 },
+        { link: `https://leetcode.com/${LEETCODE_USERNAME}`, height: 20 },
       ),
       createHeader(2, 'Find me in Codewars'),
       createImage(
@@ -76,9 +76,9 @@ export const kata = mapReferencedProjects([
       PARAGRAPH_SPACER,
       createHeader(2, 'Find me in LeetCode'),
       createImage(
-        `https://leetcode-stats-six.vercel.app/?username=${LEETCODE_USERNAME}`,
+        `https://img.shields.io/badge/dynamic/json?style=for-the-badge&labelColor=black&color=%23ffa116&label=Solved&query=solved&url=https%3A%2F%2Fleetcode-badge.vercel.app%2Fapi%2Fusers%2F${LEETCODE_USERNAME}&logo=leetcode&logoColor=yellow`,
         `Find ${LEETCODE_USERNAME} in LeetCode`,
-        { link: `https://leetcode.com/${LEETCODE_USERNAME}`, height: 125 },
+        { link: `https://leetcode.com/${LEETCODE_USERNAME}`, height: 20 },
       ),
       createHeader(2, 'Find me in Codewars'),
       createImage(
