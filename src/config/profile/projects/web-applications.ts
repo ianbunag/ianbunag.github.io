@@ -226,11 +226,6 @@ export const webApplications = mapReferencedProjects([
       link: process.env.CPU_SCHEDULING_SIMULATOR_REPOSITORY,
       linkIcon: 'mdiGitlab',
     },
-    primaryLink: {
-      text: LinkName.TRY_ME,
-      link: process.env.CPU_SCHEDULING_SIMULATOR_URL,
-      linkIcon: 'mdiWeb',
-    },
   },
   ((): ReferencedProject => {
     const casaBurgos = createAccessibleLink(
