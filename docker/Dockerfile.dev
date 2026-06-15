@@ -1,8 +1,8 @@
 FROM node:16-alpine
 
-RUN apk add --no-cache libc6-compat python3 make g++ git
-
 WORKDIR /app
+
+RUN apk add --no-cache libc6-compat python3 make g++ git
 
 EXPOSE 3000
 

@@ -73,6 +73,8 @@ yarn dev
 
 ## Build
 
+### Manual Static Build (Within dev shell)
+
 To generate the production-ready static site, run these commands inside the application container shell:
 
 1. Generate static build:
@@ -84,6 +86,27 @@ yarn generate
 ```sh
 yarn start
 ```
+
+### Production Docker Container (Local)
+
+To build and run the production-ready application inside a local Nginx container (simulating the production container registry environment):
+
+1. **Build the production Docker image:**
+   Ensure your `.env` file is prepared in the root directory (so it is copied into the build context to populate environment variables during generation):
+   ```sh
+   docker build -t portfolio-prod -f docker/Dockerfile.prod .
+   ```
+
+2. **Run the production container:**
+   ```sh
+   docker run -d \
+     --name portfolio-prod \
+     -p 3000:80 \
+     portfolio-prod
+   ```
+
+3. **Verify:**
+   Open [http://localhost:3000](http://localhost:3000) in your host browser.
 
 <br/>
 
