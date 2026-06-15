@@ -42,6 +42,7 @@ import vitest from '~/components/icons/vitest.vue'
 import postgresql from '~/components/icons/postgresql.vue'
 import reactNative from '~/components/icons/react-native.vue'
 import bluesky from '~/components/icons/bluesky.vue'
+import tryhackme from '~/components/icons/tryhackme.vue'
 
 export {
   anaconda,
@@ -88,4 +89,5 @@ export {
   postgresql,
   reactNative,
   bluesky,
+  tryhackme,
 }

@@ -87,7 +87,35 @@ yarn generate
 yarn start
 ```
 
-### Production Docker Container (Local)
+### Production Docker Container
+
+#### GitHub Registry
+
+To pull and run the production-ready application from the GitHub Container Registry:
+
+1. **Pull the production image:**
+   ```sh
+   docker pull ghcr.io/ianbunag/ianbunag.github.io:latest
+   ```
+
+2. **Run the production container:**
+   ```sh
+    docker run -d \
+      --name portfolio-prod \
+      -p 3000:80 \
+      ghcr.io/ianbunag/ianbunag.github.io:latest
+    ```
+
+3. **Verify:**
+   Open [http://localhost:3000](http://localhost:3000) in your host browser.
+
+4. **Stop and remove the container:**
+   ```sh
+   docker stop portfolio-prod
+   docker rm portfolio-prod
+   ```
+
+#### Local Build
 
 To build and run the production-ready application inside a local Nginx container (simulating the production container registry environment):
 
@@ -107,6 +135,12 @@ To build and run the production-ready application inside a local Nginx container
 
 3. **Verify:**
    Open [http://localhost:3000](http://localhost:3000) in your host browser.
+
+4. **Stop and remove the container:**
+   ```sh
+   docker stop portfolio-prod
+   docker rm portfolio-prod
+   ```
 
 <br/>
 
