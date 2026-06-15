@@ -3,6 +3,8 @@ export function normalizeHost (host: string): string {
 
   if (trimmedHost === 'localhost') { return 'http://127.0.0.1' }
 
+  if (!trimmedHost.startsWith('http')) { return `http://${trimmedHost}` }
+
   return trimmedHost
 }
 

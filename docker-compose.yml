@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dev
+    container_name: portfolio-dev
+    volumes:
+      - .:/app
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
