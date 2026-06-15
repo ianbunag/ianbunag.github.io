@@ -4,10 +4,11 @@ Listed are the important build variables.
 
 ## HOST
 - Host where the app will be served
-- **Required**, set to localhost for local package generation
+- **Required**, set to localhost for local/Docker development
 - Used for generating root sitemap (`sitemap.xml`) in build package root
 - Protocol must be prefixed (`http://` or `https://`)
 - `localhost` value gets automatically mapped to `http://127.0.0.1`
+- `0.0.0.0` value gets automatically mapped to `http://0.0.0.0`
 - If serving on a specific port, it should be defined in `PORT` variable
 
 ## EXTRA_HOSTS

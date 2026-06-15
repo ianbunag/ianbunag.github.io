@@ -30,7 +30,7 @@ John Ian Buñag's personal portfolio. Made with [Nuxt.js](https://nuxtjs.org/),
 
 ## Requirements
 
-1. [Node](https://nodejs.org/en/) version 16.5.0 or higher
+* [Docker](https://www.docker.com/) and Docker Compose.
 
 <br/>
 
@@ -38,13 +38,7 @@ John Ian Buñag's personal portfolio. Made with [Nuxt.js](https://nuxtjs.org/),
 
 ## Preparation
 
-1. Install dependencies
-```sh
-nvm use
-yarn install
-```
-
-2. Copy `.env.dist` to `.env` and populate missing values
+1. Copy `.env.dist` to `.env` and populate missing values:
 ```sh
 cp .env.dist .env
 ```
@@ -55,10 +49,23 @@ cp .env.dist .env
 
 ## Development
 
-1. Start the development server
+1. Start the container:
 ```sh
+docker compose up -d
+```
+
+2. Shell into the application container:
+```sh
+docker compose exec app sh
+```
+
+3. Inside the container shell, install dependencies and start the dev server:
+```sh
+yarn install
 yarn dev
 ```
+
+4. Open [http://localhost:3000](http://localhost:3000) (or the port defined by `PORT` in your `.env`) in your host browser.
 
 <br/>
 
@@ -66,15 +73,40 @@ yarn dev
 
 ## Build
 
-1. Generate static build
+### Manual Static Build (Within dev shell)
+
+To generate the production-ready static site, run these commands inside the application container shell:
+
+1. Generate static build:
 ```sh
 yarn generate
 ```
 
-2. Start static server
+2. Start the static preview server:
 ```sh
 yarn start
 ```
+
+### Production Docker Container (Local)
+
+To build and run the production-ready application inside a local Nginx container (simulating the production container registry environment):
+
+1. **Build the production Docker image:**
+   Ensure your `.env` file is prepared in the root directory (so it is copied into the build context to populate environment variables during generation):
+   ```sh
+   docker build -t portfolio-prod -f docker/Dockerfile.prod .
+   ```
+
+2. **Run the production container:**
+   ```sh
+   docker run -d \
+     --name portfolio-prod \
+     -p 3000:80 \
+     portfolio-prod
+   ```
+
+3. **Verify:**
+   Open [http://localhost:3000](http://localhost:3000) in your host browser.
 
 <br/>
 
