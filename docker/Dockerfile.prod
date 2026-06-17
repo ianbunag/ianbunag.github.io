@@ -1,8 +1,11 @@
-FROM node:16-alpine AS builder
+FROM alpine:3.24.1 AS builder
 
 WORKDIR /app
 
-RUN apk add --no-cache libc6-compat python3 make g++
+RUN apk add --no-cache libc6-compat python3 make g++ git
+RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/v3.16/main/ \
+  nodejs=16.20.2-r0 npm
+RUN npm install -g yarn
 
 COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
@@ -10,7 +13,7 @@ RUN yarn install --frozen-lockfile
 COPY . .
 RUN yarn generate
 
-FROM nginx:stable-alpine
+FROM nginx:stable-alpine3.23
 
 COPY --from=builder /app/public /usr/share/nginx/html
 
