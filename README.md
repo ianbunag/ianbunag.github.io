@@ -89,6 +89,10 @@ yarn start
 
 ### Production Docker Container
 
+This is never deployed, and is only used to test docker container scanning functionality of [Aikido Security](https://www.aikido.dev).
+
+The static build is deployed to GitHub Pages, and the production-ready container image is pushed to the GitHub Container Registry.
+
 #### GitHub Registry
 
 To pull and run the production-ready application from the GitHub Container Registry:
