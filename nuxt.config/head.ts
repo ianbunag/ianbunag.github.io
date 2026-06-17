@@ -31,6 +31,15 @@ export const head = {
     { name: 'robots', content: 'index, follow' },
     { property: 'og:type', content: 'profile' },
     { property: 'og:image', content: '/og-image.png' },
+    {
+      'http-equiv': 'Content-Security-Policy',
+      content: [
+        'default-src \'self\';',
+        'script-src \'self\' \'unsafe-inline\' \'unsafe-eval\';',
+        'style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com;',
+        'font-src \'self\' https://fonts.gstatic.com;',
+      ].join(' '),
+    },
   ],
   link: [
     { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
