@@ -6,5 +6,8 @@ services:
     container_name: portfolio-dev
     volumes:
       - .:/app
+      - /app/node_modules
+      - /app/public
+      - /app/.nuxt
     ports:
       - "${PORT:-3000}:${PORT:-3000}"
