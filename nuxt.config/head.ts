@@ -39,6 +39,7 @@ export const head = {
         'style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com;',
         'font-src \'self\' https://fonts.gstatic.com;',
         'img-src \'self\' data:;',
+        'form-action \'self\'',
       ].join(' '),
     },
   ],
