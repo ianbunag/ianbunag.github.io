@@ -4,10 +4,35 @@ services:
       context: .
       dockerfile: docker/Dockerfile.dev
     container_name: portfolio-dev
-    volumes:
-      - .:/app
-      - /app/node_modules
-      - /app/public
-      - /app/.nuxt
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1gb
+    volumes: # Sync with .dockerignore
+      - ./.husky:/app/.husky
+      - ./docker/nginx.conf:/app/docker/nginx.conf
+      - ./nuxt.config:/app/nuxt.config
+      - ./src:/app/src
+      - ./types:/app/types
+      - ./.env:/app/.env
+      - ./.eslintrc.json:/app/.eslintrc.json
+      - ./.stylelintrc.json:/app/.stylelintrc.json
+      - ./package.json:/app/package.json
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./yarn.lock:/app/yarn.lock
+      # Runtime volumes, do not include in .dockerignore
+      - runtime.node_modules:/app/node_modules
+      - runtime.public:/app/public
+      - runtime..nuxt:/app/.nuxt
     ports:
       - "${PORT:-3000}:${PORT:-3000}"
+
+volumes:
+  runtime.node_modules:
+  runtime.public:
+  runtime..nuxt:

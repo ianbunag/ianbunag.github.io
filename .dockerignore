@@ -1,0 +1,13 @@
+# Sync with docker-compose.yml.
+**
+!.husky
+!docker/nginx.conf
+!nuxt.config
+!src
+!types
+!.env
+!.eslintrc.json
+!.stylelintrc.json
+!package.json
+!tsconfig.json
+!yarn.lock
