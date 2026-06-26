@@ -1,11 +1,17 @@
 FROM alpine:3.24.1
 
-WORKDIR /app
-
 RUN apk add --no-cache libc6-compat python3 make g++ git
 RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/v3.16/main/ \
   nodejs=16.20.2-r0 npm
 RUN npm install -g yarn
+
+RUN addgroup -g 1000 -S node && adduser -u 1000 -S node -G node
+
+WORKDIR /app
+
+RUN mkdir -p /app/node_modules /app/public /app/.nuxt && chown -R node:node /app
+
+USER node
 
 EXPOSE 3000
 
