@@ -2,4 +2,39 @@
 . "$(dirname "$0")/_/husky.sh"
 . "$(dirname "$0")/common.sh"
 
-docker compose exec -T app yarn lint-staged
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
+
+if [ -z "$STAGED_FILES" ]; then
+  exit 0
+fi
+
+JS_VUE_FILES=$(echo "$STAGED_FILES" | grep -E '\.(ts|js|vue)$' || true)
+CSS_VUE_FILES=$(echo "$STAGED_FILES" | grep -E '\.(scss|css|vue)$' || true)
+
+LINT_FAILED=0
+
+if [ -n "$JS_VUE_FILES" ]; then
+  echo "Running ESLint inside container..."
+  # Convert filenames to space-separated arguments
+  FILES_ARGS=$(echo "$JS_VUE_FILES" | tr '\n' ' ')
+  docker compose exec -T app yarn eslint --fix $FILES_ARGS
+  if [ $? -ne 0 ]; then
+    LINT_FAILED=1
+  fi
+fi
+
+if [ -n "$CSS_VUE_FILES" ]; then
+  echo "Running Stylelint inside container..."
+  FILES_ARGS=$(echo "$CSS_VUE_FILES" | tr '\n' ' ')
+  docker compose exec -T app yarn stylelint --fix $FILES_ARGS
+  if [ $? -ne 0 ]; then
+    LINT_FAILED=1
+  fi
+fi
+
+if [ $LINT_FAILED -eq 0 ]; then
+  echo "$STAGED_FILES" | xargs git add
+else
+  echo "❌ Linting failed. Commit aborted."
+  exit 1
+fi

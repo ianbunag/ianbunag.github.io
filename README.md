@@ -106,7 +106,7 @@ To pull and run the production-ready application from the GitHub Container Regis
    ```sh
     docker run -d \
       --name portfolio-prod \
-      -p 3000:80 \
+      -p 3000:3000 \
       ghcr.io/ianbunag/ianbunag.github.io:latest
     ```
 
@@ -133,7 +133,7 @@ To build and run the production-ready application inside a local Nginx container
    ```sh
    docker run -d \
      --name portfolio-prod \
-     -p 3000:80 \
+     -p 3000:3000 \
      portfolio-prod
    ```
 
