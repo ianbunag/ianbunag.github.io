@@ -19,6 +19,7 @@ John Ian Buñag's personal portfolio. Made with [Nuxt.js](https://nuxtjs.org/),
   - [Colors](#colors)
   - [Environment Variables](#environment-variables)
   - [GitHub Actions Variables](#github-actions-variables)
+- [Security Scan Policy](#security-scan-policy)
 - [Special Thanks](#special-thanks)
   - [For the layout and design inspiration](#for-the-layout-and-design-inspiration)
   - [For the free software](#for-the-free-software)
@@ -204,6 +205,12 @@ See [Environment Variables Reference](documentation/environment-variables.md)
 See [GitHub Actions Variables Reference](documentation/github-actions-variables.md)
 
 <br/>
+
+## Security Scan Policy
+
+This repository serves as a personal sandbox to evaluate GitHub Advanced Security and Aikido Security workflows. Because this is an experimental testing environment rather than a production service, vulnerability management is scoped as follows:
+- **Triage Scope:** Monitoring is strictly limited to Critical vulnerabilities.
+- **Remediation:** Lower-severity findings (High, Medium, Low) are visible but will not be actively triaged or patched. Critical vulnerabilities will be reviewed and addressed on a casual, ad-hoc basis as they appear during testing.
 
 ---
 
