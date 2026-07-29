@@ -88,7 +88,7 @@ export default defineComponent({
         :href="`mailto:${email}`"
         x-large
       >
-        Send me an email
+        Get in Touch
         <v-icon class="pl-1">
           {{ icons.mdiEmail }}
         </v-icon>
@@ -101,7 +101,7 @@ export default defineComponent({
         <div class="mailto-text">
           <a
             :href="`mailto:${email}`"
-            aria-label="Send me an email"
+            aria-label="Get in Touch"
             class="pf-link-light"
           >{{ email }}</a>
           <v-btn

@@ -30,13 +30,13 @@ export const pages = mapReferencedPages({
     icon: 'mdiHome',
   },
   TECH_STACK: {
-    name: 'Tech Stack',
-    route: '/tech-stack/',
+    name: 'Technical Skills',
+    route: '/technical-skills/',
     icon: 'mdiLightningBoltCircle',
   },
   PROJECTS: {
-    name: 'Projects',
-    route: '/projects/',
+    name: 'Featured Projects',
+    route: '/featured-projects/',
     icon: 'mdiLightbulbOnOutline',
   },
   CONTACT: {

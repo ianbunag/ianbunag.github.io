@@ -65,7 +65,7 @@ export default defineComponent({
       class="section-background-light"
     >
       <template #title>
-        A Little Bit About Myself
+        About
       </template>
       <template #sub-title>
         {{ profile.introduction.dynamic() }}
@@ -77,7 +77,7 @@ export default defineComponent({
           x-large
           nuxt
         >
-          Tech stack
+          Technical Skills
           <v-icon>{{ icons.mdiArrowTopRight }}</v-icon>
         </v-btn>
       </template>
@@ -94,10 +94,10 @@ export default defineComponent({
       class="section-background-dark"
     >
       <template #title>
-        Significant Works
+        Featured Projects
       </template>
       <template #sub-title>
-        Projects that showcase my technical growth over the years.
+        Highlighting my technical progression in building scalable applications and creative digital experiences.
       </template>
       <template #footer>
         <v-btn
@@ -106,7 +106,7 @@ export default defineComponent({
           x-large
           nuxt
         >
-          All projects
+          View All Projects
           <v-icon>{{ icons.mdiArrowTopRight }}</v-icon>
         </v-btn>
       </template>
@@ -125,12 +125,12 @@ export default defineComponent({
     >
       <template #title>
         <span class="pf-text-light">
-          My Professional Journey
+          Experience & Education
         </span>
       </template>
       <template #sub-title>
         <span class="pf-text-light">
-          Steps along my career evolution.
+          An overview of my six years in software development and ongoing graduate studies.
         </span>
       </template>
       <template #background>
@@ -148,11 +148,11 @@ export default defineComponent({
       content-class="mt-16 pt-8 pt-md-10 mx-md-16 px-md-12 mb-8 mb-sm-0"
     >
       <template #title>
-        Let's Grab Some Sushi 🍣
+        Let's Connect
       </template>
       <template #sub-title>
         <span>
-          Or a cup of coffee, I am happy to connect!
+          Whether you are hiring or just want to talk tech, I would love to hear from you.
         </span>
       </template>
       <template #background>

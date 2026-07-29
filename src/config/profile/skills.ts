@@ -28,8 +28,8 @@ function mapReferencedSkills (referencedSkills: ReferencedSkills): Skills {
 
 export const skills = mapReferencedSkills([
   {
-    name: 'Front-end development',
-    description: 'I convert design prototypes into responsive, scalable, and high-performance web applications. I use frontend frameworks, design systems, and testing tools to deliver ahead of schedule.',
+    name: 'Front-End development',
+    description: 'I convert design prototypes into responsive and accessible web applications. I utilize modern frameworks and design systems to seamlessly bridge technical execution with creative visual design.',
     icon: 'frontEnd',
     technologies: [
       'github-copilot',
@@ -40,8 +40,8 @@ export const skills = mapReferencedSkills([
     order: 1,
   },
   {
-    name: 'Back-end development',
-    description: 'I engineer products with modular, robust, and dependable services. I work across various languages in managed and serverless environments, backed by comprehensive unit and integration tests.',
+    name: 'Back-End Development',
+    description: 'I engineer scalable, secure, and modular backend services. I build robust systems across managed and serverless environments with comprehensive test coverage.',
     icon: 'backEnd',
     technologies: [
       'github-copilot',
@@ -56,8 +56,8 @@ export const skills = mapReferencedSkills([
     order: 2,
   },
   {
-    name: 'Development Operations',
-    description: 'I maintain a rapid, steady, and organized development cycle with a blend of operational knowledge. I leverage Docker for development, ensure continuous integration and delivery via CircleCI, and orchestrate infrastructure using Terraform.',
+    name: 'DevOps & Infrastructure',
+    description: 'I accelerate development cycles through automated CI/CD pipelines via CircleCI. I leverage Docker for containerization and provision reliable, scalable infrastructure using Terraform.',
     icon: 'devOps',
     technologies: [
       'github-copilot',

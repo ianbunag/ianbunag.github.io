@@ -1,3 +1,5 @@
+// @TODO remove this:
+/* eslint-disable array-bracket-newline */
 import { technologies } from '~/config/technologies'
 
 import type { TechStack, TechStacks } from '@/config/profile'
@@ -25,85 +27,87 @@ function mapReferencedTechStacks (
 
 export const techStacks = mapReferencedTechStacks([
   {
-    category: 'AI Tools',
-    technologies: [
-      'gemini',
-      'notebooklm',
-      'github-copilot',
-      'claude',
-      'junie',
-      'windsurf',
-    ],
-  },
-  {
     category: 'Languages',
     technologies: [
       'typescript',
-      'node-js',
       'javascript',
-      'php',
-      'go',
       'java',
+      'go',
+      'php',
+      'python',
       'markdown',
       'html',
       'css',
     ],
   },
   {
-    category: 'Cloud Platforms',
+    category: 'AI Tools',
     technologies: [
-      'google-cloud',
-      'amazon-web-services',
+      'gemini',
+      //   @TODO codex
+      'claude',
+      'notebooklm',
     ],
   },
   {
-    category: 'Libraries / Frameworks',
+    category: 'Technologies',
     technologies: [
+    //   @TODO git
+      'node-js',
       'react',
-      'nextjs',
       'reactNative',
-    ],
-  },
-  {
-    category: 'Tooling',
-    technologies: [
-      'docker',
-      'github',
-      'circleci',
-      'vitest',
+      'nextjs',
+      //   @TODO kafka
       'jest',
       'cypress',
-      'eslint',
-      'terraform',
-      'swagger',
-      'kubernetes',
+      //   @TODO phpunit
+      'vue',
+      'nuxt',
+      'express',
     ],
   },
   {
     category: 'Databases',
-    technologies: ['mysql', 'postgresql'],
+    technologies: [
+    // @TODO dynamodb
+      'mysql',
+      'postgresql',
+    // @TODO redis
+    // @TODO elasticsearch
+    ],
   },
   {
-    category: 'Previous Technologies',
+    category: 'Cloud',
     technologies: [
-      // Languages
-      'python',
-      // Libraries / Frameworks
-      'vue',
-      'nuxt',
-      'fastify',
-      'aws-chalice',
-      'express',
-      'lumen',
-      // UI Libraries / Design Systems
-      'vuetify',
-      'bootstrap-vue',
-      // Tooling
+    //   @TODO EC2
+    //   @TODO Lambda
+    //   @TODO S3
+    //   @TODO SQS
+    //   @TODO SNS
+    //   @TODO RDS
+    //   @TODO Cloudflare
+    ],
+  },
+  {
+    category: 'DevOps',
+    technologies: [
+      'docker',
+      'terraform',
+      'circleci',
+      'github',
       'gitlab',
-      'nginx',
-      'pm2',
-      'sass',
-      'stylelint',
+    // @TODO Datadog
+    // @TODO CloudWatch
+    ],
+  },
+  {
+    category: 'Methodologies',
+    technologies: [
+    //   @TODO back-end development
+    //   @TODO front-end development
+    //   @TODO test-driven development
+    //   @TODO Kanban
+    //   @TODO Agile methodologies
     ],
   },
 ])

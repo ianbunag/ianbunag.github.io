@@ -31,7 +31,7 @@ export default defineComponent({
     <div class="text-center justify-center">
       <heading class="text-h3 text-md-h2 pf-text-pair">
         <span class="pf-emphasized-title">
-          Tech Stack
+          Technical Skills
         </span>
       </heading>
     </div>
