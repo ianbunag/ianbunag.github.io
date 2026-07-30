@@ -1,5 +1,3 @@
-// @TODO remove this:
-/* eslint-disable array-bracket-newline */
 import { technologies } from '~/config/technologies'
 
 import type { TechStack, TechStacks } from '@/config/profile'
@@ -44,7 +42,7 @@ export const techStacks = mapReferencedTechStacks([
     category: 'AI Tools',
     technologies: [
       'gemini',
-      //   @TODO codex
+      'codex',
       'claude',
       'notebooklm',
     ],
@@ -52,15 +50,15 @@ export const techStacks = mapReferencedTechStacks([
   {
     category: 'Technologies',
     technologies: [
-    //   @TODO git
+      'git',
       'node-js',
       'react',
       'reactNative',
       'nextjs',
-      //   @TODO kafka
+      'kafka',
       'jest',
       'cypress',
-      //   @TODO phpunit
+      'phpunit',
       'vue',
       'nuxt',
       'express',
@@ -69,23 +67,23 @@ export const techStacks = mapReferencedTechStacks([
   {
     category: 'Databases',
     technologies: [
-    // @TODO dynamodb
+      'dynamodb',
       'mysql',
       'postgresql',
-    // @TODO redis
-    // @TODO elasticsearch
+      'redis',
+      'elasticsearch',
     ],
   },
   {
     category: 'Cloud',
     technologies: [
-    //   @TODO EC2
-    //   @TODO Lambda
-    //   @TODO S3
-    //   @TODO SQS
-    //   @TODO SNS
-    //   @TODO RDS
-    //   @TODO Cloudflare
+      'ec2',
+      'lambda',
+      's3',
+      'sqs',
+      'sns',
+      'rds',
+      'cloudflare',
     ],
   },
   {
@@ -96,18 +94,18 @@ export const techStacks = mapReferencedTechStacks([
       'circleci',
       'github',
       'gitlab',
-    // @TODO Datadog
-    // @TODO CloudWatch
+      'datadog',
+      'cloudwatch',
     ],
   },
   {
     category: 'Methodologies',
     technologies: [
-    //   @TODO back-end development
-    //   @TODO front-end development
-    //   @TODO test-driven development
-    //   @TODO Kanban
-    //   @TODO Agile methodologies
+      'back-end-development',
+      'front-end-development',
+      'test-driven-development',
+      'kanban',
+      'agile',
     ],
   },
 ])

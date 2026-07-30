@@ -101,6 +101,20 @@ export const languages = mapTechnology({
 })
 
 export const developmentTools = mapTechnology({
+  git: {
+    display: 'Git',
+    description: 'Distributed version control system.',
+    icon: 'technology',
+    logoURL: 'logos/git.svg',
+    url: 'https://git-scm.com/',
+  },
+  kafka: {
+    display: 'Apache Kafka',
+    description: 'Distributed event streaming platform.',
+    icon: 'technology',
+    logoURL: 'logos/placeholder.svg',
+    url: 'https://kafka.apache.org/',
+  },
   webpack: {
     display: 'Webpack',
     description: 'Module bundler for JavaScript.',
@@ -235,6 +249,13 @@ export const backEndFrameworks = mapTechnology({
 })
 
 export const testFrameworks = mapTechnology({
+  phpunit: {
+    display: 'PHPUnit',
+    description: 'Unit testing framework for PHP.',
+    icon: 'technology',
+    logoURL: 'logos/php.svg',
+    url: 'https://phpunit.de/',
+  },
   jest: {
     display: 'Jest',
     description: 'Simple JavaScript testing framework.',
@@ -259,6 +280,13 @@ export const testFrameworks = mapTechnology({
 })
 
 export const databases = mapTechnology({
+  dynamodb: {
+    display: 'Amazon DynamoDB',
+    description: 'Managed NoSQL database service.',
+    icon: 'technology',
+    logoURL: 'logos/aws.svg',
+    url: 'https://aws.amazon.com/dynamodb/',
+  },
   mysql: {
     display: 'MySQL',
     description: 'Popular open-source relational database.',
@@ -272,6 +300,20 @@ export const databases = mapTechnology({
     icon: 'postgresql',
     logoURL: 'logos/postgresql.svg',
     url: 'https://www.postgresql.org/',
+  },
+  redis: {
+    display: 'Redis',
+    description: 'In-memory data store and cache.',
+    icon: 'technology',
+    logoURL: 'logos/redis.svg',
+    url: 'https://redis.io/',
+  },
+  elasticsearch: {
+    display: 'Elasticsearch',
+    description: 'Distributed search and analytics engine.',
+    icon: 'technology',
+    logoURL: 'logos/elasticsearch.svg',
+    url: 'https://www.elastic.co/elasticsearch',
   },
 })
 
@@ -299,6 +341,13 @@ export const serverManagement = mapTechnology({
 })
 
 export const aiTools = mapTechnology({
+  codex: {
+    display: 'OpenAI Codex',
+    description: 'AI coding agent by OpenAI.',
+    icon: 'technology',
+    logoURL: 'logos/placeholder.svg',
+    url: 'https://openai.com/codex/',
+  },
   claude: {
     display: 'Claude',
     description: 'AI assistant by Anthropic.',
@@ -328,7 +377,7 @@ export const aiTools = mapTechnology({
     url: 'https://www.jetbrains.com/junie',
   },
   notebooklm: {
-    display: 'NotebookLM',
+    display: 'Gemini Notebook',
     description: 'AI research and note-taking tool by Google.',
     icon: 'notebooklm',
     logoURL: 'logos/notebooklm.svg',
@@ -434,6 +483,69 @@ export const applications = mapTechnology({
 })
 
 export const providers = mapTechnology({
+  ec2: {
+    display: 'Amazon EC2',
+    description: 'Scalable virtual server service.',
+    icon: 'technology',
+    logoURL: 'logos/aws.svg',
+    url: 'https://aws.amazon.com/ec2/',
+  },
+  lambda: {
+    display: 'AWS Lambda',
+    description: 'Serverless compute service.',
+    icon: 'technology',
+    logoURL: 'logos/aws.svg',
+    url: 'https://aws.amazon.com/lambda/',
+  },
+  s3: {
+    display: 'Amazon S3',
+    description: 'Scalable object storage service.',
+    icon: 'technology',
+    logoURL: 'logos/aws.svg',
+    url: 'https://aws.amazon.com/s3/',
+  },
+  sqs: {
+    display: 'Amazon SQS',
+    description: 'Managed message queue service.',
+    icon: 'technology',
+    logoURL: 'logos/aws.svg',
+    url: 'https://aws.amazon.com/sqs/',
+  },
+  sns: {
+    display: 'Amazon SNS',
+    description: 'Managed publish-subscribe messaging service.',
+    icon: 'technology',
+    logoURL: 'logos/aws.svg',
+    url: 'https://aws.amazon.com/sns/',
+  },
+  rds: {
+    display: 'Amazon RDS',
+    description: 'Managed relational database service.',
+    icon: 'technology',
+    logoURL: 'logos/aws.svg',
+    url: 'https://aws.amazon.com/rds/',
+  },
+  cloudflare: {
+    display: 'Cloudflare',
+    description: 'Cloud connectivity and security platform.',
+    icon: 'technology',
+    logoURL: 'logos/cloudflare.svg',
+    url: 'https://www.cloudflare.com/',
+  },
+  datadog: {
+    display: 'Datadog',
+    description: 'Cloud monitoring and security platform.',
+    icon: 'technology',
+    logoURL: 'logos/placeholder.svg',
+    url: 'https://www.datadoghq.com/',
+  },
+  cloudwatch: {
+    display: 'Amazon CloudWatch',
+    description: 'Monitoring and observability service.',
+    icon: 'technology',
+    logoURL: 'logos/aws.svg',
+    url: 'https://aws.amazon.com/cloudwatch/',
+  },
   terraform: {
     display: 'Terraform',
     description: 'Infrastructure as code tool.',
@@ -502,6 +614,34 @@ export const providers = mapTechnology({
   },
 })
 
+export const methodologies = mapTechnology({
+  'back-end-development': {
+    display: 'Back-End Development',
+    description: 'Building services, APIs and data systems.',
+    icon: 'technology',
+  },
+  'front-end-development': {
+    display: 'Front-End Development',
+    description: 'Building accessible user interfaces.',
+    icon: 'technology',
+  },
+  'test-driven-development': {
+    display: 'Test-Driven Development',
+    description: 'Writing tests before production code.',
+    icon: 'technology',
+  },
+  kanban: {
+    display: 'Kanban',
+    description: 'Visual workflow management method.',
+    icon: 'technology',
+  },
+  agile: {
+    display: 'Agile Methodologies',
+    description: 'Iterative approach to delivering value.',
+    icon: 'technology',
+  },
+})
+
 export const kataProviders = mapTechnology({
   leetcode: {
     display: 'LeetCode',
@@ -535,6 +675,7 @@ export const technologies = {
   ...aiTools,
   ...applications,
   ...providers,
+  ...methodologies,
   ...kataProviders,
 }
 
