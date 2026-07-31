@@ -6,7 +6,6 @@ import gemini from '~/components/icons/gemini.vue'
 import githubCopilot from '~/components/icons/github-copilot.vue'
 import junie from '~/components/icons/junie.vue'
 import jupyter from '~/components/icons/jupyter.vue'
-import notebooklm from '~/components/icons/notebooklm.vue'
 import windsurf from '~/components/icons/windsurf.vue'
 import ns3 from '~/components/icons/ns-3.vue'
 import wireshark from '~/components/icons/wireshark.vue'
@@ -43,6 +42,28 @@ import postgresql from '~/components/icons/postgresql.vue'
 import reactNative from '~/components/icons/react-native.vue'
 import bluesky from '~/components/icons/bluesky.vue'
 import tryhackme from '~/components/icons/tryhackme.vue'
+import agileMethodologies from '~/components/icons/agile-methodologies.vue'
+import apacheKafka from '~/components/icons/apache-kafka.vue'
+import awsCloudwatch from '~/components/icons/aws-cloudwatch.vue'
+import awsDynamodb from '~/components/icons/aws-dynamodb.vue'
+import awsEc2 from '~/components/icons/aws-ec2.vue'
+import awsLambda from '~/components/icons/aws-lambda.vue'
+import awsRds from '~/components/icons/aws-rds.vue'
+import awsS3 from '~/components/icons/aws-s3.vue'
+import awsSns from '~/components/icons/aws-sns.vue'
+import awsSqs from '~/components/icons/aws-sqs.vue'
+import backEndDevelopment from '~/components/icons/back-end-development.vue'
+import chatgptCodex from '~/components/icons/chatgpt-codex.vue'
+import cloudflare from '~/components/icons/cloudflare.vue'
+import datadog from '~/components/icons/datadog.vue'
+import elasticsearch from '~/components/icons/elasticsearch.vue'
+import frontEndDevelopment from '~/components/icons/front-end-development.vue'
+import geminiNotebook from '~/components/icons/gemini-notebook.vue'
+import git from '~/components/icons/git.vue'
+import kanban from '~/components/icons/kanban.vue'
+import phpunit from '~/components/icons/phpunit.vue'
+import redis from '~/components/icons/redis.vue'
+import testDrivenDevelopment from '~/components/icons/test-driven-development.vue'
 
 export {
   anaconda,
@@ -53,7 +74,6 @@ export {
   githubCopilot,
   junie,
   jupyter,
-  notebooklm,
   windsurf,
   ns3,
   wireshark,
@@ -90,4 +110,26 @@ export {
   reactNative,
   bluesky,
   tryhackme,
+  agileMethodologies,
+  apacheKafka,
+  awsCloudwatch,
+  awsDynamodb,
+  awsEc2,
+  awsLambda,
+  awsRds,
+  awsS3,
+  awsSns,
+  awsSqs,
+  backEndDevelopment,
+  chatgptCodex,
+  cloudflare,
+  datadog,
+  elasticsearch,
+  frontEndDevelopment,
+  geminiNotebook,
+  git,
+  kanban,
+  phpunit,
+  redis,
+  testDrivenDevelopment,
 }

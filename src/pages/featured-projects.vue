@@ -115,7 +115,7 @@ export default defineComponent({
     <v-card>
       <v-card-title class="text-center justify-center">
         <heading class="text-h3 text-md-h2 pf-text-pair">
-          Projects
+          Featured Projects
         </heading>
       </v-card-title>
 

@@ -1,19 +1,17 @@
-import moment from 'moment'
-
 /**
  * Separated to own module so that it may be imported from nuxt config without
  *  module aliasing
  */
 
 const constant =
-  'Software Engineer with over 7 years of experience building robust, scalable, and secure applications by applying advanced methodologies like Agent-Driven Development and TDD. My work has accelerated time-to-market by 30% and reduced manual effort by 80%, showcasing a commitment to delivering high-impact, innovative solutions. I am currently pursuing a Master\'s degree in Software Engineering with a specialization in Cybersecurity.'
+  'I am a software developer with six years of experience building scalable applications. I am currently pursuing a Master of Science in Software Engineering at San José State University to specialize in secure software development. I aim to write secure code and build robust pipelines to protect high-volume transaction systems. I am seeking a software engineering internship where I can contribute my extensive full-stack background while deepening my foundational cybersecurity knowledge.'
 
 function dynamic (): string {
-  const yearsOfExperience = moment()
-    .diff(moment('June 01, 2019'), 'years', false)
-    .toFixed(0)
+  // const yearsOfExperience = moment()
+  //   .diff(moment('June 01, 2019'), 'years', false)
+  //   .toFixed(0)
 
-  return `Software Engineer with over ${yearsOfExperience} years of experience building robust, scalable, and secure applications by applying advanced methodologies like Agent-Driven Development and TDD. My work has accelerated time-to-market by 30% and reduced manual effort by 80%, showcasing a commitment to delivering high-impact, innovative solutions. I am currently pursuing a Master's degree in Software Engineering with a specialization in Cybersecurity.`
+  return constant
 }
 
 export const introduction = {

@@ -19,6 +19,7 @@ John Ian Buñag's personal portfolio. Made with [Nuxt.js](https://nuxtjs.org/),
   - [Colors](#colors)
   - [Environment Variables](#environment-variables)
   - [GitHub Actions Variables](#github-actions-variables)
+- [Security Scan Policy](#security-scan-policy)
 - [Special Thanks](#special-thanks)
   - [For the layout and design inspiration](#for-the-layout-and-design-inspiration)
   - [For the free software](#for-the-free-software)
@@ -106,6 +107,9 @@ To pull and run the production-ready application from the GitHub Container Regis
    ```sh
     docker run -d \
       --name portfolio-prod \
+      --cpus="1" \
+      --memory="20m" \
+      --cap-drop=ALL \
       -p 3000:3000 \
       ghcr.io/ianbunag/ianbunag.github.io:latest
     ```
@@ -133,6 +137,9 @@ To build and run the production-ready application inside a local Nginx container
    ```sh
    docker run -d \
      --name portfolio-prod \
+     --cpus="1" \
+     --memory="20m" \
+     --cap-drop=ALL \
      -p 3000:3000 \
      portfolio-prod
    ```
@@ -204,6 +211,12 @@ See [Environment Variables Reference](documentation/environment-variables.md)
 See [GitHub Actions Variables Reference](documentation/github-actions-variables.md)
 
 <br/>
+
+## Security Scan Policy
+
+This repository serves as a personal sandbox to evaluate GitHub Advanced Security and Aikido Security workflows. Because this is an experimental testing environment rather than a production service, vulnerability management is scoped as follows:
+- **Triage Scope:** Monitoring is strictly limited to Critical vulnerabilities.
+- **Remediation:** Lower-severity findings (High, Medium, Low) are visible but will not be actively triaged or patched. Critical vulnerabilities will be reviewed and addressed on a casual, ad-hoc basis as they appear during testing.
 
 ---
 

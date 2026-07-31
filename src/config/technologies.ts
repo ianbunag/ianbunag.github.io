@@ -101,6 +101,20 @@ export const languages = mapTechnology({
 })
 
 export const developmentTools = mapTechnology({
+  git: {
+    display: 'Git',
+    description: 'Distributed version control system.',
+    icon: 'git',
+    logoURL: 'logos/git.svg',
+    url: 'https://git-scm.com/',
+  },
+  kafka: {
+    display: 'Apache Kafka',
+    description: 'Distributed event streaming platform.',
+    icon: 'apacheKafka',
+    logoURL: 'logos/apache-kafka.svg',
+    url: 'https://kafka.apache.org/',
+  },
   webpack: {
     display: 'Webpack',
     description: 'Module bundler for JavaScript.',
@@ -235,6 +249,13 @@ export const backEndFrameworks = mapTechnology({
 })
 
 export const testFrameworks = mapTechnology({
+  phpunit: {
+    display: 'PHPUnit',
+    description: 'Unit testing framework for PHP.',
+    icon: 'phpunit',
+    logoURL: 'logos/phpunit.svg',
+    url: 'https://phpunit.de/',
+  },
   jest: {
     display: 'Jest',
     description: 'Simple JavaScript testing framework.',
@@ -259,6 +280,13 @@ export const testFrameworks = mapTechnology({
 })
 
 export const databases = mapTechnology({
+  dynamodb: {
+    display: 'Amazon DynamoDB',
+    description: 'Managed NoSQL database service.',
+    icon: 'awsDynamodb',
+    logoURL: 'logos/aws-dynamodb.svg',
+    url: 'https://aws.amazon.com/dynamodb/',
+  },
   mysql: {
     display: 'MySQL',
     description: 'Popular open-source relational database.',
@@ -272,6 +300,20 @@ export const databases = mapTechnology({
     icon: 'postgresql',
     logoURL: 'logos/postgresql.svg',
     url: 'https://www.postgresql.org/',
+  },
+  redis: {
+    display: 'Redis',
+    description: 'In-memory data store and cache.',
+    icon: 'redis',
+    logoURL: 'logos/redis.svg',
+    url: 'https://redis.io/',
+  },
+  elasticsearch: {
+    display: 'Elasticsearch',
+    description: 'Distributed search and analytics engine.',
+    icon: 'elasticsearch',
+    logoURL: 'logos/elasticsearch.svg',
+    url: 'https://www.elastic.co/elasticsearch',
   },
 })
 
@@ -299,15 +341,22 @@ export const serverManagement = mapTechnology({
 })
 
 export const aiTools = mapTechnology({
+  codex: {
+    display: 'ChatGPT Codex',
+    description: 'AI coding agent by OpenAI.',
+    icon: 'chatgptCodex',
+    logoURL: 'logos/chatgpt-codex.svg',
+    url: 'https://openai.com/codex/',
+  },
   claude: {
-    display: 'Claude',
-    description: 'AI assistant by Anthropic.',
+    display: 'Claude Code',
+    description: 'AI coding agent by Anthropic.',
     icon: 'claude',
     logoURL: 'logos/claude.svg',
     url: 'https://claude.ai',
   },
   gemini: {
-    display: 'Gemini',
+    display: 'Google Gemini',
     description: 'AI assistant by Google.',
     icon: 'gemini',
     logoURL: 'logos/gemini.svg',
@@ -328,10 +377,10 @@ export const aiTools = mapTechnology({
     url: 'https://www.jetbrains.com/junie',
   },
   notebooklm: {
-    display: 'NotebookLM',
+    display: 'Gemini Notebook',
     description: 'AI research and note-taking tool by Google.',
-    icon: 'notebooklm',
-    logoURL: 'logos/notebooklm.svg',
+    icon: 'geminiNotebook',
+    logoURL: 'logos/gemini-notebook.svg',
     url: 'https://notebooklm.google',
   },
   windsurf: {
@@ -434,6 +483,69 @@ export const applications = mapTechnology({
 })
 
 export const providers = mapTechnology({
+  ec2: {
+    display: 'Amazon EC2',
+    description: 'Scalable virtual server service.',
+    icon: 'awsEc2',
+    logoURL: 'logos/aws-ec2.svg',
+    url: 'https://aws.amazon.com/ec2/',
+  },
+  lambda: {
+    display: 'AWS Lambda',
+    description: 'Serverless compute service.',
+    icon: 'awsLambda',
+    logoURL: 'logos/aws-lambda.svg',
+    url: 'https://aws.amazon.com/lambda/',
+  },
+  s3: {
+    display: 'Amazon S3',
+    description: 'Scalable object storage service.',
+    icon: 'awsS3',
+    logoURL: 'logos/aws-s3.svg',
+    url: 'https://aws.amazon.com/s3/',
+  },
+  sqs: {
+    display: 'Amazon SQS',
+    description: 'Managed message queue service.',
+    icon: 'awsSqs',
+    logoURL: 'logos/aws-sqs.svg',
+    url: 'https://aws.amazon.com/sqs/',
+  },
+  sns: {
+    display: 'Amazon SNS',
+    description: 'Managed publish-subscribe messaging service.',
+    icon: 'awsSns',
+    logoURL: 'logos/aws-sns.svg',
+    url: 'https://aws.amazon.com/sns/',
+  },
+  rds: {
+    display: 'Amazon RDS',
+    description: 'Managed relational database service.',
+    icon: 'awsRds',
+    logoURL: 'logos/aws-rds.svg',
+    url: 'https://aws.amazon.com/rds/',
+  },
+  cloudflare: {
+    display: 'Cloudflare',
+    description: 'Cloud connectivity and security platform.',
+    icon: 'cloudflare',
+    logoURL: 'logos/cloudflare.svg',
+    url: 'https://www.cloudflare.com/',
+  },
+  datadog: {
+    display: 'Datadog',
+    description: 'Cloud monitoring and security platform.',
+    icon: 'datadog',
+    logoURL: 'logos/datadog.svg',
+    url: 'https://www.datadoghq.com/',
+  },
+  cloudwatch: {
+    display: 'Amazon CloudWatch',
+    description: 'Monitoring and observability service.',
+    icon: 'awsCloudwatch',
+    logoURL: 'logos/aws-cloudwatch.svg',
+    url: 'https://aws.amazon.com/cloudwatch/',
+  },
   terraform: {
     display: 'Terraform',
     description: 'Infrastructure as code tool.',
@@ -502,6 +614,39 @@ export const providers = mapTechnology({
   },
 })
 
+export const methodologies = mapTechnology({
+  'back-end-development': {
+    display: 'Back-End Development',
+    description: 'Building services, APIs and data systems.',
+    logoURL: 'logos/back-end-development.svg',
+    icon: 'backEndDevelopment',
+  },
+  'front-end-development': {
+    display: 'Front-End Development',
+    description: 'Building accessible user interfaces.',
+    logoURL: 'logos/front-end-development.svg',
+    icon: 'frontEndDevelopment',
+  },
+  'test-driven-development': {
+    display: 'Test-Driven Development (TDD)',
+    description: 'Writing tests before production code.',
+    logoURL: 'logos/test-driven-development.svg',
+    icon: 'testDrivenDevelopment',
+  },
+  kanban: {
+    display: 'Kanban',
+    description: 'Visual workflow management method.',
+    logoURL: 'logos/kanban.svg',
+    icon: 'kanban',
+  },
+  agile: {
+    display: 'Agile Methodologies',
+    description: 'Iterative approach to delivering value.',
+    logoURL: 'logos/agile-methodologies.svg',
+    icon: 'agileMethodologies',
+  },
+})
+
 export const kataProviders = mapTechnology({
   leetcode: {
     display: 'LeetCode',
@@ -535,6 +680,7 @@ export const technologies = {
   ...aiTools,
   ...applications,
   ...providers,
+  ...methodologies,
   ...kataProviders,
 }
 

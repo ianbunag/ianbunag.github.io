@@ -1,5 +1,5 @@
 <script lang="ts">
-export default { name: 'IconNotebooklm' }
+export default { name: 'IconGeminiNotebook' }
 </script>
 
 <template>
@@ -8,7 +8,7 @@ export default { name: 'IconNotebooklm' }
     viewBox="0 0 24 24"
     width="24"
     height="24"
-    class="icon-notebooklm"
+    class="icon-gemini-notebook"
   >
     <path
       fill-rule="evenodd"
@@ -18,7 +18,7 @@ export default { name: 'IconNotebooklm' }
 </template>
 
 <style>
-.icon-notebooklm {
+.icon-gemini-notebook {
   fill: currentColor;
 }
 </style>

@@ -45,6 +45,7 @@ export const applicationSoftwares = mapReferencedProjects([
     name: '@ianbunag/dock',
     key: 'ianbunag-dock',
     period: createPeriod(2021, 'August'),
+    featured: true,
     tags: [
       'CLI',
       'BDD',
