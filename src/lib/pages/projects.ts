@@ -26,7 +26,7 @@ export const filters: Array<Filter> = [
     name: 'COURSEWORK',
     key: 'sjsu',
     icon: icons.mdiSchool,
-    tags: ['sjsu'],
+    tags: ['coursework'],
   },
   {
     name: 'WEB APPLICATION',

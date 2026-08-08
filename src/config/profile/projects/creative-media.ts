@@ -17,6 +17,7 @@ export const creativeMedia = mapReferencedProjects([
       'production',
       'content',
       'creation',
+      'coursework',
     ],
     description: createUnorderedList([
       'This laboratory activity demonstrates a hybrid workflow combining AI text generation with human technical production. The project uses an AI generated script to explore computational power and the simulation argument. The execution focuses on directing the visual flow and managing the full video production pipeline. This approach showcases how to effectively leverage automation tools while retaining total creative control over the final multimedia asset.',

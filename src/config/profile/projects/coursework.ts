@@ -4,6 +4,48 @@ import { createPeriod } from '~/lib/config/profile'
 
 export const coursework = mapReferencedProjects([
   {
+    name: 'Intermediate Cybersecurity - Analysis of the Intrusion Detection Evaluation Dataset (CIC-IDS2017)',
+    key: 'cyb-102-cic-ids2017-analysis',
+    period: createPeriod(2026, 'August'),
+    tags: [
+      'codepath',
+      'cybersecurity',
+      'incident',
+      'analysis',
+      'coursework',
+    ],
+    description: createUnorderedList([
+      'An incident response simulation project for the Intermediate Cybersecurity course at CodePath. The project involves analyzing a simulated cyberattack dataset, following a playbook, and documenting the findings in a comprehensive report. The goal is to demonstrate the ability to identify, analyze, and respond to cybersecurity incidents effectively.',
+      'Research by:',
+      [
+        'Keesa Lee Young',
+        'Mukhammadali Yuldoshev',
+        'Sameer Khan',
+        'Ashraful Islam',
+        'Rayna Maruyama',
+        'John Ian Buñag',
+      ],
+    ]),
+    images: [
+      './assets/images/projects/cyb-102-cic-ids2017-analysis/catalyst-1-tickets.png',
+      './assets/images/projects/cyb-102-cic-ids2017-analysis/catalyst-2-web-overview.png',
+      './assets/images/projects/cyb-102-cic-ids2017-analysis/catalyst-3-web-logs.png',
+      './assets/images/projects/cyb-102-cic-ids2017-analysis/catalyst-4-inf-overview.png',
+      './assets/images/projects/cyb-102-cic-ids2017-analysis/catalyst-5-inf-logs.png',
+    ].map(requireProgressiveImage),
+    technologies: [
+      'catalyst',
+      'splunk',
+      'wireshark',
+      'docker',
+    ],
+    primaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      link: process.env.CYB_102_CIC_IDS2017_ANALYSIS_REPO_LINK,
+      linkIcon: 'mdiGithub',
+    },
+  },
+  {
     name: 'Enterprise Software Platforms - Online Marketplace',
     key: 'cmpe-272-online-marketplace',
     period: createPeriod(2026, 'May'),
@@ -17,6 +59,7 @@ export const coursework = mapReferencedProjects([
       'mysql',
       'rest-api',
       'cloud',
+      'coursework',
     ],
     description: createUnorderedList([
       'A multi-vendor online marketplace built for the CMPE-272 enterprise software platforms course, allowing users to register, browse products, leave ratings and reviews, and track visits across participating vendor companies. The platform features Firebase-based authentication, APCu server-side caching, a RESTful API, and automated CI/CD deployment to a GCP VM via GitHub Actions.',
@@ -67,6 +110,7 @@ export const coursework = mapReferencedProjects([
       'data-science',
       'jupyter',
       'health',
+      'coursework',
     ],
     description: createUnorderedList([
       'A graduate research project for the CMPE-255 data mining course investigating whether air quality indicators (nitrogen dioxide, carbon monoxide, UV index, ozone) can predict RSV (respiratory syncytial virus) positivity levels using CDC epidemiological data. The team performed exploratory data analysis, data cleaning and transformation, hypothesis testing for seasonality, and trained Random Forest and Logistic Regression classifiers - achieving ~65% accuracy on the multi-class classification task.',
@@ -111,10 +155,11 @@ export const coursework = mapReferencedProjects([
       'research',
       'cli',
       'analysis',
+      'coursework',
     ],
     description: createUnorderedList([
       'A graduate research project for the CMPE-206 computer network design course comparing TCP and UDP transport-layer protocol performance using the ns-3 discrete-event network simulator. Three experiments were conducted across dumbbell topologies - varying router buffer size, link latency (with a 0.0001% bit error rate), and TCP/UDP flow ratios - measuring throughput, mean delay, packet loss, retransmissions, duplicate ACKs, and Jain\'s Fairness Index.',
-      'Built by:',
+      'Research by:',
       [
         'Bhimsen Thapa Chhetri',
         'John Ian Buñag',
