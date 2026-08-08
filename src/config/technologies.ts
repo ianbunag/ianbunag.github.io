@@ -393,6 +393,20 @@ export const aiTools = mapTechnology({
 })
 
 export const applications = mapTechnology({
+  catalyst: {
+    display: 'Catalyst',
+    description: 'Cybersecurity incident response platform.',
+    icon: 'catalyst',
+    logoURL: 'logos/catalyst.svg',
+    url: 'https://catalyst.security-brewery.com',
+  },
+  splunk: {
+    display: 'Splunk',
+    description: 'Data analytics and security monitoring platform.',
+    icon: 'splunk',
+    logoURL: 'logos/splunk.svg',
+    url: 'https://www.splunk.com/',
+  },
   'vs-code': {
     display: 'Visual Studio Code',
     description: 'Code editor by Microsoft.',

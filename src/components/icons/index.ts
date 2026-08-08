@@ -42,6 +42,8 @@ import postgresql from '~/components/icons/postgresql.vue'
 import reactNative from '~/components/icons/react-native.vue'
 import bluesky from '~/components/icons/bluesky.vue'
 import tryhackme from '~/components/icons/tryhackme.vue'
+import catalyst from '~/components/icons/catalyst.vue'
+import splunk from '~/components/icons/splunk.vue'
 import agileMethodologies from '~/components/icons/agile-methodologies.vue'
 import apacheKafka from '~/components/icons/apache-kafka.vue'
 import awsCloudwatch from '~/components/icons/aws-cloudwatch.vue'
@@ -110,6 +112,8 @@ export {
   reactNative,
   bluesky,
   tryhackme,
+  catalyst,
+  splunk,
   agileMethodologies,
   apacheKafka,
   awsCloudwatch,
