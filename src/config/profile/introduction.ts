@@ -4,7 +4,7 @@
  */
 
 const constant =
-  'I am a software developer with six years of experience building scalable applications. I am currently pursuing a Master of Science in Software Engineering at San José State University to specialize in secure software development. I aim to write secure code and build robust pipelines to protect high-volume transaction systems. I am seeking a software engineering internship where I can contribute my extensive full-stack background while deepening my foundational cybersecurity knowledge.'
+  'I am a software developer with six years of experience building scalable applications, currently pursuing a Master of Science in Software Engineering at San José State University. My focus is on embedding security throughout the software lifecycle, specializing in application security, container hardening, and DevSecOps pipelines for high-volume transaction systems. I am seeking Security Engineer, Application Security Engineer, DevSecOps Engineer, Cloud Security Engineer, or Secure Software Engineer internship roles where I can leverage my full-stack background to protect enterprise cloud infrastructure.'
 
 function dynamic (): string {
   // const yearsOfExperience = moment()
