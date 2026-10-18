@@ -4,8 +4,8 @@ import { createPeriod } from '~/lib/config/profile'
 
 export const coursework = mapReferencedProjects([
   {
-    name: 'Intermediate Cybersecurity - Analysis of the Intrusion Detection Evaluation Dataset (CIC-IDS2017)',
-    key: 'cyb-102-cic-ids2017-analysis',
+    name: 'Incident Response & Threat Hunting Simulation',
+    key: 'incident-response-threat-hunting-simulation',
     period: createPeriod(2026, 'August'),
     tags: [
       'codepath',
@@ -46,8 +46,98 @@ export const coursework = mapReferencedProjects([
     },
   },
   {
-    name: 'Enterprise Software Platforms - Online Marketplace',
-    key: 'cmpe-272-online-marketplace',
+    name: 'TCP vs. UDP Performance Comparison',
+    key: 'tcp-udp-performance-comparison',
+    period: createPeriod(2026, 'May'),
+    tags: [
+      'sjsu',
+      'simulation',
+      'networking',
+      'c++',
+      'research',
+      'cli',
+      'analysis',
+      'coursework',
+    ],
+    description: createUnorderedList([
+      'A graduate research project for the CMPE-206 computer network design course comparing TCP and UDP transport-layer protocol performance using the ns-3 discrete-event network simulator. Three experiments were conducted across dumbbell topologies - varying router buffer size, link latency (with a 0.0001% bit error rate), and TCP/UDP flow ratios - measuring throughput, mean delay, packet loss, retransmissions, duplicate ACKs, and Jain\'s Fairness Index.',
+      'Research by:',
+      [
+        'Bhimsen Thapa Chhetri',
+        'John Ian Buñag',
+      ],
+    ]),
+    images: [
+      './assets/images/projects/cmpe-206-tcp-vs-udp-comparison/paper.png',
+      './assets/images/projects/cmpe-206-tcp-vs-udp-comparison/buffer-simulation-mixed.png',
+      './assets/images/projects/cmpe-206-tcp-vs-udp-comparison/latency-simulation-mixed.png',
+      './assets/images/projects/cmpe-206-tcp-vs-udp-comparison/class-imbalance-simulation.png',
+    ].map(requireProgressiveImage),
+    technologies: [
+      'c++',
+      'ns-3',
+      'wireshark',
+    ],
+    primaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      link: process.env.CMPE_206_TCP_VS_UDP_REPO_LINK,
+      linkIcon: 'mdiGithub',
+    },
+    secondaryLink: {
+      text: LinkName.READ_PAPER,
+      link: process.env.CMPE_206_TCP_VS_UDP_PAPER_LINK,
+      linkIcon: 'mdiFilePdfBox',
+    },
+  },
+  {
+    name: 'Air Quality Analysis for Health and Environmental Protection',
+    key: 'air-quality-respiratory-health-analysis',
+    period: createPeriod(2026, 'May'),
+    tags: [
+      'sjsu',
+      'data-mining',
+      'machine-learning',
+      'python',
+      'classification',
+      'data-science',
+      'jupyter',
+      'health',
+      'coursework',
+    ],
+    description: createUnorderedList([
+      'A graduate research project for the CMPE-255 data mining course investigating whether air quality indicators (nitrogen dioxide, carbon monoxide, UV index, ozone) can predict RSV (respiratory syncytial virus) positivity levels using CDC epidemiological data. The team performed exploratory data analysis, data cleaning and transformation, hypothesis testing for seasonality, and trained Random Forest and Logistic Regression classifiers - achieving ~65% accuracy on the multi-class classification task.',
+      'Built by:',
+      [
+        'Hung Pham',
+        'Bhimsen Thapa Chhetri',
+        'John Ian Buñag',
+      ],
+    ]),
+    images: [
+      './assets/images/projects/cmpe-255-air-quality-analysis/paper.png',
+      './assets/images/projects/cmpe-255-air-quality-analysis/distribution.png',
+      './assets/images/projects/cmpe-255-air-quality-analysis/correlation.png',
+      './assets/images/projects/cmpe-255-air-quality-analysis/confusion-matrix.png',
+    ].map(requireProgressiveImage),
+    technologies: [
+      'python',
+      'jupyter',
+      'anaconda',
+    ],
+    primaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      link: process.env.CMPE_255_AIR_QUALITY_ANALYSIS_REPO_LINK,
+      linkIcon: 'mdiGithub',
+    },
+    secondaryLink: {
+      text: LinkName.READ_PAPER,
+      link: process.env.CMPE_255_AIR_QUALITY_ANALYSIS_PAPER_LINK,
+      linkIcon: 'mdiFilePdfBox',
+    },
+  },
+  {
+    name: 'Enterprise Cloud Marketplace Platform',
+    key: 'enterprise-cloud-marketplace-platform',
     period: createPeriod(2026, 'May'),
     tags: [
       'sjsu',
@@ -95,96 +185,6 @@ export const coursework = mapReferencedProjects([
       text: LinkName.WATCH_ME,
       link: process.env.CMPE_272_ONLINE_MARKETPLACE_VIDEO_LINK,
       linkIcon: 'mdiYoutube',
-    },
-  },
-  {
-    name: 'Data Mining - Air Quality Analysis for Health and Environmental Protection',
-    key: 'cmpe-255-air-quality-analysis',
-    period: createPeriod(2026, 'May'),
-    tags: [
-      'sjsu',
-      'data-mining',
-      'machine-learning',
-      'python',
-      'classification',
-      'data-science',
-      'jupyter',
-      'health',
-      'coursework',
-    ],
-    description: createUnorderedList([
-      'A graduate research project for the CMPE-255 data mining course investigating whether air quality indicators (nitrogen dioxide, carbon monoxide, UV index, ozone) can predict RSV (respiratory syncytial virus) positivity levels using CDC epidemiological data. The team performed exploratory data analysis, data cleaning and transformation, hypothesis testing for seasonality, and trained Random Forest and Logistic Regression classifiers - achieving ~65% accuracy on the multi-class classification task.',
-      'Built by:',
-      [
-        'Hung Pham',
-        'Bhimsen Thapa Chhetri',
-        'John Ian Buñag',
-      ],
-    ]),
-    images: [
-      './assets/images/projects/cmpe-255-air-quality-analysis/paper.png',
-      './assets/images/projects/cmpe-255-air-quality-analysis/distribution.png',
-      './assets/images/projects/cmpe-255-air-quality-analysis/correlation.png',
-      './assets/images/projects/cmpe-255-air-quality-analysis/confusion-matrix.png',
-    ].map(requireProgressiveImage),
-    technologies: [
-      'python',
-      'jupyter',
-      'anaconda',
-    ],
-    primaryLink: {
-      text: LinkName.VIEW_SOURCE,
-      link: process.env.CMPE_255_AIR_QUALITY_ANALYSIS_REPO_LINK,
-      linkIcon: 'mdiGithub',
-    },
-    secondaryLink: {
-      text: LinkName.READ_PAPER,
-      link: process.env.CMPE_255_AIR_QUALITY_ANALYSIS_PAPER_LINK,
-      linkIcon: 'mdiFilePdfBox',
-    },
-  },
-  {
-    name: 'Computer Network Design - TCP vs UDP Performance Comparison',
-    key: 'cmpe-206-tcp-vs-udp-comparison',
-    period: createPeriod(2026, 'May'),
-    tags: [
-      'sjsu',
-      'simulation',
-      'networking',
-      'c++',
-      'research',
-      'cli',
-      'analysis',
-      'coursework',
-    ],
-    description: createUnorderedList([
-      'A graduate research project for the CMPE-206 computer network design course comparing TCP and UDP transport-layer protocol performance using the ns-3 discrete-event network simulator. Three experiments were conducted across dumbbell topologies - varying router buffer size, link latency (with a 0.0001% bit error rate), and TCP/UDP flow ratios - measuring throughput, mean delay, packet loss, retransmissions, duplicate ACKs, and Jain\'s Fairness Index.',
-      'Research by:',
-      [
-        'Bhimsen Thapa Chhetri',
-        'John Ian Buñag',
-      ],
-    ]),
-    images: [
-      './assets/images/projects/cmpe-206-tcp-vs-udp-comparison/paper.png',
-      './assets/images/projects/cmpe-206-tcp-vs-udp-comparison/buffer-simulation-mixed.png',
-      './assets/images/projects/cmpe-206-tcp-vs-udp-comparison/latency-simulation-mixed.png',
-      './assets/images/projects/cmpe-206-tcp-vs-udp-comparison/class-imbalance-simulation.png',
-    ].map(requireProgressiveImage),
-    technologies: [
-      'c++',
-      'ns-3',
-      'wireshark',
-    ],
-    primaryLink: {
-      text: LinkName.VIEW_SOURCE,
-      link: process.env.CMPE_206_TCP_VS_UDP_REPO_LINK,
-      linkIcon: 'mdiGithub',
-    },
-    secondaryLink: {
-      text: LinkName.READ_PAPER,
-      link: process.env.CMPE_206_TCP_VS_UDP_PAPER_LINK,
-      linkIcon: 'mdiFilePdfBox',
     },
   },
 ])
