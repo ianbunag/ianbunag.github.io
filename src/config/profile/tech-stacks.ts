@@ -91,6 +91,7 @@ export const techStacks = mapReferencedTechStacks([
     technologies: [
       'docker',
       'terraform',
+      'ansible',
       'circleci',
       'github',
       'gitlab',

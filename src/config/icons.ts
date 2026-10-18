@@ -52,6 +52,8 @@ import {
   mdiKubernetes,
   mdiWebPlus,
   mdiFilePdfBox,
+  mdiLanguageC,
+  mdiAnsible,
 } from '@mdi/js'
 
 import { pluggedIcons } from '~/plugins/vuetify'
@@ -128,6 +130,8 @@ export const mdi = defineIconMap({
   mdiKubernetes,
   mdiWebPlus,
   mdiFilePdfBox,
+  mdiLanguageC,
+  mdiAnsible,
 })
 
 export const custom: CustomIcons = (() => {

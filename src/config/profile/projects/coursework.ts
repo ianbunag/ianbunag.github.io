@@ -4,6 +4,42 @@ import { createPeriod } from '~/lib/config/profile'
 
 export const coursework = mapReferencedProjects([
   {
+    name: 'Software Security Engineering Lab',
+    key: 'software-security-engineering-lab',
+    period: 'Present',
+    tags: [
+      'sjsu',
+      'security',
+      'c',
+      'linux',
+      'terraform',
+      'ansible',
+      'gcp',
+      'cloud',
+      'research',
+      'analysis',
+      'coursework',
+    ],
+    description: createUnorderedList([
+      'An applied software security and vulnerability research workspace for the CMPE-279 Software Security Technologies graduate course at San José State University. Explores memory safety, exploit analysis, defensive systems engineering, and modern security mitigations through hands-on laboratory exercises and exploit development, backed by an automated Terraform and Ansible cloud lab environment on Google Cloud Platform.',
+      'Research by:',
+      ['John Ian Buñag'],
+    ]),
+    images: [],
+    technologies: [
+      'c',
+      'terraform',
+      'ansible',
+      'google-cloud',
+      'cloudflare',
+    ],
+    primaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      link: process.env.CMPE_279_SOFTWARE_SECURITY_REPO_LINK,
+      linkIcon: 'mdiGithub',
+    },
+  },
+  {
     name: 'Incident Response & Threat Hunting Simulation',
     key: 'incident-response-threat-hunting-simulation',
     period: createPeriod(2026, 'August'),
