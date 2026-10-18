@@ -74,6 +74,12 @@ export const languages = mapTechnology({
     logoURL: 'logos/java.svg',
     url: 'https://www.java.com',
   },
+  c: {
+    display: 'C',
+    description: 'General-purpose systems programming language.',
+    icon: 'mdiLanguageC',
+    url: 'https://www.c-language.org',
+  },
   'c++': {
     display: 'C++',
     description: 'General-purpose object-oriented programming language.',
@@ -566,6 +572,13 @@ export const providers = mapTechnology({
     icon: 'mdiTerraform',
     logoURL: 'logos/terraform.svg',
     url: 'https://www.terraform.io/',
+  },
+  ansible: {
+    display: 'Ansible',
+    description: 'IT automation and configuration management tool.',
+    icon: 'mdiAnsible',
+    logoURL: 'logos/ansible.svg',
+    url: 'https://www.redhat.com/en/ansible-collaborative',
   },
   github: {
     display: 'GitHub',
