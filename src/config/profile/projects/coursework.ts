@@ -4,6 +4,45 @@ import { createPeriod } from '~/lib/config/profile'
 
 export const coursework = mapReferencedProjects([
   {
+    name: 'MIPS Virtual Machine Monitor (VMM)',
+    key: 'mips-virtual-machine-monitor',
+    period: 'Present',
+    tags: [
+      'sjsu',
+      'virtualization',
+      'hypervisor',
+      'c',
+      'linux',
+      'terraform',
+      'ansible',
+      'gcp',
+      'cloud',
+      'mips',
+      'systems',
+      'research',
+      'simulation',
+      'coursework',
+    ],
+    description: createUnorderedList([
+      'A user-space virtual machine monitor (VMM) developed in C for the CMPE-283 Virtual Technologies graduate course at San José State University. Features MIPS instruction emulation, virtual register and memory state management, round-robin multi-VM scheduling, and state snapshotting and restoration with instruction hash validation.',
+      'Research by:',
+      ['John Ian Buñag'],
+    ]),
+    images: [],
+    technologies: [
+      'c',
+      'terraform',
+      'ansible',
+      'google-cloud',
+      'cloudflare',
+    ],
+    primaryLink: {
+      text: LinkName.VIEW_SOURCE,
+      link: process.env.CMPE_283_VIRTUAL_TECHNOLOGIES_REPO_LINK,
+      linkIcon: 'mdiGithub',
+    },
+  },
+  {
     name: 'Software Security Engineering Lab',
     key: 'software-security-engineering-lab',
     period: 'Present',
