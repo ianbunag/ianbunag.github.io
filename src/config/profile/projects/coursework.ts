@@ -28,7 +28,7 @@ export const coursework = mapReferencedProjects([
       'Research by:',
       ['John Ian Buñag'],
     ]),
-    images: [],
+    images: ['./assets/images/projects/mips-virtual-machine-monitor/cover.png'].map(requireProgressiveImage),
     technologies: [
       'c',
       'terraform',
@@ -64,7 +64,7 @@ export const coursework = mapReferencedProjects([
       'Research by:',
       ['John Ian Buñag'],
     ]),
-    images: [],
+    images: ['./assets/images/projects/software-security-engineering-lab/cover.png'].map(requireProgressiveImage),
     technologies: [
       'c',
       'terraform',
