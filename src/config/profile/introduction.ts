@@ -4,7 +4,7 @@
  */
 
 const constant =
-  'I am a software developer with six years of experience building scalable applications, currently pursuing a Master of Science in Software Engineering at San José State University. My focus is on embedding security throughout the software lifecycle, specializing in application security, container hardening, and DevSecOps pipelines for high-volume transaction systems. I am targeting future Security Engineer, Application Security Engineer, DevSecOps Engineer, Cloud Security Engineer, or Secure Software Engineering roles where I can leverage my full-stack background to protect enterprise cloud infrastructure.'
+  'I am a secure software engineer with six years of full-stack development experience, currently completing my Master of Science in Software Engineering at San José State University. I specialize in application security, container hardening, and DevSecOps pipelines. Having built highly scalable cloud platforms and infrastructure automation tools like @ianbunag/dock, I leverage my background in automated testing and cloud-native architecture to build secure and resilient systems. I am currently seeking a Summer 2027 internship in Secure Software Engineering, Application Security, or DevSecOps.'
 
 function dynamic (): string {
   // const yearsOfExperience = moment()
